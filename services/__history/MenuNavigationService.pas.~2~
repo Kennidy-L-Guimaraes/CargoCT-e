@@ -1,0 +1,70 @@
+unit MenuNavigationService;
+
+
+interface
+
+uses System.SysUtils, System.Classes, Vcl.Controls, Vcl.ExtCtrls, Generics.Collections;
+
+type
+ TMenuNavigationService = Class
+ Private
+  {Private Declarations}
+  FPanels : TList<TPanel>;
+  procedure HideAllPanels;
+  procedure ShowPanel(APanel: TPanel);
+
+ Public
+  {Public Declarations}
+  procedure RegisterPanel(APanel: TPanel);
+  procedure ActivePanel(APanel: TPanel);
+  Constructor Create;
+  Destructor Destroy;
+
+ End;
+
+implementation
+
+{ TMenuNavigationService }
+
+procedure TMenuNavigationService.ActivePanel(APanel: TPanel);
+begin
+  if not FPanels.Contains(APanel) then
+    raise Exception.Create('Painel não registrado');
+  HideAllPanels;
+  ShowPanel(APanel);
+end;
+
+constructor TMenuNavigationService.Create;
+begin
+ inherited Create;
+ FPanels := TList<TPanel>.Create;
+end;
+
+destructor TMenuNavigationService.Destroy;
+begin
+  FPanels.Free;
+  Inherited Destroy;
+end;
+
+procedure TMenuNavigationService.HideAllPanels;
+ var
+  Panel : TPanel;
+begin
+  For Panel in FPanels do
+  begin
+  Panel.Width   := 0;
+  Panel.Visible := False;
+  end;
+end;
+
+procedure TMenuNavigationService.RegisterPanel(APanel: TPanel);
+begin
+  If not FPanels.Contains(APanel) then FPanels.Add(APanel);
+end;
+
+procedure TMenuNavigationService.ShowPanel(APanel: TPanel);
+begin
+  APanel.Width := 100;
+end;
+
+end.

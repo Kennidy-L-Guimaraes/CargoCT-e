@@ -1,0 +1,11 @@
+﻿[Opd_BuscarImagem]
+Coordinates=74,1,132,36
+
+[Panel1]
+Coordinates=853,280,55,58
+
+[]
+Coordinates=204,552,220,58
+Visible=True
+ExplicitSubNodes=AutoSize
+

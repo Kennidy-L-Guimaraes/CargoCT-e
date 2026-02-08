@@ -1,0 +1,19 @@
+# Delphi build
+*.dcu
+*.exe
+*.dll
+*.bpl
+*.bpi
+*.map
+*.rsm
+
+# Generate Paths
+Win32/
+Win64/
+__history/
+
+# Delphi IDE
+*.identcache
+*.local
+*.stat
+*.proj.local
