@@ -3653,8 +3653,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Height = 464
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 743
-        ExplicitWidth = 0
         object Pgc_NotaInfo: TPageControl
           Left = 1
           Top = 1
@@ -3663,7 +3661,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           ActivePage = Tbsh_IdentificacaoETomador
           Align = alClient
           TabOrder = 0
-          ExplicitWidth = 61
           object Tbsh_IdentificacaoETomador: TTabSheet
             Caption = 'Identifica'#231#227'o e Tomador'
             object Lbl_Identificacao: TLabel

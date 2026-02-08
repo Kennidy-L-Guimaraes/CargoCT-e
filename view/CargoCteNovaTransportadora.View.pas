@@ -96,6 +96,8 @@ type
     Panel8: TPanel;
     Image3: TImage;
     Button1: TButton;
+    Image4: TImage;
+    procedure Btn_BtnCancelarConfiguracoesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -108,5 +110,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrm_NovaTransportadora.Btn_BtnCancelarConfiguracoesClick(
+  Sender: TObject);
+begin
+  Frm_NovaTransportadora.Close;
+
+end;
 
 end.

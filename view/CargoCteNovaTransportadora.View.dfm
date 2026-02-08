@@ -4,8 +4,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
   AutoSize = True
   BorderIcons = [biSystemMenu]
   Caption = 'Registrar Nova Transportadora'
-  ClientHeight = 475
-  ClientWidth = 492
+  ClientHeight = 441
+  ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,21 +17,20 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 492
-    Height = 475
+    Width = 624
+    Height = 441
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 473
+    ExplicitHeight = 439
     object ScrollBox1: TScrollBox
       Left = 0
       Top = 0
-      Width = 492
-      Height = 475
+      Width = 624
+      Height = 441
       VertScrollBar.Increment = 2
-      VertScrollBar.Position = 1219
       VertScrollBar.Range = 1802
       VertScrollBar.Tracking = True
       Align = alClient
@@ -41,10 +40,17 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
+      ExplicitHeight = 439
+      object Image4: TImage
+        Left = 3
+        Top = 1585
+        Width = 599
+        Height = 161
+      end
       object GroupBox1: TGroupBox
         Left = 0
-        Top = -1219
-        Width = 473
+        Top = 0
+        Width = 605
         Height = 209
         Align = alTop
         Caption = 'Identifica'#231#227'o Fiscal'
@@ -59,7 +65,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 0
         object Pnl_IdentificacaoCte: TPanel
-          Left = 131
+          Left = 197
           Top = 24
           Width = 334
           Height = 181
@@ -274,7 +280,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
         object Panel8: TPanel
-          Left = 25
+          Left = 87
           Top = 47
           Width = 111
           Height = 141
@@ -346,7 +352,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Button1: TButton
             Left = 0
             Top = 111
-            Width = 106
+            Width = 107
             Height = 25
             Cursor = crHandPoint
             Caption = 'Buscar Imagem'
@@ -362,8 +368,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object GroupBox2: TGroupBox
         Left = 0
-        Top = -1010
-        Width = 473
+        Top = 209
+        Width = 605
         Height = 368
         Align = alTop
         Caption = 'Endere'#231'o Fiscal'
@@ -695,8 +701,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object GroupBox3: TGroupBox
         Left = 0
-        Top = 166
-        Width = 473
+        Top = 1385
+        Width = 605
         Height = 185
         Align = alTop
         Caption = 'Contato'
@@ -802,8 +808,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object GroupBox4: TGroupBox
         Left = 0
-        Top = -417
-        Width = 473
+        Top = 802
+        Width = 605
         Height = 150
         Align = alTop
         Caption = 'Dados Operacionais'
@@ -893,8 +899,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object GroupBox5: TGroupBox
         Left = 0
-        Top = -267
-        Width = 473
+        Top = 952
+        Width = 605
         Height = 252
         Align = alTop
         Caption = 'Ve'#237'culo e Motorista'
@@ -1088,8 +1094,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object GroupBox6: TGroupBox
         Left = 0
-        Top = -642
-        Width = 473
+        Top = 577
+        Width = 605
         Height = 225
         Align = alTop
         Caption = 'Dados Fiscais'
@@ -1232,8 +1238,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object GroupBox7: TGroupBox
         Left = 0
-        Top = -15
-        Width = 473
+        Top = 1204
+        Width = 605
         Height = 181
         Align = alTop
         Caption = 'Sistema'
@@ -1343,29 +1349,29 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_ConfiguracoesBtns: TPanel
         Left = 0
-        Top = 547
-        Width = 473
-        Height = 36
-        Align = alBottom
+        Top = 1769
+        Width = 605
+        Height = 30
+        Align = alCustom
         AutoSize = True
         BevelOuter = bvNone
-        Color = 14737632
+        Color = clWhite
         ParentBackground = False
         TabOrder = 7
         object Pnl_BtnSalvarConfiguracoes: TPanel
-          Left = 323
+          Left = 455
           Top = 0
           Width = 150
-          Height = 36
+          Height = 30
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 0
-          ExplicitLeft = 173
+          ExplicitHeight = 36
           object Shp_BtnSalvarConfiguracoes: TShape
             Left = 0
             Top = 0
             Width = 150
-            Height = 36
+            Height = 30
             Align = alClient
             Brush.Color = 4227072
             Pen.Color = clLime
@@ -1378,7 +1384,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Left = 0
             Top = 0
             Width = 150
-            Height = 36
+            Height = 30
             Cursor = crHandPoint
             Align = alClient
             Caption = 'Salvar'
@@ -1390,22 +1396,23 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
             ExplicitLeft = -6
+            ExplicitHeight = 36
           end
         end
         object Pnl_BtnCancelarConfiguracoes: TPanel
-          Left = 173
+          Left = 305
           Top = 0
           Width = 150
-          Height = 36
+          Height = 30
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitLeft = 323
+          ExplicitHeight = 36
           object Shp_BtnCancelarConfiguracoes: TShape
             Left = 0
             Top = 0
             Width = 150
-            Height = 36
+            Height = 30
             Align = alClient
             Brush.Color = 168
             Pen.Color = clRed
@@ -1418,7 +1425,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Left = 0
             Top = 0
             Width = 150
-            Height = 36
+            Height = 30
             Cursor = crHandPoint
             Align = alClient
             Caption = 'Cancelar'
@@ -1429,6 +1436,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
+            OnClick = Btn_BtnCancelarConfiguracoesClick
             ExplicitLeft = 22
             ExplicitWidth = 178
             ExplicitHeight = 48
@@ -1441,7 +1449,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Filter = 
       'JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Po' +
       'rtable Network Graphics (*.png)|*.png'
-    Left = 430
-    Top = 366
+    Left = 14
+    Top = 238
   end
 end
