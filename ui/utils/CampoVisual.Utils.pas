@@ -15,6 +15,7 @@ O que ela deve:
 
 unit CampoVisual.Utils;
 interface
+uses System.SysUtils, Vcl.StdCtrls;
 
 type
  TCampoVisualUtils = Class
@@ -23,8 +24,17 @@ type
 
    public
     {Public Declarations}
+   class procedure LimparCamposEdt(AEdit: TEdit);
+
  End;
 
 implementation
+
+{ TCampoVisualUtils }
+
+class procedure TCampoVisualUtils.LimparCamposEdt(AEdit: TEdit);
+begin
+ AEdit.Text := '';
+end;
 
 end.

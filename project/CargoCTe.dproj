@@ -138,6 +138,7 @@
             <Form>Frm_NovaTransportadora</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\ui\utils\CampoVisual.Utils.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

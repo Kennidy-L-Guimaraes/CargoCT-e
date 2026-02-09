@@ -3,14 +3,16 @@
 	<Transactions>
     <Transaction>2024/12/26 19:43:11.000.166,=C:\Users\PC-Kenny\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2026/01/30 10:19:24.000.867,=C:\Users\PC-Kenny\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026/01/30 18:18:55.000.884,C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCTe.View.pas=C:\Users\PC-Kenny\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026/01/30 18:18:55.000.884,C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCTe.View.dfm=C:\Users\PC-Kenny\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2026/01/30 18:19:22.000.043,C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\CargoCTe.dproj=C:\Users\PC-Kenny\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2026/01/30 18:18:55.000.884,C:\Users\PC-Kenny\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCTe.View.dfm</Transaction>
+    <Transaction>2026/01/30 18:18:55.000.884,C:\Users\PC-Kenny\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCTe.View.pas</Transaction>
+    <Transaction>2026/01/30 18:19:22.000.043,C:\Users\PC-Kenny\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\CargoCTe.dproj</Transaction>
     <Transaction>2026/02/05 11:46:55.000.170,=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.pas</Transaction>
-    <Transaction>2026/02/05 12:09:21.000.732,C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.dfm=C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCteConfig.View.dfm</Transaction>
-    <Transaction>2026/02/05 12:09:21.000.732,C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.pas=C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCteConfig.View.pas</Transaction>
+    <Transaction>2026/02/05 12:09:21.000.732,C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCteConfig.View.pas=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.pas</Transaction>
+    <Transaction>2026/02/05 12:09:21.000.732,C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCteConfig.View.dfm=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.dfm</Transaction>
     <Transaction>2026/02/06 13:17:21.000.127,=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.pas</Transaction>
-    <Transaction>2026/02/06 13:30:36.000.437,C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.pas=C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCteNovaTransportadora.View.pas</Transaction>
-    <Transaction>2026/02/06 13:30:36.000.437,C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.dfm=C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCteNovaTransportadora.View.dfm</Transaction>
+    <Transaction>2026/02/06 13:30:36.000.437,C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCteNovaTransportadora.View.dfm=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.dfm</Transaction>
+    <Transaction>2026/02/06 13:30:36.000.437,C:\Users\PC-Kenny\Desktop\Cargo CT-e\view\CargoCteNovaTransportadora.View.pas=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.pas</Transaction>
+    <Transaction>2026/02/08 18:47:53.235,=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.pas</Transaction>
+    <Transaction>2026/02/08 18:57:40.377,C:\Users\PC-Kenny\Desktop\Cargo CT-e\ui\utils\CampoVisual.Utils.pas=C:\Users\PC-Kenny\Desktop\Cargo CT-e\Project\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

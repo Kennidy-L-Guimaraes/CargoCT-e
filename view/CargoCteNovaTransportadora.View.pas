@@ -5,43 +5,43 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtDlgs;
+  Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg;
 
 type
   TFrm_NovaTransportadora = class(TForm)
-    Panel1: TPanel;
+    Pnl_Background: TPanel;
     Opd_BuscarImagem: TOpenPictureDialog;
-    ScrollBox1: TScrollBox;
-    GroupBox1: TGroupBox;
+    Scbx_NovaTransportadora: TScrollBox;
+    Grbx_IdentificacaoFiscal: TGroupBox;
     Pnl_IdentificacaoCte: TPanel;
     Lbl_IdentificacaoSerie: TLabel;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Image2: TImage;
-    Edt_IdentificacaoSerie: TEdit;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    ComboBox1: TComboBox;
-    GroupBox2: TGroupBox;
-    Panel2: TPanel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    Image1: TImage;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Edit5: TEdit;
-    Edit6: TEdit;
-    Edit7: TEdit;
-    Edit8: TEdit;
-    Edit9: TEdit;
-    Edit10: TEdit;
+    Lbl_IdentificacaoRS: TLabel;
+    Lbl_IdentificacaoInscricaoIE: TLabel;
+    Lbl_IdentificacaoRegimeTribu: TLabel;
+    Img_IdentificacaoCNPJLupa: TImage;
+    Edt_IdentificacaoCNPJ: TEdit;
+    Edt_IdentificacaoFiscalRS: TEdit;
+    Edt_IdentificacaoInscricaoIE: TEdit;
+    Cmbx_IdentificacaoRegimeTribu: TComboBox;
+    Grbx_EnderecoFiscal: TGroupBox;
+    Pnl_EnderecoFiscal: TPanel;
+    Lbl_EnderecoCEP: TLabel;
+    Lbl_EnderecoMunicipio: TLabel;
+    Lbl_EnderecoBairro: TLabel;
+    Lbl_EnderecoLogradouro: TLabel;
+    Lbl_EnderecoNumero: TLabel;
+    Lbl_EnderecoCodigoIBGE: TLabel;
+    Lbl_EnderecoComplemento: TLabel;
+    Lbl_EnderecoUF: TLabel;
+    Img_EnderecoLupa: TImage;
+    Edt_EnderecoCEP: TEdit;
+    Edt_EnderecoMunicipio: TEdit;
+    Edt_EnderecoBairro: TEdit;
+    Edt_EnderecoLogradouro: TEdit;
+    Edt_EnderecoNumero: TEdit;
+    Edt_EnderecoCodigoIBGE: TEdit;
+    Edt_EnderecoComplemento: TEdit;
+    Edt_EnderecoUF: TEdit;
     GroupBox3: TGroupBox;
     Panel3: TPanel;
     Label12: TLabel;
@@ -93,11 +93,12 @@ type
     Pnl_BtnCancelarConfiguracoes: TPanel;
     Shp_BtnCancelarConfiguracoes: TShape;
     Btn_BtnCancelarConfiguracoes: TSpeedButton;
-    Panel8: TPanel;
-    Image3: TImage;
-    Button1: TButton;
+    Pnl_IdentificacaoFiscalLogo: TPanel;
+    Img_IdentificacaoLogo: TImage;
+    Btn_IdentificacaoLogo: TButton;
     Image4: TImage;
     procedure Btn_BtnCancelarConfiguracoesClick(Sender: TObject);
+    procedure ResetarConfiguracoes;
   private
     { Private declarations }
   public
@@ -111,11 +112,34 @@ implementation
 
 {$R *.dfm}
 
+uses CampoVisual.Utils;
+
 procedure TFrm_NovaTransportadora.Btn_BtnCancelarConfiguracoesClick(
   Sender: TObject);
 begin
+  ResetarConfiguracoes;
   Frm_NovaTransportadora.Close;
+end;
 
+procedure TFrm_NovaTransportadora.ResetarConfiguracoes;
+begin
+  //Identificação Fiscal
+  TCampoVisualUtils.LimparCamposEdt(Edt_IdentificacaoCNPJ);
+  TCampoVisualUtils.LimparCamposEdt(Edt_IdentificacaoFiscalRS);
+  TCampoVisualUtils.LimparCamposEdt(Edt_IdentificacaoInscricaoIE);
+
+  //Endereço Fiscal
+  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoCEP);
+  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoMunicipio);
+  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoBairro);
+  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoLogradouro);
+  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoNumero);
+  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoCodigoIBGE);
+  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoComplemento);
+  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoUF);
+
+  //Resetar Posição do ScrollBox
+  Scbx_NovaTransportadora.VertScrollBar.Position := 0;
 end;
 
 end.
