@@ -23,7 +23,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 647
     DesignSize = (
       876
       649)
@@ -37,7 +36,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3362,7 +3360,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -3658,7 +3655,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Top = 1
           Width = 740
           Height = 462
-          ActivePage = Tbsh_IdentificacaoETomador
+          ActivePage = Tbsh_Nota
           Align = alClient
           TabOrder = 0
           object Tbsh_IdentificacaoETomador: TTabSheet
@@ -7124,7 +7121,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           object Tbsh_Nota: TTabSheet
             Caption = 'Nota'
             ImageIndex = 5
-            object Pnl_NotaBtns: TPanel
+            object Pnl_BtnsNotas: TPanel
               Left = 0
               Top = 384
               Width = 732
@@ -7134,8 +7131,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
               AutoSize = True
               BevelOuter = bvNone
               TabOrder = 0
-              ExplicitWidth = 53
-              object Pnl_NotaBtnsGerarNota: TPanel
+              object Pnl_BtnsNotasGerarNota: TPanel
                 Left = 0
                 Top = 0
                 Width = 366
@@ -7157,7 +7153,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ExplicitWidth = 65
                   ExplicitHeight = 65
                 end
-                object Btn_NotaBtnsGerarNota: TSpeedButton
+                object Pnl_NotasGerarNota: TSpeedButton
                   Left = 0
                   Top = 0
                   Width = 366
@@ -7178,7 +7174,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ExplicitHeight = 22
                 end
               end
-              object Pnl_NotaBtnsCancelarOperacao: TPanel
+              object Pnl_BtnsNotasCancelarOperacao: TPanel
                 Left = 366
                 Top = 0
                 Width = 366
@@ -7187,7 +7183,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Anchors = []
                 BevelOuter = bvNone
                 TabOrder = 1
-                ExplicitLeft = -313
                 object Shp_NotaBtnsCancelarOperacao: TShape
                   Left = 0
                   Top = 0
@@ -7201,7 +7196,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ExplicitWidth = 65
                   ExplicitHeight = 65
                 end
-                object Btn_NotaBtnsCancelarOperacao: TSpeedButton
+                object Btn_NotasCancelarOperacao: TSpeedButton
                   Left = 0
                   Top = 0
                   Width = 366
@@ -18310,7 +18305,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
-      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
@@ -18347,7 +18341,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
-        ExplicitHeight = 87
       end
     end
   end

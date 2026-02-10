@@ -181,13 +181,13 @@ type
     Pnl_Ajuda: TPanel;
     Mem_Ajuda: TMemo;
     Lbl_Ajuda: TLabel;
-    Pnl_NotaBtns: TPanel;
-    Pnl_NotaBtnsGerarNota: TPanel;
+    Pnl_BtnsNotas: TPanel;
+    Pnl_BtnsNotasGerarNota: TPanel;
     Shp_NotaBtnsGerarNota: TShape;
-    Btn_NotaBtnsGerarNota: TSpeedButton;
-    Pnl_NotaBtnsCancelarOperacao: TPanel;
+    Pnl_NotasGerarNota: TSpeedButton;
+    Pnl_BtnsNotasCancelarOperacao: TPanel;
     Shp_NotaBtnsCancelarOperacao: TShape;
-    Btn_NotaBtnsCancelarOperacao: TSpeedButton;
+    Btn_NotasCancelarOperacao: TSpeedButton;
     Pnl_BtnSair: TPanel;
     Shp_BtnSair: TShape;
     Btn_Sair: TSpeedButton;

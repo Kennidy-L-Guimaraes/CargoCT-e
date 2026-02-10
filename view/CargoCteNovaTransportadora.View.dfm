@@ -24,13 +24,13 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 439
     object Scbx_NovaTransportadora: TScrollBox
       Left = 0
       Top = 0
       Width = 624
       Height = 441
       VertScrollBar.Increment = 15
+      VertScrollBar.Position = 1215
       VertScrollBar.Range = 1802
       VertScrollBar.Tracking = True
       Align = alClient
@@ -40,11 +40,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
-      ExplicitHeight = 439
-      object Image4: TImage
+      object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = 0
-        Width = 605
+        Top = -1215
+        Width = 607
         Height = 161
         Align = alTop
         Picture.Data = {
@@ -4467,11 +4466,12 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         Stretch = True
         ExplicitLeft = -16
         ExplicitTop = -31
+        ExplicitWidth = 605
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = 161
-        Width = 605
+        Top = -1054
+        Width = 607
         Height = 209
         Align = alTop
         Caption = 'Identifica'#231#227'o Fiscal'
@@ -4789,8 +4789,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = 370
-        Width = 605
+        Top = -845
+        Width = 607
         Height = 368
         Align = alTop
         Caption = 'Endere'#231'o Fiscal'
@@ -5136,10 +5136,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
       end
-      object GroupBox3: TGroupBox
+      object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 1546
-        Width = 605
+        Top = 331
+        Width = 607
         Height = 185
         Align = alTop
         Caption = 'Contato'
@@ -5153,14 +5153,14 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 2
-        object Panel3: TPanel
+        object Pnl_Contato: TPanel
           Left = 71
           Top = 36
           Width = 334
           Height = 141
           BevelOuter = bvNone
           TabOrder = 0
-          object Label12: TLabel
+          object Lbl_ContatoTelefone: TLabel
             Left = 16
             Top = 27
             Width = 60
@@ -5173,7 +5173,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label13: TLabel
+          object Lbl_ContatoEmail: TLabel
             Left = 16
             Top = 62
             Width = 46
@@ -5186,7 +5186,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label14: TLabel
+          object Lbl_ContatoResponsavel: TLabel
             Left = 16
             Top = 97
             Width = 85
@@ -5199,7 +5199,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Edit11: TEdit
+          object Edt_ContatoTelefone: TEdit
             Left = 88
             Top = 23
             Width = 236
@@ -5213,7 +5213,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 0
           end
-          object Edit12: TEdit
+          object Edt_ContatoEmail: TEdit
             Left = 80
             Top = 58
             Width = 244
@@ -5227,7 +5227,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 1
           end
-          object Edit13: TEdit
+          object Edt_ContatoResponsavel: TEdit
             Left = 120
             Top = 93
             Width = 204
@@ -5243,10 +5243,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
       end
-      object GroupBox4: TGroupBox
+      object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = 963
-        Width = 605
+        Top = -252
+        Width = 607
         Height = 150
         Align = alTop
         Caption = 'Dados Operacionais'
@@ -5260,14 +5260,14 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 3
-        object Panel4: TPanel
+        object Pnl_DadosOperacionais: TPanel
           Left = 71
           Top = 28
           Width = 334
           Height = 109
           BevelOuter = bvNone
           TabOrder = 0
-          object Label15: TLabel
+          object Lbl_DadosOperacionaisTipoDeTransporte: TLabel
             Left = 16
             Top = 27
             Width = 87
@@ -5280,7 +5280,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label16: TLabel
+          object Lbl_DadosOperacionaisTipoDeOperacao: TLabel
             Left = 16
             Top = 62
             Width = 82
@@ -5293,7 +5293,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object ComboBox2: TComboBox
+          object Cmbx_DadosOperacionaisTipoDeTransporte: TComboBox
             Left = 120
             Top = 23
             Width = 204
@@ -5313,17 +5313,17 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               'Aquavi'#225'rio'
               'Multimodal')
           end
-          object ComboBox3: TComboBox
-            Left = 112
+          object Cmbx_DadosOperacionaisTipoDeOperacao: TComboBox
+            Left = 120
             Top = 58
-            Width = 212
+            Width = 204
             Height = 25
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ItemIndex = 0
+            ItemIndex = 2
             ParentFont = False
             TabOrder = 1
             Text = 'Estadual'
@@ -5334,10 +5334,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
       end
-      object GroupBox5: TGroupBox
+      object Grbx_VeiculoMotorista: TGroupBox
         Left = 0
-        Top = 1113
-        Width = 605
+        Top = -102
+        Width = 607
         Height = 252
         Align = alTop
         Caption = 'Ve'#237'culo e Motorista'
@@ -5351,14 +5351,14 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 4
-        object Panel5: TPanel
+        object Pnl_VeiculoMotorista: TPanel
           Left = 71
           Top = 28
           Width = 334
           Height = 213
           BevelOuter = bvNone
           TabOrder = 0
-          object Label17: TLabel
+          object Lbl_VeiculoMotoristaMotoristaAssociado: TLabel
             Left = 16
             Top = 27
             Width = 93
@@ -5371,7 +5371,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label18: TLabel
+          object Lbl_VeiculoMotoristaPlaca: TLabel
             Left = 16
             Top = 62
             Width = 38
@@ -5384,7 +5384,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label19: TLabel
+          object Lbl_VeiculoMotoristaPlacaUF: TLabel
             Left = 16
             Top = 97
             Width = 59
@@ -5397,7 +5397,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label20: TLabel
+          object Lbl_VeiculoMotoristaTipoVeiculo: TLabel
             Left = 16
             Top = 132
             Width = 65
@@ -5410,7 +5410,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label21: TLabel
+          object Lbl_VeiculoMotoristaCapacidade: TLabel
             Left = 16
             Top = 167
             Width = 82
@@ -5423,7 +5423,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object ComboBox4: TComboBox
+          object Cmbx_VeiculoMotoristaMotoristaAssociado: TComboBox
             Left = 123
             Top = 23
             Width = 201
@@ -5442,7 +5442,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               'Agregado'
               'Terceirizado')
           end
-          object Edit14: TEdit
+          object Edt_VeiculoMotoristaPlaca: TEdit
             Left = 72
             Top = 58
             Width = 252
@@ -5456,7 +5456,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 1
           end
-          object Edit16: TEdit
+          object Edt_VeiculoMotoristaTipoVeiculo: TEdit
             Left = 96
             Top = 128
             Width = 228
@@ -5470,7 +5470,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 2
           end
-          object Edit17: TEdit
+          object Edt_VeiculoMotoristaCapacidade: TEdit
             Left = 112
             Top = 163
             Width = 212
@@ -5484,7 +5484,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 3
           end
-          object ComboBox5: TComboBox
+          object Cmbx_VeiculoMotoristaPlacaUF: TComboBox
             Left = 96
             Top = 93
             Width = 228
@@ -5529,10 +5529,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
       end
-      object GroupBox6: TGroupBox
+      object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = 738
-        Width = 605
+        Top = -477
+        Width = 607
         Height = 225
         Align = alTop
         Caption = 'Dados Fiscais'
@@ -5546,14 +5546,14 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 5
-        object Panel6: TPanel
+        object Pnl_DadosFiscais: TPanel
           Left = 71
           Top = 28
           Width = 334
           Height = 181
           BevelOuter = bvNone
           TabOrder = 0
-          object Label24: TLabel
+          object Lbl_DadosTipoTributacao: TLabel
             Left = 16
             Top = 60
             Width = 125
@@ -5566,7 +5566,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label25: TLabel
+          object Lbl_DadosObservacaoFiscal: TLabel
             Left = 16
             Top = 95
             Width = 121
@@ -5579,7 +5579,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label26: TLabel
+          object Lbl_DadosAliquotaPadrao: TLabel
             Left = 16
             Top = 130
             Width = 126
@@ -5592,7 +5592,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label27: TLabel
+          object Lbl_DadosPapelCTe: TLabel
             Left = 16
             Top = 24
             Width = 74
@@ -5605,7 +5605,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Edit18: TEdit
+          object Edt_DadosObservacaoFiscal: TEdit
             Left = 160
             Top = 94
             Width = 164
@@ -5619,7 +5619,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 0
           end
-          object Edit19: TEdit
+          object Edt_DadosAliquotaPadrao: TEdit
             Left = 160
             Top = 129
             Width = 164
@@ -5633,7 +5633,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 1
           end
-          object ComboBox7: TComboBox
+          object Cmbx_DadosTipoTributacao: TComboBox
             Left = 160
             Top = 59
             Width = 164
@@ -5651,7 +5651,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               'Isento'
               'Diferido')
           end
-          object ComboBox8: TComboBox
+          object Cmbx_DadosPapelCTe: TComboBox
             Left = 112
             Top = 23
             Width = 212
@@ -5661,6 +5661,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
+            ItemIndex = 4
             ParentFont = False
             TabOrder = 3
             Text = 'Emitente'
@@ -5673,10 +5674,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
       end
-      object GroupBox7: TGroupBox
+      object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = 1365
-        Width = 605
+        Top = 150
+        Width = 607
         Height = 181
         Align = alTop
         Caption = 'Sistema'
@@ -5690,14 +5691,14 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 6
-        object Panel7: TPanel
+        object Panel_Sistema: TPanel
           Left = 71
           Top = 28
           Width = 334
           Height = 141
           BevelOuter = bvNone
           TabOrder = 0
-          object Label23: TLabel
+          object Lbl_SistemaStatus: TLabel
             Left = 16
             Top = 24
             Width = 43
@@ -5710,7 +5711,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label29: TLabel
+          object Lbl_SistemaDataCadastro: TLabel
             Left = 16
             Top = 62
             Width = 119
@@ -5723,7 +5724,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label30: TLabel
+          object Lbl_SistemaResponsavel: TLabel
             Left = 16
             Top = 97
             Width = 85
@@ -5736,7 +5737,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object ComboBox9: TComboBox
+          object Cmbx_SistemaStatus: TComboBox
             Left = 80
             Top = 23
             Width = 244
@@ -5754,7 +5755,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               'Ativo'
               'Inativo')
           end
-          object Edit15: TEdit
+          object Edt_SistemaDataCadastro: TEdit
             Left = 152
             Top = 61
             Width = 172
@@ -5768,7 +5769,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 1
           end
-          object Edit20: TEdit
+          object Edt_SistemaResponsavel: TEdit
             Left = 120
             Top = 96
             Width = 204
@@ -5784,9 +5785,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
       end
-      object Pnl_ConfiguracoesBtns: TPanel
+      object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 1769
+        Top = 554
         Width = 605
         Height = 30
         Align = alCustom
@@ -5795,7 +5796,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         Color = clWhite
         ParentBackground = False
         TabOrder = 7
-        object Pnl_BtnSalvarConfiguracoes: TPanel
+        object Pnl_BtnSalvarNovaTransportadora: TPanel
           Left = 455
           Top = 0
           Width = 150
@@ -5803,8 +5804,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 0
-          ExplicitHeight = 36
-          object Shp_BtnSalvarConfiguracoes: TShape
+          object Shp_BtnSalvarNovaTransportadora: TShape
             Left = 0
             Top = 0
             Width = 150
@@ -5817,7 +5817,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ExplicitWidth = 65
             ExplicitHeight = 65
           end
-          object Btn_BtnSalvarrConfiguracoes: TSpeedButton
+          object Btn_SalvarNovaTransportadora: TSpeedButton
             Left = 0
             Top = 0
             Width = 150
@@ -5836,7 +5836,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ExplicitHeight = 36
           end
         end
-        object Pnl_BtnCancelarConfiguracoes: TPanel
+        object Pnl_BtnCancelarNovaTransportadora: TPanel
           Left = 305
           Top = 0
           Width = 150
@@ -5844,8 +5844,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitHeight = 36
-          object Shp_BtnCancelarConfiguracoes: TShape
+          object Shp_BtnCancelarNovaTransportadora: TShape
             Left = 0
             Top = 0
             Width = 150
@@ -5858,7 +5857,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ExplicitWidth = 65
             ExplicitHeight = 65
           end
-          object Btn_BtnCancelarConfiguracoes: TSpeedButton
+          object Btn_CancelarNovaTransportadora: TSpeedButton
             Left = 0
             Top = 0
             Width = 150
@@ -5873,7 +5872,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
-            OnClick = Btn_BtnCancelarConfiguracoesClick
+            OnClick = Btn_CancelarNovaTransportadoraClick
             ExplicitLeft = 22
             ExplicitWidth = 178
             ExplicitHeight = 48
@@ -5886,7 +5885,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Filter = 
       'JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Po' +
       'rtable Network Graphics (*.png)|*.png'
-    Left = 14
-    Top = 238
+    Left = 598
+    Top = 65534
   end
 end
