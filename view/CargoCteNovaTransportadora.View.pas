@@ -138,6 +138,25 @@ begin
   TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoComplemento);
   TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoUF);
 
+  //Dados Fiscais
+  TCampoVisualUtils.LimparCamposEdt(Edt_DadosObservacaoFiscal);
+  TCampoVisualUtils.LimparCamposEdt(Edt_DadosAliquotaPadrao);
+
+  //Veiculo e Motorista
+  TCampoVisualUtils.LimparCamposEdt(Edt_VeiculoMotoristaPlaca);
+  TCampoVisualUtils.LimparCamposEdt(Edt_VeiculoMotoristaTipoVeiculo);
+  TCampoVisualUtils.LimparCamposEdt(Edt_VeiculoMotoristaCapacidade);
+
+  //Sistema
+  TCampoVisualUtils.LimparCamposEdt(Edt_SistemaDataCadastro);
+  TCampoVisualUtils.LimparCamposEdt(Edt_SistemaResponsavel);
+
+  //Contato
+  TCampoVisualUtils.LimparCamposEdt(Edt_ContatoTelefone);
+  TCampoVisualUtils.LimparCamposEdt(Edt_ContatoEmail);
+  TCampoVisualUtils.LimparCamposEdt(Edt_ContatoResponsavel);
+
+
   //Resetar Posição do ScrollBox
   Scbx_NovaTransportadora.VertScrollBar.Position := 0;
 end;
