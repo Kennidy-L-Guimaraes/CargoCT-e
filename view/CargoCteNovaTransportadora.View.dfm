@@ -4,7 +4,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
   AutoSize = True
   BorderIcons = [biSystemMenu]
   Caption = 'Registrar Nova Transportadora'
-  ClientHeight = 660
+  ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,20 +18,19 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Left = 0
     Top = 0
     Width = 624
-    Height = 660
+    Height = 441
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 441
     object Scbx_NovaTransportadora: TScrollBox
       Left = 0
       Top = 0
       Width = 624
-      Height = 660
+      Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 917
+      VertScrollBar.Position = 405
       VertScrollBar.Range = 1802
       VertScrollBar.Tracking = True
       Align = alClient
@@ -41,10 +40,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
-      ExplicitHeight = 441
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -917
+        Top = -405
         Width = 607
         Height = 161
         Align = alTop
@@ -4472,7 +4470,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = -756
+        Top = -244
         Width = 607
         Height = 209
         Align = alTop
@@ -4791,7 +4789,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = -547
+        Top = -35
         Width = 607
         Height = 368
         Align = alTop
@@ -5140,7 +5138,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 629
+        Top = 1141
         Width = 607
         Height = 185
         Align = alTop
@@ -5247,7 +5245,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = 46
+        Top = 558
         Width = 607
         Height = 150
         Align = alTop
@@ -5338,7 +5336,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_VeiculoMotorista: TGroupBox
         Left = 0
-        Top = 196
+        Top = 708
         Width = 607
         Height = 252
         Align = alTop
@@ -5533,7 +5531,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = -179
+        Top = 333
         Width = 607
         Height = 225
         Align = alTop
@@ -5645,6 +5643,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
+            ItemIndex = 2
             ParentFont = False
             TabOrder = 2
             Text = 'Normal'
@@ -5678,7 +5677,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = 448
+        Top = 960
         Width = 607
         Height = 181
         Align = alTop
@@ -5789,7 +5788,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 852
+        Top = 1364
         Width = 605
         Height = 30
         Align = alCustom

@@ -139,6 +139,8 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\ui\utils\CampoVisual.Utils.pas"/>
+        <DCCReference Include="..\model\Transportadora.Interfaces.pas"/>
+        <DCCReference Include="..\model\Endereco.Tipo.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
