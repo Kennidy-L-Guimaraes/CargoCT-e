@@ -18,7 +18,12 @@ TEndereco = class
 
   procedure ValidarDados;
   procedure ValidarEstadoUF;
-  procedure ValidarCodigoIBGE; 
+  procedure ValidarCodigoIBGE;
+  procedure ValidarMunicipio;
+  procedure ValidarBairro;
+  procedure ValidarLogradouro;
+  procedure ValidarNumero;
+
   Public
   {Public Declarations}
 
@@ -33,10 +38,6 @@ TEndereco = class
   property CodigoIBGE : string  read FCodigoIBGE;
   property Complemento: string  read FComplemento;
   property EstadoUF   : string  read FEstadoUF;
-
-
-
-
 
 end;
 
@@ -58,7 +59,21 @@ begin
   ValidarDados;
 end;
 
+procedure TEndereco.ValidarBairro;
+begin
+ //VALIDAR BAIRRO
+ //Validar se bairro está vazio
+ If FBairro = '' then
+  raise Exception.Create('Bairro Inválido, não pode ser vazio!');
+
+ //Validar se o número de caracteres é aceitável
+ if FBairro.Length < 2 then
+  raise Exception.Create('Bairro Inválido, caracteres insuficientes');
+end;
+
 procedure TEndereco.ValidarCodigoIBGE;
+var
+C: char;
 begin
     //VALIDAR CODIGOIBGE
     //Valida se o código IBGE está vazio
@@ -68,14 +83,21 @@ begin
    //Valida se o código IBGE possui o número de caracteres permitido
  if FCodigoIBGE.Length <> 7 then
    raise Exception.Create('O número de caracteres do código IBGE é insuficiente');
+
+   //Validar se o código do IBGE é apenas números
+  for C in FCodigoIBGE do
+   if not CharInSet(C, ['0'..'9']) then
+     raise Exception.Create('Código IBGE Inválido, não deve conter letras!');
 end;
 
 procedure TEndereco.ValidarDados;
-var
-C : Char;
 begin
-  ValidarEstadoUF; 
-  ValidarCodigoIBGE; 
+  ValidarEstadoUF;
+  ValidarCodigoIBGE;
+  ValidarMunicipio;
+  ValidarBairro;
+  ValidarLogradouro;
+  ValidarNumero;
 end;
 
 procedure TEndereco.ValidarEstadoUF;
@@ -83,15 +105,50 @@ var
 C: char;
 begin
    //VALIDAR ESTADOS UF
+   //Normalização
+   FEstadoUF := UpperCase(FEstadoUF);
+
    //Valida se o estado possui mais de 2 caracteres
  if Length(FEstadoUF) <> 2 then
   raise Exception.Create('Estado deve possuir 2 caracteres');
-    FEstadoUF := UpperCase(FEstadoUF);
 
   //Valida se o estado contem apenas letras
  for C in FEstadoUF do
  if not CharInSet(C, ['A'..'Z']) then
   raise Exception.Create('Estado deve conter apenas letras.');
  end;
-end. 
+
+procedure TEndereco.ValidarLogradouro;
+begin
+  //VALIDAR LOGRADOURO
+ //Validar se o logradouro está vazio
+ If FLogradouro = '' then
+  raise Exception.Create('Logradouro Inválido, não pode ser vazio!');
+
+  //Validar se o número de caracteres é aceitável
+ if FLogradouro.Length < 2 then
+  raise Exception.Create('Logradouro Inválido, caracteres insuficientes');
+end;
+
+procedure TEndereco.ValidarMunicipio;
+begin
+ //VALIDAR MUNICIPIO
+ //Validar se o municipio está vazio
+ If FMunicipio = '' then
+  raise Exception.Create('Municipio Inválido, não pode ser vazio!');
+
+ //Validar se o número de caracteres é aceitável
+ if FMunicipio.Length < 2 then
+  raise Exception.Create('Municipio Inválido, caracteres insuficientes');
+end;
+
+procedure TEndereco.ValidarNumero;
+begin
+  //VALIDAR NUMERO
+  //Validar se o numero está vazio
+  if FNumero = '' then
+  raise Exception.Create('Número Inválido, não deve estar vazio!');
+end;
+
+end.
 
