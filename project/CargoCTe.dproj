@@ -140,7 +140,8 @@
         </DCCReference>
         <DCCReference Include="..\ui\utils\CampoVisual.Utils.pas"/>
         <DCCReference Include="..\model\Transportadora.Interfaces.pas"/>
-        <DCCReference Include="..\model\Endereco.Tipo.pas"/>
+        <DCCReference Include="..\model\Endereco.Tipo.CEP.pas"/>
+        <DCCReference Include="..\model\IdentidadeFiscal.Tipo.CNPJ.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

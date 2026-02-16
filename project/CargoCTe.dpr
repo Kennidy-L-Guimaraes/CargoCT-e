@@ -8,7 +8,8 @@ uses
   CargoCteNovaTransportadora.View in '..\view\CargoCteNovaTransportadora.View.pas' {Frm_NovaTransportadora},
   CampoVisual.Utils in '..\ui\utils\CampoVisual.Utils.pas',
   Transportadora.Interfaces in '..\model\Transportadora.Interfaces.pas',
-  Endereco.Tipo in '..\model\Endereco.Tipo.pas';
+  Endereco.Tipo.CEP in '..\model\Endereco.Tipo.CEP.pas',
+  IdentidadeFiscal.Tipo.CNPJ in '..\model\IdentidadeFiscal.Tipo.CNPJ.pas';
 
 {$R *.res}
 
