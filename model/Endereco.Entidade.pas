@@ -55,7 +55,7 @@ begin
   FNumero      := Trim(ANumero);
   FCodigoIBGE  := Trim(ACodigoIBGE);
   FComplemento := Trim(AComplemento);
-  FEstadoUF    := Trim(AEStadoUF);
+  FEstadoUF    := Trim(AEstadoUF);
   ValidarDados;
 end;
 
@@ -101,8 +101,9 @@ begin
 end;
 
 procedure TEndereco.ValidarEstadoUF;
-var
-C: char;
+const
+  UFsValidas: array[0..26] of string = ('AC','AL','AP','AM','BA','CE','DF','ES','GO',
+    'MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO');
 begin
    //VALIDAR ESTADOS UF
    //Normalização
@@ -112,10 +113,11 @@ begin
  if Length(FEstadoUF) <> 2 then
   raise Exception.Create('Estado deve possuir 2 caracteres');
 
-  //Valida se o estado contem apenas letras
- for C in FEstadoUF do
- if not CharInSet(C, ['A'..'Z']) then
-  raise Exception.Create('Estado deve conter apenas letras.');
+  //Valida se o estado é um estado válido
+  if not (FEstadoUF in UFsValidas) then
+   raise Exception.Create('Estado UF inválido.');
+
+
  end;
 
 procedure TEndereco.ValidarLogradouro;
