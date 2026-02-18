@@ -18,7 +18,9 @@ uses
   DUnitTestRunner,
   TestEndereco in '..\Unit\Domain\Entities\TestEndereco.pas',
   Endereco.Entidade in '..\..\src\Domain\Entities\Endereco.Entidade.pas',
-  Endereco.Tipo.CEP in '..\..\src\Domain\ValueObjects\Endereco.Tipo.CEP.pas';
+  Endereco.Tipo.CEP in '..\..\src\Domain\ValueObjects\Endereco.Tipo.CEP.pas',
+  TestIdentidadeFiscal in '..\Unit\Domain\Entities\TestIdentidadeFiscal.pas',
+  IdentidadeFiscal.Entidade in '..\..\src\Domain\Entities\IdentidadeFiscal.Entidade.pas';
 
 {$R *.RES}
 

@@ -24,13 +24,38 @@ type
     procedure SetUp; override;
     procedure TearDown; override;
   published
-    procedure TestValidarEstadoUFValido;
-    procedure TestValidarEstadoUFInvalido;
+    procedure TestarEstadoValido;
+    procedure TestarEstadoInvalido;
+    procedure TestarCepValido;
+    procedure TestarCepInvalido;
+    procedure TestarMunicipioValido;
+    procedure TestarMunicipioInvalido;
+    procedure TestarBairroValido;
+    procedure TestarBairroInvalido;
+    procedure TestarLogradouroValido;
+    procedure TestarLogradouroInvalido;
+    procedure TestarNumeroValido;
+    procedure TestarNumeroInvalido;
+    procedure TestarCodigoIBGEValido;
+    procedure TestarCodigoIBGEInvalido;
+    procedure TestarComplementoValido;
+    procedure TestarComplementoInvalido;
   end;
 
 implementation
 
 { TestTEndereco }
+{   === ORDEM CORRETA ===
+  CEP
+  EstadoUF
+  Municipio
+  Bairro
+  Logradouro
+  Numero
+  CodigoIBGE
+  Complemento
+}
+
 
 procedure TestTEndereco.SetUp;
 begin
@@ -44,43 +69,328 @@ begin
 
 end;
 
-procedure TestTEndereco.TestValidarEstadoUFInvalido;
+
+procedure TestTEndereco.TestarEstadoValido;
 var
   CEP: TCEP;
 begin
-  CEP := TCEP.Create('68500000');
-    begin
-      TEndereco.Create(
-        CEP,
-        '',         // Numero Inválido
-        '2704302',     // IBGE válido
-        'Maceio',      // Município válido
-        'Centro',      // Bairro válido
-        'Rua A',       // Logradouro válido
-        '',
-        'AL'           // UF Válido
-      );
-    end;
+  CEP       := TCEP.Create('12345678');
+  FEndereco := TEndereco.Create(
+   CEP,
+   'SP',
+   'São Paulo',
+   'São Bento',
+   'Avenida Paulista',
+   '123',
+   '3550308',
+   'Sala 10'
+   );
+  CheckNotNull(FEndereco);
 end;
 
-procedure TestTEndereco.TestValidarEstadoUFValido;
+procedure TestTEndereco.TestarEstadoInvalido;
 var
   CEP: TCEP;
 begin
-  CEP := TCEP.Create('57000000'); // ajuste conforme sua classe
+  CEP := TCEP.Create('12345678');
+  CheckException(
+    procedure
+    begin
+      TEndereco.Create(
+       CEP,
+       '',
+       'São Paulo',
+       'São Bento',
+       'Avenida Paulista',
+       '123',
+       '3550308',
+       'Sala 10'
+      );
+    end,
+    Exception);
+end;
 
-  CheckNotNull(
-    TEndereco.Create(
-      CEP,
-      '123',
-      '2704302',
-      'Alagoas',
-      'Centro',
-      'Rua A',
-      '',
-      'AL'
-    )
+
+procedure TestTEndereco.TestarCepValido;
+var
+  CEP: TCEP;
+begin
+  CEP       := TCEP.Create('12345678');
+  FEndereco := TEndereco.Create(
+   CEP,
+   'SP',
+   'São Paulo',
+   'São Bento',
+   'Avenida Paulista',
+   '123',
+   '3550308',
+   'Sala 10'
+   );
+  CheckNotNull(FEndereco);
+end;
+
+procedure TestTEndereco.TestarCepInvalido;
+begin
+  CheckException(
+    procedure
+    var
+      CEP: TCEP;
+    begin
+      CEP := TCEP.Create('123'); // falha no record
+      TEndereco.Create(
+       CEP,
+       'SP',
+       'São Paulo',
+       'São Bento',
+       'Avenida Paulista',
+       '123',
+       '3550308',
+       'Sala 10'
+      );
+    end,
+    Exception);
+end;
+
+procedure TestTEndereco.TestarMunicipioValido;
+var
+  CEP: TCEP;
+begin
+  CEP       := TCEP.Create('12345678');
+  FEndereco := TEndereco.Create(
+   CEP,
+   'SP',
+   'São Paulo',
+   'São Bento',
+   'Avenida Paulista',
+   '123',
+   '3550308',
+   'Sala 10'
   );
+  CheckNotNull(FEndereco);
+end;
+
+procedure TestTEndereco.TestarMunicipioInvalido;
+var
+  CEP: TCEP;
+begin
+  CEP := TCEP.Create('12345678');
+
+  CheckException(
+    procedure
+    begin
+      TEndereco.Create(
+       CEP,
+       'SP',
+       '',
+       'São Bento',
+       'Avenida Paulista',
+       '123',
+       '3550308',
+       'Sala 10'
+      );
+    end,
+    Exception);
+end;
+
+procedure TestTEndereco.TestarBairroValido;
+var
+  CEP: TCEP;
+begin
+  CEP       := TCEP.Create('12345678');
+  FEndereco := TEndereco.Create(
+   CEP,
+   'SP',
+   'São Paulo',
+   'São Bento',
+   'Avenida Paulista',
+   '123',
+   '3550308',
+   'Sala 10'
+   );
+  CheckNotNull(FEndereco);
+end;
+
+procedure TestTEndereco.TestarBairroInvalido;
+var
+  CEP: TCEP;
+begin
+  CEP := TCEP.Create('12345678');
+
+  CheckException(
+    procedure
+    begin
+      TEndereco.Create(
+       CEP,
+       'SP',
+       'São Paulo',
+       '',
+       'Avenida Paulista',
+       '123',
+       '3550308',
+       'Sala 10'
+      );
+    end,
+    Exception);
+end;
+
+procedure TestTEndereco.TestarLogradouroValido;
+var
+  CEP: TCEP;
+begin
+  CEP       := TCEP.Create('12345678');
+  FEndereco := TEndereco.Create(
+   CEP,
+   'SP',
+   'São Paulo',
+   'São Bento',
+   'Avenida Paulista',
+   '123',
+   '3550308',
+   'Sala 10'
+   );
+  CheckNotNull(FEndereco);
+end;
+
+procedure TestTEndereco.TestarLogradouroInvalido;
+var
+  CEP: TCEP;
+begin
+  CEP := TCEP.Create('12345678');
+  CheckException(
+    procedure
+    begin
+      TEndereco.Create(
+       CEP,
+       'SP',
+       'São Paulo',
+       'São Bento',
+       '',
+       '123',
+       '3550308',
+       'Sala 10'
+      );
+    end,
+    Exception);
+end;
+
+procedure TestTEndereco.TestarNumeroValido;
+var
+  CEP: TCEP;
+begin
+  CEP       := TCEP.Create('12345678');
+  FEndereco := TEndereco.Create(
+   CEP,
+   'SP',
+   'São Paulo',
+   'São Bento',
+   'Avenida Paulista',
+   '123',
+   '3550308',
+   'Sala 10'
+   );
+  CheckNotNull(FEndereco);
+end;
+
+procedure TestTEndereco.TestarNumeroInvalido;
+var
+  CEP: TCEP;
+begin
+  CEP := TCEP.Create('12345678');
+  CheckException(
+    procedure
+    begin
+      TEndereco.Create(
+       CEP,
+       'SP',
+       'São Paulo',
+       'São Bento',
+       'Avenida Paulista',
+       '',
+       '3550308',
+       'Sala 10'
+      );
+    end,
+    Exception);
+end;
+
+procedure TestTEndereco.TestarCodigoIBGEValido;
+var
+  CEP: TCEP;
+begin
+  CEP       := TCEP.Create('12345678');
+  FEndereco := TEndereco.Create(
+   CEP,
+   'SP',
+   'São Paulo',
+   'São Bento',
+   'Avenida Paulista',
+   '123',
+   '3550308',
+   'Sala 10'
+  );
+  CheckNotNull(FEndereco);
+end;
+
+procedure TestTEndereco.TestarCodigoIBGEInvalido;
+var
+  CEP: TCEP;
+begin
+  CEP := TCEP.Create('12345678');
+  CheckException(
+    procedure
+    begin
+      TEndereco.Create(
+       CEP,
+       'SP',
+       'São Paulo',
+       'São Bento',
+       'Avenida Paulista',
+       '123',
+       '',
+       'Sala 10'
+    );
+    end,
+    Exception);
+end;
+
+procedure TestTEndereco.TestarComplementoValido;
+var
+  CEP: TCEP;
+begin
+  CEP       := TCEP.Create('12345678');
+  FEndereco := TEndereco.Create(
+   CEP,
+   'SP',
+   'São Paulo',
+   'São Bento',
+   'Avenida Paulista',
+   '123',
+   '3550308',
+   'Sala 10'
+   );
+  CheckNotNull(FEndereco);
+end;
+
+procedure TestTEndereco.TestarComplementoInvalido;
+var
+  CEP: TCEP;
+begin
+  CEP := TCEP.Create('12345678');
+  CheckException(
+    procedure
+    begin
+      TEndereco.Create(
+       CEP,
+       'SP',
+       'São Paulo',
+       'São Bento',
+       'Avenida Paulista',
+       '123',
+       '3550308',
+       ''
+      );
+    end,
+    Exception);
 end;
 
 initialization

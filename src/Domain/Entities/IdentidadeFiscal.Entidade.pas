@@ -18,7 +18,7 @@ TIdentidadeFiscal = class
     procedure ValidarRegimeTributario;
   Public
   {Public Declarations}
-    constructor Create(ACNPJ, ARazaoSocial, AInscricaoIE, ARegimeTributario: string);
+    constructor Create(ACNPJ: TCNPJ; ARazaoSocial, AInscricaoIE, ARegimeTributario: string);
     property CNPJ             : TCNPJ   read FCNPJ;
     property RazaoSocial      : string  read FRazaoSocial;
     property InscricaoIE      : string  read FInscricaoIE;
@@ -30,10 +30,10 @@ implementation
 
 { TIdentidadeFiscal }
 
-constructor TIdentidadeFiscal.Create(ACNPJ, ARazaoSocial, AInscricaoIE,
+constructor TIdentidadeFiscal.Create(ACNPJ: TCNPJ; ARazaoSocial, AInscricaoIE,
   ARegimeTributario: string);
 begin
-   FCNPJ             := TCNPJ.Create(ACNPJ);
+   FCNPJ             := TCNPJ.Create(ACNPJ.Valor);
    FRazaoSocial      := Trim(ARazaoSocial);
    FInscricaoIE      := Trim(AInscricaoIE);
    FRegimeTributario := Trim(ARegimeTributario);
