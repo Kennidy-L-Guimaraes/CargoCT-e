@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{04FAA9FA-4C8D-4D58-89EA-C1FDA52E93A8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\CargoCTe.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CargoCTeTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CargoCTe">
+        <MSBuild Projects="..\CargoCTe.dproj"/>
+    </Target>
+    <Target Name="CargoCTe:Clean">
+        <MSBuild Projects="..\CargoCTe.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CargoCTe:Make">
+        <MSBuild Projects="..\CargoCTe.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CargoCTeTests">
+        <MSBuild Projects="CargoCTeTests.dproj"/>
+    </Target>
+    <Target Name="CargoCTeTests:Clean">
+        <MSBuild Projects="CargoCTeTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CargoCTeTests:Make">
+        <MSBuild Projects="CargoCTeTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CargoCTe;CargoCTeTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CargoCTe:Clean;CargoCTeTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CargoCTe:Make;CargoCTeTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

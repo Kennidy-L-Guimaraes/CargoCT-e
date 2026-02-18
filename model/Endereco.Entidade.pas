@@ -104,6 +104,9 @@ procedure TEndereco.ValidarEstadoUF;
 const
   UFsValidas: array[0..26] of string = ('AC','AL','AP','AM','BA','CE','DF','ES','GO',
     'MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO');
+  var
+  Encontrado : boolean;
+  UF         : string;
 begin
    //VALIDAR ESTADOS UF
    //Normalização
@@ -114,10 +117,17 @@ begin
   raise Exception.Create('Estado deve possuir 2 caracteres');
 
   //Valida se o estado é um estado válido
-  if not (FEstadoUF in UFsValidas) then
-   raise Exception.Create('Estado UF inválido.');
-
-
+  Encontrado := False;
+  for UF in UFsValidas do
+    begin
+      if FEstadoUF = UF then
+      begin
+        Encontrado := True;
+        Break;
+      end;
+    end;
+  if not Encontrado then
+    raise Exception.Create('Estado UF inválido.');
  end;
 
 procedure TEndereco.ValidarLogradouro;
