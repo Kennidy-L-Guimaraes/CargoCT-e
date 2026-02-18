@@ -1,4 +1,4 @@
-unit TestIdentidadeFiscal;
+unit TestIdentidadeFiscal.Entidade;
 {
 
   Delphi DUnit Test Case

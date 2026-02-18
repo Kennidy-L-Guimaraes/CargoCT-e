@@ -1,4 +1,4 @@
-unit TestEndereco;
+unit TestEndereco.Entidade;
 {
 
   Delphi DUnit Test Case
