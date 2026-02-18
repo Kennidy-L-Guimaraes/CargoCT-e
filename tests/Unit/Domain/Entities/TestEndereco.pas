@@ -52,7 +52,7 @@ begin
     begin
       TEndereco.Create(
         CEP,
-        '123',         // Numero Inválido
+        '',         // Numero Inválido
         '2704302',     // IBGE válido
         'Maceio',      // Município válido
         'Centro',      // Bairro válido

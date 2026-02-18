@@ -16,9 +16,9 @@ program CargoCTeTests;
 
 uses
   DUnitTestRunner,
-  TestEndereco in 'TestModel\TestEndereco.pas',
-  Endereco.Entidade in '..\..\model\Endereco.Entidade.pas',
-  Endereco.Tipo.CEP in '..\..\model\Endereco.Tipo.CEP.pas';
+  TestEndereco in '..\Unit\Domain\Entities\TestEndereco.pas',
+  Endereco.Entidade in '..\..\src\Domain\Entities\Endereco.Entidade.pas',
+  Endereco.Tipo.CEP in '..\..\src\Domain\ValueObjects\Endereco.Tipo.CEP.pas';
 
 {$R *.RES}
 
