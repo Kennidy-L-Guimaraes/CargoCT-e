@@ -1,4 +1,6 @@
-# Delphi build
+# =========================
+# Delphi Build Artifacts
+# =========================
 *.dcu
 *.exe
 *.dll
@@ -6,14 +8,24 @@
 *.bpi
 *.map
 *.rsm
+*.drc
+*.ilc
+*.ild
+*.obj
+*.hpp
+*.bak
+*.tmp
+*.log
 
-# Generate Paths
-Win32/
-Win64/
+# =========================
+# Build Output
+# =========================
+build/
 __history/
 
-# Delphi IDE
+# =========================
+# Delphi IDE Files
+# =========================
 *.identcache
-*.local
 *.stat
-*.proj.local
+*.dproj.local
