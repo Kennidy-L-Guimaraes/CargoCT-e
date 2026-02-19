@@ -90,10 +90,10 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\Unit\Domain\Entities\TestEndereco.pas"/>
+        <DCCReference Include="..\Unit\Domain\Entities\TestEndereco.Entidade.pas"/>
         <DCCReference Include="..\..\src\Domain\Entities\Endereco.Entidade.pas"/>
         <DCCReference Include="..\..\src\Domain\ValueObjects\Endereco.Tipo.CEP.pas"/>
-        <DCCReference Include="..\Unit\Domain\Entities\TestIdentidadeFiscal.pas"/>
+        <DCCReference Include="..\Unit\Domain\Entities\TestIdentidadeFiscal.Entidade.pas"/>
         <DCCReference Include="..\..\src\Domain\Entities\IdentidadeFiscal.Entidade.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

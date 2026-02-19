@@ -16,10 +16,10 @@ program CargoCTeTests;
 
 uses
   DUnitTestRunner,
-  TestEndereco in '..\Unit\Domain\Entities\TestEndereco.pas',
+  TestEndereco.Entidade in '..\Unit\Domain\Entities\TestEndereco.Entidade.pas',
   Endereco.Entidade in '..\..\src\Domain\Entities\Endereco.Entidade.pas',
   Endereco.Tipo.CEP in '..\..\src\Domain\ValueObjects\Endereco.Tipo.CEP.pas',
-  TestIdentidadeFiscal in '..\Unit\Domain\Entities\TestIdentidadeFiscal.pas',
+  TestIdentidadeFiscal.Entidade in '..\Unit\Domain\Entities\TestIdentidadeFiscal.Entidade.pas',
   IdentidadeFiscal.Entidade in '..\..\src\Domain\Entities\IdentidadeFiscal.Entidade.pas';
 
 {$R *.RES}
