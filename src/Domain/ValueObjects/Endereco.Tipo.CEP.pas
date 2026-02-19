@@ -1,7 +1,7 @@
 unit Endereco.Tipo.CEP;
 
 interface
-uses System.SysUtils;
+uses System.SysUtils, Validar.Exceptions;
 
 type
   TCEP = Record
@@ -32,15 +32,8 @@ var
  C: char; 
 begin
   //VALIDAR CEP
-  if FCEP = '' then
-    raise Exception.Create('CEP inválido');
-
-  if FCEP.Length <> 8 then
-    raise Exception.Create('O CEP precisa conter oito caracteres válidos!');
-
-  for C in FCEP do
-  if not CharInSet(C, ['0'..'9']) then
-      raise Exception.Create('CEP deve conter apenas números');
-
+  TValidar.SeVazio('CEP', FCEP);
+  TValidar.SeMenorQue('CEP', FCEP.Length, 8);
+  TValidar.SeNaoNumerico('CEP', FCEP);
 end;
 end.

@@ -1,7 +1,7 @@
 unit Endereco.Entidade;
 
 interface
-uses System.SysUtils, Endereco.Tipo.CEP;
+uses System.SysUtils, Endereco.Tipo.CEP, Validar.Exceptions;
 
 type
 TEndereco = class
@@ -71,32 +71,22 @@ end;
 
 procedure TEndereco.ValidarBairro;
 begin
- If FBairro = '' then
-  raise Exception.Create('Bairro Inválido, não pode ser vazio!');
-
- if FBairro.Length < 2 then
-  raise Exception.Create('Bairro Inválido, caracteres insuficientes');
+  TValidar.SeVazio('Bairro', FBairro);
+  TValidar.SeMenorQue('Bairro', FBairro.Length, 2);
 end;
 
 procedure TEndereco.ValidarCodigoIBGE;
 var
 C: char;
 begin
- if FCodigoIBGE = '' then
-   raise Exception.Create('Código IBGE Inválido');
-
- if FCodigoIBGE.Length <> 7 then
-   raise Exception.Create('O número de caracteres do código IBGE é insuficiente');
-
- for C in FCodigoIBGE do
- if not CharInSet(C, ['0'..'9']) then
-   raise Exception.Create('Código IBGE Inválido, não deve conter letras!');
+  TValidar.SeVazio('Código IBGE', FCodigoIBGE);
+  TValidar.SeNumDiferente('Código IBGE', FCodigoIBGE.Length, 7);
+  TValidar.SeNaoNumerico('Código IBGE', FCodigoIBGE);
 end;
 
 procedure TEndereco.ValidarComplemento;
 begin
- if Complemento = '' then
- raise Exception.Create('Complemento Invalido, informe um complemento-auxiliar.');
+ TValidar.SeVazio('Complemento', FComplemento);
 end;
 
 procedure TEndereco.ValidarDados;
@@ -112,53 +102,31 @@ end;
 
 procedure TEndereco.ValidarEstadoUF;
 const
-  UFsValidas: array[0..26] of string = ('AC','AL','AP','AM','BA','CE','DF','ES','GO',
-    'MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO');
-  var
-  Encontrado : boolean;
-  UF         : string;
+  UFsValidas: array[0..26] of string = (
+    'AC','AL','AP','AM','BA','CE','DF','ES','GO',
+    'MA','MT','MS','MG','PA','PB','PR','PE','PI',
+    'RJ','RN','RS','RO','RR','SC','SP','SE','TO');
 begin
-   //Normalização
- FEstadoUF := UpperCase(FEstadoUF);
- if Length(FEstadoUF) <> 2 then
-  raise Exception.Create('Estado deve possuir 2 caracteres');
-
-  //Valida se o estado é um estado válido
-  Encontrado := False;
-  for UF in UFsValidas do
-    begin
-      if FEstadoUF = UF then
-      begin
-        Encontrado := True;
-        Break;
-      end;
-    end;
-  if not Encontrado then
-    raise Exception.Create('Estado UF inválido.');
- end;
+  FEstadoUF := UpperCase(FEstadoUF);
+  TValidar.SeNumDiferente('Estado', FEstadoUF.Length, 2);
+  TValidar.SeNaoContemNaListaText('Estado UF', FEstadoUF, UFsValidas);
+end;
 
 procedure TEndereco.ValidarLogradouro;
 begin
- If FLogradouro = '' then
-  raise Exception.Create('Logradouro Inválido, não pode ser vazio!');
-
- if FLogradouro.Length < 2 then
-  raise Exception.Create('Logradouro Inválido, caracteres insuficientes');
+  TValidar.SeVazio('Logradouro', FLogradouro);
+  TValidar.SeMenorQue('Logradouro', FLogradouro.Length, 2);
 end;
 
 procedure TEndereco.ValidarMunicipio;
 begin
- If FMunicipio = '' then
-  raise Exception.Create('Municipio Inválido, não pode ser vazio!');
-
- if FMunicipio.Length < 2 then
-  raise Exception.Create('Municipio Inválido, caracteres insuficientes');
+  TValidar.SeVazio('Municipio', FMunicipio);
+  TValidar.SeMenorQue('Municipio', FMunicipio.Length, 2);
 end;
 
 procedure TEndereco.ValidarNumero;
 begin
- if FNumero = '' then
-  raise Exception.Create('Número Inválido, não deve estar vazio!');
+  TValidar.SeVazio('Número', Fnumero);
 end;
 
 end.

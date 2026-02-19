@@ -3,7 +3,7 @@ unit IdentidadeFiscal.Tipo.CNPJ;
 interface
 
 uses
-  System.SysUtils;
+  System.SysUtils, Validar.Exceptions;
 
 type
   TCNPJ = record
@@ -32,18 +32,10 @@ begin
 end;
 
 procedure TCNPJ.ValidarFormato;
-var
-  C: Char;
 begin
-  if FCNPJ = '' then
-    raise Exception.Create('CNPJ não pode estar vazio.');
-
-  if Length(FCNPJ) <> 14 then
-    raise Exception.Create('CNPJ deve conter 14 dígitos.');
-
-  for C in FCNPJ do
-    if not CharInSet(C, ['0'..'9']) then
-      raise Exception.Create('CNPJ deve conter apenas números.');
+  TValidar.SeVazio('CNPJ', FCNPJ);
+  TValidar.SeNumDiferente('CNPJ', FCNPJ.Length, 14);
+  TValidar.SeNaoNumerico('CNPJ', FCNPJ);
 end;
 
 procedure TCNPJ.ValidarDigitos;

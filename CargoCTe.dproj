@@ -145,6 +145,7 @@
         <DCCReference Include="src\Domain\ValueObjects\IdentidadeFiscal.Tipo.CNPJ.pas"/>
         <DCCReference Include="src\Domain\Entities\IdentidadeFiscal.Entidade.pas"/>
         <DCCReference Include="src\Domain\Entities\Endereco.Entidade.pas"/>
+        <DCCReference Include="src\Domain\Exceptions\Validar.Exceptions.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -171,7 +172,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
-                <DeployFile LocalName="Win32\Debug\CargoCTe.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="build\Win32\Debug\CargoCTe.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>CargoCTe.exe</RemoteName>
                         <Overwrite>true</Overwrite>

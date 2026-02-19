@@ -1,7 +1,7 @@
 unit IdentidadeFiscal.Entidade;
 
 interface
-uses System.SysUtils, System.Classes, IdentidadeFiscal.Tipo.CNPJ;
+uses System.SysUtils, System.Classes, IdentidadeFiscal.Tipo.CNPJ, Validar.Exceptions;
 
 type
 TIdentidadeFiscal = class
@@ -49,30 +49,21 @@ end;
 
 procedure TIdentidadeFiscal.ValidarInscricaoIE;
 begin
- if FinscricaoIE = '' then
-  raise Exception.Create('Inscrição IE inválido, não pode estar vazio!');
+ TValidar.SeVazio('Inscrição Estadual- IE', FInscricaoIE);
 end;
 
 procedure TIdentidadeFiscal.ValidarRazaoSocial;
 begin
- If FRazaoSocial = '' then
-  raise Exception.Create('Razão social inválido, não pode estar vazio!');
-
+ TValidar.SeVazio('Razão Social', FRazaoSocial);
 end;
 
 procedure TIdentidadeFiscal.ValidarRegimeTributario;
+const
+  RegimesValidos: array[0..2] of string = ('SIMPLES NACIONAL','LUCRO PRESUMIDO','LUCRO REAL');
 begin
-  if FRegimeTributario = '' then
-   raise Exception.Create('Regime Tributário Inválido, não pode estar vazio!');
-
-    FRegimeTributario := UpperCase(FRegimeTributario);
-
-  if not (
-    (FRegimeTributario = 'SIMPLES NACIONAL') or
-    (FRegimeTributario = 'LUCRO PRESUMIDO') or
-    (FRegimeTributario = 'LUCRO REAL')
-  ) then
-    raise Exception.Create('Regime tributário não reconhecido.');
+  TValidar.SeVazio('Regime Tributário', FRegimeTributario);
+  FRegimeTributario := UpperCase(FRegimeTributario);
+  TValidar.SeNaoContemNaListaText('Regime Tributário', FRegimeTributario, RegimesValidos);
 end;
 
 end.
