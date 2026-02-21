@@ -9,7 +9,7 @@
    - Não contém regras de negócio ou validações específicas de domínio.
 
 2) Dependências
-   - Deve depender apenas de System.SysUtils e System.TypInfo.
+   - Deve depender apenas de (System.SysUtils, System.TypInfo e RTTi para tipos genéricos).
    - Não pode depender de entidades, serviços, DTOs ou qualquer classe do domínio.
 
 3) Acoplamento
@@ -52,7 +52,7 @@
 unit Validar.Exceptions;
 
 interface
-uses System.SysUtils, System.TypInfo;
+uses System.SysUtils, System.TypInfo, Rtti;
 
 type
  TValidar = class
@@ -92,10 +92,10 @@ begin
   if TipoInfo^.Kind <> tkEnumeration then
     raise EArgumentException.Create('Tipo informado não é enum.');
 
-  TipoData := GetTypeData(TipoInfo);
-  Valor := PInteger(@AValue)^;
+  TipoData  := GetTypeData(TipoInfo);
+  Valor     := TValue.From<T>(AValue).asOrdinal;
 
-  if (Valor < TipoData^.MinValue) or (Valor > TipoData^.MaxValue) then
+ if (Valor < TipoData^.MinValue) or (Valor > TipoData^.MaxValue) then
     raise EArgumentException.CreateFmt('%s inválido.', [ANomeVar]);
 end;
 

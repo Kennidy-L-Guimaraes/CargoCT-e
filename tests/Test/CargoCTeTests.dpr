@@ -21,7 +21,9 @@ uses
   Endereco.Tipo.CEP in '..\..\src\Domain\ValueObjects\Endereco.Tipo.CEP.pas',
   TestIdentidadeFiscal.Entidade in '..\Unit\Domain\Entities\TestIdentidadeFiscal.Entidade.pas',
   IdentidadeFiscal.Entidade in '..\..\src\Domain\Entities\IdentidadeFiscal.Entidade.pas',
-  Validar.Exceptions in '..\..\src\Domain\Exceptions\Validar.Exceptions.pas';
+  Validar.Exceptions in '..\..\src\Domain\Exceptions\Validar.Exceptions.pas',
+  TestDadosFiscais.Entidade in '..\Unit\Domain\Entities\TestDadosFiscais.Entidade.pas',
+  DadosFiscais.Entidade in '..\..\src\Domain\Entities\DadosFiscais.Entidade.pas';
 
 {$R *.RES}
 

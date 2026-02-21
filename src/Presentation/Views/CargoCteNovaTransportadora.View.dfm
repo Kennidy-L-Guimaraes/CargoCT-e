@@ -31,7 +31,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       Width = 624
       Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 706
       VertScrollBar.Range = 1802
       VertScrollBar.Tracking = True
       Align = alClient
@@ -44,7 +43,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       ExplicitHeight = 439
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -706
+        Top = 0
         Width = 605
         Height = 161
         Align = alTop
@@ -4471,7 +4470,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = -545
+        Top = 161
         Width = 605
         Height = 209
         Align = alTop
@@ -4790,7 +4789,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = -336
+        Top = 370
         Width = 605
         Height = 368
         Align = alTop
@@ -5139,7 +5138,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 840
+        Top = 1546
         Width = 605
         Height = 185
         Align = alTop
@@ -5246,7 +5245,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = 257
+        Top = 963
         Width = 605
         Height = 150
         Align = alTop
@@ -5304,7 +5303,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ItemIndex = 3
             ParentFont = False
             TabOrder = 0
             Text = 'Multimodal'
@@ -5324,7 +5322,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ItemIndex = 2
             ParentFont = False
             TabOrder = 1
             Text = 'Estadual'
@@ -5337,7 +5334,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_VeiculoMotorista: TGroupBox
         Left = 0
-        Top = 407
+        Top = 1113
         Width = 605
         Height = 252
         Align = alTop
@@ -5532,7 +5529,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = 32
+        Top = 738
         Width = 605
         Height = 225
         Align = alTop
@@ -5678,7 +5675,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = 659
+        Top = 1365
         Width = 605
         Height = 181
         Align = alTop
@@ -5789,7 +5786,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 1063
+        Top = 1769
         Width = 605
         Height = 30
         Align = alCustom
