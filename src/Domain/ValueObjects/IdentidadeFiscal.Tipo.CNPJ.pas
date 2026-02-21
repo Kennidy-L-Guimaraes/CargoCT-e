@@ -34,7 +34,7 @@ end;
 procedure TCNPJ.ValidarFormato;
 begin
   TValidar.SeVazio('CNPJ', FCNPJ);
-  TValidar.SeNumDiferente('CNPJ', FCNPJ.Length, 14);
+  TValidar.SeDiferenteDe('CNPJ', FCNPJ.Length, 14);
   TValidar.SeNaoNumerico('CNPJ', FCNPJ);
 end;
 

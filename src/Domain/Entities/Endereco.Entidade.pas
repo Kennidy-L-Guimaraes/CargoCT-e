@@ -80,7 +80,7 @@ var
 C: char;
 begin
   TValidar.SeVazio('Código IBGE', FCodigoIBGE);
-  TValidar.SeNumDiferente('Código IBGE', FCodigoIBGE.Length, 7);
+  TValidar.SeDiferenteDe('Código IBGE', FCodigoIBGE.Length, 7);
   TValidar.SeNaoNumerico('Código IBGE', FCodigoIBGE);
 end;
 
@@ -108,7 +108,7 @@ const
     'RJ','RN','RS','RO','RR','SC','SP','SE','TO');
 begin
   FEstadoUF := UpperCase(FEstadoUF);
-  TValidar.SeNumDiferente('Estado', FEstadoUF.Length, 2);
+  TValidar.SeDiferenteDe('Estado', FEstadoUF.Length, 2);
   TValidar.SeNaoContemNaListaText('Estado UF', FEstadoUF, UFsValidas);
 end;
 

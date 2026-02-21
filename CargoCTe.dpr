@@ -12,7 +12,8 @@ uses
   IdentidadeFiscal.Tipo.CNPJ in 'src\Domain\ValueObjects\IdentidadeFiscal.Tipo.CNPJ.pas',
   IdentidadeFiscal.Entidade in 'src\Domain\Entities\IdentidadeFiscal.Entidade.pas',
   Endereco.Entidade in 'src\Domain\Entities\Endereco.Entidade.pas',
-  Validar.Exceptions in 'src\Domain\Exceptions\Validar.Exceptions.pas';
+  Validar.Exceptions in 'src\Domain\Exceptions\Validar.Exceptions.pas',
+  DadosFiscais.Entidade in 'src\Domain\Entities\DadosFiscais.Entidade.pas';
 
 {$R *.res}
 

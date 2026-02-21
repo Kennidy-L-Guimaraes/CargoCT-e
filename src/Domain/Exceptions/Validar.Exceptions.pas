@@ -9,7 +9,7 @@
    - Não contém regras de negócio ou validações específicas de domínio.
 
 2) Dependências
-   - Deve depender apenas de System.SysUtils.
+   - Deve depender apenas de System.SysUtils e System.TypInfo.
    - Não pode depender de entidades, serviços, DTOs ou qualquer classe do domínio.
 
 3) Acoplamento
@@ -39,7 +39,7 @@
    - Apenas valida e lança exceção.
 
 6) Exceções
-   - Deve lançar apenas exceções padrão da RTL (ex: EArgumentException).
+   - Deve lançar apenas exceções padrão da RTL (ex: EArgumentException ou Exception.CreateFmt).
    - Não deve criar tipos específicos de exceção.
 
 7) Princípio
@@ -52,7 +52,7 @@
 unit Validar.Exceptions;
 
 interface
-uses System.SysUtils;
+uses System.SysUtils, System.TypInfo;
 
 type
  TValidar = class
@@ -60,23 +60,63 @@ type
    {Private Variables}
    public
    {Public Variablres}
+   class procedure LancarErro(const ANomeVar, AMensagemErro: string);
+   class procedure SeEnumInvalido<T>(const ANomeVar: string; AValue: T); static; //Para validar Enum's
    class procedure SeVazio(const ANomeVar, AValue: string);
    class procedure SeNulo(const ANomeVar: string; AValue: TObject); static;
    class procedure SeMenorQue(const ANomeVar: string; AValue, AMin: Integer); static;
+   class procedure SeMenorOuZero(const ANomeVar: string; AValue: integer); overload;
+   class procedure SeMenorOuZero(const ANomeVar: string; AValue: currency); overload;
    class procedure SeMaiorQue(const ANomeVar: string; AValue, AMax: Integer); static;
-   class procedure SeNumDiferente(const ANomeVar: string; AValue, AComparar: Integer); static;
-   class procedure SeTextDiferente(const ANomeVar, AValue, AComparar: string); static;
+   class procedure SeDiferenteDe(const ANomeVar: string; AValue, AComparar: Integer); overload; static;
+   class procedure SeDiferenteDe(const ANomeVar, AValue, AComparar: string); overload; static;
    class procedure SeNaoNumerico(const ANomeVar, AValue: string);
    class procedure SeNaoContemNaListaText(const ANomeVar, AValue: string; const ALista: array of string);
  end;
 
 implementation
 
+class procedure TValidar.LancarErro(const ANomeVar, AMensagemErro: string);
+begin
+  raise EArgumentException.CreateFmt('Erro em %s! %s.', [ANomeVar, AMensagemErro]);
+end;
+
+class procedure TValidar.SeEnumInvalido<T>(const ANomeVar: string; AValue: T);
+var
+  TipoInfo: PTypeInfo;
+  TipoData: PTypeData;
+  Valor: Integer;
+begin
+  TipoInfo := TypeInfo(T);
+
+  if TipoInfo^.Kind <> tkEnumeration then
+    raise EArgumentException.Create('Tipo informado não é enum.');
+
+  TipoData := GetTypeData(TipoInfo);
+  Valor := PInteger(@AValue)^;
+
+  if (Valor < TipoData^.MinValue) or (Valor > TipoData^.MaxValue) then
+    raise EArgumentException.CreateFmt('%s inválido.', [ANomeVar]);
+end;
+
 class procedure TValidar.SeMaiorQue(const ANomeVar: string; AValue,
   AMax: Integer);
 begin
  if AValue > AMax then
   raise EArgumentException.CreateFmt('Valor inválido, %s deve ser menor ou igual a %d.',[ANomeVar, AMax]);
+end;
+
+class procedure TValidar.SeMenorOuZero(const ANomeVar: string; AValue: integer);
+begin
+ If AValue < 0 then
+  raise EArgumentException.CreateFmt('Valor inválido, %s deve ser maior que zero',[ANomeVar]);
+end;
+
+class procedure TValidar.SeMenorOuZero(const ANomeVar: string;
+  AValue: currency);
+begin
+ If AValue < 0 then
+  raise EArgumentException.CreateFmt('Valor inválido, %%s deve ser maior que zero.',[ANomeVar]);
 end;
 
 class procedure TValidar.SeMenorQue(const ANomeVar: string; AValue,
@@ -101,7 +141,7 @@ begin
     end;
 
   if not Encontrado then
-    raise EArgumentException.CreateFmt('%s inválido. Valor deve estar entre: %s',
+    raise EArgumentException.CreateFmt('%s inválido. Valor deve estar entre: %s.',
       [ANomeVar, string.Join(', ', ALista)]);
 end;
 
@@ -117,21 +157,21 @@ end;
 class procedure TValidar.SeNulo(const ANomeVar: string; AValue: TObject);
 begin
    if AValue = Nil then
-   raise EArgumentException.CreateFmt('Valor inválido, o %s não deve ser nulo', [ANomeVar]);
+   raise EArgumentException.CreateFmt('Valor inválido, o %s não deve ser nulo.', [ANomeVar]);
 end;
 
-class procedure TValidar.SeNumDiferente(const ANomeVar: string; AValue,
+class procedure TValidar.SeDiferenteDe(const ANomeVar: string; AValue,
   AComparar: Integer);
 begin
   if AValue <> AComparar then
    raise EArgumentException.CreateFmt('Valor inválido, %s deve possuir %d caracteres.',[ANomeVar, AComparar]);
 end;
 
-class procedure TValidar.SeTextDiferente(const ANomeVar, AValue,
+class procedure TValidar.SeDiferenteDe(const ANomeVar, AValue,
   AComparar: string);
 begin
   if AValue <> AComparar then
-   raise EArgumentException.CreateFmt('Valor inválido, %s e %s não devem ser diferentes.',[ANomeVar, AComparar]);
+   raise EArgumentException.CreateFmt('Valor inválido, %s deve ser igual a %s',[ANomeVar, AComparar]);
 end;
 
 { TGenericException }
