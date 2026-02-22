@@ -23,7 +23,8 @@ uses
   IdentidadeFiscal.Entidade in '..\..\src\Domain\Entities\IdentidadeFiscal.Entidade.pas',
   Validar.Exceptions in '..\..\src\Domain\Exceptions\Validar.Exceptions.pas',
   TestDadosFiscais.Entidade in '..\Unit\Domain\Entities\TestDadosFiscais.Entidade.pas',
-  DadosFiscais.Entidade in '..\..\src\Domain\Entities\DadosFiscais.Entidade.pas';
+  DadosFiscais.Entidade in '..\..\src\Domain\Entities\DadosFiscais.Entidade.pas',
+  TestValidar.Exceptions in '..\Unit\Domain\Exceptions\TestValidar.Exceptions.pas';
 
 {$R *.RES}
 
