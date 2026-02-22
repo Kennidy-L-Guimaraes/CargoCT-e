@@ -62,7 +62,7 @@ type
    {Public Variablres}
    class procedure LancarErro(const ANomeVar, AMensagemErro: string);
    class procedure SeEnumInvalido<T>(const ANomeVar: string; AValue: T); static; //Para validar Enum's
-   class procedure SeVazio(const ANomeVar, AValue: string);
+   class procedure SeVazio(const ANomeVar, AValue: string); overload;
    class procedure SeNulo(const ANomeVar: string; AValue: TObject); static;
    class procedure SeMenorQue(const ANomeVar: string; AValue, AMin: Integer); static;
    class procedure SeMenorOuZero(const ANomeVar: string; AValue: integer); overload;

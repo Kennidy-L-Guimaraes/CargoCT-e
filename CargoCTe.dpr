@@ -14,7 +14,8 @@ uses
   Endereco.Entidade in 'src\Domain\Entities\Endereco.Entidade.pas',
   Validar.Exceptions in 'src\Domain\Exceptions\Validar.Exceptions.pas',
   DadosFiscais.Entidade in 'src\Domain\Entities\DadosFiscais.Entidade.pas',
-  DadosOperacionais.Entidade in 'src\Domain\Entities\DadosOperacionais.Entidade.pas';
+  DadosOperacionais.Entidade in 'src\Domain\Entities\DadosOperacionais.Entidade.pas',
+  Veiculo.Entidade in 'src\Domain\Entities\Veiculo.Entidade.pas';
 
 {$R *.res}
 

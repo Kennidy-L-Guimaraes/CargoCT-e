@@ -148,6 +148,7 @@
         <DCCReference Include="src\Domain\Exceptions\Validar.Exceptions.pas"/>
         <DCCReference Include="src\Domain\Entities\DadosFiscais.Entidade.pas"/>
         <DCCReference Include="src\Domain\Entities\DadosOperacionais.Entidade.pas"/>
+        <DCCReference Include="src\Domain\Entities\Veiculo.Entidade.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
