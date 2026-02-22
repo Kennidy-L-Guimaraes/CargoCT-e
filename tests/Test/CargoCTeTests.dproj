@@ -99,6 +99,8 @@
         <DCCReference Include="..\Unit\Domain\Entities\TestDadosFiscais.Entidade.pas"/>
         <DCCReference Include="..\..\src\Domain\Entities\DadosFiscais.Entidade.pas"/>
         <DCCReference Include="..\Unit\Domain\Exceptions\TestValidar.Exceptions.pas"/>
+        <DCCReference Include="..\Unit\Domain\Entities\TestDadosOperacionais.Entidade.pas"/>
+        <DCCReference Include="..\..\src\Domain\Entities\DadosOperacionais.Entidade.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

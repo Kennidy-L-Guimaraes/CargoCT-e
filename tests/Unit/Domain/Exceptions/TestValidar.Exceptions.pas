@@ -29,31 +29,31 @@ type
     //Não deve lancar Execão
     //procedure ValidarLancarErro_NaoLancarExcecao; Sempre lançará uma Exceção!
     //procedure ValidarSeEnumInvalido_NaoLancarExcecao; Enum já nasce válido.
-    procedure ValidarSeVazio_NaoLancarExcecao;
-    procedure ValidarSeNulo_NaoLancarExcecao;
-    procedure ValidarSeMenorQue_NaoLancarExcecao;
-    procedure ValidarSeMenorOuZero_Currency_NaoLancarExcecao; //Possui overload
-    procedure ValidarSeMenorOuZero_Integer_NaoLancarExcecao; //Possui overload
-    procedure ValidarSeMaiorQue_NaoLancarExcecao;
-    procedure ValidarSeDiferenteDe_String_NaoLancarExcecao; //Possui overload
-    procedure ValidarSeDiferenteDe_Integer_NaoLancarExcecao; //Possui overload
-    procedure ValidarSeNaoNumerico_NaoLancarExcecao;
-    procedure ValidarSeNaoContemNaListaText_NaoLancarExcecao;
+    procedure TestarSeVazio_NaoLancarExcecao;
+    procedure TestarSeNulo_NaoLancarExcecao;
+    procedure TestarSeMenorQue_NaoLancarExcecao;
+    procedure TestarSeMenorOuZero_Currency_NaoLancarExcecao; //Possui overload
+    procedure TestarSeMenorOuZero_Integer_NaoLancarExcecao; //Possui overload
+    procedure TestarSeMaiorQue_NaoLancarExcecao;
+    procedure TestarSeDiferenteDe_String_NaoLancarExcecao; //Possui overload
+    procedure TestarSeDiferenteDe_Integer_NaoLancarExcecao; //Possui overload
+    procedure TestarSeNaoNumerico_NaoLancarExcecao;
+    procedure TestarSeNaoContemNaListaText_NaoLancarExcecao;
 
     //Deve Lancar Exceção
-    procedure ValidarLancarErro_LancarExcecao;
+    procedure TestarLancarErro_LancarExcecao;
     //procedure ValidarSeEnumInvalido_LancarExcecao; Enum já nasce válido
-    procedure ValidarSeVazio_LancarExcecao;
-    procedure ValidarSeNulo_LancarExcecao;
-    procedure ValidarSeMenorQue_Currency_LancarExcecao; //Possui overload
-    procedure ValidarSeMenorQue_Integer_LancarExcecao; //Possui overload
-    procedure ValidarSeMenorQue_LancarExcecao;
-    procedure ValidarSeMenorOuZero_Currency_LancarExcecao;
-    procedure ValidarSeMaiorQue_LancarExcecao;
-    procedure ValidarSeDiferenteDe_String_LancarExcecao; //Possui overload
-    procedure ValidarSeDiferenteDe_Integer_LancarExcecao; //Possui overload
-    procedure ValidarSeNaoNumerico_LancarExcecao;
-    procedure ValidarSeNaoContemNaListaText_LancarExcecao;
+    procedure TestarSeVazio_LancarExcecao;
+    procedure TestarSeNulo_LancarExcecao;
+    procedure TestarSeMenorQue_Currency_LancarExcecao; //Possui overload
+    procedure TestarSeMenorQue_Integer_LancarExcecao; //Possui overload
+    procedure TestarSeMenorQue_LancarExcecao;
+    procedure TestarSeMenorOuZero_Currency_LancarExcecao;
+    procedure TestarSeMaiorQue_LancarExcecao;
+    procedure TestarSeDiferenteDe_String_LancarExcecao; //Possui overload
+    procedure TestarSeDiferenteDe_Integer_LancarExcecao; //Possui overload
+    procedure TestarSeNaoNumerico_LancarExcecao;
+    procedure TestarSeNaoContemNaListaText_LancarExcecao;
   end;
 
 implementation
@@ -68,7 +68,7 @@ begin
 
 end;
 
-procedure TestTValidar.ValidarLancarErro_LancarExcecao;
+procedure TestTValidar.TestarLancarErro_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -78,7 +78,7 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeDiferenteDe_Integer_LancarExcecao;
+procedure TestTValidar.TestarSeDiferenteDe_Integer_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -88,12 +88,12 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeDiferenteDe_Integer_NaoLancarExcecao;
+procedure TestTValidar.TestarSeDiferenteDe_Integer_NaoLancarExcecao;
 begin
   TValidar.SeDiferenteDe('Diferente Integer', 1,1);
 end;
 
-procedure TestTValidar.ValidarSeDiferenteDe_String_LancarExcecao;
+procedure TestTValidar.TestarSeDiferenteDe_String_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -103,12 +103,12 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeDiferenteDe_String_NaoLancarExcecao;
+procedure TestTValidar.TestarSeDiferenteDe_String_NaoLancarExcecao;
 begin
   TValidar.SeDiferenteDe('Diferente string', 'a', 'a');
 end;
 
-procedure TestTValidar.ValidarSeMaiorQue_LancarExcecao;
+procedure TestTValidar.TestarSeMaiorQue_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -118,12 +118,12 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeMaiorQue_NaoLancarExcecao;
+procedure TestTValidar.TestarSeMaiorQue_NaoLancarExcecao;
 begin
   TValidar.SeMaiorQue('Test', 9,10);
 end;
 
-procedure TestTValidar.ValidarSeMenorOuZero_Currency_LancarExcecao;
+procedure TestTValidar.TestarSeMenorOuZero_Currency_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -133,12 +133,12 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeMenorOuZero_Currency_NaoLancarExcecao;
+procedure TestTValidar.TestarSeMenorOuZero_Currency_NaoLancarExcecao;
 begin
   TValidar.SeMenorOuZero('Test', 1);
 end;
 
-procedure TestTValidar.ValidarSeMenorOuZero_Integer_NaoLancarExcecao;
+procedure TestTValidar.TestarSeMenorOuZero_Integer_NaoLancarExcecao;
 begin
   CheckException(
   procedure
@@ -148,17 +148,17 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeMenorQue_Currency_LancarExcecao;
+procedure TestTValidar.TestarSeMenorQue_Currency_LancarExcecao;
 begin
   TValidar.SeMenorOuZero('Test', 1);
 end;
 
-procedure TestTValidar.ValidarSeMenorQue_Integer_LancarExcecao;
+procedure TestTValidar.TestarSeMenorQue_Integer_LancarExcecao;
 begin
 
 end;
 
-procedure TestTValidar.ValidarSeMenorQue_LancarExcecao;
+procedure TestTValidar.TestarSeMenorQue_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -168,12 +168,12 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeMenorQue_NaoLancarExcecao;
+procedure TestTValidar.TestarSeMenorQue_NaoLancarExcecao;
 begin
   TValidar.SeMenorQue('Test', 10,9);
 end;
 
-procedure TestTValidar.ValidarSeNaoContemNaListaText_LancarExcecao;
+procedure TestTValidar.TestarSeNaoContemNaListaText_LancarExcecao;
  var
  letras: array[0..3] of string;
 begin
@@ -189,7 +189,7 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeNaoContemNaListaText_NaoLancarExcecao;
+procedure TestTValidar.TestarSeNaoContemNaListaText_NaoLancarExcecao;
  var
  letras: array[0..3] of string;
 begin
@@ -200,7 +200,7 @@ begin
   TValidar.SeNaoContemNaListaText('Test', 'a', letras);
 end;
 
-procedure TestTValidar.ValidarSeNaoNumerico_LancarExcecao;
+procedure TestTValidar.TestarSeNaoNumerico_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -210,12 +210,12 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeNaoNumerico_NaoLancarExcecao;
+procedure TestTValidar.TestarSeNaoNumerico_NaoLancarExcecao;
 begin
   TValidar.SeNaoNumerico('Test', '123');
 end;
 
-procedure TestTValidar.ValidarSeNulo_LancarExcecao;
+procedure TestTValidar.TestarSeNulo_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -225,7 +225,7 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeNulo_NaoLancarExcecao;
+procedure TestTValidar.TestarSeNulo_NaoLancarExcecao;
 var
  obj : TObject;
 begin
@@ -237,7 +237,7 @@ begin
   end;
 end;
 
-procedure TestTValidar.ValidarSeVazio_LancarExcecao;
+procedure TestTValidar.TestarSeVazio_LancarExcecao;
 begin
   CheckException(
   procedure
@@ -247,7 +247,7 @@ begin
   Exception);
 end;
 
-procedure TestTValidar.ValidarSeVazio_NaoLancarExcecao;
+procedure TestTValidar.TestarSeVazio_NaoLancarExcecao;
 begin
   TValidar.SeVazio('Test', 'Test');
 end;

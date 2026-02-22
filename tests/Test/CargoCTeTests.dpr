@@ -24,7 +24,9 @@ uses
   Validar.Exceptions in '..\..\src\Domain\Exceptions\Validar.Exceptions.pas',
   TestDadosFiscais.Entidade in '..\Unit\Domain\Entities\TestDadosFiscais.Entidade.pas',
   DadosFiscais.Entidade in '..\..\src\Domain\Entities\DadosFiscais.Entidade.pas',
-  TestValidar.Exceptions in '..\Unit\Domain\Exceptions\TestValidar.Exceptions.pas';
+  TestValidar.Exceptions in '..\Unit\Domain\Exceptions\TestValidar.Exceptions.pas',
+  TestDadosOperacionais.Entidade in '..\Unit\Domain\Entities\TestDadosOperacionais.Entidade.pas',
+  DadosOperacionais.Entidade in '..\..\src\Domain\Entities\DadosOperacionais.Entidade.pas';
 
 {$R *.RES}
 

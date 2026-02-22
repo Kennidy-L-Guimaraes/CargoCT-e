@@ -4,7 +4,7 @@ interface
 uses Validar.Exceptions;
 type
  //Enum Tipo de Transporte
- TTipoTransporte = (trRodoviário, trAereo, trAquaviario, trMultimodal);
+ TTipoTransporte = (trRodoviario, trAereo, trAquaviario, trMultimodal);
 type
  //Enum Tipo de Operação
  TTipoOperacao   = (opEstadual, opInterestadual, opInternacional);
