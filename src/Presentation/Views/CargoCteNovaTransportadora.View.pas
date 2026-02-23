@@ -56,18 +56,6 @@ type
     Lbl_DadosOperacionaisTipoDeOperacao: TLabel;
     Cmbx_DadosOperacionaisTipoDeTransporte: TComboBox;
     Cmbx_DadosOperacionaisTipoDeOperacao: TComboBox;
-    Grbx_VeiculoMotorista: TGroupBox;
-    Pnl_VeiculoMotorista: TPanel;
-    Lbl_VeiculoMotoristaMotoristaAssociado: TLabel;
-    Lbl_VeiculoMotoristaPlaca: TLabel;
-    Lbl_VeiculoMotoristaPlacaUF: TLabel;
-    Lbl_VeiculoMotoristaTipoVeiculo: TLabel;
-    Lbl_VeiculoMotoristaCapacidade: TLabel;
-    Cmbx_VeiculoMotoristaMotoristaAssociado: TComboBox;
-    Edt_VeiculoMotoristaPlaca: TEdit;
-    Edt_VeiculoMotoristaTipoVeiculo: TEdit;
-    Edt_VeiculoMotoristaCapacidade: TEdit;
-    Cmbx_VeiculoMotoristaPlacaUF: TComboBox;
     Grbx_DadosFiscais: TGroupBox;
     Pnl_DadosFiscais: TPanel;
     Lbl_DadosTipoTributacao: TLabel;
@@ -97,6 +85,7 @@ type
     Img_IdentificacaoLogo: TImage;
     Btn_IdentificacaoLogo: TButton;
     Img_NovaTransportadoraBanner: TImage;
+    Grbx_VeiculoMotorista: TGroupBox;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
     procedure ResetarConfiguracoes;
   private
@@ -112,7 +101,7 @@ implementation
 
 {$R *.dfm}
 
-uses CampoVisual.Utils;
+uses CampoVisual.Utils, CargoCteNovoVeiculoEMotorista.View;
 
 procedure TFrm_NovaTransportadora.Btn_CancelarNovaTransportadoraClick(
   Sender: TObject);
@@ -141,11 +130,6 @@ begin
   //Dados Fiscais
   TCampoVisualUtils.LimparCamposEdt(Edt_DadosObservacaoFiscal);
   TCampoVisualUtils.LimparCamposEdt(Edt_DadosAliquotaPadrao);
-
-  //Veiculo e Motorista
-  TCampoVisualUtils.LimparCamposEdt(Edt_VeiculoMotoristaPlaca);
-  TCampoVisualUtils.LimparCamposEdt(Edt_VeiculoMotoristaTipoVeiculo);
-  TCampoVisualUtils.LimparCamposEdt(Edt_VeiculoMotoristaCapacidade);
 
   //Sistema
   TCampoVisualUtils.LimparCamposEdt(Edt_SistemaDataCadastro);

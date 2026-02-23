@@ -24,15 +24,14 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 439
     object Scbx_NovaTransportadora: TScrollBox
       Left = 0
       Top = 0
       Width = 624
       Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 1035
-      VertScrollBar.Range = 1802
+      VertScrollBar.Position = 1124
+      VertScrollBar.Range = 1700
       VertScrollBar.Tracking = True
       Align = alClient
       AutoScroll = False
@@ -41,11 +40,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
-      ExplicitHeight = 439
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -1035
-        Width = 605
+        Top = -1124
+        Width = 607
         Height = 161
         Align = alTop
         Picture.Data = {
@@ -4468,11 +4466,12 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         Stretch = True
         ExplicitLeft = -16
         ExplicitTop = -31
+        ExplicitWidth = 605
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = -874
-        Width = 605
+        Top = -963
+        Width = 607
         Height = 209
         Align = alTop
         Caption = 'Identifica'#231#227'o Fiscal'
@@ -4790,8 +4789,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = -665
-        Width = 605
+        Top = -754
+        Width = 607
         Height = 368
         Align = alTop
         Caption = 'Endere'#231'o Fiscal'
@@ -4806,7 +4805,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 1
         object Pnl_EnderecoFiscal: TPanel
-          Left = 71
+          Left = 87
           Top = 28
           Width = 334
           Height = 309
@@ -5139,8 +5138,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 511
-        Width = 605
+        Top = 170
+        Width = 607
         Height = 185
         Align = alTop
         Caption = 'Contato'
@@ -5155,11 +5154,13 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 2
         object Pnl_Contato: TPanel
-          Left = 71
-          Top = 36
+          Left = 87
+          Top = 28
           Width = 334
           Height = 141
           BevelOuter = bvNone
+          Color = clWhite
+          ParentBackground = False
           TabOrder = 0
           object Lbl_ContatoTelefone: TLabel
             Left = 16
@@ -5246,8 +5247,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = -72
-        Width = 605
+        Top = -161
+        Width = 607
         Height = 150
         Align = alTop
         Caption = 'Dados Operacionais'
@@ -5262,7 +5263,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 3
         object Pnl_DadosOperacionais: TPanel
-          Left = 71
+          Left = 87
           Top = 28
           Width = 334
           Height = 109
@@ -5333,205 +5334,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
       end
-      object Grbx_VeiculoMotorista: TGroupBox
-        Left = 0
-        Top = 78
-        Width = 605
-        Height = 252
-        Align = alTop
-        Caption = 'Ve'#237'culo e Motorista'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentBackground = False
-        ParentColor = False
-        ParentFont = False
-        TabOrder = 4
-        object Pnl_VeiculoMotorista: TPanel
-          Left = 71
-          Top = 28
-          Width = 334
-          Height = 213
-          BevelOuter = bvNone
-          TabOrder = 0
-          object Lbl_VeiculoMotoristaMotoristaAssociado: TLabel
-            Left = 16
-            Top = 27
-            Width = 93
-            Height = 20
-            Caption = 'Motorista Ass:'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -15
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Lbl_VeiculoMotoristaPlaca: TLabel
-            Left = 16
-            Top = 62
-            Width = 38
-            Height = 20
-            Caption = 'Placa:'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -15
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Lbl_VeiculoMotoristaPlacaUF: TLabel
-            Left = 16
-            Top = 97
-            Width = 59
-            Height = 20
-            Caption = 'Placa UF:'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -15
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Lbl_VeiculoMotoristaTipoVeiculo: TLabel
-            Left = 16
-            Top = 132
-            Width = 65
-            Height = 20
-            Caption = 'T/Veiculo:'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -15
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Lbl_VeiculoMotoristaCapacidade: TLabel
-            Left = 16
-            Top = 167
-            Width = 104
-            Height = 20
-            Caption = 'Capacidade KG:'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -15
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object Cmbx_VeiculoMotoristaMotoristaAssociado: TComboBox
-            Left = 123
-            Top = 23
-            Width = 201
-            Height = 25
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ItemIndex = 2
-            ParentFont = False
-            TabOrder = 0
-            Text = 'Terceirizado'
-            Items.Strings = (
-              'Pr'#243'prio'
-              'Agregado'
-              'Terceirizado')
-          end
-          object Edt_VeiculoMotoristaPlaca: TEdit
-            Left = 72
-            Top = 58
-            Width = 252
-            Height = 25
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            NumbersOnly = True
-            ParentFont = False
-            TabOrder = 1
-          end
-          object Edt_VeiculoMotoristaTipoVeiculo: TEdit
-            Left = 96
-            Top = 128
-            Width = 228
-            Height = 25
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            NumbersOnly = True
-            ParentFont = False
-            TabOrder = 2
-          end
-          object Edt_VeiculoMotoristaCapacidade: TEdit
-            Left = 126
-            Top = 163
-            Width = 198
-            Height = 25
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            NumbersOnly = True
-            ParentFont = False
-            TabOrder = 3
-          end
-          object Cmbx_VeiculoMotoristaPlacaUF: TComboBox
-            Left = 96
-            Top = 93
-            Width = 228
-            Height = 25
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ItemIndex = 6
-            ParentFont = False
-            TabOrder = 4
-            Text = 'BA'
-            Items.Strings = (
-              'AC'
-              'AL'
-              'AP'
-              'AM'
-              'BA'
-              'CE'
-              'DF'
-              'ES'
-              'GO'
-              'MA'
-              'MT'
-              'MS'
-              'MG'
-              'PA'
-              'PB'
-              'PR'
-              'PE'
-              'PI'
-              'RJ'
-              'RN'
-              'RS'
-              'RO'
-              'RR'
-              'SC'
-              'SP'
-              'SE'
-              'TO')
-          end
-        end
-      end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = -297
-        Width = 605
+        Top = -386
+        Width = 607
         Height = 225
         Align = alTop
         Caption = 'Dados Fiscais'
@@ -5544,9 +5350,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentBackground = False
         ParentColor = False
         ParentFont = False
-        TabOrder = 5
+        TabOrder = 4
         object Pnl_DadosFiscais: TPanel
-          Left = 71
+          Left = 87
           Top = 28
           Width = 334
           Height = 181
@@ -5676,8 +5482,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = 330
-        Width = 605
+        Top = -11
+        Width = 607
         Height = 181
         Align = alTop
         Caption = 'Sistema'
@@ -5690,9 +5496,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentBackground = False
         ParentColor = False
         ParentFont = False
-        TabOrder = 6
+        TabOrder = 5
         object Panel_Sistema: TPanel
-          Left = 71
+          Left = 87
           Top = 28
           Width = 334
           Height = 141
@@ -5747,7 +5553,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ItemIndex = 1
+            ItemIndex = 0
             ParentFont = False
             TabOrder = 0
             Text = 'Inativo'
@@ -5787,28 +5593,31 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 734
-        Width = 605
-        Height = 30
-        Align = alCustom
-        AutoSize = True
+        Top = 521
+        Width = 607
+        Height = 55
+        Align = alBottom
         BevelOuter = bvNone
+        BorderWidth = 10
         Color = clWhite
         ParentBackground = False
-        TabOrder = 7
+        TabOrder = 6
         object Pnl_BtnSalvarNovaTransportadora: TPanel
-          Left = 455
-          Top = 0
+          Left = 447
+          Top = 10
           Width = 150
-          Height = 30
+          Height = 35
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 0
+          ExplicitLeft = 457
+          ExplicitTop = 0
+          ExplicitHeight = 70
           object Shp_BtnSalvarNovaTransportadora: TShape
             Left = 0
             Top = 0
             Width = 150
-            Height = 30
+            Height = 35
             Align = alClient
             Brush.Color = 4227072
             Pen.Color = clLime
@@ -5821,7 +5630,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Left = 0
             Top = 0
             Width = 150
-            Height = 30
+            Height = 35
             Cursor = crHandPoint
             Align = alClient
             Caption = 'Salvar'
@@ -5837,18 +5646,21 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
         object Pnl_BtnCancelarNovaTransportadora: TPanel
-          Left = 305
-          Top = 0
+          Left = 297
+          Top = 10
           Width = 150
-          Height = 30
+          Height = 35
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 1
+          ExplicitLeft = 307
+          ExplicitTop = 0
+          ExplicitHeight = 70
           object Shp_BtnCancelarNovaTransportadora: TShape
             Left = 0
             Top = 0
             Width = 150
-            Height = 30
+            Height = 35
             Align = alClient
             Brush.Color = 168
             Pen.Color = clRed
@@ -5861,7 +5673,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Left = 0
             Top = 0
             Width = 150
-            Height = 30
+            Height = 35
             Cursor = crHandPoint
             Align = alClient
             Caption = 'Cancelar'
@@ -5878,6 +5690,24 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ExplicitHeight = 48
           end
         end
+      end
+      object Grbx_VeiculoMotorista: TGroupBox
+        Left = 0
+        Top = 355
+        Width = 607
+        Height = 96
+        Align = alTop
+        Caption = 'Ve'#237'culo e Motorista'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 7
       end
     end
   end

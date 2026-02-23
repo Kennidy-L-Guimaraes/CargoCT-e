@@ -15,7 +15,8 @@ uses
   Validar.Exceptions in 'src\Domain\Exceptions\Validar.Exceptions.pas',
   DadosFiscais.Entidade in 'src\Domain\Entities\DadosFiscais.Entidade.pas',
   DadosOperacionais.Entidade in 'src\Domain\Entities\DadosOperacionais.Entidade.pas',
-  Veiculo.Entidade in 'src\Domain\Entities\Veiculo.Entidade.pas';
+  Veiculo.Entidade in 'src\Domain\Entities\Veiculo.Entidade.pas',
+  CargoCteNovoVeiculoEMotorista.View in 'src\Presentation\Views\CargoCteNovoVeiculoEMotorista.View.pas' {Frm_NovoVeiculoEMotorista};
 
 {$R *.res}
 
@@ -25,5 +26,6 @@ begin
   Application.CreateForm(TFrm_CargoCTe, Frm_CargoCTe);
   Application.CreateForm(TFrm_CargoCteConfig, Frm_CargoCteConfig);
   Application.CreateForm(TFrm_NovaTransportadora, Frm_NovaTransportadora);
+  Application.CreateForm(TFrm_NovoVeiculoEMotorista, Frm_NovoVeiculoEMotorista);
   Application.Run;
 end.
