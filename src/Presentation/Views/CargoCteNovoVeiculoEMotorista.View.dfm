@@ -4321,7 +4321,7 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
         Left = 15
         Top = 30
         Width = 682
-        Height = 139
+        Height = 157
         BevelOuter = bvNone
         TabOrder = 0
         object Label1: TLabel
@@ -4340,9 +4340,9 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
         object Label2: TLabel
           Left = 16
           Top = 62
-          Width = 38
+          Width = 114
           Height = 20
-          Caption = 'Placa:'
+          Caption = 'Nome Completo:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -15
@@ -4352,10 +4352,10 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
         end
         object Label3: TLabel
           Left = 16
-          Top = 97
-          Width = 59
+          Top = 93
+          Width = 27
           Height = 20
-          Caption = 'Placa UF:'
+          Caption = 'CPF:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -15
@@ -4364,11 +4364,11 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
           ParentFont = False
         end
         object Label4: TLabel
-          Left = 344
-          Top = 26
-          Width = 65
+          Left = 16
+          Top = 124
+          Width = 22
           Height = 20
-          Caption = 'T/Veiculo:'
+          Caption = 'RG:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -15
@@ -4377,11 +4377,50 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
           ParentFont = False
         end
         object Label5: TLabel
-          Left = 344
-          Top = 61
-          Width = 104
+          Left = 352
+          Top = 22
+          Width = 139
           Height = 20
-          Caption = 'Capacidade KG:'
+          Caption = 'Data de Nascimento:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label6: TLabel
+          Left = 352
+          Top = 53
+          Width = 80
+          Height = 20
+          Caption = 'Estado Civil:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label7: TLabel
+          Left = 352
+          Top = 84
+          Width = 60
+          Height = 20
+          Caption = 'Telefone:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label8: TLabel
+          Left = 352
+          Top = 115
+          Width = 135
+          Height = 20
+          Caption = 'Endere'#231'o Completo:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -15
@@ -4409,9 +4448,9 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
             'Terceirizado')
         end
         object Edit1: TEdit
-          Left = 72
+          Left = 144
           Top = 58
-          Width = 252
+          Width = 180
           Height = 25
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -4423,9 +4462,9 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
           TabOrder = 1
         end
         object Edit2: TEdit
-          Left = 424
-          Top = 22
-          Width = 228
+          Left = 49
+          Top = 89
+          Width = 275
           Height = 25
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -4437,9 +4476,9 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
           TabOrder = 2
         end
         object Edit3: TEdit
-          Left = 454
-          Top = 57
-          Width = 198
+          Left = 49
+          Top = 120
+          Width = 275
           Height = 25
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -4450,48 +4489,66 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
           ParentFont = False
           TabOrder = 3
         end
-        object ComboBox2: TComboBox
-          Left = 96
-          Top = 93
-          Width = 228
+        object Edit4: TEdit
+          Left = 497
+          Top = 18
+          Width = 163
           Height = 25
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
-          ItemIndex = 8
+          NumbersOnly = True
           ParentFont = False
           TabOrder = 4
-          Text = 'GO'
+        end
+        object Edit6: TEdit
+          Left = 423
+          Top = 80
+          Width = 237
+          Height = 25
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          NumbersOnly = True
+          ParentFont = False
+          TabOrder = 5
+        end
+        object Edit7: TEdit
+          Left = 497
+          Top = 111
+          Width = 163
+          Height = 25
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          NumbersOnly = True
+          ParentFont = False
+          TabOrder = 6
+        end
+        object ComboBox2: TComboBox
+          Left = 448
+          Top = 49
+          Width = 212
+          Height = 25
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 7
+          Text = 'Casado'
           Items.Strings = (
-            'AC'
-            'AL'
-            'AP'
-            'AM'
-            'BA'
-            'CE'
-            'DF'
-            'ES'
-            'GO'
-            'MA'
-            'MT'
-            'MS'
-            'MG'
-            'PA'
-            'PB'
-            'PR'
-            'PE'
-            'PI'
-            'RJ'
-            'RN'
-            'RS'
-            'RO'
-            'RR'
-            'SC'
-            'SP'
-            'SE'
-            'TO')
+            'Casado'
+            'Solteiro'
+            'Divorciado'
+            'Viuvo')
         end
       end
     end

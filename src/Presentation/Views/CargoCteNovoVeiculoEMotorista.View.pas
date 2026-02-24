@@ -26,14 +26,8 @@ type
     Panel1: TPanel;
     Label1: TLabel;
     Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
     ComboBox1: TComboBox;
     Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    ComboBox2: TComboBox;
     Pnl_NovaTransportadoraBtns: TPanel;
     Pnl_BtnSalvarNovaTransportadora: TPanel;
     Shp_BtnSalvarNovaTransportadora: TShape;
@@ -42,6 +36,18 @@ type
     Shp_BtnCancelarNovaTransportadora: TShape;
     Btn_CancelarNovaTransportadora: TSpeedButton;
     Img_NovaTransportadoraBanner: TImage;
+    Edit2: TEdit;
+    Label3: TLabel;
+    Edit3: TEdit;
+    Label4: TLabel;
+    Edit4: TEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    Edit6: TEdit;
+    Label7: TLabel;
+    Edit7: TEdit;
+    Label8: TLabel;
+    ComboBox2: TComboBox;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
   private
     { Private declarations }
