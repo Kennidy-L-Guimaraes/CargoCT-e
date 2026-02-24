@@ -23,7 +23,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 647
     DesignSize = (
       876
       649)
@@ -37,7 +36,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3359,10 +3357,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Top = 598
         Width = 148
         Height = 50
+        Margins.Left = 0
+        Margins.Top = 0
+        Margins.Right = 0
+        Margins.Bottom = 0
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -3396,13 +3397,19 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_BtnMotoristas: TPanel
+        AlignWithMargins = True
         Left = 1
-        Top = 208
+        Top = 212
         Width = 148
         Height = 50
+        Margins.Left = 0
+        Margins.Top = 1
+        Margins.Right = 0
+        Margins.Bottom = 0
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 2
+        ExplicitTop = 208
         object Shp_BtnMotoristas: TShape
           Left = 0
           Top = 0
@@ -3437,13 +3444,19 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_BtnTransportadoras: TPanel
+        AlignWithMargins = True
         Left = 1
-        Top = 158
+        Top = 161
         Width = 148
         Height = 50
+        Margins.Left = 0
+        Margins.Top = 1
+        Margins.Right = 0
+        Margins.Bottom = 0
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 3
+        ExplicitTop = 158
         object Shp_BtnTransportadoras: TShape
           Left = 0
           Top = 0
@@ -3477,13 +3490,19 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_BtnNotasEmitidas: TPanel
+        AlignWithMargins = True
         Left = 1
-        Top = 108
+        Top = 110
         Width = 148
         Height = 50
+        Margins.Left = 0
+        Margins.Top = 1
+        Margins.Right = 0
+        Margins.Bottom = 0
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 4
+        ExplicitTop = 108
         object Shp_BtnNotasEmitidas: TShape
           Left = 0
           Top = 0
@@ -3517,13 +3536,19 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_BtnConfiguracoes: TPanel
+        AlignWithMargins = True
         Left = 1
-        Top = 308
+        Top = 314
         Width = 148
         Height = 50
+        Margins.Left = 0
+        Margins.Top = 1
+        Margins.Right = 0
+        Margins.Bottom = 0
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 5
+        ExplicitTop = 308
         object Shp_BtnConfiguracoes: TShape
           Left = 0
           Top = 0
@@ -3557,14 +3582,20 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_BtnClientes: TPanel
+        AlignWithMargins = True
         Left = 1
-        Top = 258
+        Top = 263
         Width = 148
         Height = 50
+        Margins.Left = 0
+        Margins.Top = 1
+        Margins.Right = 0
+        Margins.Bottom = 0
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 6
         Visible = False
+        ExplicitTop = 258
         object Shp_BtnClientes: TShape
           Left = 0
           Top = 0
@@ -3597,13 +3628,19 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_BtnNovaNota: TPanel
+        AlignWithMargins = True
         Left = 1
-        Top = 58
+        Top = 59
         Width = 148
         Height = 50
+        Margins.Left = 0
+        Margins.Top = 1
+        Margins.Right = 0
+        Margins.Bottom = 0
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 7
+        ExplicitTop = 58
         object Shp_BtnNovaNota: TShape
           Left = 0
           Top = 0
@@ -18256,21 +18293,32 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
       end
       object Pnl_BtnNovaTransportadora: TPanel
-        Left = 528
-        Top = 1
-        Width = 181
-        Height = 49
+        AlignWithMargins = True
+        Left = 514
+        Top = 4
+        Width = 190
+        Height = 43
+        Margins.Left = 10
+        Margins.Right = 5
         Align = alRight
         BevelOuter = bvNone
+        Color = clWhite
+        Ctl3D = False
+        ParentBackground = False
+        ParentCtl3D = False
         TabOrder = 0
+        ExplicitLeft = 519
+        ExplicitTop = 1
+        ExplicitHeight = 49
         object Shp_BtnNovaTransportadora: TShape
           Left = 0
           Top = 0
-          Width = 181
-          Height = 49
+          Width = 190
+          Height = 43
           Align = alClient
           Brush.Color = 4227072
-          Pen.Color = clLime
+          Pen.Color = clGreen
+          Shape = stRoundRect
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
@@ -18279,21 +18327,75 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Btn_NovaTransportadora: TSpeedButton
           Left = 0
           Top = 0
-          Width = 181
-          Height = 49
+          Width = 190
+          Height = 43
           Cursor = crHandPoint
+          Margins.Left = 10
+          Margins.Right = 10
           Align = alClient
-          Caption = 'Nova Transportadora'
+          Caption = '+ Nova Transportadora'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
-          Font.Height = -17
+          Font.Height = -16
           Font.Name = 'Segoe UI'
-          Font.Style = []
+          Font.Style = [fsBold]
           ParentFont = False
           OnClick = Btn_NovaTransportadoraClick
           ExplicitLeft = 72
           ExplicitTop = 8
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+      end
+      object Panel1: TPanel
+        AlignWithMargins = True
+        Left = 309
+        Top = 4
+        Width = 190
+        Height = 43
+        Margins.Left = 10
+        Margins.Right = 5
+        Align = alRight
+        BevelOuter = bvNone
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 1
+        ExplicitLeft = 329
+        ExplicitTop = 1
+        ExplicitHeight = 49
+        object Shape1: TShape
+          Left = 0
+          Top = 0
+          Width = 190
+          Height = 43
+          Align = alClient
+          Brush.Color = 16744448
+          Pen.Color = 12279296
+          Shape = stRoundRect
+          ExplicitLeft = 136
+          ExplicitTop = 24
+          ExplicitWidth = 65
+          ExplicitHeight = 65
+        end
+        object SpeedButton1: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 190
+          Height = 43
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = '+ Ve'#237'culo e Motorista'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWhite
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = SpeedButton1Click
+          ExplicitLeft = 288
+          ExplicitTop = 16
           ExplicitWidth = 23
           ExplicitHeight = 22
         end
@@ -18308,7 +18410,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
-      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
@@ -18345,7 +18446,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
-        ExplicitHeight = 87
       end
     end
   end

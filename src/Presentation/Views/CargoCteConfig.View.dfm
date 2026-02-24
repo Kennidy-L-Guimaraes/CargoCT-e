@@ -24,27 +24,25 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 104
-    ExplicitTop = 128
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Pnl_ConfiguracoesBtns: TPanel
       Left = 0
       Top = 298
       Width = 399
       Height = 48
+      Margins.Top = 0
+      Margins.Bottom = 0
       Align = alBottom
       Anchors = [akLeft, akTop, akRight]
       AutoSize = True
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitTop = 384
-      ExplicitWidth = 53
       object Pnl_BtnSalvarConfiguracoes: TPanel
-        Left = 0
-        Top = 0
-        Width = 200
-        Height = 48
+        AlignWithMargins = True
+        Left = 5
+        Top = 3
+        Width = 195
+        Height = 42
+        Margins.Left = 5
         Align = alLeft
         Anchors = []
         BevelOuter = bvNone
@@ -52,11 +50,12 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         object Shp_BtnSalvarConfiguracoes: TShape
           Left = 0
           Top = 0
-          Width = 200
-          Height = 48
+          Width = 195
+          Height = 42
           Align = alClient
           Brush.Color = 4227072
-          Pen.Color = clLime
+          Pen.Color = clGreen
+          Shape = stRoundRect
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
@@ -65,8 +64,8 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         object Btn_BtnSalvarrConfiguracoes: TSpeedButton
           Left = 0
           Top = 0
-          Width = 200
-          Height = 48
+          Width = 195
+          Height = 42
           Cursor = crHandPoint
           Align = alClient
           Caption = 'Salvar'
@@ -85,23 +84,25 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         end
       end
       object Pnl_BtnCancelarConfiguracoes: TPanel
-        Left = 199
-        Top = 0
-        Width = 200
-        Height = 48
+        AlignWithMargins = True
+        Left = 201
+        Top = 3
+        Width = 195
+        Height = 42
+        Margins.Left = 5
         Align = alRight
         Anchors = []
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 184
         object Shp_BtnCancelarConfiguracoes: TShape
           Left = 0
           Top = 0
-          Width = 200
-          Height = 48
+          Width = 195
+          Height = 42
           Align = alClient
           Brush.Color = 168
           Pen.Color = clRed
+          Shape = stRoundRect
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
@@ -110,8 +111,8 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         object Btn_BtnCancelarConfiguracoes: TSpeedButton
           Left = 0
           Top = 0
-          Width = 200
-          Height = 48
+          Width = 195
+          Height = 42
           Cursor = crHandPoint
           Align = alClient
           Caption = 'Cancelar'
@@ -125,6 +126,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
           OnClick = Btn_BtnCancelarConfiguracoesClick
           ExplicitLeft = 22
           ExplicitWidth = 178
+          ExplicitHeight = 48
         end
       end
     end
@@ -134,7 +136,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Width = 399
       Height = 129
       Caption = 'Configura'#231#245'es da Interace'
-      Color = 15132390
+      Color = clWhite
       ParentBackground = False
       ParentColor = False
       TabOrder = 1
@@ -183,7 +185,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Width = 399
       Height = 58
       Caption = 'Configura'#231#245'es da Nota CT-e'
-      Color = 15132390
+      Color = clWhite
       ParentBackground = False
       ParentColor = False
       TabOrder = 2
@@ -203,10 +205,11 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Top = 221
       Width = 399
       Height = 77
+      Margins.Top = 0
+      Margins.Bottom = 0
       Align = alBottom
       BevelOuter = bvLowered
       TabOrder = 3
-      ExplicitTop = 280
       object Btn_ExcluirBancoDeDados: TBitBtn
         Left = 16
         Top = 10
