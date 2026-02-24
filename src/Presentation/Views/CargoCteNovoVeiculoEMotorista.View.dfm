@@ -1,10 +1,9 @@
 object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
   Left = 0
   Top = 0
-  AutoSize = True
   Caption = 'Adicionar Veiculo e Motorista'
-  ClientHeight = 516
-  ClientWidth = 624
+  ClientHeight = 549
+  ClientWidth = 738
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,37 +15,35 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
   object Pnl_Background: TPanel
     Left = 0
     Top = 0
-    Width = 624
-    Height = 516
+    Width = 738
+    Height = 549
     Align = alClient
     BevelOuter = bvNone
+    Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 280
-    ExplicitTop = 152
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 624
+    ExplicitHeight = 439
     object Grbx_VeiculoMotorista: TGroupBox
       Left = 0
-      Top = 0
-      Width = 624
+      Top = 18
+      Width = 733
       Height = 252
-      Align = alTop
+      Cursor = crDrag
       Caption = 'Ve'#237'culo'
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -16
+      Font.Height = -21
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentBackground = False
       ParentColor = False
       ParentFont = False
       TabOrder = 0
-      ExplicitTop = 8
       object Pnl_VeiculoMotorista: TPanel
         Left = 87
-        Top = 30
+        Top = 33
         Width = 334
         Height = 213
         BevelOuter = bvNone
@@ -223,23 +220,21 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
       end
     end
     object GroupBox1: TGroupBox
-      Left = 0
-      Top = 252
-      Width = 624
+      Left = 8
+      Top = 284
+      Width = 725
       Height = 249
-      Align = alTop
       Caption = 'Motorista Associado'
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -16
+      Font.Height = -21
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentBackground = False
       ParentColor = False
       ParentFont = False
       TabOrder = 1
-      ExplicitTop = 206
       object Panel1: TPanel
         Left = 87
         Top = 30
@@ -322,7 +317,7 @@ object Frm_NovoVeiculoEMotorista: TFrm_NovoVeiculoEMotorista
           Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
-          ItemIndex = 0
+          ItemIndex = 2
           ParentFont = False
           TabOrder = 0
           Text = 'Pr'#243'prio'

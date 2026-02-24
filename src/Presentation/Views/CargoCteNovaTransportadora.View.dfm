@@ -24,13 +24,14 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 439
     object Scbx_NovaTransportadora: TScrollBox
       Left = 0
       Top = 0
       Width = 624
       Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 1124
+      VertScrollBar.Position = 1259
       VertScrollBar.Range = 1700
       VertScrollBar.Tracking = True
       Align = alClient
@@ -40,10 +41,11 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
+      ExplicitHeight = 439
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -1124
-        Width = 607
+        Top = -1259
+        Width = 605
         Height = 161
         Align = alTop
         Picture.Data = {
@@ -4466,12 +4468,11 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         Stretch = True
         ExplicitLeft = -16
         ExplicitTop = -31
-        ExplicitWidth = 605
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = -963
-        Width = 607
+        Top = -1098
+        Width = 605
         Height = 209
         Align = alTop
         Caption = 'Identifica'#231#227'o Fiscal'
@@ -4789,8 +4790,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = -754
-        Width = 607
+        Top = -889
+        Width = 605
         Height = 368
         Align = alTop
         Caption = 'Endere'#231'o Fiscal'
@@ -5138,8 +5139,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 170
-        Width = 607
+        Top = 35
+        Width = 605
         Height = 185
         Align = alTop
         Caption = 'Contato'
@@ -5247,8 +5248,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = -161
-        Width = 607
+        Top = -296
+        Width = 605
         Height = 150
         Align = alTop
         Caption = 'Dados Operacionais'
@@ -5336,8 +5337,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = -386
-        Width = 607
+        Top = -521
+        Width = 605
         Height = 225
         Align = alTop
         Caption = 'Dados Fiscais'
@@ -5482,8 +5483,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = -11
-        Width = 607
+        Top = -146
+        Width = 605
         Height = 181
         Align = alTop
         Caption = 'Sistema'
@@ -5593,8 +5594,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 521
-        Width = 607
+        Top = 386
+        Width = 605
         Height = 55
         Align = alBottom
         BevelOuter = bvNone
@@ -5603,16 +5604,13 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentBackground = False
         TabOrder = 6
         object Pnl_BtnSalvarNovaTransportadora: TPanel
-          Left = 447
+          Left = 445
           Top = 10
           Width = 150
           Height = 35
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 0
-          ExplicitLeft = 457
-          ExplicitTop = 0
-          ExplicitHeight = 70
           object Shp_BtnSalvarNovaTransportadora: TShape
             Left = 0
             Top = 0
@@ -5646,16 +5644,13 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           end
         end
         object Pnl_BtnCancelarNovaTransportadora: TPanel
-          Left = 297
+          Left = 295
           Top = 10
           Width = 150
           Height = 35
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitLeft = 307
-          ExplicitTop = 0
-          ExplicitHeight = 70
           object Shp_BtnCancelarNovaTransportadora: TShape
             Left = 0
             Top = 0
@@ -5693,8 +5688,8 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_VeiculoMotorista: TGroupBox
         Left = 0
-        Top = 355
-        Width = 607
+        Top = 220
+        Width = 605
         Height = 96
         Align = alTop
         Caption = 'Ve'#237'culo e Motorista'
@@ -5708,6 +5703,48 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 7
+        object Panel1: TPanel
+          Left = 16
+          Top = 35
+          Width = 569
+          Height = 41
+          TabOrder = 0
+          object Shape1: TShape
+            Left = 1
+            Top = 1
+            Width = 567
+            Height = 39
+            Align = alClient
+            Brush.Color = 16744448
+            Pen.Color = 12279296
+            Shape = stRoundRect
+            ExplicitLeft = 136
+            ExplicitTop = 24
+            ExplicitWidth = 65
+            ExplicitHeight = 65
+          end
+          object SpeedButton1: TSpeedButton
+            Left = 1
+            Top = 1
+            Width = 567
+            Height = 39
+            Cursor = crHandPoint
+            Align = alClient
+            Caption = 'Adicionar Ve'#237'culo e Motorista'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            OnClick = SpeedButton1Click
+            ExplicitLeft = 288
+            ExplicitTop = 16
+            ExplicitWidth = 23
+            ExplicitHeight = 22
+          end
+        end
       end
     end
   end

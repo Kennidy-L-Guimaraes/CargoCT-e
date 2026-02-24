@@ -86,8 +86,12 @@ type
     Btn_IdentificacaoLogo: TButton;
     Img_NovaTransportadoraBanner: TImage;
     Grbx_VeiculoMotorista: TGroupBox;
+    Panel1: TPanel;
+    Shape1: TShape;
+    SpeedButton1: TSpeedButton;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
     procedure ResetarConfiguracoes;
+    procedure SpeedButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -143,6 +147,11 @@ begin
 
   //Resetar Posição do ScrollBox
   Scbx_NovaTransportadora.VertScrollBar.Position := 0;
+end;
+
+procedure TFrm_NovaTransportadora.SpeedButton1Click(Sender: TObject);
+begin
+ Frm_NovoVeiculoEMotorista.Show;
 end;
 
 end.

@@ -3410,7 +3410,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Height = 50
           Align = alClient
           Brush.Color = 10440704
-          Pen.Color = 12615680
+          Pen.Color = 10184960
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
@@ -3451,7 +3451,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Height = 50
           Align = alClient
           Brush.Color = 10440704
-          Pen.Color = 12615680
+          Pen.Color = 10184960
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
@@ -3491,7 +3491,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Height = 50
           Align = alClient
           Brush.Color = 10440704
-          Pen.Color = 16744448
+          Pen.Color = 10184960
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
@@ -3531,7 +3531,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Height = 50
           Align = alClient
           Brush.Color = 10440704
-          Pen.Color = 12615680
+          Pen.Color = 10184960
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
@@ -3572,7 +3572,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Height = 50
           Align = alClient
           Brush.Color = 10440704
-          Pen.Color = 12615680
+          Pen.Color = 10184960
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
@@ -3611,7 +3611,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Height = 50
           Align = alClient
           Brush.Color = 10440704
-          Pen.Color = 16744448
+          Pen.Color = 10184960
           ExplicitLeft = 312
           ExplicitTop = 16
           ExplicitWidth = 65
