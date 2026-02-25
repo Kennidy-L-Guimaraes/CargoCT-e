@@ -289,9 +289,14 @@ implementation
 {$R *.dfm}
 
 uses CargoCteConfig.View, CargoCteNovaTransportadora.View,
-  CargoCteNovoTransporte.View;
+  CargoCteNovaFrota.View;
 
 { TFrm_CargoCTe }
+
+procedure TFrm_CargoCTe.Btn_AdicionarVeiculoClick(Sender: TObject);
+begin
+ Frm_NovaFrota.Show;
+end;
 
 procedure TFrm_CargoCTe.Btn_BtnNovaNotaClick(Sender: TObject);
 begin
@@ -347,11 +352,6 @@ FMenuService.RegisterPanel(Pnl_NotaInfo);
 FMenuService.RegisterPanel(Pnl_NotasEmitidas);
 FMenuService.RegisterPanel(Pnl_Transportadoras);
 FMenuService.RegisterPanel(Pnl_Motoristas);
-end;
-
-procedure TFrm_CargoCTe.Btn_AdicionarVeiculoClick(Sender: TObject);
-begin
- Frm_NovoTransporte.Show;
 end;
 
 procedure TFrm_CargoCTe.Srbx_PesquisarTransportadoraClick(Sender: TObject);

@@ -16,7 +16,7 @@ uses
   DadosFiscais.Entidade in 'src\Domain\Entities\DadosFiscais.Entidade.pas',
   DadosOperacionais.Entidade in 'src\Domain\Entities\DadosOperacionais.Entidade.pas',
   Veiculo.Entidade in 'src\Domain\Entities\Veiculo.Entidade.pas',
-  CargoCteNovoTransporte.View in 'src\Presentation\Views\CargoCteNovoTransporte.View.pas' {Frm_NovoTransporte};
+  CargoCteNovaFrota.View in 'src\Presentation\Views\CargoCteNovaFrota.View.pas' {Frm_NovaFrota};
 
 {$R *.res}
 
@@ -26,6 +26,6 @@ begin
   Application.CreateForm(TFrm_CargoCTe, Frm_CargoCTe);
   Application.CreateForm(TFrm_CargoCteConfig, Frm_CargoCteConfig);
   Application.CreateForm(TFrm_NovaTransportadora, Frm_NovaTransportadora);
-  Application.CreateForm(TFrm_NovoTransporte, Frm_NovoTransporte);
+  Application.CreateForm(TFrm_NovaFrota, Frm_NovaFrota);
   Application.Run;
 end.

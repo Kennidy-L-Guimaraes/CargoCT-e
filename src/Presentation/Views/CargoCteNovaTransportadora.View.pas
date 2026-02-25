@@ -101,7 +101,7 @@ implementation
 
 {$R *.dfm}
 
-uses CampoVisual.Utils, CargoCteNovoTransporte.View;
+uses CampoVisual.Utils, CargoCteNovaFrota.View;
 
 procedure TFrm_NovaTransportadora.Btn_CancelarNovaTransportadoraClick(
   Sender: TObject);
@@ -147,7 +147,7 @@ end;
 
 procedure TFrm_NovaTransportadora.SpeedButton1Click(Sender: TObject);
 begin
- Frm_NovoTransporte.Show;
+ Frm_NovaFrota.Show;
 end;
 
 end.

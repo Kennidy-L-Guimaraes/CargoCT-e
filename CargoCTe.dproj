@@ -149,8 +149,8 @@
         <DCCReference Include="src\Domain\Entities\DadosFiscais.Entidade.pas"/>
         <DCCReference Include="src\Domain\Entities\DadosOperacionais.Entidade.pas"/>
         <DCCReference Include="src\Domain\Entities\Veiculo.Entidade.pas"/>
-        <DCCReference Include="src\Presentation\Views\CargoCteNovoTransporte.View.pas">
-            <Form>Frm_NovoTransporte</Form>
+        <DCCReference Include="src\Presentation\Views\CargoCteNovaFrota.View.pas">
+            <Form>Frm_NovaFrota</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

@@ -1,4 +1,4 @@
-unit CargoCteNovoTransporte.View;
+unit CargoCteNovaFrota.View;
 
 interface
 
@@ -8,7 +8,7 @@ uses
   Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.Imaging.jpeg, Vcl.ComCtrls;
 
 type
-  TFrm_NovoTransporte = class(TForm)
+  TFrm_NovaFrota = class(TForm)
     Pnl_Background: TPanel;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
@@ -52,15 +52,11 @@ type
     Lbl_VeiculoMotoristaPlaca: TLabel;
     Lbl_VeiculoMotoristaPlacaUF: TLabel;
     Lbl_VeiculoMotoristaTipoVeiculo: TLabel;
-    Lbl_VeiculoMotoristaCapacidade: TLabel;
     Lbl_VeiculoMotoristaMotoristaAssociado: TLabel;
-    Label9: TLabel;
     Edt_VeiculoMotoristaPlaca: TEdit;
     Edt_VeiculoMotoristaTipoVeiculo: TEdit;
-    Edt_VeiculoMotoristaCapacidade: TEdit;
     Cmbx_VeiculoMotoristaPlacaUF: TComboBox;
     Cmbx_VeiculoMotoristaMotoristaAssociado: TComboBox;
-    ComboBox3: TComboBox;
     Panel2: TPanel;
     Panel3: TPanel;
     Shape1: TShape;
@@ -69,6 +65,32 @@ type
     Shape2: TShape;
     SpeedButton2: TSpeedButton;
     Image1: TImage;
+    Edit9: TEdit;
+    Label14: TLabel;
+    GroupBox2: TGroupBox;
+    Panel5: TPanel;
+    Lbl_VeiculoMotoristaCapacidade: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Edt_VeiculoMotoristaCapacidade: TEdit;
+    Edit14: TEdit;
+    Edit16: TEdit;
+    Edit17: TEdit;
+    Edit18: TEdit;
+    Edit19: TEdit;
+    GroupBox3: TGroupBox;
+    Panel6: TPanel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label27: TLabel;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    Edit15: TEdit;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
   private
     { Private declarations }
@@ -77,16 +99,16 @@ type
   end;
 
 var
-  Frm_NovoTransporte: TFrm_NovoTransporte;
+  Frm_NovaFrota: TFrm_NovaFrota;
 
 implementation
 
 {$R *.dfm}
 
-procedure TFrm_NovoTransporte.Btn_CancelarNovaTransportadoraClick(
+procedure TFrm_NovaFrota.Btn_CancelarNovaTransportadoraClick(
   Sender: TObject);
 begin
- Frm_NovoTransporte.Close;
+ Frm_NovaFrota.Close;
 end;
 
 end.

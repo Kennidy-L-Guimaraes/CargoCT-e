@@ -18288,12 +18288,12 @@ object Frm_CargoCTe: TFrm_CargoCTe
       end
       object Pnl_BtnNovaTransportadora: TPanel
         AlignWithMargins = True
-        Left = 514
+        Left = 547
         Top = 4
-        Width = 190
+        Width = 160
         Height = 43
-        Margins.Left = 5
-        Margins.Right = 5
+        Margins.Left = 2
+        Margins.Right = 2
         Align = alRight
         BevelOuter = bvNone
         Color = clWhite
@@ -18304,7 +18304,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Shp_BtnNovaTransportadora: TShape
           Left = 0
           Top = 0
-          Width = 190
+          Width = 160
           Height = 43
           Align = alClient
           Brush.Color = 4227072
@@ -18318,13 +18318,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Btn_NovaTransportadora: TSpeedButton
           Left = 0
           Top = 0
-          Width = 190
+          Width = 160
           Height = 43
           Cursor = crHandPoint
           Margins.Left = 10
           Margins.Right = 10
           Align = alClient
-          Caption = '+ Nova Transportadora'
+          Caption = '+ Transportadora'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
@@ -18341,12 +18341,12 @@ object Frm_CargoCTe: TFrm_CargoCTe
       end
       object Pnl_BtnAdicionarVeiculo: TPanel
         AlignWithMargins = True
-        Left = 374
+        Left = 463
         Top = 4
-        Width = 130
+        Width = 80
         Height = 43
-        Margins.Left = 5
-        Margins.Right = 5
+        Margins.Left = 2
+        Margins.Right = 2
         Align = alRight
         BevelOuter = bvNone
         Ctl3D = False
@@ -18355,7 +18355,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Shp_BtnAdicionarVeiculo: TShape
           Left = 0
           Top = 0
-          Width = 130
+          Width = 80
           Height = 43
           Align = alClient
           Brush.Color = 4227072
@@ -18369,11 +18369,11 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Btn_AdicionarVeiculo: TSpeedButton
           Left = 0
           Top = 0
-          Width = 130
+          Width = 80
           Height = 43
           Cursor = crHandPoint
           Align = alClient
-          Caption = '+ Transporte'
+          Caption = '+ Frota'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
@@ -18382,21 +18382,23 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Font.Style = [fsBold]
           ParentFont = False
           OnClick = Btn_AdicionarVeiculoClick
+          ExplicitWidth = 130
         end
       end
       object Pnl_BtnAdicionarMotorista: TPanel
         AlignWithMargins = True
-        Left = 264
+        Left = 359
         Top = 4
         Width = 100
         Height = 43
-        Margins.Left = 5
-        Margins.Right = 5
+        Margins.Left = 2
+        Margins.Right = 2
         Align = alRight
         BevelOuter = bvNone
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 2
+        ExplicitLeft = 264
         object Shp_BtnAdicionarMotorista: TShape
           Left = 0
           Top = 0
@@ -18426,7 +18428,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          OnClick = Btn_AdicionarVeiculoClick
           ExplicitLeft = 288
           ExplicitTop = 16
           ExplicitWidth = 23
