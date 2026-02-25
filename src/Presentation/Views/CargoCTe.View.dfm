@@ -23,7 +23,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 647
     DesignSize = (
       876
       649)
@@ -37,7 +36,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3366,7 +3364,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -18361,8 +18358,8 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Width = 130
           Height = 43
           Align = alClient
-          Brush.Color = 16744448
-          Pen.Color = 12279296
+          Brush.Color = 4227072
+          Pen.Color = clGreen
           Shape = stRoundRect
           ExplicitLeft = 136
           ExplicitTop = 24
@@ -18406,8 +18403,8 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Width = 100
           Height = 43
           Align = alClient
-          Brush.Color = 16744448
-          Pen.Color = 12279296
+          Brush.Color = 4227072
+          Pen.Color = clTeal
           Shape = stRoundRect
           ExplicitLeft = 136
           ExplicitTop = 24
@@ -18446,7 +18443,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
-      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
@@ -18483,7 +18479,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
-        ExplicitHeight = 87
       end
     end
   end

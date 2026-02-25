@@ -24,7 +24,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 439
     object Scbx_NovaTransportadora: TScrollBox
       Left = 0
       Top = 0
@@ -40,11 +39,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
-      ExplicitHeight = 439
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
         Top = 0
-        Width = 605
+        Width = 607
         Height = 161
         Align = alTop
         Picture.Data = {
@@ -4467,11 +4465,12 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         Stretch = True
         ExplicitLeft = -16
         ExplicitTop = -31
+        ExplicitWidth = 605
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
         Top = 161
-        Width = 605
+        Width = 607
         Height = 209
         Align = alTop
         Caption = 'Identifica'#231#227'o Fiscal'
@@ -4639,9 +4638,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Proportional = True
           end
           object Edt_IdentificacaoCNPJ: TEdit
-            Left = 93
-            Top = 23
-            Width = 231
+            Left = 120
+            Top = 27
+            Width = 204
             Height = 25
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4790,7 +4789,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
         Top = 370
-        Width = 605
+        Width = 607
         Height = 368
         Align = alTop
         Caption = 'Endere'#231'o Fiscal'
@@ -5010,9 +5009,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Proportional = True
           end
           object Edt_EnderecoCEP: TEdit
-            Left = 86
+            Left = 101
             Top = 23
-            Width = 238
+            Width = 223
             Height = 25
             Ctl3D = True
             Font.Charset = DEFAULT_CHARSET
@@ -5042,9 +5041,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             TabOrder = 1
           end
           object Edt_EnderecoBairro: TEdit
-            Left = 79
+            Left = 101
             Top = 93
-            Width = 245
+            Width = 223
             Height = 25
             Ctl3D = True
             Enabled = False
@@ -5058,9 +5057,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             TabOrder = 2
           end
           object Edt_EnderecoLogradouro: TEdit
-            Left = 109
+            Left = 101
             Top = 128
-            Width = 215
+            Width = 223
             Height = 25
             Ctl3D = True
             Enabled = False
@@ -5074,9 +5073,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             TabOrder = 3
           end
           object Edt_EnderecoNumero: TEdit
-            Left = 86
+            Left = 101
             Top = 163
-            Width = 238
+            Width = 223
             Height = 25
             Ctl3D = True
             Font.Charset = DEFAULT_CHARSET
@@ -5119,9 +5118,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             TabOrder = 6
           end
           object Edt_EnderecoUF: TEdit
-            Left = 109
+            Left = 120
             Top = 268
-            Width = 215
+            Width = 204
             Height = 25
             Ctl3D = True
             Enabled = False
@@ -5139,7 +5138,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_Contato: TGroupBox
         Left = 0
         Top = 1294
-        Width = 605
+        Width = 607
         Height = 185
         Align = alTop
         Caption = 'Contato'
@@ -5216,9 +5215,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             TabOrder = 0
           end
           object Edt_ContatoEmail: TEdit
-            Left = 80
+            Left = 88
             Top = 58
-            Width = 244
+            Width = 236
             Height = 25
             Enabled = False
             Font.Charset = DEFAULT_CHARSET
@@ -5248,7 +5247,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
         Top = 963
-        Width = 605
+        Width = 607
         Height = 150
         Align = alTop
         Caption = 'Dados Operacionais'
@@ -5324,6 +5323,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
+            ItemIndex = 2
             ParentFont = False
             TabOrder = 1
             Text = 'Estadual'
@@ -5337,7 +5337,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
         Top = 738
-        Width = 605
+        Width = 607
         Height = 225
         Align = alTop
         Caption = 'Dados Fiscais'
@@ -5483,7 +5483,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_Sistema: TGroupBox
         Left = 0
         Top = 1113
-        Width = 605
+        Width = 607
         Height = 181
         Align = alTop
         Caption = 'Sistema'
@@ -5594,7 +5594,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
         Top = 1545
-        Width = 605
+        Width = 607
         Height = 55
         Align = alBottom
         BevelOuter = bvNone
@@ -5604,7 +5604,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         TabOrder = 6
         object Pnl_BtnSalvarNovaTransportadora: TPanel
           AlignWithMargins = True
-          Left = 443
+          Left = 445
           Top = 10
           Width = 150
           Height = 35
@@ -5650,7 +5650,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         end
         object Pnl_BtnCancelarNovaTransportadora: TPanel
           AlignWithMargins = True
-          Left = 289
+          Left = 291
           Top = 10
           Width = 150
           Height = 35

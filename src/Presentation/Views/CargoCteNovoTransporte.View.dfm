@@ -22,14 +22,12 @@ object Frm_NovoTransporte: TFrm_NovoTransporte
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 624
-    ExplicitHeight = 439
     object PageControl1: TPageControl
       Left = 0
       Top = 0
       Width = 766
       Height = 535
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       TabOrder = 0
       object TabSheet1: TTabSheet
@@ -4492,8 +4490,6 @@ object Frm_NovoTransporte: TFrm_NovoTransporte
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 384
-          ExplicitWidth = 624
           object Pnl_BtnSalvarNovaTransportadora: TPanel
             AlignWithMargins = True
             Left = 596
@@ -4507,7 +4503,6 @@ object Frm_NovoTransporte: TFrm_NovoTransporte
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitLeft = 823
             object Shp_BtnSalvarNovaTransportadora: TShape
               Left = 0
               Top = 0
@@ -4554,7 +4549,6 @@ object Frm_NovoTransporte: TFrm_NovoTransporte
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 1
-            ExplicitLeft = 669
             object Shp_BtnCancelarNovaTransportadora: TShape
               Left = 0
               Top = 0
@@ -8912,8 +8906,6 @@ object Frm_NovoTransporte: TFrm_NovoTransporte
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 384
-          ExplicitWidth = 624
           object Panel3: TPanel
             AlignWithMargins = True
             Left = 596
@@ -8927,7 +8919,6 @@ object Frm_NovoTransporte: TFrm_NovoTransporte
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitLeft = 823
             object Shape1: TShape
               Left = 0
               Top = 0
@@ -8974,7 +8965,6 @@ object Frm_NovoTransporte: TFrm_NovoTransporte
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 1
-            ExplicitLeft = 669
             object Shape2: TShape
               Left = 0
               Top = 0
