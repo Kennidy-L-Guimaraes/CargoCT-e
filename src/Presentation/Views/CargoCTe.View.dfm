@@ -23,6 +23,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 647
     DesignSize = (
       876
       649)
@@ -36,6 +37,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3364,6 +3366,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -3409,7 +3412,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitTop = 208
         object Shp_BtnMotoristas: TShape
           Left = 0
           Top = 0
@@ -3456,7 +3458,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 3
-        ExplicitTop = 158
         object Shp_BtnTransportadoras: TShape
           Left = 0
           Top = 0
@@ -3502,7 +3503,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 4
-        ExplicitTop = 108
         object Shp_BtnNotasEmitidas: TShape
           Left = 0
           Top = 0
@@ -3548,7 +3548,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 5
-        ExplicitTop = 308
         object Shp_BtnConfiguracoes: TShape
           Left = 0
           Top = 0
@@ -3595,7 +3594,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         BevelOuter = bvNone
         TabOrder = 6
         Visible = False
-        ExplicitTop = 258
         object Shp_BtnClientes: TShape
           Left = 0
           Top = 0
@@ -3640,7 +3638,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 7
-        ExplicitTop = 58
         object Shp_BtnNovaNota: TShape
           Left = 0
           Top = 0
@@ -18298,7 +18295,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Top = 4
         Width = 190
         Height = 43
-        Margins.Left = 10
+        Margins.Left = 5
         Margins.Right = 5
         Align = alRight
         BevelOuter = bvNone
@@ -18307,9 +18304,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentBackground = False
         ParentCtl3D = False
         TabOrder = 0
-        ExplicitLeft = 519
-        ExplicitTop = 1
-        ExplicitHeight = 49
         object Shp_BtnNovaTransportadora: TShape
           Left = 0
           Top = 0
@@ -18348,26 +18342,23 @@ object Frm_CargoCTe: TFrm_CargoCTe
           ExplicitHeight = 22
         end
       end
-      object Panel1: TPanel
+      object Pnl_BtnAdicionarVeiculo: TPanel
         AlignWithMargins = True
-        Left = 309
+        Left = 374
         Top = 4
-        Width = 190
+        Width = 130
         Height = 43
-        Margins.Left = 10
+        Margins.Left = 5
         Margins.Right = 5
         Align = alRight
         BevelOuter = bvNone
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 1
-        ExplicitLeft = 329
-        ExplicitTop = 1
-        ExplicitHeight = 49
-        object Shape1: TShape
+        object Shp_BtnAdicionarVeiculo: TShape
           Left = 0
           Top = 0
-          Width = 190
+          Width = 130
           Height = 43
           Align = alClient
           Brush.Color = 16744448
@@ -18378,14 +18369,14 @@ object Frm_CargoCTe: TFrm_CargoCTe
           ExplicitWidth = 65
           ExplicitHeight = 65
         end
-        object SpeedButton1: TSpeedButton
+        object Btn_AdicionarVeiculo: TSpeedButton
           Left = 0
           Top = 0
-          Width = 190
+          Width = 130
           Height = 43
           Cursor = crHandPoint
           Align = alClient
-          Caption = '+ Ve'#237'culo e Motorista'
+          Caption = '+ Transporte'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
@@ -18393,7 +18384,52 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          OnClick = SpeedButton1Click
+          OnClick = Btn_AdicionarVeiculoClick
+        end
+      end
+      object Pnl_BtnAdicionarMotorista: TPanel
+        AlignWithMargins = True
+        Left = 264
+        Top = 4
+        Width = 100
+        Height = 43
+        Margins.Left = 5
+        Margins.Right = 5
+        Align = alRight
+        BevelOuter = bvNone
+        Ctl3D = False
+        ParentCtl3D = False
+        TabOrder = 2
+        object Shp_BtnAdicionarMotorista: TShape
+          Left = 0
+          Top = 0
+          Width = 100
+          Height = 43
+          Align = alClient
+          Brush.Color = 16744448
+          Pen.Color = 12279296
+          Shape = stRoundRect
+          ExplicitLeft = 136
+          ExplicitTop = 24
+          ExplicitWidth = 65
+          ExplicitHeight = 65
+        end
+        object Btn_AdicionarMotorista: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 100
+          Height = 43
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = '+ Vinculo'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWhite
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = Btn_AdicionarVeiculoClick
           ExplicitLeft = 288
           ExplicitTop = 16
           ExplicitWidth = 23
@@ -18410,6 +18446,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
+      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
@@ -18446,6 +18483,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
+        ExplicitHeight = 87
       end
     end
   end

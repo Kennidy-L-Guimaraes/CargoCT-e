@@ -9,6 +9,8 @@
 - [ ] Criar a classe `TMotorista` com todas as atribuições e ajustar a view.
 - [ ] Criar novos testes unitários (TVeiculo, TMotoristas e TDadosOperacionais).
 - [ ] Implementar Gestão de Veículos (Form/View) e diminuir os campos em (RegitrarTransportadora) adicione um botão (Gerenciar Frota), esta opção deve estar disponível na interface principal.  
+- [ ] Desenvolver a interface para Motorista e Veículo no PageControl (Adicionar Transporte).
+- [ ] Desenvolver a interface simples para (Vinculo).
 
 
 ---

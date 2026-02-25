@@ -255,9 +255,12 @@ type
     Dbgd_MotoristasRegistrados: TDBGrid;
     Pnl_MotoristasTopo: TPanel;
     Lbl_MotoristasTopo: TLabel;
-    Panel1: TPanel;
-    Shape1: TShape;
-    SpeedButton1: TSpeedButton;
+    Pnl_BtnAdicionarVeiculo: TPanel;
+    Shp_BtnAdicionarVeiculo: TShape;
+    Btn_AdicionarVeiculo: TSpeedButton;
+    Pnl_BtnAdicionarMotorista: TPanel;
+    Shp_BtnAdicionarMotorista: TShape;
+    Btn_AdicionarMotorista: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Btn_BtnNovaNotaClick(Sender: TObject);
     procedure Btn_NotasEmitidasClick(Sender: TObject);
@@ -267,7 +270,7 @@ type
     procedure Btn_SairClick(Sender: TObject);
     procedure Btn_ConfiguracoesClick(Sender: TObject);
     procedure Btn_NovaTransportadoraClick(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
+    procedure Btn_AdicionarVeiculoClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationService;
@@ -286,7 +289,7 @@ implementation
 {$R *.dfm}
 
 uses CargoCteConfig.View, CargoCteNovaTransportadora.View,
-  CargoCteNovoVeiculoEMotorista.View;
+  CargoCteNovoTransporte.View;
 
 { TFrm_CargoCTe }
 
@@ -346,9 +349,9 @@ FMenuService.RegisterPanel(Pnl_Transportadoras);
 FMenuService.RegisterPanel(Pnl_Motoristas);
 end;
 
-procedure TFrm_CargoCTe.SpeedButton1Click(Sender: TObject);
+procedure TFrm_CargoCTe.Btn_AdicionarVeiculoClick(Sender: TObject);
 begin
- Frm_NovoVeiculoEMotorista.Show;
+ Frm_NovoTransporte.Show;
 end;
 
 procedure TFrm_CargoCTe.Srbx_PesquisarTransportadoraClick(Sender: TObject);

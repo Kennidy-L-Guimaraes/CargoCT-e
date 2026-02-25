@@ -85,10 +85,6 @@ type
     Img_IdentificacaoLogo: TImage;
     Btn_IdentificacaoLogo: TButton;
     Img_NovaTransportadoraBanner: TImage;
-    Grbx_VeiculoMotorista: TGroupBox;
-    Panel1: TPanel;
-    Shape1: TShape;
-    SpeedButton1: TSpeedButton;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
     procedure ResetarConfiguracoes;
     procedure SpeedButton1Click(Sender: TObject);
@@ -105,7 +101,7 @@ implementation
 
 {$R *.dfm}
 
-uses CampoVisual.Utils, CargoCteNovoVeiculoEMotorista.View;
+uses CampoVisual.Utils, CargoCteNovoTransporte.View;
 
 procedure TFrm_NovaTransportadora.Btn_CancelarNovaTransportadoraClick(
   Sender: TObject);
@@ -151,7 +147,7 @@ end;
 
 procedure TFrm_NovaTransportadora.SpeedButton1Click(Sender: TObject);
 begin
- Frm_NovoVeiculoEMotorista.Show;
+ Frm_NovoTransporte.Show;
 end;
 
 end.
