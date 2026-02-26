@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Grids, Data.DB,
-  Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.Imaging.jpeg, Vcl.ComCtrls;
+  Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.Imaging.jpeg, Vcl.ComCtrls,
+  Vcl.Mask;
 
 type
   TFrm_NovaFrota = class(TForm)
@@ -23,13 +24,7 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Edit6: TEdit;
-    Edit7: TEdit;
     ComboBox2: TComboBox;
-    Img_NovaTransportadoraBanner: TImage;
     Pnl_NovaTransportadoraBtns: TPanel;
     Pnl_BtnSalvarNovaTransportadora: TPanel;
     Shp_BtnSalvarNovaTransportadora: TShape;
@@ -54,7 +49,6 @@ type
     Panel4: TPanel;
     Shape2: TShape;
     SpeedButton2: TSpeedButton;
-    Image1: TImage;
     Edit9: TEdit;
     Label14: TLabel;
     GroupBox2: TGroupBox;
@@ -89,9 +83,33 @@ type
     Label28: TLabel;
     ComboBox1: TComboBox;
     Edit20: TEdit;
-    Edit21: TEdit;
-    Edit22: TEdit;
     ComboBox4: TComboBox;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label29: TLabel;
+    Label30: TLabel;
+    Label31: TLabel;
+    Label32: TLabel;
+    Label33: TLabel;
+    MaskEdit1: TMaskEdit;
+    MaskEdit2: TMaskEdit;
+    MaskEdit3: TMaskEdit;
+    MaskEdit4: TMaskEdit;
+    MaskEdit5: TMaskEdit;
+    MaskEdit6: TMaskEdit;
+    MaskEdit7: TMaskEdit;
+    Label34: TLabel;
+    Label35: TLabel;
+    Label36: TLabel;
+    Label37: TLabel;
+    Label38: TLabel;
+    Label39: TLabel;
+    Label40: TLabel;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
   private
     { Private declarations }

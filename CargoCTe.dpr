@@ -16,13 +16,16 @@ uses
   DadosFiscais.Entidade in 'src\Domain\Entities\DadosFiscais.Entidade.pas',
   DadosOperacionais.Entidade in 'src\Domain\Entities\DadosOperacionais.Entidade.pas',
   Veiculo.Entidade in 'src\Domain\Entities\Veiculo.Entidade.pas',
-  CargoCteNovaFrota.View in 'src\Presentation\Views\CargoCteNovaFrota.View.pas' {Frm_NovaFrota};
+  CargoCteNovaFrota.View in 'src\Presentation\Views\CargoCteNovaFrota.View.pas' {Frm_NovaFrota},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.Title := '';
   Application.CreateForm(TFrm_CargoCTe, Frm_CargoCTe);
   Application.CreateForm(TFrm_CargoCteConfig, Frm_CargoCteConfig);
   Application.CreateForm(TFrm_NovaTransportadora, Frm_NovaTransportadora);

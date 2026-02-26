@@ -23,8 +23,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 876
-    ExplicitHeight = 647
     DesignSize = (
       891
       649)
@@ -38,7 +36,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3367,7 +3364,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -3681,7 +3677,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 744
       object Pnl_NotaInfo: TPanel
         Left = 1
         Top = 1
@@ -3689,7 +3684,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Height = 464
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 742
         object Pgc_NotaInfo: TPageControl
           Left = 1
           Top = 1
@@ -3698,7 +3692,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           ActivePage = Tbsh_Nota
           Align = alClient
           TabOrder = 0
-          ExplicitWidth = 740
           object Tbsh_IdentificacaoETomador: TTabSheet
             Caption = 'Identifica'#231#227'o e Tomador'
             object Lbl_Identificacao: TLabel
@@ -7172,7 +7165,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
               AutoSize = True
               BevelOuter = bvNone
               TabOrder = 0
-              ExplicitWidth = 732
               object Pnl_BtnsNotasGerarNota: TPanel
                 AlignWithMargins = True
                 Left = 4
@@ -7231,7 +7223,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Align = alLeft
                 BevelOuter = bvNone
                 TabOrder = 1
-                ExplicitLeft = 373
                 object Shp_NotaBtnsCancelarOperacao: TShape
                   Left = 0
                   Top = 0
@@ -7280,7 +7271,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 743
         object Img_NotasEmitidas: TImage
           Left = 3
           Top = 55
@@ -10283,7 +10273,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 2
-        ExplicitLeft = 743
         object Img_Transportadoras: TImage
           Left = 1
           Top = 44
@@ -14107,7 +14096,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 3
-        ExplicitLeft = 743
         object Img_Motoristas: TImage
           Left = 3
           Top = 44
@@ -18279,7 +18267,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 710
       object Lbl_Logo: TLabel
         Left = 16
         Top = 2
@@ -18321,7 +18308,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentBackground = False
         ParentCtl3D = False
         TabOrder = 0
-        ExplicitLeft = 547
         object Shp_BtnNovaTransportadora: TShape
           Left = 0
           Top = 0
@@ -18373,7 +18359,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 1
-        ExplicitLeft = 463
         object Shp_BtnAdicionarVeiculo: TShape
           Left = 0
           Top = 0
@@ -18420,7 +18405,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 2
-        ExplicitLeft = 359
         object Shp_BtnAdicionarMotorista: TShape
           Left = 0
           Top = 0
@@ -18466,8 +18450,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
-      ExplicitWidth = 710
-      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
@@ -18504,8 +18486,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
-        ExplicitWidth = 694
-        ExplicitHeight = 87
       end
     end
   end
