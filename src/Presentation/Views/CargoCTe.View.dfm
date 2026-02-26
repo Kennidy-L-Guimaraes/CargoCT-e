@@ -3,7 +3,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
   Top = 0
   Caption = 'Cargo CT-e'
   ClientHeight = 649
-  ClientWidth = 876
+  ClientWidth = 891
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,15 +16,17 @@ object Frm_CargoCTe: TFrm_CargoCTe
   object Pnl_Background: TPanel
     Left = 0
     Top = 0
-    Width = 876
+    Width = 891
     Height = 649
     Align = alClient
     BevelOuter = bvNone
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 876
+    ExplicitHeight = 647
     DesignSize = (
-      876
+      891
       649)
     object Pnl_Menu: TPanel
       Left = 0
@@ -36,6 +38,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3364,6 +3367,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -3671,27 +3675,30 @@ object Frm_CargoCTe: TFrm_CargoCTe
     object Pnl_Content: TPanel
       Left = 160
       Top = 64
-      Width = 744
+      Width = 759
       Height = 466
       Anchors = [akLeft, akTop, akRight]
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 744
       object Pnl_NotaInfo: TPanel
         Left = 1
         Top = 1
-        Width = 742
+        Width = 757
         Height = 464
         Align = alClient
         TabOrder = 0
+        ExplicitWidth = 742
         object Pgc_NotaInfo: TPageControl
           Left = 1
           Top = 1
-          Width = 740
+          Width = 755
           Height = 462
-          ActivePage = Tbsh_IdentificacaoETomador
+          ActivePage = Tbsh_Nota
           Align = alClient
           TabOrder = 0
+          ExplicitWidth = 740
           object Tbsh_IdentificacaoETomador: TTabSheet
             Caption = 'Identifica'#231#227'o e Tomador'
             object Lbl_Identificacao: TLabel
@@ -7158,18 +7165,22 @@ object Frm_CargoCTe: TFrm_CargoCTe
             object Pnl_BtnsNotas: TPanel
               Left = 0
               Top = 384
-              Width = 732
+              Width = 747
               Height = 48
               Align = alBottom
               Anchors = [akLeft, akTop, akRight]
               AutoSize = True
               BevelOuter = bvNone
               TabOrder = 0
+              ExplicitWidth = 732
               object Pnl_BtnsNotasGerarNota: TPanel
-                Left = 0
-                Top = 0
-                Width = 366
-                Height = 48
+                AlignWithMargins = True
+                Left = 4
+                Top = 3
+                Width = 355
+                Height = 42
+                Margins.Left = 4
+                Margins.Right = 4
                 Align = alLeft
                 Anchors = []
                 BevelOuter = bvNone
@@ -7177,11 +7188,12 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 object Shp_NotaBtnsGerarNota: TShape
                   Left = 0
                   Top = 0
-                  Width = 366
-                  Height = 48
+                  Width = 355
+                  Height = 42
                   Align = alClient
                   Brush.Color = 4227072
                   Pen.Color = clLime
+                  Shape = stRoundRect
                   ExplicitLeft = 312
                   ExplicitTop = 16
                   ExplicitWidth = 65
@@ -7190,8 +7202,8 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 object Pnl_NotasGerarNota: TSpeedButton
                   Left = 0
                   Top = 0
-                  Width = 366
-                  Height = 48
+                  Width = 355
+                  Height = 42
                   Cursor = crHandPoint
                   Align = alClient
                   Caption = 'Gerar Nota'
@@ -7209,22 +7221,26 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 end
               end
               object Pnl_BtnsNotasCancelarOperacao: TPanel
-                Left = 366
-                Top = 0
-                Width = 366
-                Height = 48
-                Align = alRight
-                Anchors = []
+                AlignWithMargins = True
+                Left = 367
+                Top = 3
+                Width = 355
+                Height = 42
+                Margins.Left = 4
+                Margins.Right = 4
+                Align = alLeft
                 BevelOuter = bvNone
                 TabOrder = 1
+                ExplicitLeft = 373
                 object Shp_NotaBtnsCancelarOperacao: TShape
                   Left = 0
                   Top = 0
-                  Width = 366
-                  Height = 48
+                  Width = 355
+                  Height = 42
                   Align = alClient
                   Brush.Color = 168
                   Pen.Color = clRed
+                  Shape = stRoundRect
                   ExplicitLeft = 312
                   ExplicitTop = 16
                   ExplicitWidth = 65
@@ -7233,8 +7249,8 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 object Btn_NotasCancelarOperacao: TSpeedButton
                   Left = 0
                   Top = 0
-                  Width = 366
-                  Height = 48
+                  Width = 355
+                  Height = 42
                   Cursor = crHandPoint
                   Align = alClient
                   Caption = 'Cancelar Opera'#231#227'o'
@@ -7256,7 +7272,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_NotasEmitidas: TPanel
-        Left = 743
+        Left = 758
         Top = 1
         Width = 0
         Height = 464
@@ -7264,6 +7280,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 1
+        ExplicitLeft = 743
         object Img_NotasEmitidas: TImage
           Left = 3
           Top = 55
@@ -10258,7 +10275,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_Transportadoras: TPanel
-        Left = 743
+        Left = 758
         Top = 1
         Width = 0
         Height = 464
@@ -10266,6 +10283,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 2
+        ExplicitLeft = 743
         object Img_Transportadoras: TImage
           Left = 1
           Top = 44
@@ -14081,7 +14099,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_Motoristas: TPanel
-        Left = 743
+        Left = 758
         Top = 1
         Width = 0
         Height = 464
@@ -14089,6 +14107,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 3
+        ExplicitLeft = 743
         object Img_Motoristas: TImage
           Left = 3
           Top = 44
@@ -18254,12 +18273,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
     object Pnl_SubMenu: TPanel
       Left = 159
       Top = 7
-      Width = 710
+      Width = 725
       Height = 51
       Anchors = [akLeft, akTop, akRight]
       Color = clWhite
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 710
       object Lbl_Logo: TLabel
         Left = 16
         Top = 2
@@ -18288,7 +18308,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       end
       object Pnl_BtnNovaTransportadora: TPanel
         AlignWithMargins = True
-        Left = 547
+        Left = 562
         Top = 4
         Width = 160
         Height = 43
@@ -18301,6 +18321,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentBackground = False
         ParentCtl3D = False
         TabOrder = 0
+        ExplicitLeft = 547
         object Shp_BtnNovaTransportadora: TShape
           Left = 0
           Top = 0
@@ -18341,7 +18362,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       end
       object Pnl_BtnAdicionarVeiculo: TPanel
         AlignWithMargins = True
-        Left = 463
+        Left = 478
         Top = 4
         Width = 80
         Height = 43
@@ -18352,6 +18373,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 1
+        ExplicitLeft = 463
         object Shp_BtnAdicionarVeiculo: TShape
           Left = 0
           Top = 0
@@ -18387,7 +18409,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       end
       object Pnl_BtnAdicionarMotorista: TPanel
         AlignWithMargins = True
-        Left = 359
+        Left = 374
         Top = 4
         Width = 100
         Height = 43
@@ -18398,7 +18420,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 2
-        ExplicitLeft = 264
+        ExplicitLeft = 359
         object Shp_BtnAdicionarMotorista: TShape
           Left = 0
           Top = 0
@@ -18438,16 +18460,18 @@ object Frm_CargoCTe: TFrm_CargoCTe
     object Pnl_Ajuda: TPanel
       Left = 160
       Top = 536
-      Width = 710
+      Width = 725
       Height = 112
       Anchors = [akLeft, akTop, akRight, akBottom]
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
+      ExplicitWidth = 710
+      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
-        Width = 708
+        Width = 723
         Height = 21
         Align = alTop
         Caption = '  Painel de Ajuda (HelpPanel):'
@@ -18464,7 +18488,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       object Mem_Ajuda: TMemo
         Left = 15
         Top = 22
-        Width = 694
+        Width = 709
         Height = 89
         Align = alRight
         Anchors = [akLeft, akTop, akRight, akBottom]
@@ -18480,6 +18504,8 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
+        ExplicitWidth = 694
+        ExplicitHeight = 87
       end
     end
   end

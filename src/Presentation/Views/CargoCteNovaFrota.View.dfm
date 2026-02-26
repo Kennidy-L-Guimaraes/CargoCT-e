@@ -2,7 +2,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
   Left = 0
   Top = 0
   Caption = 'Adicionar Nova Frota'
-  ClientHeight = 644
+  ClientHeight = 609
   ClientWidth = 766
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,22 +16,22 @@ object Frm_NovaFrota: TFrm_NovaFrota
     Left = 0
     Top = 0
     Width = 766
-    Height = 644
+    Height = 609
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 535
+    ExplicitHeight = 642
     object PageControl1: TPageControl
       Left = 0
       Top = 0
       Width = 766
-      Height = 644
+      Height = 609
       ActivePage = TabSheet2
       Align = alClient
       TabOrder = 0
-      ExplicitHeight = 535
+      ExplicitHeight = 642
       object TabSheet1: TTabSheet
         Caption = 'Novo Motorista'
         object Img_NovaTransportadoraBanner: TImage
@@ -4113,13 +4113,14 @@ object Frm_NovaFrota: TFrm_NovaFrota
             191CED544E7050E928E19B54563A675000C251110110011FFD1EB17FFE96CFFF
             00CE62F853FF00C2B6FF0032DFE33FFFD9}
           Stretch = True
+          Visible = False
           ExplicitTop = 8
           ExplicitWidth = 985
         end
         object GroupBox1: TGroupBox
-          Left = 16
+          Left = 3
           Top = 167
-          Width = 730
+          Width = 385
           Height = 298
           Caption = 'Dados do Motorista'
           Color = clWhite
@@ -4133,25 +4134,12 @@ object Frm_NovaFrota: TFrm_NovaFrota
           ParentFont = False
           TabOrder = 0
           object Panel1: TPanel
-            Left = 15
-            Top = 30
-            Width = 682
+            Left = 9
+            Top = 24
+            Width = 354
             Height = 259
             BevelOuter = bvNone
             TabOrder = 0
-            object Label1: TLabel
-              Left = 352
-              Top = 19
-              Width = 132
-              Height = 20
-              Caption = 'Tipo de Motorista: *'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
             object Label2: TLabel
               Left = 16
               Top = 19
@@ -4243,77 +4231,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label10: TLabel
-              Left = 352
-              Top = 50
-              Width = 102
-              Height = 20
-              Caption = 'N'#250'mero CNH: *'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Label11: TLabel
-              Left = 352
-              Top = 81
-              Width = 106
-              Height = 20
-              Caption = 'Validade CNH: *'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Label12: TLabel
-              Left = 352
-              Top = 112
-              Width = 78
-              Height = 20
-              Caption = 'Categoria: *'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Label13: TLabel
-              Left = 352
-              Top = 143
-              Width = 163
-              Height = 20
-              Caption = 'Validade Exame M'#233'dico:'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object ComboBox1: TComboBox
-              Left = 504
-              Top = 18
-              Width = 156
-              Height = 25
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -13
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ItemIndex = 2
-              ParentFont = False
-              TabOrder = 0
-              Text = 'Terceirizado'
-              Items.Strings = (
-                'Pr'#243'prio'
-                'Agregado'
-                'Terceirizado')
-            end
             object Edit1: TEdit
               Left = 168
               Top = 18
@@ -4326,7 +4243,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               NumbersOnly = True
               ParentFont = False
-              TabOrder = 1
+              TabOrder = 0
             end
             object Edit2: TEdit
               Left = 168
@@ -4340,7 +4257,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               NumbersOnly = True
               ParentFont = False
-              TabOrder = 2
+              TabOrder = 1
             end
             object Edit3: TEdit
               Left = 168
@@ -4354,7 +4271,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               NumbersOnly = True
               ParentFont = False
-              TabOrder = 3
+              TabOrder = 2
             end
             object Edit4: TEdit
               Left = 184
@@ -4368,7 +4285,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               NumbersOnly = True
               ParentFont = False
-              TabOrder = 4
+              TabOrder = 3
             end
             object Edit6: TEdit
               Left = 168
@@ -4382,7 +4299,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               NumbersOnly = True
               ParentFont = False
-              TabOrder = 5
+              TabOrder = 4
             end
             object Edit7: TEdit
               Left = 184
@@ -4396,7 +4313,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               NumbersOnly = True
               ParentFont = False
-              TabOrder = 6
+              TabOrder = 5
             end
             object ComboBox2: TComboBox
               Left = 168
@@ -4409,7 +4326,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
-              TabOrder = 7
+              TabOrder = 6
               Text = 'Casado'
               Items.Strings = (
                 'Casado'
@@ -4417,73 +4334,11 @@ object Frm_NovaFrota: TFrm_NovaFrota
                 'Divorciado'
                 'Viuvo')
             end
-            object Edit5: TEdit
-              Left = 504
-              Top = 49
-              Width = 156
-              Height = 25
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -13
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              NumbersOnly = True
-              ParentFont = False
-              TabOrder = 8
-            end
-            object Edit8: TEdit
-              Left = 504
-              Top = 80
-              Width = 156
-              Height = 25
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -13
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              NumbersOnly = True
-              ParentFont = False
-              TabOrder = 9
-            end
-            object Edit10: TEdit
-              Left = 528
-              Top = 142
-              Width = 132
-              Height = 25
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -13
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              NumbersOnly = True
-              ParentFont = False
-              TabOrder = 10
-            end
-            object ComboBox4: TComboBox
-              Left = 504
-              Top = 111
-              Width = 156
-              Height = 25
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -13
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-              TabOrder = 11
-              Text = 'C'
-              Items.Strings = (
-                'A'
-                'B'
-                'C'
-                'D'
-                'E')
-            end
           end
         end
         object Pnl_NovaTransportadoraBtns: TPanel
           Left = 0
-          Top = 559
+          Top = 524
           Width = 758
           Height = 55
           Align = alBottom
@@ -4492,7 +4347,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 450
+          ExplicitTop = 559
           object Pnl_BtnSalvarNovaTransportadora: TPanel
             AlignWithMargins = True
             Left = 596
@@ -4558,8 +4413,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Width = 150
               Height = 35
               Align = alClient
-              Brush.Color = 168
-              Pen.Color = clRed
+              Brush.Color = 7631988
+              Pen.Color = clGray
               Shape = stRoundRect
               ExplicitLeft = 312
               ExplicitTop = 16
@@ -4585,6 +4440,177 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ExplicitLeft = 22
               ExplicitWidth = 178
               ExplicitHeight = 48
+            end
+          end
+        end
+        object GroupBox4: TGroupBox
+          Left = 394
+          Top = 167
+          Width = 352
+          Height = 242
+          Caption = 'Habilita'#231#227'o'
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 2
+          object Panel7: TPanel
+            Left = 13
+            Top = 24
+            Width = 324
+            Height = 190
+            BevelOuter = bvNone
+            TabOrder = 0
+            object Label1: TLabel
+              Left = 6
+              Top = 13
+              Width = 132
+              Height = 20
+              Caption = 'Tipo de Motorista: *'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label25: TLabel
+              Left = 6
+              Top = 44
+              Width = 102
+              Height = 20
+              Caption = 'N'#250'mero CNH: *'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label26: TLabel
+              Left = 6
+              Top = 75
+              Width = 106
+              Height = 20
+              Caption = 'Validade CNH: *'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label27: TLabel
+              Left = 6
+              Top = 106
+              Width = 78
+              Height = 20
+              Caption = 'Categoria: *'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label28: TLabel
+              Left = 6
+              Top = 137
+              Width = 163
+              Height = 20
+              Caption = 'Validade Exame M'#233'dico:'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object ComboBox1: TComboBox
+              Left = 158
+              Top = 12
+              Width = 156
+              Height = 25
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ItemIndex = 2
+              ParentFont = False
+              TabOrder = 0
+              Text = 'Terceirizado'
+              Items.Strings = (
+                'Pr'#243'prio'
+                'Agregado'
+                'Terceirizado')
+            end
+            object Edit20: TEdit
+              Left = 158
+              Top = 43
+              Width = 156
+              Height = 25
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              NumbersOnly = True
+              ParentFont = False
+              TabOrder = 1
+            end
+            object Edit21: TEdit
+              Left = 158
+              Top = 74
+              Width = 156
+              Height = 25
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              NumbersOnly = True
+              ParentFont = False
+              TabOrder = 2
+            end
+            object Edit22: TEdit
+              Left = 182
+              Top = 136
+              Width = 132
+              Height = 25
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              NumbersOnly = True
+              ParentFont = False
+              TabOrder = 3
+            end
+            object ComboBox4: TComboBox
+              Left = 158
+              Top = 105
+              Width = 156
+              Height = 25
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 4
+              Text = 'C'
+              Items.Strings = (
+                'A'
+                'B'
+                'C'
+                'D'
+                'E')
             end
           end
         end
@@ -8671,12 +8697,13 @@ object Frm_NovaFrota: TFrm_NovaFrota
             191CED544E7050E928E19B54563A675000C251110110011FFD1EB17FFE96CFFF
             00CE62F853FF00C2B6FF0032DFE33FFFD9}
           Stretch = True
+          Visible = False
         end
         object Grbx_VeiculoMotorista: TGroupBox
           Left = 3
           Top = 167
           Width = 369
-          Height = 285
+          Height = 234
           Cursor = crDrag
           Caption = 'Ve'#237'culo'
           Color = clWhite
@@ -8693,7 +8720,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Left = 15
             Top = 28
             Width = 346
-            Height = 229
+            Height = 189
             BevelOuter = bvNone
             TabOrder = 0
             object Lbl_VeiculoMotoristaPlaca: TLabel
@@ -8869,7 +8896,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
         end
         object Panel2: TPanel
           Left = 0
-          Top = 559
+          Top = 524
           Width = 758
           Height = 55
           Align = alBottom
@@ -8878,7 +8905,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 450
+          ExplicitTop = 557
           object Panel3: TPanel
             AlignWithMargins = True
             Left = 596
@@ -8944,8 +8971,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Width = 150
               Height = 35
               Align = alClient
-              Brush.Color = 168
-              Pen.Color = clRed
+              Brush.Color = 7631988
+              Pen.Color = clGray
               Shape = stRoundRect
               ExplicitLeft = 312
               ExplicitTop = 16
@@ -8978,9 +9005,9 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Left = 378
           Top = 167
           Width = 361
-          Height = 285
+          Height = 234
           Cursor = crDrag
-          Caption = 'Ve'#237'culo'
+          Caption = 'Especifica'#231#245'es'
           Color = clWhite
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -8995,12 +9022,12 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Left = 7
             Top = 28
             Width = 346
-            Height = 229
+            Height = 189
             BevelOuter = bvNone
             TabOrder = 0
             object Lbl_VeiculoMotoristaCapacidade: TLabel
-              Left = 11
-              Top = 136
+              Left = 13
+              Top = 144
               Width = 114
               Height = 20
               Caption = 'Capacidade KG: *'
@@ -9012,8 +9039,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object Label21: TLabel
-              Left = 14
-              Top = 8
+              Left = 16
+              Top = 47
               Width = 44
               Height = 20
               Caption = 'Marca:'
@@ -9025,8 +9052,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object Label22: TLabel
-              Left = 14
-              Top = 39
+              Left = 16
+              Top = 78
               Width = 55
               Height = 20
               Caption = 'Modelo:'
@@ -9038,8 +9065,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object Label23: TLabel
-              Left = 14
-              Top = 70
+              Left = 16
+              Top = 109
               Width = 26
               Height = 20
               Caption = 'Cor:'
@@ -9050,25 +9077,12 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label24: TLabel
-              Left = 14
-              Top = 101
-              Width = 64
+            object Label15: TLabel
+              Left = 13
+              Top = 16
+              Width = 116
               Height = 20
-              Caption = 'Km Atual:'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Label25: TLabel
-              Left = 11
-              Top = 167
-              Width = 27
-              Height = 20
-              Caption = 'PBT:'
+              Caption = 'Tipo de Veiculo: *'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -15
@@ -9077,9 +9091,9 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object Edt_VeiculoMotoristaCapacidade: TEdit
-              Left = 173
-              Top = 131
-              Width = 146
+              Left = 152
+              Top = 139
+              Width = 169
               Height = 25
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -9090,10 +9104,10 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 0
             end
-            object Edit14: TEdit
-              Left = 173
-              Top = 162
-              Width = 146
+            object Edit16: TEdit
+              Left = 152
+              Top = 46
+              Width = 169
               Height = 25
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -9104,10 +9118,10 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 1
             end
-            object Edit16: TEdit
-              Left = 173
-              Top = 7
-              Width = 146
+            object Edit17: TEdit
+              Left = 152
+              Top = 77
+              Width = 169
               Height = 25
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -9118,10 +9132,10 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 2
             end
-            object Edit17: TEdit
-              Left = 173
-              Top = 38
-              Width = 146
+            object Edit18: TEdit
+              Left = 152
+              Top = 108
+              Width = 169
               Height = 25
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -9132,10 +9146,10 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 3
             end
-            object Edit18: TEdit
-              Left = 173
-              Top = 69
-              Width = 146
+            object Edit12: TEdit
+              Left = 152
+              Top = 15
+              Width = 169
               Height = 25
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -9146,29 +9160,15 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 4
             end
-            object Edit19: TEdit
-              Left = 173
-              Top = 100
-              Width = 146
-              Height = 25
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -13
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              NumbersOnly = True
-              ParentFont = False
-              TabOrder = 5
-            end
           end
         end
         object GroupBox3: TGroupBox
-          Left = 0
-          Top = 458
+          Left = 3
+          Top = 407
           Width = 736
           Height = 108
           Cursor = crDrag
-          Caption = 'Ve'#237'culo'
+          Caption = 'Controle Operacional'
           Color = clWhite
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -9187,8 +9187,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
             BevelOuter = bvNone
             TabOrder = 0
             object Label19: TLabel
-              Left = 378
-              Top = 14
+              Left = 383
+              Top = 41
               Width = 47
               Height = 20
               Caption = 'Status: '
@@ -9200,11 +9200,11 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object Label20: TLabel
-              Left = 378
-              Top = 45
-              Width = 126
+              Left = 14
+              Top = 41
+              Width = 123
               Height = 20
-              Caption = 'Possui Rastrador?:  '
+              Caption = 'Possui Rastreador?'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -15
@@ -9212,12 +9212,25 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label27: TLabel
-              Left = 11
-              Top = 14
-              Width = 114
+            object Label24: TLabel
+              Left = 14
+              Top = 13
+              Width = 64
               Height = 20
-              Caption = 'Capacidade KG: *'
+              Caption = 'Km Atual:'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label9: TLabel
+              Left = 383
+              Top = 13
+              Width = 110
+              Height = 20
+              Caption = 'N'#176' Equipamento'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -15
@@ -9226,8 +9239,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object RadioButton1: TRadioButton
-              Left = 513
-              Top = 48
+              Left = 149
+              Top = 44
               Width = 62
               Height = 17
               Caption = 'Sim'
@@ -9240,8 +9253,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 0
             end
             object RadioButton2: TRadioButton
-              Left = 581
-              Top = 48
+              Left = 217
+              Top = 44
               Width = 66
               Height = 17
               Caption = 'N'#227'o'
@@ -9254,8 +9267,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 1
             end
             object CheckBox1: TCheckBox
-              Left = 513
-              Top = 14
+              Left = 447
+              Top = 44
               Width = 62
               Height = 17
               Caption = 'Ativo'
@@ -9267,24 +9280,24 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 2
             end
-            object CheckBox2: TCheckBox
-              Left = 581
-              Top = 14
-              Width = 62
-              Height = 17
-              Caption = 'Inativo'
+            object Edit19: TEdit
+              Left = 94
+              Top = 10
+              Width = 91
+              Height = 25
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
+              NumbersOnly = True
               ParentFont = False
               TabOrder = 3
             end
-            object Edit15: TEdit
-              Left = 173
-              Top = 9
-              Width = 146
+            object Edit11: TEdit
+              Left = 532
+              Top = 10
+              Width = 154
               Height = 25
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
