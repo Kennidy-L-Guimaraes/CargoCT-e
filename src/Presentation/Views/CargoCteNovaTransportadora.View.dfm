@@ -24,13 +24,13 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 439
     object Scbx_NovaTransportadora: TScrollBox
       Left = 0
       Top = 0
       Width = 624
       Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 135
       VertScrollBar.Range = 1600
       VertScrollBar.Tracking = True
       Align = alClient
@@ -40,10 +40,11 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
+      ExplicitHeight = 439
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -135
-        Width = 607
+        Top = 0
+        Width = 605
         Height = 161
         Align = alTop
         Picture.Data = {
@@ -4466,13 +4467,12 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         Stretch = True
         ExplicitLeft = -16
         ExplicitTop = -31
-        ExplicitWidth = 605
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = 26
-        Width = 607
-        Height = 209
+        Top = 161
+        Width = 605
+        Height = 220
         Align = alTop
         Caption = 'Identifica'#231#227'o Fiscal'
         Color = clWhite
@@ -4486,17 +4486,25 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 0
         object Pnl_IdentificacaoCte: TPanel
-          Left = 197
-          Top = 24
-          Width = 334
-          Height = 181
+          AlignWithMargins = True
+          Left = 141
+          Top = 35
+          Width = 384
+          Height = 172
+          Margins.Left = 5
+          Margins.Right = 5
           BevelOuter = bvNone
           TabOrder = 0
           object Lbl_IdentificacaoSerie: TLabel
-            Left = 16
-            Top = 27
+            AlignWithMargins = True
+            Left = 20
+            Top = 9
             Width = 35
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'CNPJ:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4506,10 +4514,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_IdentificacaoRS: TLabel
-            Left = 16
-            Top = 62
+            AlignWithMargins = True
+            Left = 20
+            Top = 74
             Width = 88
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'Raz'#227'o Social:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4519,10 +4532,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_IdentificacaoInscricaoIE: TLabel
-            Left = 16
-            Top = 97
+            AlignWithMargins = True
+            Left = 224
+            Top = 9
             Width = 87
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'Inscri'#231#227'o (IE):'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4532,11 +4550,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_IdentificacaoRegimeTribu: TLabel
-            Left = 16
-            Top = 132
-            Width = 91
+            AlignWithMargins = True
+            Left = 224
+            Top = 84
+            Width = 126
             Height = 20
-            Caption = 'Regime Tribu:'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Regime Tribut'#225'rio: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -4545,11 +4568,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Img_IdentificacaoCNPJLupa: TImage
-            Left = 57
-            Top = 23
+            AlignWithMargins = True
+            Left = 154
+            Top = 39
             Width = 30
-            Height = 29
+            Height = 25
             Cursor = crHandPoint
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Picture.Data = {
               0954506E67496D61676589504E470D0A1A0A0000000D49484452000000640000
               0064080600000070E29554000000097048597300000B1300000B1301009A9C18
@@ -4638,25 +4666,76 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               9EF0A19DB78F2D0000000049454E44AE426082}
             Proportional = True
           end
-          object Edt_IdentificacaoCNPJ: TEdit
-            Left = 120
-            Top = 27
-            Width = 204
-            Height = 25
+          object Label10: TLabel
+            Left = 63
+            Top = 9
+            Width = 30
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
+            Font.Color = clRed
+            Font.Height = -15
             Font.Name = 'Segoe UI'
-            Font.Style = []
-            NumbersOnly = True
+            Font.Style = [fsBold]
             ParentFont = False
-            TabOrder = 0
+          end
+          object Label1: TLabel
+            Left = 116
+            Top = 74
+            Width = 36
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label2: TLabel
+            Left = 335
+            Top = 9
+            Width = 33
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label3: TLabel
+            Left = 358
+            Top = 84
+            Width = 43
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
           end
           object Edt_IdentificacaoFiscalRS: TEdit
-            Left = 120
-            Top = 58
-            Width = 204
+            AlignWithMargins = True
+            Left = 20
+            Top = 104
+            Width = 130
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Enabled = False
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4664,27 +4743,18 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
-            TabOrder = 1
-          end
-          object Edt_IdentificacaoInscricaoIE: TEdit
-            Left = 120
-            Top = 93
-            Width = 204
-            Height = 25
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            NumbersOnly = True
-            ParentFont = False
-            TabOrder = 2
+            TabOrder = 0
           end
           object Cmbx_IdentificacaoRegimeTribu: TComboBox
-            Left = 120
-            Top = 128
-            Width = 204
+            AlignWithMargins = True
+            Left = 224
+            Top = 114
+            Width = 130
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
@@ -4692,19 +4762,62 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ItemIndex = 2
             ParentFont = False
-            TabOrder = 3
+            TabOrder = 1
             Text = 'Simples Nacional'
             Items.Strings = (
               'Simples Nacional'
               'Lucro Presumido'
               'Lucro Real')
           end
+          object MsEdt_IdentificacaoCNPJ: TMaskEdit
+            AlignWithMargins = True
+            Left = 20
+            Top = 39
+            Width = 127
+            Height = 25
+            Margins.Top = 5
+            Margins.Bottom = 5
+            EditMask = '99.999.999/9999-99;1;_'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 4934475
+            Font.Height = -13
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 18
+            ParentFont = False
+            TabOrder = 2
+            Text = '00.000.000/0000-00'
+          end
+          object MsEdt_IdentificacaoInscricaoIE: TMaskEdit
+            AlignWithMargins = True
+            Left = 224
+            Top = 39
+            Width = 129
+            Height = 25
+            Margins.Top = 5
+            Margins.Bottom = 5
+            EditMask = '999.999.999.999;1;_'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 4934475
+            Font.Height = -13
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 15
+            ParentFont = False
+            TabOrder = 3
+            Text = '000.000.000.000'
+          end
         end
         object Pnl_IdentificacaoFiscalLogo: TPanel
-          Left = 87
-          Top = 47
+          AlignWithMargins = True
+          Left = 20
+          Top = 35
           Width = 111
           Height = 141
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 5
+          Margins.Bottom = 5
           BevelKind = bkSoft
           BevelOuter = bvNone
           TabOrder = 1
@@ -4789,9 +4902,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = 235
-        Width = 607
-        Height = 368
+        Top = 381
+        Width = 605
+        Height = 359
         Align = alTop
         Caption = 'Endere'#231'o Fiscal'
         Color = clWhite
@@ -4805,17 +4918,22 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 1
         object Pnl_EnderecoFiscal: TPanel
-          Left = 87
-          Top = 28
-          Width = 334
+          Left = 108
+          Top = 20
+          Width = 434
           Height = 309
           BevelOuter = bvNone
           TabOrder = 0
           object Lbl_EnderecoCEP: TLabel
+            AlignWithMargins = True
             Left = 16
             Top = 27
             Width = 28
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'CEP:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4825,10 +4943,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_EnderecoMunicipio: TLabel
+            AlignWithMargins = True
             Left = 16
-            Top = 62
+            Top = 92
             Width = 69
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'Municipio:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4838,10 +4961,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_EnderecoBairro: TLabel
+            AlignWithMargins = True
             Left = 16
-            Top = 97
+            Top = 157
             Width = 43
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'Bairro:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4851,10 +4979,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_EnderecoLogradouro: TLabel
+            AlignWithMargins = True
             Left = 16
-            Top = 132
+            Top = 222
             Width = 81
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'Logradouro:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4864,10 +4997,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_EnderecoNumero: TLabel
-            Left = 16
-            Top = 167
+            AlignWithMargins = True
+            Left = 256
+            Top = 222
             Width = 57
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'N'#250'mero:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4877,10 +5015,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_EnderecoCodigoIBGE: TLabel
-            Left = 16
-            Top = 202
+            AlignWithMargins = True
+            Left = 256
+            Top = 27
             Width = 87
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'C'#243'digo IBGE:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4890,10 +5033,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_EnderecoComplemento: TLabel
-            Left = 16
-            Top = 237
+            AlignWithMargins = True
+            Left = 256
+            Top = 92
             Width = 98
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'Complemento:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4903,10 +5051,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_EnderecoUF: TLabel
-            Left = 16
-            Top = 272
+            AlignWithMargins = True
+            Left = 256
+            Top = 157
             Width = 79
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'Estado (UF):'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -4916,11 +5069,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Img_EnderecoLupa: TImage
-            Left = 50
-            Top = 22
+            AlignWithMargins = True
+            Left = 179
+            Top = 57
             Width = 30
-            Height = 30
+            Height = 25
             Cursor = crHandPoint
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Picture.Data = {
               0954506E67496D61676589504E470D0A1A0A0000000D49484452000000640000
               0064080600000070E29554000000097048597300000B1300000B1301009A9C18
@@ -5009,27 +5167,97 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               9EF0A19DB78F2D0000000049454E44AE426082}
             Proportional = True
           end
-          object Edt_EnderecoCEP: TEdit
-            Left = 101
-            Top = 23
-            Width = 223
+          object Label4: TLabel
+            Left = 52
+            Top = 27
+            Width = 24
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label5: TLabel
+            Left = 351
+            Top = 27
+            Width = 25
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label6: TLabel
+            Left = 362
+            Top = 92
+            Width = 25
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label7: TLabel
+            Left = 321
+            Top = 222
+            Width = 31
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Edt_EnderecoMunicipio: TEdit
+            AlignWithMargins = True
+            Left = 16
+            Top = 122
+            Width = 193
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Ctl3D = True
+            Enabled = False
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            NumbersOnly = True
             ParentCtl3D = False
             ParentFont = False
             TabOrder = 0
           end
-          object Edt_EnderecoMunicipio: TEdit
-            Left = 101
-            Top = 58
-            Width = 223
+          object Edt_EnderecoBairro: TEdit
+            AlignWithMargins = True
+            Left = 16
+            Top = 187
+            Width = 193
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Ctl3D = True
             Enabled = False
             Font.Charset = DEFAULT_CHARSET
@@ -5041,11 +5269,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 1
           end
-          object Edt_EnderecoBairro: TEdit
-            Left = 101
-            Top = 93
-            Width = 223
+          object Edt_EnderecoLogradouro: TEdit
+            AlignWithMargins = True
+            Left = 16
+            Top = 252
+            Width = 193
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Ctl3D = True
             Enabled = False
             Font.Charset = DEFAULT_CHARSET
@@ -5057,13 +5290,17 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 2
           end
-          object Edt_EnderecoLogradouro: TEdit
-            Left = 101
-            Top = 128
-            Width = 223
+          object Edt_EnderecoNumero: TEdit
+            AlignWithMargins = True
+            Left = 256
+            Top = 252
+            Width = 87
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Ctl3D = True
-            Enabled = False
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
@@ -5073,11 +5310,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 3
           end
-          object Edt_EnderecoNumero: TEdit
-            Left = 101
-            Top = 163
-            Width = 223
+          object Edt_EnderecoCodigoIBGE: TEdit
+            AlignWithMargins = True
+            Left = 256
+            Top = 57
+            Width = 168
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Ctl3D = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -5088,11 +5330,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 4
           end
-          object Edt_EnderecoCodigoIBGE: TEdit
-            Left = 120
-            Top = 198
-            Width = 204
+          object Edt_EnderecoComplemento: TEdit
+            AlignWithMargins = True
+            Left = 256
+            Top = 122
+            Width = 168
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Ctl3D = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -5103,43 +5350,76 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 5
           end
-          object Edt_EnderecoComplemento: TEdit
-            Left = 120
-            Top = 233
-            Width = 204
+          object MsEdt_EnderecoCEP: TMaskEdit
+            AlignWithMargins = True
+            Left = 16
+            Top = 57
+            Width = 159
             Height = 25
-            Ctl3D = True
+            Margins.Top = 5
+            Margins.Bottom = 5
+            EditMask = '99999-999;1;_'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
+            Font.Color = 4934475
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ParentCtl3D = False
+            MaxLength = 9
             ParentFont = False
             TabOrder = 6
+            Text = '00000-000'
           end
-          object Edt_EnderecoUF: TEdit
-            Left = 120
-            Top = 268
-            Width = 204
+          object Cmbx_EnderecoUF: TComboBox
+            Left = 256
+            Top = 187
+            Width = 87
             Height = 25
-            Ctl3D = True
+            Margins.Top = 5
+            Margins.Bottom = 5
             Enabled = False
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ParentCtl3D = False
+            ItemIndex = 0
             ParentFont = False
             TabOrder = 7
+            Items.Strings = (
+              'AC'
+              'AL'
+              'AP'
+              'AM'
+              'BA'
+              'CE'
+              'DF'
+              'ES'
+              'GO'
+              'MA'
+              'MT'
+              'MS'
+              'MG'
+              'PA'
+              'PB'
+              'PR'
+              'PE'
+              'PI'
+              'RJ'
+              'RN'
+              'RS'
+              'RO'
+              'RR'
+              'SC'
+              'SP'
+              'SE'
+              'TO')
           end
         end
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 1159
-        Width = 607
+        Top = 1262
+        Width = 605
         Height = 185
         Align = alTop
         Caption = 'Contato'
@@ -5154,20 +5434,25 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 2
         object Pnl_Contato: TPanel
-          Left = 87
+          Left = 108
           Top = 28
-          Width = 334
+          Width = 434
           Height = 141
           BevelOuter = bvNone
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
           object Lbl_ContatoTelefone: TLabel
-            Left = 16
-            Top = 27
-            Width = 60
+            AlignWithMargins = True
+            Left = 18
+            Top = 11
+            Width = 64
             Height = 20
-            Caption = 'Telefone:'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Telefone: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5176,10 +5461,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_ContatoEmail: TLabel
-            Left = 16
-            Top = 62
+            AlignWithMargins = True
+            Left = 18
+            Top = 76
             Width = 46
             Height = 20
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Caption = 'E-Mail:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -5189,11 +5479,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_ContatoResponsavel: TLabel
-            Left = 16
-            Top = 97
-            Width = 85
+            AlignWithMargins = True
+            Left = 257
+            Top = 11
+            Width = 89
             Height = 20
-            Caption = 'Respons'#225'vel:'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Respons'#225'vel: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5201,26 +5496,64 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Edt_ContatoTelefone: TEdit
-            Left = 88
-            Top = 23
-            Width = 236
+          object Label18: TLabel
+            Left = 90
+            Top = 11
+            Width = 28
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label19: TLabel
+            Left = 354
+            Top = 11
+            Width = 28
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Edt_ContatoEmail: TEdit
+            AlignWithMargins = True
+            Left = 18
+            Top = 106
+            Width = 191
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
           end
-          object Edt_ContatoEmail: TEdit
-            Left = 88
-            Top = 58
-            Width = 236
+          object Edt_ContatoResponsavel: TEdit
+            AlignWithMargins = True
+            Left = 257
+            Top = 41
+            Width = 167
             Height = 25
-            Enabled = False
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
@@ -5229,27 +5562,32 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 1
           end
-          object Edt_ContatoResponsavel: TEdit
-            Left = 120
-            Top = 93
-            Width = 204
+          object MsEdt_ContatoTelefone: TMaskEdit
+            AlignWithMargins = True
+            Left = 16
+            Top = 41
+            Width = 188
             Height = 25
+            Margins.Top = 5
+            Margins.Bottom = 5
+            EditMask = '(99)9999-99999;1;_'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
+            Font.Color = 4934475
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            NumbersOnly = True
+            MaxLength = 14
             ParentFont = False
             TabOrder = 2
+            Text = '(00)0000-00000'
           end
         end
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = 828
-        Width = 607
-        Height = 150
+        Top = 950
+        Width = 605
+        Height = 131
         Align = alTop
         Caption = 'Dados Operacionais'
         Color = clWhite
@@ -5263,18 +5601,23 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 3
         object Pnl_DadosOperacionais: TPanel
-          Left = 87
-          Top = 28
-          Width = 334
-          Height = 109
+          Left = 108
+          Top = 35
+          Width = 434
+          Height = 86
           BevelOuter = bvNone
           TabOrder = 0
           object Lbl_DadosOperacionaisTipoDeTransporte: TLabel
-            Left = 16
-            Top = 27
-            Width = 87
+            AlignWithMargins = True
+            Left = 11
+            Top = 3
+            Width = 132
             Height = 20
-            Caption = 'T/Transporte:'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Tipo de Transporte: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5283,11 +5626,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_DadosOperacionaisTipoDeOperacao: TLabel
-            Left = 16
-            Top = 62
-            Width = 82
+            AlignWithMargins = True
+            Left = 257
+            Top = -2
+            Width = 127
             Height = 20
-            Caption = 'T/Opera'#231#227'o:'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Tipo de Opera'#231#227'o: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5295,11 +5643,46 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
+          object Label13: TLabel
+            Left = 151
+            Top = 3
+            Width = 24
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label14: TLabel
+            Left = 392
+            Top = -2
+            Width = 19
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
           object Cmbx_DadosOperacionaisTipoDeTransporte: TComboBox
-            Left = 120
-            Top = 23
-            Width = 204
+            AlignWithMargins = True
+            Left = 11
+            Top = 33
+            Width = 198
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
@@ -5315,10 +5698,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               'Multimodal')
           end
           object Cmbx_DadosOperacionaisTipoDeOperacao: TComboBox
-            Left = 120
-            Top = 58
-            Width = 204
+            AlignWithMargins = True
+            Left = 257
+            Top = 28
+            Width = 167
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
@@ -5337,9 +5725,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = 603
-        Width = 607
-        Height = 225
+        Top = 740
+        Width = 605
+        Height = 210
         Align = alTop
         Caption = 'Dados Fiscais'
         Color = clWhite
@@ -5353,18 +5741,23 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 4
         object Pnl_DadosFiscais: TPanel
-          Left = 87
+          Left = 108
           Top = 28
-          Width = 334
-          Height = 181
+          Width = 434
+          Height = 157
           BevelOuter = bvNone
           TabOrder = 0
           object Lbl_DadosTipoTributacao: TLabel
+            AlignWithMargins = True
             Left = 16
-            Top = 60
-            Width = 125
+            Top = 81
+            Width = 132
             Height = 20
-            Caption = 'Tipo de Tributa'#231#227'o'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Tipo de Tributa'#231#227'o: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5373,11 +5766,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_DadosObservacaoFiscal: TLabel
-            Left = 16
-            Top = 95
-            Width = 121
+            AlignWithMargins = True
+            Left = 257
+            Top = 16
+            Width = 125
             Height = 20
-            Caption = 'Observa'#231#227'o FIscal:'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Observa'#231#227'o FIscal: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5386,11 +5784,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_DadosAliquotaPadrao: TLabel
-            Left = 16
-            Top = 130
-            Width = 126
+            AlignWithMargins = True
+            Left = 257
+            Top = 81
+            Width = 130
             Height = 20
-            Caption = 'Aliquota Padr'#227'o %:'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Aliquota Padr'#227'o %: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5399,11 +5802,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_DadosPapelCTe: TLabel
+            AlignWithMargins = True
             Left = 16
-            Top = 24
-            Width = 74
+            Top = 16
+            Width = 78
             Height = 20
-            Caption = 'Papel CT-e:'
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
+            Caption = 'Papel CT-e: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5411,47 +5819,102 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
+          object Label8: TLabel
+            Left = 102
+            Top = 16
+            Width = 26
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label9: TLabel
+            Left = 390
+            Top = 16
+            Width = 26
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label11: TLabel
+            Left = 395
+            Top = 81
+            Width = 18
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label12: TLabel
+            Left = 156
+            Top = 81
+            Width = 26
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
           object Edt_DadosObservacaoFiscal: TEdit
-            Left = 160
-            Top = 94
-            Width = 164
+            AlignWithMargins = True
+            Left = 256
+            Top = 46
+            Width = 168
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            NumbersOnly = True
             ParentFont = False
             TabOrder = 0
           end
-          object Edt_DadosAliquotaPadrao: TEdit
-            Left = 160
-            Top = 129
-            Width = 164
+          object Cmbx_DadosTipoTributacao: TComboBox
+            AlignWithMargins = True
+            Left = 16
+            Top = 111
+            Width = 193
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            NumbersOnly = True
+            ItemIndex = 1
             ParentFont = False
             TabOrder = 1
-          end
-          object Cmbx_DadosTipoTributacao: TComboBox
-            Left = 160
-            Top = 59
-            Width = 164
-            Height = 25
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ItemIndex = 2
-            ParentFont = False
-            TabOrder = 2
             Text = 'Normal'
             Items.Strings = (
               'Normal'
@@ -5459,10 +5922,15 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               'Diferido')
           end
           object Cmbx_DadosPapelCTe: TComboBox
-            Left = 112
-            Top = 23
-            Width = 212
+            AlignWithMargins = True
+            Left = 16
+            Top = 46
+            Width = 193
             Height = 25
+            Margins.Left = 5
+            Margins.Top = 5
+            Margins.Right = 5
+            Margins.Bottom = 5
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
@@ -5470,7 +5938,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ItemIndex = 4
             ParentFont = False
-            TabOrder = 3
+            TabOrder = 2
             Text = 'Emitente'
             Items.Strings = (
               'Emitente'
@@ -5479,12 +5947,31 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               'Redespachadora'
               'Redespacho intermedi'#225'rio')
           end
+          object MsEdt_DadosAliquotaPadrao: TMaskEdit
+            AlignWithMargins = True
+            Left = 257
+            Top = 111
+            Width = 126
+            Height = 25
+            Margins.Top = 5
+            Margins.Bottom = 5
+            EditMask = '000.00%;1;_'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 4934475
+            Font.Height = -13
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            MaxLength = 7
+            ParentFont = False
+            TabOrder = 3
+            Text = '000.00%'
+          end
         end
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = 978
-        Width = 607
+        Top = 1081
+        Width = 605
         Height = 181
         Align = alTop
         Caption = 'Sistema'
@@ -5499,18 +5986,18 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentFont = False
         TabOrder = 5
         object Panel_Sistema: TPanel
-          Left = 87
-          Top = 28
-          Width = 334
+          Left = 108
+          Top = 34
+          Width = 434
           Height = 141
           BevelOuter = bvNone
           TabOrder = 0
           object Lbl_SistemaStatus: TLabel
-            Left = 16
-            Top = 24
-            Width = 43
+            Left = 11
+            Top = 8
+            Width = 47
             Height = 20
-            Caption = 'Status:'
+            Caption = 'Status: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5519,11 +6006,11 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_SistemaDataCadastro: TLabel
-            Left = 16
-            Top = 62
-            Width = 119
+            Left = 11
+            Top = 65
+            Width = 123
             Height = 20
-            Caption = 'Data de Cadastro:'
+            Caption = 'Data de Cadastro: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5532,11 +6019,11 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
           end
           object Lbl_SistemaResponsavel: TLabel
-            Left = 16
-            Top = 97
-            Width = 85
+            Left = 257
+            Top = 8
+            Width = 89
             Height = 20
-            Caption = 'Respons'#225'vel:'
+            Caption = 'Respons'#225'vel: '
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15
@@ -5544,17 +6031,62 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
+          object Label15: TLabel
+            Left = 64
+            Top = 6
+            Width = 26
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label16: TLabel
+            Left = 139
+            Top = 65
+            Width = 25
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+          object Label17: TLabel
+            Left = 352
+            Top = 6
+            Width = 25
+            Height = 20
+            Margins.Top = 5
+            Margins.Bottom = 5
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clRed
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
           object Cmbx_SistemaStatus: TComboBox
-            Left = 80
-            Top = 23
-            Width = 244
+            Left = 11
+            Top = 34
+            Width = 198
             Height = 25
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ItemIndex = 0
+            ItemIndex = 1
             ParentFont = False
             TabOrder = 0
             Text = 'Inativo'
@@ -5562,40 +6094,60 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               'Ativo'
               'Inativo')
           end
-          object Edt_SistemaDataCadastro: TEdit
-            Left = 152
-            Top = 61
-            Width = 172
+          object Edt_SistemaResponsavel: TEdit
+            Left = 257
+            Top = 34
+            Width = 167
             Height = 25
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            NumbersOnly = True
             ParentFont = False
             TabOrder = 1
           end
-          object Edt_SistemaResponsavel: TEdit
-            Left = 120
-            Top = 96
-            Width = 204
+          object Btn_SistemaDataAtual: TButton
+            Left = 130
+            Top = 93
+            Width = 77
             Height = 25
+            Cursor = crHandPoint
+            Caption = 'Data Atual'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            NumbersOnly = True
             ParentFont = False
             TabOrder = 2
+            OnClick = Btn_SistemaDataAtualClick
           end
+        end
+        object MsEdt_SistemaDataCadastro: TMaskEdit
+          AlignWithMargins = True
+          Left = 119
+          Top = 127
+          Width = 115
+          Height = 25
+          Margins.Top = 5
+          Margins.Bottom = 5
+          EditMask = '99/99/99;1;_'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 4934475
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          MaxLength = 8
+          ParentFont = False
+          TabOrder = 1
+          Text = '  /  /  '
         end
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 1410
-        Width = 607
+        Top = 1545
+        Width = 605
         Height = 55
         Align = alBottom
         BevelOuter = bvNone
@@ -5605,7 +6157,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         TabOrder = 6
         object Pnl_BtnSalvarNovaTransportadora: TPanel
           AlignWithMargins = True
-          Left = 445
+          Left = 443
           Top = 10
           Width = 150
           Height = 35
@@ -5645,13 +6197,14 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
+            OnClick = Btn_SalvarNovaTransportadoraClick
             ExplicitLeft = -6
             ExplicitHeight = 36
           end
         end
         object Pnl_BtnCancelarNovaTransportadora: TPanel
           AlignWithMargins = True
-          Left = 291
+          Left = 289
           Top = 10
           Width = 150
           Height = 35

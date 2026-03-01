@@ -138,7 +138,7 @@
         <DCCReference Include="src\Presentation\Views\CargoCteNovaTransportadora.View.pas">
             <Form>Frm_NovaTransportadora</Form>
         </DCCReference>
-        <DCCReference Include="src\Presentation\UI\Utils\MenuNavigationService.pas"/>
+        <DCCReference Include="src\Presentation\UI\Utils\MenuNavigation.Utils.pas"/>
         <DCCReference Include="src\Presentation\UI\Utils\CampoVisual.Utils.pas"/>
         <DCCReference Include="src\Domain\Interfaces\Transportadora.Interfaces.pas"/>
         <DCCReference Include="src\Domain\ValueObjects\Endereco.Tipo.CEP.pas"/>
@@ -153,6 +153,7 @@
             <Form>Frm_NovaFrota</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\Presentation\UI\Utils\Sistema.Utils.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

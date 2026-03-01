@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.jpeg, Vcl.ExtCtrls,
   Vcl.ComCtrls, Vcl.StdCtrls, RLReport, Vcl.Buttons, Vcl.Grids, Data.DB,
-  Vcl.DBGrids, MenuNavigationService, Vcl.WinXCtrls, Vcl.Imaging.pngimage;
+  Vcl.DBGrids, MenuNavigation.Utils, Vcl.WinXCtrls, Vcl.Imaging.pngimage;
 
 type
   // PADRÃO DE NOMENCLATURA
@@ -211,7 +211,7 @@ type
     Shp_BtnNovaTransportadora: TShape;
     Btn_NovaTransportadora: TSpeedButton;
     Lbl_Logo: TLabel;
-    Lbl_FraseLogo: TLabel;
+    Lbl_DataEHora: TLabel;
     Cmbx_IdentificacaoTipodeCTe: TComboBox;
     Cmbx_Modal: TComboBox;
     Cmbx_FormaDeEmissao: TComboBox;
@@ -261,6 +261,7 @@ type
     Pnl_BtnAdicionarMotorista: TPanel;
     Shp_BtnAdicionarMotorista: TShape;
     Btn_AdicionarMotorista: TSpeedButton;
+    TimerDataEHora: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure Btn_BtnNovaNotaClick(Sender: TObject);
     procedure Btn_NotasEmitidasClick(Sender: TObject);
@@ -271,9 +272,10 @@ type
     procedure Btn_ConfiguracoesClick(Sender: TObject);
     procedure Btn_NovaTransportadoraClick(Sender: TObject);
     procedure Btn_AdicionarVeiculoClick(Sender: TObject);
+    procedure TimerDataEHoraTimer(Sender: TObject);
   private
     { Private declarations }
-    FMenuService: TMenuNavigationService;
+    FMenuService: TMenuNavigationUtils;
 
   public
     { Public declarations }
@@ -289,7 +291,7 @@ implementation
 {$R *.dfm}
 
 uses CargoCteConfig.View, CargoCteNovaTransportadora.View,
-  CargoCteNovaFrota.View;
+  CargoCteNovaFrota.View, Sistema.Utils;
 
 { TFrm_CargoCTe }
 
@@ -337,7 +339,7 @@ end;
 constructor TFrm_CargoCTe.Create(AOwner: TComponent);
 begin
   Inherited Create(AOwner);
-  FMenuService := TMenuNavigationService.Create;
+  FMenuService := TMenuNavigationUtils.Create;
 end;
 
 destructor TFrm_CargoCTe.Destroy;
@@ -357,6 +359,11 @@ end;
 procedure TFrm_CargoCTe.Srbx_PesquisarTransportadoraClick(Sender: TObject);
 begin
 Srbx_PesquisarTransportadora.Text := '';
+end;
+
+procedure TFrm_CargoCTe.TimerDataEHoraTimer(Sender: TObject);
+begin
+ Lbl_DataEHora.Caption := TSistemaUtils.DataHoraAtual;
 end;
 
 end.

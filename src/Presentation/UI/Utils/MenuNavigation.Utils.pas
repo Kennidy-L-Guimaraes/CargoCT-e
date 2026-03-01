@@ -1,4 +1,26 @@
-unit MenuNavigationService;
+{
+  ATENÇÃO
+
+  Responsabilidade da Classe:
+
+  Coordenar a navegação entre containers visuais do menu,
+  garantindo que apenas um esteja ativo por vez.
+
+  NÃO deve:
+
+  - Conter regras de negócio.
+  - Depender de formulários específicos.
+  - Executar validações de domínio.
+  - Manipular estado externo fora dos componentes registrados.
+
+  DEVE:
+
+  - Gerenciar o ciclo de exibição dos painéis registrados.
+  - Centralizar a lógica de ativação e ocultação.
+  - Reduzir repetição de código na camada de apresentação.
+}
+
+unit MenuNavigation.Utils;
 
 
 interface
@@ -6,7 +28,7 @@ interface
 uses System.SysUtils, System.Classes, Vcl.Controls, Vcl.ExtCtrls, Generics.Collections;
 
 type
- TMenuNavigationService = Class
+ TMenuNavigationUtils = Class
  Private
   {Private Declarations}
   FPanels : TList<TPanel>;
@@ -26,7 +48,7 @@ implementation
 
 { TMenuNavigationService }
 
-procedure TMenuNavigationService.ActivePanel(APanel: TPanel);
+procedure TMenuNavigationUtils.ActivePanel(APanel: TPanel);
 begin
   if not FPanels.Contains(APanel) then
     raise Exception.Create('Painel não registrado');
@@ -34,19 +56,19 @@ begin
   ShowPanel(APanel);
 end;
 
-constructor TMenuNavigationService.Create;
+constructor TMenuNavigationUtils.Create;
 begin
  inherited Create;
  FPanels := TList<TPanel>.Create;
 end;
 
-destructor TMenuNavigationService.Destroy;
+destructor TMenuNavigationUtils.Destroy;
 begin
   FPanels.Free;
   Inherited Destroy;
 end;
 
-procedure TMenuNavigationService.HideAllPanels;
+procedure TMenuNavigationUtils.HideAllPanels;
  var
   Panel : TPanel;
 begin
@@ -58,12 +80,12 @@ begin
   end;
 end;
 
-procedure TMenuNavigationService.RegisterPanel(APanel: TPanel);
+procedure TMenuNavigationUtils.RegisterPanel(APanel: TPanel);
 begin
   If not FPanels.Contains(APanel) then FPanels.Add(APanel);
 end;
 
-procedure TMenuNavigationService.ShowPanel(APanel: TPanel);
+procedure TMenuNavigationUtils.ShowPanel(APanel: TPanel);
 begin
   APanel.Align   := AlClient;
   APanel.Visible := True;

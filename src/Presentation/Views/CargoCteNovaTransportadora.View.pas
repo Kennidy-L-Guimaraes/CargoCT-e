@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg;
+  Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg, Vcl.Mask;
 
 type
   TFrm_NovaTransportadora = class(TForm)
@@ -19,9 +19,7 @@ type
     Lbl_IdentificacaoInscricaoIE: TLabel;
     Lbl_IdentificacaoRegimeTribu: TLabel;
     Img_IdentificacaoCNPJLupa: TImage;
-    Edt_IdentificacaoCNPJ: TEdit;
     Edt_IdentificacaoFiscalRS: TEdit;
-    Edt_IdentificacaoInscricaoIE: TEdit;
     Cmbx_IdentificacaoRegimeTribu: TComboBox;
     Grbx_EnderecoFiscal: TGroupBox;
     Pnl_EnderecoFiscal: TPanel;
@@ -34,20 +32,17 @@ type
     Lbl_EnderecoComplemento: TLabel;
     Lbl_EnderecoUF: TLabel;
     Img_EnderecoLupa: TImage;
-    Edt_EnderecoCEP: TEdit;
     Edt_EnderecoMunicipio: TEdit;
     Edt_EnderecoBairro: TEdit;
     Edt_EnderecoLogradouro: TEdit;
     Edt_EnderecoNumero: TEdit;
     Edt_EnderecoCodigoIBGE: TEdit;
     Edt_EnderecoComplemento: TEdit;
-    Edt_EnderecoUF: TEdit;
     Grbx_Contato: TGroupBox;
     Pnl_Contato: TPanel;
     Lbl_ContatoTelefone: TLabel;
     Lbl_ContatoEmail: TLabel;
     Lbl_ContatoResponsavel: TLabel;
-    Edt_ContatoTelefone: TEdit;
     Edt_ContatoEmail: TEdit;
     Edt_ContatoResponsavel: TEdit;
     Grbx_DadosOperacionais: TGroupBox;
@@ -63,7 +58,6 @@ type
     Lbl_DadosAliquotaPadrao: TLabel;
     Lbl_DadosPapelCTe: TLabel;
     Edt_DadosObservacaoFiscal: TEdit;
-    Edt_DadosAliquotaPadrao: TEdit;
     Cmbx_DadosTipoTributacao: TComboBox;
     Cmbx_DadosPapelCTe: TComboBox;
     Grbx_Sistema: TGroupBox;
@@ -72,7 +66,6 @@ type
     Lbl_SistemaDataCadastro: TLabel;
     Lbl_SistemaResponsavel: TLabel;
     Cmbx_SistemaStatus: TComboBox;
-    Edt_SistemaDataCadastro: TEdit;
     Edt_SistemaResponsavel: TEdit;
     Pnl_NovaTransportadoraBtns: TPanel;
     Pnl_BtnSalvarNovaTransportadora: TPanel;
@@ -85,9 +78,38 @@ type
     Img_IdentificacaoLogo: TImage;
     Btn_IdentificacaoLogo: TButton;
     Img_NovaTransportadoraBanner: TImage;
+    Label10: TLabel;
+    MsEdt_IdentificacaoCNPJ: TMaskEdit;
+    MsEdt_IdentificacaoInscricaoIE: TMaskEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    MsEdt_EnderecoCEP: TMaskEdit;
+    Label4: TLabel;
+    Cmbx_EnderecoUF: TComboBox;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    MsEdt_SistemaDataCadastro: TMaskEdit;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    MsEdt_DadosAliquotaPadrao: TMaskEdit;
+    MsEdt_ContatoTelefone: TMaskEdit;
+    Label18: TLabel;
+    Label19: TLabel;
+    Btn_SistemaDataAtual: TButton;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
     procedure ResetarConfiguracoes;
     procedure SpeedButton1Click(Sender: TObject);
+    procedure Btn_SalvarNovaTransportadoraClick(Sender: TObject);
+    procedure Btn_SistemaDataAtualClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -101,7 +123,7 @@ implementation
 
 {$R *.dfm}
 
-uses CampoVisual.Utils, CargoCteNovaFrota.View;
+uses CampoVisual.Utils, CargoCteNovaFrota.View, Sistema.Utils;
 
 procedure TFrm_NovaTransportadora.Btn_CancelarNovaTransportadoraClick(
   Sender: TObject);
@@ -110,35 +132,46 @@ begin
   Frm_NovaTransportadora.Close;
 end;
 
+procedure TFrm_NovaTransportadora.Btn_SalvarNovaTransportadoraClick(
+  Sender: TObject);
+begin
+  ResetarConfiguracoes;
+end;
+
+procedure TFrm_NovaTransportadora.Btn_SistemaDataAtualClick(Sender: TObject);
+begin
+  MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
+end;
+
 procedure TFrm_NovaTransportadora.ResetarConfiguracoes;
 begin
   //Identificação Fiscal
-  TCampoVisualUtils.LimparCamposEdt(Edt_IdentificacaoCNPJ);
-  TCampoVisualUtils.LimparCamposEdt(Edt_IdentificacaoFiscalRS);
-  TCampoVisualUtils.LimparCamposEdt(Edt_IdentificacaoInscricaoIE);
+  TCampoVisualUtils.LimparControle(MsEdt_IdentificacaoCNPJ);
+  TCampoVisualUtils.LimparControle(Edt_IdentificacaoFiscalRS);
+  TCampoVisualUtils.LimparControle(MsEdt_IdentificacaoInscricaoIE);
 
   //Endereço Fiscal
-  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoCEP);
-  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoMunicipio);
-  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoBairro);
-  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoLogradouro);
-  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoNumero);
-  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoCodigoIBGE);
-  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoComplemento);
-  TCampoVisualUtils.LimparCamposEdt(Edt_EnderecoUF);
+  TCampoVisualUtils.LimparControle(MsEdt_EnderecoCEP);
+  TCampoVisualUtils.LimparControle(Edt_EnderecoMunicipio);
+  TCampoVisualUtils.LimparControle(Edt_EnderecoBairro);
+  TCampoVisualUtils.LimparControle(Edt_EnderecoLogradouro);
+  TCampoVisualUtils.LimparControle(Edt_EnderecoNumero);
+  TCampoVisualUtils.LimparControle(Edt_EnderecoCodigoIBGE);
+  TCampoVisualUtils.LimparControle(Edt_EnderecoComplemento);
+  TCampoVisualUtils.LimparControle(Cmbx_EnderecoUF);
 
   //Dados Fiscais
-  TCampoVisualUtils.LimparCamposEdt(Edt_DadosObservacaoFiscal);
-  TCampoVisualUtils.LimparCamposEdt(Edt_DadosAliquotaPadrao);
+  TCampoVisualUtils.LimparControle(Edt_DadosObservacaoFiscal);
+  TCampoVisualUtils.LimparControle(MsEdt_DadosAliquotaPadrao);
 
   //Sistema
-  TCampoVisualUtils.LimparCamposEdt(Edt_SistemaDataCadastro);
-  TCampoVisualUtils.LimparCamposEdt(Edt_SistemaResponsavel);
+  TCampoVisualUtils.LimparControle(MsEdt_SistemaDataCadastro);
+  TCampoVisualUtils.LimparControle(Edt_SistemaResponsavel);
 
   //Contato
-  TCampoVisualUtils.LimparCamposEdt(Edt_ContatoTelefone);
-  TCampoVisualUtils.LimparCamposEdt(Edt_ContatoEmail);
-  TCampoVisualUtils.LimparCamposEdt(Edt_ContatoResponsavel);
+  TCampoVisualUtils.LimparControle(MsEdt_ContatoTelefone);
+  TCampoVisualUtils.LimparControle(Edt_ContatoEmail);
+  TCampoVisualUtils.LimparControle(Edt_ContatoResponsavel);
 
 
   //Resetar Posição do ScrollBox

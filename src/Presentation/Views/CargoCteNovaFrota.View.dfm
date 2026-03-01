@@ -22,18 +22,16 @@ object Frm_NovaFrota: TFrm_NovaFrota
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 766
-    ExplicitHeight = 609
+    ExplicitHeight = 492
     object PageControl1: TPageControl
       Left = 0
       Top = 0
       Width = 785
       Height = 494
-      ActivePage = TabSheet2
+      ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 766
-      ExplicitHeight = 609
+      ExplicitLeft = 1
       object TabSheet1: TTabSheet
         Caption = 'Novo Motorista'
         object Label33: TLabel
@@ -184,7 +182,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label10: TLabel
               Left = 136
               Top = 20
-              Width = 25
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -199,7 +197,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label11: TLabel
               Left = 165
               Top = 150
-              Width = 33
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -214,7 +212,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label12: TLabel
               Left = 246
               Top = 150
-              Width = 36
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -229,7 +227,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label13: TLabel
               Left = 278
               Top = 20
-              Width = 28
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -244,7 +242,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label16: TLabel
               Left = 240
               Top = 85
-              Width = 28
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -259,7 +257,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label17: TLabel
               Left = 53
               Top = 215
-              Width = 35
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -416,8 +414,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 524
-          ExplicitWidth = 758
           object Pnl_BtnSalvarNovaTransportadora: TPanel
             AlignWithMargins = True
             Left = 615
@@ -431,7 +427,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitLeft = 596
             object Shp_BtnSalvarNovaTransportadora: TShape
               Left = 0
               Top = 0
@@ -478,7 +473,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 1
-            ExplicitLeft = 442
             object Shp_BtnCancelarNovaTransportadora: TShape
               Left = 0
               Top = 0
@@ -606,8 +600,8 @@ object Frm_NovaFrota: TFrm_NovaFrota
               AlignWithMargins = True
               Left = 196
               Top = 18
-              Width = 88
-              Height = 66
+              Width = 62
+              Height = 60
               Margins.Top = 5
               Margins.Bottom = 5
               Caption = 'Validade Exame M'#233'dico: '
@@ -623,7 +617,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               AlignWithMargins = True
               Left = 112
               Top = 148
-              Width = 33
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -639,7 +633,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               AlignWithMargins = True
               Left = 108
               Top = 77
-              Width = 33
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -655,7 +649,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               AlignWithMargins = True
               Left = 138
               Top = 18
-              Width = 23
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -671,7 +665,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               AlignWithMargins = True
               Left = 84
               Top = 213
-              Width = 41
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -687,7 +681,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               AlignWithMargins = True
               Left = 261
               Top = 52
-              Width = 31
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -806,10 +800,10 @@ object Frm_NovaFrota: TFrm_NovaFrota
         Caption = 'Novo Veiculo'
         ImageIndex = 1
         object Grbx_VeiculoMotorista: TGroupBox
-          Left = 10
-          Top = 3
+          Left = 28
+          Top = 10
           Width = 369
-          Height = 278
+          Height = 275
           Cursor = crDrag
           Caption = 'Ve'#237'culo'
           Color = clWhite
@@ -907,7 +901,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label34: TLabel
               Left = 58
               Top = 16
-              Width = 27
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -922,7 +916,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label35: TLabel
               Left = 79
               Top = 81
-              Width = 25
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -937,7 +931,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label36: TLabel
               Left = 69
               Top = 146
-              Width = 16
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -952,7 +946,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label37: TLabel
               Left = 255
               Top = 16
-              Width = 25
+              Width = 26
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -967,7 +961,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label38: TLabel
               Left = 279
               Top = 81
-              Width = 33
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -1106,8 +1100,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 524
-          ExplicitWidth = 758
+          ExplicitTop = 401
           object Panel3: TPanel
             AlignWithMargins = True
             Left = 615
@@ -1121,7 +1114,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitLeft = 596
             object Shape1: TShape
               Left = 0
               Top = 0
@@ -1168,7 +1160,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 1
-            ExplicitLeft = 442
             object Shape2: TShape
               Left = 0
               Top = 0
@@ -1206,9 +1197,9 @@ object Frm_NovaFrota: TFrm_NovaFrota
           end
         end
         object GroupBox2: TGroupBox
-          Left = 385
-          Top = 6
-          Width = 361
+          Left = 403
+          Top = 10
+          Width = 344
           Height = 275
           Cursor = crDrag
           Caption = 'Especifica'#231#245'es'
@@ -1225,7 +1216,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           object Panel5: TPanel
             Left = 7
             Top = 28
-            Width = 346
+            Width = 330
             Height = 229
             BevelOuter = bvNone
             TabOrder = 0
@@ -1307,7 +1298,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label39: TLabel
               Left = 128
               Top = 16
-              Width = 12
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -1322,7 +1313,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label40: TLabel
               Left = 290
               Top = 81
-              Width = 13
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -1417,9 +1408,9 @@ object Frm_NovaFrota: TFrm_NovaFrota
           end
         end
         object GroupBox3: TGroupBox
-          Left = 10
-          Top = 287
-          Width = 736
+          Left = 28
+          Top = 291
+          Width = 719
           Height = 108
           Cursor = crDrag
           Caption = 'Controle Operacional'
@@ -1436,15 +1427,20 @@ object Frm_NovaFrota: TFrm_NovaFrota
           object Panel6: TPanel
             Left = 18
             Top = 25
-            Width = 713
+            Width = 679
             Height = 73
             BevelOuter = bvNone
             TabOrder = 0
             object Label19: TLabel
+              AlignWithMargins = True
               Left = 383
               Top = 41
               Width = 47
               Height = 20
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
               Caption = 'Status: '
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -1454,10 +1450,15 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object Label20: TLabel
-              Left = 14
+              AlignWithMargins = True
+              Left = 11
               Top = 41
               Width = 123
               Height = 20
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
               Caption = 'Possui Rastreador?'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -1467,10 +1468,15 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object Label24: TLabel
-              Left = 14
-              Top = 13
+              AlignWithMargins = True
+              Left = 11
+              Top = 11
               Width = 64
               Height = 20
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
               Caption = 'Km Atual:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -1480,11 +1486,16 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
             end
             object Label9: TLabel
-              Left = 383
-              Top = 13
-              Width = 110
+              AlignWithMargins = True
+              Left = 380
+              Top = 11
+              Width = 117
               Height = 20
-              Caption = 'N'#176' Equipamento'
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
+              Caption = 'N'#176' Equipamento: '
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -15
@@ -1492,11 +1503,31 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
+            object Label41: TLabel
+              Left = 438
+              Top = 41
+              Width = 10
+              Height = 20
+              Margins.Top = 5
+              Margins.Bottom = 5
+              Caption = '*'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clRed
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
             object RadioButton1: TRadioButton
-              Left = 149
+              AlignWithMargins = True
+              Left = 144
               Top = 44
               Width = 62
               Height = 17
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
               Caption = 'Sim'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -1507,10 +1538,15 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 0
             end
             object RadioButton2: TRadioButton
-              Left = 217
+              AlignWithMargins = True
+              Left = 216
               Top = 44
               Width = 66
               Height = 17
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
               Caption = 'N'#227'o'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -1521,24 +1557,36 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 1
             end
             object CheckBox1: TCheckBox
-              Left = 447
+              AlignWithMargins = True
+              Left = 456
               Top = 44
               Width = 62
               Height = 17
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
               Caption = 'Ativo'
+              Checked = True
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -13
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
+              State = cbChecked
               TabOrder = 2
             end
             object Edit19: TEdit
-              Left = 94
-              Top = 10
+              AlignWithMargins = True
+              Left = 85
+              Top = 9
               Width = 91
               Height = 25
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -13
@@ -1549,10 +1597,15 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 3
             end
             object Edit11: TEdit
-              Left = 532
-              Top = 10
+              AlignWithMargins = True
+              Left = 507
+              Top = 9
               Width = 154
               Height = 25
+              Margins.Left = 5
+              Margins.Top = 5
+              Margins.Right = 5
+              Margins.Bottom = 5
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -13

@@ -110,6 +110,7 @@ type
     Label38: TLabel;
     Label39: TLabel;
     Label40: TLabel;
+    Label41: TLabel;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
   private
     { Private declarations }
