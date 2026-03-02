@@ -22,7 +22,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 492
     object PageControl1: TPageControl
       Left = 0
       Top = 0
@@ -31,7 +30,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
-      ExplicitHeight = 492
       object TabSheet1: TTabSheet
         Caption = 'Novo Motorista'
         object Label33: TLabel
@@ -179,7 +177,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label10: TLabel
+            object Lbl_ReqNomeCompleto: TLabel
               Left = 136
               Top = 20
               Width = 7
@@ -194,7 +192,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label11: TLabel
+            object Lbl_ReqDadosMotoristaDataNascimento: TLabel
               Left = 165
               Top = 150
               Width = 7
@@ -209,7 +207,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label12: TLabel
+            object Lbl_ReqCEP: TLabel
               Left = 246
               Top = 150
               Width = 7
@@ -224,7 +222,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label13: TLabel
+            object Lbl_ReqTelefone: TLabel
               Left = 278
               Top = 20
               Width = 7
@@ -239,7 +237,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label16: TLabel
+            object Lbl_ReqRG: TLabel
               Left = 240
               Top = 85
               Width = 7
@@ -254,7 +252,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label17: TLabel
+            object Lbl_ReqDadosMotoristaCPF: TLabel
               Left = 53
               Top = 215
               Width = 7
@@ -414,7 +412,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 407
           object Pnl_BtnSalvarNovaTransportadora: TPanel
             AlignWithMargins = True
             Left = 615
@@ -614,7 +611,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               WordWrap = True
             end
-            object Label18: TLabel
+            object Lbl_ReqHabilitacaoValidadeCNH: TLabel
               AlignWithMargins = True
               Left = 112
               Top = 148
@@ -630,7 +627,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label29: TLabel
+            object Lbl_ReqHabilitacaoNumeroCNH: TLabel
               AlignWithMargins = True
               Left = 108
               Top = 77
@@ -646,7 +643,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label30: TLabel
+            object Lbl_ReqHabilitacaoTipoMotorista: TLabel
               AlignWithMargins = True
               Left = 138
               Top = 18
@@ -662,7 +659,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label31: TLabel
+            object Lbl_ReqHabilitacaoCategoria: TLabel
               AlignWithMargins = True
               Left = 84
               Top = 213
@@ -678,7 +675,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label32: TLabel
+            object Lbl_ReqHabilitacaoValidadeExame: TLabel
               AlignWithMargins = True
               Left = 261
               Top = 52
@@ -899,7 +896,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label34: TLabel
+            object Lbl_ReqVeiculoPlaca: TLabel
               Left = 58
               Top = 16
               Width = 7
@@ -914,7 +911,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label35: TLabel
+            object Lbl_ReqVeiculoPlacaUF: TLabel
               Left = 79
               Top = 81
               Width = 7
@@ -929,7 +926,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label36: TLabel
+            object Lbl_ReqVeiculoRNTRC: TLabel
               Left = 69
               Top = 146
               Width = 7
@@ -944,7 +941,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label37: TLabel
+            object Lbl_ReqVeiculoProprietario: TLabel
               Left = 255
               Top = 16
               Width = 7
@@ -959,7 +956,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label38: TLabel
+            object Lbl_ReqVeiculoTipoVeiculo: TLabel
               Left = 279
               Top = 81
               Width = 7
@@ -1295,7 +1292,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label39: TLabel
+            object Lbl_ReqEspecificacoesTipoVeiculo: TLabel
               Left = 128
               Top = 16
               Width = 7
@@ -1310,7 +1307,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Label40: TLabel
+            object Lbl_ReqEspecificacoesCapacidade: TLabel
               Left = 290
               Top = 81
               Width = 7
@@ -1503,7 +1500,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label41: TLabel
+            object Lbl_ReqControleOpStatus: TLabel
               Left = 438
               Top = 41
               Width = 7

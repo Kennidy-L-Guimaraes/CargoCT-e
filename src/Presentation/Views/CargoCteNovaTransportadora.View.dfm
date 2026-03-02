@@ -24,7 +24,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 439
     object Scbx_NovaTransportadora: TScrollBox
       Left = 0
       Top = 0
@@ -40,11 +39,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
-      ExplicitHeight = 439
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
         Top = 0
-        Width = 605
+        Width = 607
         Height = 161
         Align = alTop
         Picture.Data = {
@@ -4467,11 +4465,12 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         Stretch = True
         ExplicitLeft = -16
         ExplicitTop = -31
+        ExplicitWidth = 605
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
         Top = 161
-        Width = 605
+        Width = 607
         Height = 220
         Align = alTop
         Caption = 'Identifica'#231#227'o Fiscal'
@@ -4666,10 +4665,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               9EF0A19DB78F2D0000000049454E44AE426082}
             Proportional = True
           end
-          object Label10: TLabel
-            Left = 63
+          object Lbl_ReqCNPJ: TLabel
+            Left = 65
             Top = 9
-            Width = 7
+            Width = 5
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -4681,7 +4680,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label1: TLabel
+          object Lbl_ReqRazaoSocial: TLabel
             Left = 116
             Top = 74
             Width = 7
@@ -4696,7 +4695,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label2: TLabel
+          object Lbl_ReqInscricaoEstadual: TLabel
             Left = 335
             Top = 9
             Width = 7
@@ -4711,7 +4710,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label3: TLabel
+          object Lbl_ReqRegimeTributario: TLabel
             Left = 358
             Top = 84
             Width = 7
@@ -4903,7 +4902,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
         Top = 381
-        Width = 605
+        Width = 607
         Height = 359
         Align = alTop
         Caption = 'Endere'#231'o Fiscal'
@@ -5167,7 +5166,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
               9EF0A19DB78F2D0000000049454E44AE426082}
             Proportional = True
           end
-          object Label4: TLabel
+          object Lbl_ReqCEP: TLabel
             Left = 52
             Top = 27
             Width = 7
@@ -5182,7 +5181,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label5: TLabel
+          object Lbl_ReqCodigoIBGE: TLabel
             Left = 351
             Top = 27
             Width = 7
@@ -5197,7 +5196,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label6: TLabel
+          object Lbl_ReqComplemento: TLabel
             Left = 362
             Top = 92
             Width = 7
@@ -5212,7 +5211,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label7: TLabel
+          object Lbl_ReqNumero: TLabel
             Left = 321
             Top = 222
             Width = 7
@@ -5419,7 +5418,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_Contato: TGroupBox
         Left = 0
         Top = 1262
-        Width = 605
+        Width = 607
         Height = 185
         Align = alTop
         Caption = 'Contato'
@@ -5496,7 +5495,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label18: TLabel
+          object Lbl_ReqTelefone: TLabel
             Left = 90
             Top = 11
             Width = 7
@@ -5511,7 +5510,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label19: TLabel
+          object Lbl_ReqContatoResponsavel: TLabel
             Left = 354
             Top = 11
             Width = 7
@@ -5586,7 +5585,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
         Top = 950
-        Width = 605
+        Width = 607
         Height = 131
         Align = alTop
         Caption = 'Dados Operacionais'
@@ -5643,7 +5642,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label13: TLabel
+          object Lbl_ReqTipoTransporte: TLabel
             Left = 151
             Top = 3
             Width = 7
@@ -5658,7 +5657,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label14: TLabel
+          object Lbl_ReqTipoOperacao: TLabel
             Left = 392
             Top = -2
             Width = 7
@@ -5726,7 +5725,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
         Top = 740
-        Width = 605
+        Width = 607
         Height = 210
         Align = alTop
         Caption = 'Dados Fiscais'
@@ -5819,7 +5818,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label8: TLabel
+          object Lbl_ReqPapelCTe: TLabel
             Left = 102
             Top = 16
             Width = 7
@@ -5834,7 +5833,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label9: TLabel
+          object Lbl_ReqObservacaoFiscal: TLabel
             Left = 390
             Top = 16
             Width = 7
@@ -5849,7 +5848,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label11: TLabel
+          object Lbl_ReqAliquotaPadrao: TLabel
             Left = 395
             Top = 81
             Width = 7
@@ -5864,7 +5863,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label12: TLabel
+          object Lbl_ReqTipoTributacao: TLabel
             Left = 156
             Top = 81
             Width = 7
@@ -5912,7 +5911,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ItemIndex = 1
+            ItemIndex = 2
             ParentFont = False
             TabOrder = 1
             Text = 'Normal'
@@ -5971,7 +5970,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Grbx_Sistema: TGroupBox
         Left = 0
         Top = 1081
-        Width = 605
+        Width = 607
         Height = 181
         Align = alTop
         Caption = 'Sistema'
@@ -6031,7 +6030,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
           end
-          object Label15: TLabel
+          object Lbl_ReqStatus: TLabel
             Left = 64
             Top = 6
             Width = 7
@@ -6061,7 +6060,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label17: TLabel
+          object Lbl_ReqResponsavel: TLabel
             Left = 352
             Top = 6
             Width = 7
@@ -6147,7 +6146,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
         Top = 1545
-        Width = 605
+        Width = 607
         Height = 55
         Align = alBottom
         BevelOuter = bvNone
@@ -6157,7 +6156,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         TabOrder = 6
         object Pnl_BtnSalvarNovaTransportadora: TPanel
           AlignWithMargins = True
-          Left = 443
+          Left = 445
           Top = 10
           Width = 150
           Height = 35
@@ -6204,7 +6203,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         end
         object Pnl_BtnCancelarNovaTransportadora: TPanel
           AlignWithMargins = True
-          Left = 289
+          Left = 291
           Top = 10
           Width = 150
           Height = 35

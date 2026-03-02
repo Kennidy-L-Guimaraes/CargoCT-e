@@ -23,7 +23,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 647
     DesignSize = (
       891
       649)
@@ -37,7 +36,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3366,7 +3364,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -3891,7 +3888,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = []
                 ParentFont = False
               end
-              object Label4: TLabel
+              object Lbl_ReqIdentificacaoSerie: TLabel
                 Left = 68
                 Top = 15
                 Width = 7
@@ -3906,7 +3903,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label1: TLabel
+              object Lbl_ReqIdentificacaoNumero: TLabel
                 Left = 89
                 Top = 83
                 Width = 7
@@ -3921,7 +3918,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label2: TLabel
+              object Lbl_ReqIdentificacaoTipoCte: TLabel
                 Left = 121
                 Top = 148
                 Width = 7
@@ -3936,7 +3933,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label3: TLabel
+              object Lbl_ReqIdentificacaoFinalidade: TLabel
                 Left = 104
                 Top = 213
                 Width = 7
@@ -3951,7 +3948,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label5: TLabel
+              object Lbl_ReqIdentificacaoModal: TLabel
                 Left = 222
                 Top = 15
                 Width = 7
@@ -3966,7 +3963,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label6: TLabel
+              object Lbl_ReqIdentificacaoFormaEmissao: TLabel
                 Left = 270
                 Top = 80
                 Width = 7
@@ -3981,7 +3978,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label7: TLabel
+              object Lbl_ReqIdentificacaoCFOP: TLabel
                 Left = 214
                 Top = 148
                 Width = 7
@@ -3996,7 +3993,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label8: TLabel
+              object Lbl_ReqIdentificacaoCEP: TLabel
                 Left = 204
                 Top = 213
                 Width = 7
@@ -4151,6 +4148,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Height = -13
                 Font.Name = 'Segoe UI'
                 Font.Style = []
+                ItemIndex = 1
                 ParentFont = False
                 TabOrder = 5
                 Text = '1.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DO ESTADO'
@@ -5922,7 +5920,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = []
                 ParentFont = False
               end
-              object Label9: TLabel
+              object Lbl_ReqTomadorInscricaoEstadual: TLabel
                 Left = 152
                 Top = 151
                 Width = 7
@@ -5937,7 +5935,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label10: TLabel
+              object Lbl_ReqTomadorCEP: TLabel
                 Left = 211
                 Top = 83
                 Width = 7
@@ -5952,7 +5950,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label11: TLabel
+              object Lbl_ReqTomadorNome: TLabel
                 Left = 227
                 Top = 15
                 Width = 7
@@ -5967,7 +5965,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label12: TLabel
+              object Lbl_ReqTomadorTipoTomador: TLabel
                 Left = 128
                 Top = 15
                 Width = 7
@@ -5982,7 +5980,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label13: TLabel
+              object Lbl_ReqTomadorCPF: TLabel
                 Left = 58
                 Top = 83
                 Width = 7
@@ -6113,6 +6111,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
               Font.Height = -15
               Font.Name = 'Segoe UI'
               Font.Style = []
+              ItemIndex = 0
               ParentFont = False
               TabOrder = 2
               Text = 'Remetente'
@@ -6244,10 +6243,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = []
                 ParentFont = False
               end
-              object Label19: TLabel
+              object Lbl_ReqRemetenteCEP: TLabel
                 Left = 224
                 Top = 22
-                Width = 25
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -6259,7 +6258,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label20: TLabel
+              object Lbl_ReqRemetenteNome: TLabel
                 Left = 98
                 Top = 22
                 Width = 7
@@ -6274,7 +6273,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label21: TLabel
+              object Lbl_ReqRemetenteCPF: TLabel
                 Left = 93
                 Top = 85
                 Width = 7
@@ -6455,7 +6454,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = []
                 ParentFont = False
               end
-              object Label15: TLabel
+              object Lbl_ReqTransportadoraNomeFantasia: TLabel
                 Left = 266
                 Top = 14
                 Width = 7
@@ -6470,7 +6469,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label16: TLabel
+              object Lbl_ReqTransportadoraCNPJ: TLabel
                 Left = 93
                 Top = 82
                 Width = 7
@@ -6485,7 +6484,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label17: TLabel
+              object Lbl_ReqTransportadoraNome: TLabel
                 Left = 98
                 Top = 14
                 Width = 7
@@ -6666,10 +6665,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = []
                 ParentFont = False
               end
-              object Label18: TLabel
+              object Lbl_ReqDestinatarioCEP: TLabel
                 Left = 226
                 Top = 20
-                Width = 30
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -6681,10 +6680,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label22: TLabel
+              object Lbl_ReqDestinatarioNome: TLabel
                 Left = 101
                 Top = 20
-                Width = 23
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -6696,10 +6695,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label23: TLabel
+              object Lbl_ReqDestinatarioCPF: TLabel
                 Left = 96
                 Top = 85
-                Width = 31
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -6711,10 +6710,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label24: TLabel
+              object Lbl_ReqDestinatarioEmail: TLabel
                 Left = 248
                 Top = 85
-                Width = 15
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -6886,10 +6885,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = []
                 ParentFont = False
               end
-              object Label32: TLabel
+              object Lbl_ReqOrigemCEP: TLabel
                 Left = 56
                 Top = 15
-                Width = 18
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -6901,10 +6900,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label33: TLabel
+              object Lbl_ReqOrigemTipoServico: TLabel
                 Left = 261
                 Top = 15
-                Width = 29
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7001,10 +7000,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = []
                 ParentFont = False
               end
-              object Label34: TLabel
+              object Lbl_ReqDestinoCEP: TLabel
                 Left = 56
                 Top = 13
-                Width = 32
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7016,10 +7015,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label35: TLabel
+              object Lbl_ReqDestinoTipoServico: TLabel
                 Left = 264
                 Top = 13
-                Width = 24
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7296,10 +7295,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsItalic]
                 ParentFont = False
               end
-              object Label25: TLabel
+              object Lbl_ReqCargaProduto: TLabel
                 Left = 84
                 Top = 22
-                Width = 25
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7311,10 +7310,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label26: TLabel
+              object Lbl_ReqCargaPesoBruto: TLabel
                 Left = 101
                 Top = 87
-                Width = 22
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7326,10 +7325,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label27: TLabel
+              object Lbl_ReqCargaPesoCubado: TLabel
                 Left = 117
                 Top = 152
-                Width = 31
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7341,10 +7340,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label28: TLabel
+              object Lbl_ReqCargaCubagem: TLabel
                 Left = 311
                 Top = 22
-                Width = 31
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7356,10 +7355,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label29: TLabel
+              object Lbl_ReqCargaValorCarga: TLabel
                 Left = 344
                 Top = 87
-                Width = 31
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7371,10 +7370,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label30: TLabel
+              object Lbl_ReqCargaQuantidade: TLabel
                 Left = 533
                 Top = 22
-                Width = 31
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7386,10 +7385,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label31: TLabel
+              object Lbl_ReqCargaValorSeguro: TLabel
                 Left = 332
                 Top = 152
-                Width = 22
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7749,10 +7748,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsItalic]
                 ParentFont = False
               end
-              object Label36: TLabel
+              object Lbl_ReqValoresFrete: TLabel
                 Left = 125
                 Top = 11
-                Width = 36
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7764,10 +7763,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label37: TLabel
+              object Lbl_ReqValoresDespacho: TLabel
                 Left = 98
                 Top = 82
-                Width = 21
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7779,10 +7778,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label38: TLabel
+              object Lbl_ReqValoresPedagio: TLabel
                 Left = 300
                 Top = 11
-                Width = 31
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7794,10 +7793,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label39: TLabel
+              object Lbl_ReqValoresSeguro: TLabel
                 Left = 293
                 Top = 82
-                Width = 23
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -7809,10 +7808,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label40: TLabel
+              object Lbl_ReqValoresOutros: TLabel
                 Left = 509
                 Top = 11
-                Width = 30
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -8621,10 +8620,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = []
                 ParentFont = False
               end
-              object Label42: TLabel
+              object Lbl_ReqVeiculoPlaca: TLabel
                 Left = 66
                 Top = 7
-                Width = 18
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -8636,10 +8635,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label43: TLabel
+              object Lbl_ReqVeiculoTARA: TLabel
                 Left = 218
                 Top = 7
-                Width = 31
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -8651,10 +8650,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label44: TLabel
+              object Lbl_ReqVeiculoPlacaUF: TLabel
                 Left = 87
                 Top = 72
-                Width = 31
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -8666,10 +8665,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label45: TLabel
+              object Lbl_ReqVeiculoRENAVAM: TLabel
                 Left = 99
                 Top = 137
-                Width = 22
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -8681,10 +8680,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label46: TLabel
+              object Lbl_ReqVeiculoMotoristaNome: TLabel
                 Left = 72
                 Top = 228
-                Width = 22
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -8696,10 +8695,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label47: TLabel
+              object Lbl_ReqVeiculoMotoristaCPF: TLabel
                 Left = 244
                 Top = 228
-                Width = 25
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -8711,10 +8710,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label48: TLabel
+              object Lbl_ReqVeiculoCarroceria: TLabel
                 Left = 305
                 Top = 137
-                Width = 16
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -8726,10 +8725,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
                 Font.Style = [fsBold]
                 ParentFont = False
               end
-              object Label49: TLabel
+              object Lbl_ReqVeiculoTipoRodado: TLabel
                 Left = 290
                 Top = 72
-                Width = 15
+                Width = 7
                 Height = 20
                 Margins.Top = 5
                 Margins.Bottom = 5
@@ -20212,7 +20211,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
-      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
@@ -20249,7 +20247,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
-        ExplicitHeight = 87
       end
     end
   end
