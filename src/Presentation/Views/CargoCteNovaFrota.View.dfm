@@ -22,17 +22,17 @@ object Frm_NovaFrota: TFrm_NovaFrota
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    object PageControl1: TPageControl
+    object PagCtr_NovaFrota: TPageControl
       Left = 0
       Top = 0
       Width = 785
       Height = 494
-      ActivePage = TabSheet1
+      ActivePage = TbSh_NovoMotorista
       Align = alClient
       TabOrder = 0
-      object TabSheet1: TTabSheet
+      object TbSh_NovoMotorista: TTabSheet
         Caption = 'Novo Motorista'
-        object Label33: TLabel
+        object Lbl_CadastroCompletoRNTRCANTT: TLabel
           Left = 28
           Top = 324
           Width = 292
@@ -46,7 +46,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Font.Style = []
           ParentFont = False
         end
-        object GroupBox1: TGroupBox
+        object GrBx_DadosDoMotorista: TGroupBox
           Left = 9
           Top = 4
           Width = 385
@@ -62,7 +62,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           ParentColor = False
           ParentFont = False
           TabOrder = 0
-          object Panel1: TPanel
+          object Pnl_DadosDoMotorista: TPanel
             AlignWithMargins = True
             Left = 3
             Top = 22
@@ -72,7 +72,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Margins.Bottom = 10
             BevelOuter = bvNone
             TabOrder = 0
-            object Label2: TLabel
+            object Lbl_DadosDoMotoristaNome: TLabel
               Left = 16
               Top = 20
               Width = 114
@@ -87,7 +87,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label3: TLabel
+            object Lbl_DadosDoMotoristaCPF: TLabel
               Left = 16
               Top = 215
               Width = 31
@@ -102,7 +102,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label4: TLabel
+            object Lbl_DadosDoMotoristaRG: TLabel
               Left = 208
               Top = 85
               Width = 26
@@ -117,7 +117,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label5: TLabel
+            object Lbl_DadosDoMotoristaDataDeNascimento: TLabel
               Left = 16
               Top = 150
               Width = 143
@@ -132,7 +132,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label6: TLabel
+            object Lbl_DadosDoMotoristaEstadoCivil: TLabel
               Left = 16
               Top = 85
               Width = 80
@@ -147,7 +147,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label7: TLabel
+            object Lbl_DadosDoMotoristaTelefone: TLabel
               Left = 208
               Top = 20
               Width = 64
@@ -162,7 +162,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label8: TLabel
+            object Lbl_DadosDoMotoristaCEP: TLabel
               Left = 208
               Top = 150
               Width = 32
@@ -267,7 +267,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object Edit1: TEdit
+            object Edt_DadosDoMotoristaNome: TEdit
               Left = 16
               Top = 50
               Width = 156
@@ -283,7 +283,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 0
             end
-            object ComboBox2: TComboBox
+            object CmBx_DadosDoMotoristaEstadoCivil: TComboBox
               Left = 16
               Top = 115
               Width = 128
@@ -304,7 +304,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
                 'Divorciado'
                 'Viuvo')
             end
-            object MaskEdit2: TMaskEdit
+            object MsEdt_DadosDoMotoristaTelefone: TMaskEdit
               AlignWithMargins = True
               Left = 208
               Top = 50
@@ -323,7 +323,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 2
               Text = '(00)0000-00000'
             end
-            object MaskEdit3: TMaskEdit
+            object MsEdt_DadosDoMotoristaRG: TMaskEdit
               AlignWithMargins = True
               Left = 208
               Top = 115
@@ -342,7 +342,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 3
               Text = '00.000.000-0'
             end
-            object MaskEdit5: TMaskEdit
+            object MsEdt_DadosDoMotoristaDataNascimento: TMaskEdit
               AlignWithMargins = True
               Left = 16
               Top = 180
@@ -361,7 +361,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 4
               Text = '  /  /  '
             end
-            object MaskEdit6: TMaskEdit
+            object MsEdt_DadosDoMotoristaCPF: TMaskEdit
               AlignWithMargins = True
               Left = 16
               Top = 245
@@ -380,7 +380,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 5
               Text = '000.000.000.-00'
             end
-            object MaskEdit7: TMaskEdit
+            object MsEdt_DadosDoMotoristaCEP: TMaskEdit
               AlignWithMargins = True
               Left = 208
               Top = 180
@@ -401,7 +401,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             end
           end
         end
-        object Pnl_NovaTransportadoraBtns: TPanel
+        object Pnl_NovoMotoristaBtns: TPanel
           Left = 0
           Top = 409
           Width = 777
@@ -412,7 +412,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          object Pnl_BtnSalvarNovaTransportadora: TPanel
+          object Pnl_BtnSalvarNovoMotorista: TPanel
             AlignWithMargins = True
             Left = 615
             Top = 10
@@ -425,7 +425,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 0
-            object Shp_BtnSalvarNovaTransportadora: TShape
+            object Shp_BtnSalvarNovoMotorista: TShape
               Left = 0
               Top = 0
               Width = 150
@@ -439,7 +439,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ExplicitWidth = 65
               ExplicitHeight = 65
             end
-            object Btn_SalvarNovaTransportadora: TSpeedButton
+            object Btn_SalvarNovoMotorista: TSpeedButton
               Left = 0
               Top = 0
               Width = 150
@@ -458,7 +458,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ExplicitHeight = 36
             end
           end
-          object Pnl_BtnCancelarNovaTransportadora: TPanel
+          object Pnl_BtnCancelarNovoMotorista: TPanel
             AlignWithMargins = True
             Left = 461
             Top = 10
@@ -471,7 +471,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             Align = alRight
             BevelOuter = bvNone
             TabOrder = 1
-            object Shp_BtnCancelarNovaTransportadora: TShape
+            object Shp_BtnCancelarNovoMotorista: TShape
               Left = 0
               Top = 0
               Width = 150
@@ -485,7 +485,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ExplicitWidth = 65
               ExplicitHeight = 65
             end
-            object Btn_CancelarNovaTransportadora: TSpeedButton
+            object Btn_CancelarNovoMotorista: TSpeedButton
               Left = 0
               Top = 0
               Width = 150
@@ -500,14 +500,14 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
-              OnClick = Btn_CancelarNovaTransportadoraClick
+              OnClick = Btn_CancelarNovoMotoristaClick
               ExplicitLeft = 22
               ExplicitWidth = 178
               ExplicitHeight = 48
             end
           end
         end
-        object GroupBox4: TGroupBox
+        object GrBx_Habilitacao: TGroupBox
           Left = 400
           Top = 4
           Width = 367
@@ -523,14 +523,14 @@ object Frm_NovaFrota: TFrm_NovaFrota
           ParentColor = False
           ParentFont = False
           TabOrder = 2
-          object Panel7: TPanel
+          object Pnl_Habilitacao: TPanel
             Left = 13
             Top = 24
             Width = 340
             Height = 287
             BevelOuter = bvNone
             TabOrder = 0
-            object Label1: TLabel
+            object Lbl_HabilitacaoTipoDeMotorista: TLabel
               AlignWithMargins = True
               Left = 6
               Top = 18
@@ -546,7 +546,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label25: TLabel
+            object Lbl_HabilitacaoNumeroCNH: TLabel
               AlignWithMargins = True
               Left = 6
               Top = 83
@@ -562,7 +562,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label26: TLabel
+            object Lbl_HabilitacaoValidadeCNH: TLabel
               AlignWithMargins = True
               Left = 6
               Top = 148
@@ -578,7 +578,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label27: TLabel
+            object Lbl_HabilitacaoCategoria: TLabel
               AlignWithMargins = True
               Left = 6
               Top = 213
@@ -594,7 +594,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label28: TLabel
+            object Lbl_HabilitacaoValidadeExamMedico: TLabel
               AlignWithMargins = True
               Left = 196
               Top = 18
@@ -691,7 +691,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object ComboBox1: TComboBox
+            object CmBx_HabilitacaoTipoMotorista: TComboBox
               AlignWithMargins = True
               Left = 6
               Top = 48
@@ -713,7 +713,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
                 'Agregado'
                 'Terceirizado')
             end
-            object Edit20: TEdit
+            object Edt_HabilitacaoNumeroCNH: TEdit
               AlignWithMargins = True
               Left = 6
               Top = 113
@@ -730,7 +730,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 1
             end
-            object ComboBox4: TComboBox
+            object CmBx_HabilitacaoCategoria: TComboBox
               AlignWithMargins = True
               Left = 6
               Top = 243
@@ -753,7 +753,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
                 'D'
                 'E')
             end
-            object MaskEdit1: TMaskEdit
+            object MsEdt_HabilitacaoValidadeExamMedico: TMaskEdit
               AlignWithMargins = True
               Left = 196
               Top = 94
@@ -772,11 +772,11 @@ object Frm_NovaFrota: TFrm_NovaFrota
               TabOrder = 3
               Text = '00/00/00'
             end
-            object MaskEdit4: TMaskEdit
+            object MsEdt_HabilitacaoValidadeCNH: TMaskEdit
               AlignWithMargins = True
-              Left = 4
+              Left = 6
               Top = 178
-              Width = 127
+              Width = 128
               Height = 25
               Margins.Top = 5
               Margins.Bottom = 5
@@ -794,7 +794,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           end
         end
       end
-      object TabSheet2: TTabSheet
+      object TbSh_NovoVeiculo: TTabSheet
         Caption = 'Novo Veiculo'
         ImageIndex = 1
         object Grbx_VeiculoMotorista: TGroupBox
@@ -1069,7 +1069,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
                 'Agregado'
                 'Terceirizado')
             end
-            object Edit9: TEdit
+            object Edt_VeiculoRNTRC: TEdit
               Left = 14
               Top = 176
               Width = 69
@@ -1186,7 +1186,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
-              OnClick = Btn_CancelarNovaTransportadoraClick
+              OnClick = Btn_CancelarNovoMotoristaClick
               ExplicitLeft = 22
               ExplicitWidth = 178
               ExplicitHeight = 48
@@ -1210,14 +1210,14 @@ object Frm_NovaFrota: TFrm_NovaFrota
           ParentColor = False
           ParentFont = False
           TabOrder = 2
-          object Panel5: TPanel
+          object Pnl_Especificacoes: TPanel
             Left = 7
             Top = 28
             Width = 330
             Height = 229
             BevelOuter = bvNone
             TabOrder = 0
-            object Lbl_VeiculoMotoristaCapacidade: TLabel
+            object Lbl_EspecificacoesCapacidadeKg: TLabel
               Left = 176
               Top = 81
               Width = 108
@@ -1232,7 +1232,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label21: TLabel
+            object Lbl_EspecificacoesMarca: TLabel
               Left = 16
               Top = 81
               Width = 44
@@ -1247,7 +1247,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label22: TLabel
+            object Lbl_EspecificacoesModelo: TLabel
               Left = 16
               Top = 146
               Width = 55
@@ -1262,7 +1262,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label23: TLabel
+            object Lbl_EspecificacoesCor: TLabel
               Left = 176
               Top = 16
               Width = 26
@@ -1277,7 +1277,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label15: TLabel
+            object Lbl_EspecificacoesTipoVeiculo: TLabel
               Left = 16
               Top = 16
               Width = 106
@@ -1338,7 +1338,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 0
             end
-            object Edit16: TEdit
+            object Edt_EspecificacoesMarca: TEdit
               Left = 16
               Top = 111
               Width = 106
@@ -1354,7 +1354,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 1
             end
-            object Edit17: TEdit
+            object Edt_EspecificacoesModelo: TEdit
               Left = 16
               Top = 176
               Width = 106
@@ -1370,7 +1370,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 2
             end
-            object Edit18: TEdit
+            object Edt_EspecificacoesCor: TEdit
               Left = 176
               Top = 46
               Width = 97
@@ -1386,7 +1386,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 3
             end
-            object Edit12: TEdit
+            object Edt_EspecificacoesTipoVeiculo: TEdit
               Left = 16
               Top = 46
               Width = 106
@@ -1404,7 +1404,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             end
           end
         end
-        object GroupBox3: TGroupBox
+        object GrBx_ControleOp: TGroupBox
           Left = 28
           Top = 291
           Width = 719
@@ -1421,14 +1421,14 @@ object Frm_NovaFrota: TFrm_NovaFrota
           ParentColor = False
           ParentFont = False
           TabOrder = 3
-          object Panel6: TPanel
+          object Pnl_ControleOp: TPanel
             Left = 18
             Top = 25
             Width = 679
             Height = 73
             BevelOuter = bvNone
             TabOrder = 0
-            object Label19: TLabel
+            object Lbl_ControleOpStatus: TLabel
               AlignWithMargins = True
               Left = 383
               Top = 41
@@ -1446,7 +1446,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label20: TLabel
+            object Lbl_ControleOpPossuiRastreador: TLabel
               AlignWithMargins = True
               Left = 11
               Top = 41
@@ -1464,7 +1464,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label24: TLabel
+            object Lbl_ControleOpKmAtual: TLabel
               AlignWithMargins = True
               Left = 11
               Top = 11
@@ -1482,7 +1482,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = []
               ParentFont = False
             end
-            object Label9: TLabel
+            object Lbl_ControleOpNEquipamento: TLabel
               AlignWithMargins = True
               Left = 380
               Top = 11
@@ -1515,7 +1515,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Font.Style = [fsBold]
               ParentFont = False
             end
-            object RadioButton1: TRadioButton
+            object RaBt_ControleOpSim: TRadioButton
               AlignWithMargins = True
               Left = 144
               Top = 44
@@ -1534,7 +1534,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 0
             end
-            object RadioButton2: TRadioButton
+            object RaBt_ControleOpNao: TRadioButton
               AlignWithMargins = True
               Left = 216
               Top = 44
@@ -1553,7 +1553,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 1
             end
-            object CheckBox1: TCheckBox
+            object ChBx_ControleOpAtivo: TCheckBox
               AlignWithMargins = True
               Left = 456
               Top = 44
@@ -1574,7 +1574,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               State = cbChecked
               TabOrder = 2
             end
-            object Edit19: TEdit
+            object Edt_ControleOpKmAtual: TEdit
               AlignWithMargins = True
               Left = 85
               Top = 9
@@ -1593,7 +1593,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               ParentFont = False
               TabOrder = 3
             end
-            object Edit11: TEdit
+            object Edt_ControleOpNEquipamentos: TEdit
               AlignWithMargins = True
               Left = 507
               Top = 9
