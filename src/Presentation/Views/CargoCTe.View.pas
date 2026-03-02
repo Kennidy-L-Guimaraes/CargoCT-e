@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.jpeg, Vcl.ExtCtrls,
   Vcl.ComCtrls, Vcl.StdCtrls, RLReport, Vcl.Buttons, Vcl.Grids, Data.DB,
-  Vcl.DBGrids, MenuNavigation.Utils, Vcl.WinXCtrls, Vcl.Imaging.pngimage;
+  Vcl.DBGrids, MenuNavigation.Utils, Vcl.WinXCtrls, Vcl.Imaging.pngimage,
+  Vcl.Mask;
 
 type
   // PADRÃO DE NOMENCLATURA
@@ -36,7 +37,6 @@ type
     Edt_IdentificacaoSerie: TEdit;
     Edt_IdentificacaoNumero: TEdit;
     Edt_IdentificacaoFinalidade: TEdit;
-    Edt_IdentificacaoCEP: TEdit;
     Lbl_IdentificacaoSerie: TLabel;
     Lbl_IdentificacaoNumero: TLabel;
     Lbl_IdentificacaoTipodeCte: TLabel;
@@ -50,17 +50,13 @@ type
     Lbl_TomadorIE: TLabel;
     Lbl_TomadorNomeRS: TLabel;
     Lbl_TomadorCep: TLabel;
-    Edt_TomadorCpfCnpj: TEdit;
-    Edt_TomadorIE: TEdit;
     Edt_TomadorNome: TEdit;
-    Edt_TomadorCEP: TEdit;
     Pnl_ParticipantesRemetente: TPanel;
     Lbl_ParticipantesRemetenteNomeRS: TLabel;
     Lbl_ParticipantesRemetenteCpfCnpj: TLabel;
     Lbl_ParticipantesRemetenteCEP: TLabel;
     Edt_ParticipantesRemetenteNomeRS: TEdit;
     Edt_ParticipantesRemetenteCpfCnpj: TEdit;
-    Edt_ParticipantesRemetenteCEP: TEdit;
     Lbl_ParticipantesRemetente: TLabel;
     Pnl_ParticipantesTransportadora: TPanel;
     Lbl_ParticipantesTransportadoraNomeRS: TLabel;
@@ -78,7 +74,6 @@ type
     Lbl_ParticipantesDestinatarioEmail: TLabel;
     Edt_ParticipantesDestinatarioNomeRS: TEdit;
     Edt_ParticipantesDestinatarioCpfCnpj: TEdit;
-    Edt_ParticipantesDestinatarioCEP: TEdit;
     Edt_ParticipantesDestinatarioEmail: TEdit;
     Edt_ParticipantesTransportadoraNFantasia: TEdit;
     Lbl_ParticipantesTransportadoraNFantasia: TLabel;
@@ -89,12 +84,10 @@ type
     Pnl_TransporteOrigem: TPanel;
     Lbl_TransporteOrigemCEP: TLabel;
     Lbl_TransporteOrigemTServico: TLabel;
-    Edt_TransporteOrigemCEP: TEdit;
     Lbl_TransporteOrigem: TLabel;
     Pnl_TransporteDestino: TPanel;
     Lbl_TransporteDestinoCEP: TLabel;
     Lbl_TransporteDestinoTServico: TLabel;
-    Edt_TransporteDestinoCEP: TEdit;
     Pnl_TransporteCarga: TPanel;
     Lbl_TransporteCargaProduto: TLabel;
     Lbl_TransporteCargaPesoBruto: TLabel;
@@ -117,7 +110,6 @@ type
     Lbl_TransporteCargaValorSeguroPreco: TLabel;
     Lbl_TransporteCargaQuantidadeUn: TLabel;
     Lbl_DocumentosIdentificacaoCte: TLabel;
-    Lbl_DocumentosTaxas: TLabel;
     Pnl_DocumentosTaxas: TPanel;
     Lbl_DocumentosTaxasValorFrete: TLabel;
     Lbl_DocumentosTaxasAviso: TLabel;
@@ -125,15 +117,10 @@ type
     Lbl_DocumentosTaxasDespacho: TLabel;
     Lbl_DocumentosTaxasSeguro: TLabel;
     Lbl_DocumentosTaxasOutros: TLabel;
-    Edt_DocumentosTaxasPedagio: TEdit;
     Lbl_DocumentosTaxasPedagioPrice: TLabel;
-    Edt_DocumentosTaxasValorFrete: TEdit;
     Lbl_DocumentosTaxasValorFretePrice: TLabel;
-    Edt_DocumentosTaxasDespacho: TEdit;
     Lbl_DocumentosTaxasDespachoPrice: TLabel;
-    Edt_DocumentosTaxasSeguro: TEdit;
     Lbl_DocumentosTaxasSeguroPrice: TLabel;
-    Edt_DocumentosTaxasOutros: TEdit;
     Lbl_DocumentosTaxasOutrosPrice: TLabel;
     Pnl_ImpostosImpostos: TPanel;
     Lbl_ImpostosImpostosCST: TLabel;
@@ -262,6 +249,70 @@ type
     Shp_BtnAdicionarMotorista: TShape;
     Btn_AdicionarMotorista: TSpeedButton;
     TimerDataEHora: TTimer;
+    MsEdt_IdentificacaoCEP: TMaskEdit;
+    Label4: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    MsEdt_TomadorCEP: TMaskEdit;
+    MsEdt_TomadorIE: TMaskEdit;
+    MsEdt_TomadorCpfCnpj: TMaskEdit;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    ComboBox1: TComboBox;
+    Label14: TLabel;
+    MsEdt_ParticipantesDestinatarioCEP: TMaskEdit;
+    Label18: TLabel;
+    MsEdt_ParticipantesRemetenteCEP: TMaskEdit;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Label26: TLabel;
+    Label27: TLabel;
+    Label28: TLabel;
+    Label29: TLabel;
+    Label30: TLabel;
+    Label31: TLabel;
+    MsEdt_TransporteOrigemCEP: TMaskEdit;
+    MsEdt_TransporteDestinoCEP: TMaskEdit;
+    Label32: TLabel;
+    Label33: TLabel;
+    Label34: TLabel;
+    Label35: TLabel;
+    MsEdt_DocumentosTaxasValorFrete: TMaskEdit;
+    MsEdt_DocumentosTaxasPedagio: TMaskEdit;
+    MsEdt_DocumentosTaxasDespacho: TMaskEdit;
+    MsEdt_DocumentosTaxasSeguro: TMaskEdit;
+    MsEdt_DocumentosTaxasOutros: TMaskEdit;
+    Label36: TLabel;
+    Label37: TLabel;
+    Label38: TLabel;
+    Label39: TLabel;
+    Label40: TLabel;
+    ComboBox2: TComboBox;
+    Label41: TLabel;
+    Label42: TLabel;
+    Label43: TLabel;
+    Label44: TLabel;
+    Label45: TLabel;
+    Label46: TLabel;
+    Label47: TLabel;
+    Label48: TLabel;
+    Label49: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure Btn_BtnNovaNotaClick(Sender: TObject);
     procedure Btn_NotasEmitidasClick(Sender: TObject);

@@ -4669,7 +4669,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label10: TLabel
             Left = 63
             Top = 9
-            Width = 30
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -4684,7 +4684,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label1: TLabel
             Left = 116
             Top = 74
-            Width = 36
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -4699,7 +4699,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label2: TLabel
             Left = 335
             Top = 9
-            Width = 33
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -4714,7 +4714,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label3: TLabel
             Left = 358
             Top = 84
-            Width = 43
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5170,7 +5170,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label4: TLabel
             Left = 52
             Top = 27
-            Width = 24
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5185,7 +5185,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label5: TLabel
             Left = 351
             Top = 27
-            Width = 25
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5200,7 +5200,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label6: TLabel
             Left = 362
             Top = 92
-            Width = 25
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5215,7 +5215,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label7: TLabel
             Left = 321
             Top = 222
-            Width = 31
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5499,7 +5499,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label18: TLabel
             Left = 90
             Top = 11
-            Width = 28
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5514,7 +5514,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label19: TLabel
             Left = 354
             Top = 11
-            Width = 28
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5646,7 +5646,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label13: TLabel
             Left = 151
             Top = 3
-            Width = 24
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5661,7 +5661,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label14: TLabel
             Left = 392
             Top = -2
-            Width = 19
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5712,7 +5712,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            ItemIndex = 2
+            ItemIndex = 0
             ParentFont = False
             TabOrder = 1
             Text = 'Estadual'
@@ -5822,7 +5822,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label8: TLabel
             Left = 102
             Top = 16
-            Width = 26
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5837,7 +5837,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label9: TLabel
             Left = 390
             Top = 16
-            Width = 26
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5852,7 +5852,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label11: TLabel
             Left = 395
             Top = 81
-            Width = 18
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5867,7 +5867,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label12: TLabel
             Left = 156
             Top = 81
-            Width = 26
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -5951,20 +5951,20 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             AlignWithMargins = True
             Left = 257
             Top = 111
-            Width = 126
+            Width = 123
             Height = 25
             Margins.Top = 5
             Margins.Bottom = 5
-            EditMask = '000.00%;1;_'
+            EditMask = '000.00;1;_'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 4934475
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
-            MaxLength = 7
+            MaxLength = 6
             ParentFont = False
             TabOrder = 3
-            Text = '000.00%'
+            Text = '000.00'
           end
         end
       end
@@ -6034,7 +6034,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label15: TLabel
             Left = 64
             Top = 6
-            Width = 26
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -6049,7 +6049,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label16: TLabel
             Left = 139
             Top = 65
-            Width = 25
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5
@@ -6064,7 +6064,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           object Label17: TLabel
             Left = 352
             Top = 6
-            Width = 25
+            Width = 7
             Height = 20
             Margins.Top = 5
             Margins.Bottom = 5

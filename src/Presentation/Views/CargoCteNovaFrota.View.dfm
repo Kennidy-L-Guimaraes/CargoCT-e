@@ -31,7 +31,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
-      ExplicitLeft = 1
+      ExplicitHeight = 492
       object TabSheet1: TTabSheet
         Caption = 'Novo Motorista'
         object Label33: TLabel
@@ -414,6 +414,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
+          ExplicitTop = 407
           object Pnl_BtnSalvarNovaTransportadora: TPanel
             AlignWithMargins = True
             Left = 615
@@ -946,7 +947,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label37: TLabel
               Left = 255
               Top = 16
-              Width = 26
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
@@ -1100,7 +1101,6 @@ object Frm_NovaFrota: TFrm_NovaFrota
           Color = clWhite
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 401
           object Panel3: TPanel
             AlignWithMargins = True
             Left = 615
@@ -1506,7 +1506,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
             object Label41: TLabel
               Left = 438
               Top = 41
-              Width = 10
+              Width = 7
               Height = 20
               Margins.Top = 5
               Margins.Bottom = 5
