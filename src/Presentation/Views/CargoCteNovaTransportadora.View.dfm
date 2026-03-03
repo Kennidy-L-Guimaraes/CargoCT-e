@@ -13,6 +13,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poMainFormCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object Pnl_Background: TPanel
     Left = 0
@@ -30,7 +31,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       Width = 624
       Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 1029
       VertScrollBar.Range = 1600
       VertScrollBar.Tracking = True
       Align = alClient
@@ -42,7 +42,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       UseWheelForScrolling = True
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -1029
+        Top = 0
         Width = 607
         Height = 161
         Align = alTop
@@ -4470,7 +4470,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = -868
+        Top = 161
         Width = 607
         Height = 220
         Align = alTop
@@ -4901,7 +4901,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = -648
+        Top = 381
         Width = 607
         Height = 359
         Align = alTop
@@ -5402,7 +5402,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 233
+        Top = 1262
         Width = 607
         Height = 185
         Align = alTop
@@ -5569,7 +5569,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = -79
+        Top = 950
         Width = 607
         Height = 131
         Align = alTop
@@ -5710,7 +5710,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = -289
+        Top = 740
         Width = 607
         Height = 210
         Align = alTop
@@ -5955,7 +5955,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = 52
+        Top = 1081
         Width = 607
         Height = 181
         Align = alTop
@@ -6031,21 +6031,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = [fsBold]
             ParentFont = False
           end
-          object Label16: TLabel
-            Left = 139
-            Top = 65
-            Width = 7
-            Height = 20
-            Margins.Top = 5
-            Margins.Bottom = 5
-            Caption = '*'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clRed
-            Font.Height = -15
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-          end
           object Lbl_ReqResponsavel: TLabel
             Left = 352
             Top = 6
@@ -6092,31 +6077,16 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             ParentFont = False
             TabOrder = 1
           end
-          object Btn_SistemaDataAtual: TButton
-            Left = 130
-            Top = 93
-            Width = 77
-            Height = 25
-            Cursor = crHandPoint
-            Caption = 'Data Atual'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -13
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-            TabOrder = 2
-            OnClick = Btn_SistemaDataAtualClick
-          end
         end
         object MsEdt_SistemaDataCadastro: TMaskEdit
           AlignWithMargins = True
           Left = 119
           Top = 127
-          Width = 115
+          Width = 114
           Height = 25
           Margins.Top = 5
           Margins.Bottom = 5
+          Enabled = False
           EditMask = '99/99/99;1;_'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 4934475
@@ -6131,7 +6101,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 516
+        Top = 1545
         Width = 607
         Height = 55
         Align = alBottom

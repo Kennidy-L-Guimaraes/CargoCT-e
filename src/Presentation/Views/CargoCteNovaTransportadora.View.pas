@@ -97,18 +97,17 @@ type
     Lbl_ReqTipoOperacao: TLabel;
     MsEdt_SistemaDataCadastro: TMaskEdit;
     Lbl_ReqStatus: TLabel;
-    Label16: TLabel;
     Lbl_ReqResponsavel: TLabel;
     MsEdt_DadosAliquotaPadrao: TMaskEdit;
     MsEdt_ContatoTelefone: TMaskEdit;
     Lbl_ReqTelefone: TLabel;
     Lbl_ReqContatoResponsavel: TLabel;
-    Btn_SistemaDataAtual: TButton;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
     procedure ResetarConfiguracoes;
     procedure SpeedButton1Click(Sender: TObject);
     procedure Btn_SalvarNovaTransportadoraClick(Sender: TObject);
     procedure Btn_SistemaDataAtualClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -139,6 +138,12 @@ end;
 
 procedure TFrm_NovaTransportadora.Btn_SistemaDataAtualClick(Sender: TObject);
 begin
+  MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
+end;
+
+procedure TFrm_NovaTransportadora.FormCreate(Sender: TObject);
+begin
+   //Configurações Iniciais Aplica a Data atual
   MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
 end;
 
