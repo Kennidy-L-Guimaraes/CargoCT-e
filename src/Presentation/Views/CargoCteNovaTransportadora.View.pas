@@ -42,9 +42,9 @@ type
     Pnl_Contato: TPanel;
     Lbl_ContatoTelefone: TLabel;
     Lbl_ContatoEmail: TLabel;
-    Lbl_ContatoResponsavel: TLabel;
+    Lbl_ContatoSite: TLabel;
     Edt_ContatoEmail: TEdit;
-    Edt_ContatoResponsavel: TEdit;
+    Edt_ContatoSite: TEdit;
     Grbx_DadosOperacionais: TGroupBox;
     Pnl_DadosOperacionais: TPanel;
     Lbl_DadosOperacionaisTipoDeTransporte: TLabel;
@@ -171,7 +171,7 @@ begin
   //Contato
   TCampoVisualUtils.LimparControle(MsEdt_ContatoTelefone);
   TCampoVisualUtils.LimparControle(Edt_ContatoEmail);
-  TCampoVisualUtils.LimparControle(Edt_ContatoResponsavel);
+  TCampoVisualUtils.LimparControle(Edt_ContatoSite);
 
 
   //Resetar Posição do ScrollBox
