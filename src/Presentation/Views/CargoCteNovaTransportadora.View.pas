@@ -88,7 +88,6 @@ type
     Lbl_ReqCEP: TLabel;
     Cmbx_EnderecoUF: TComboBox;
     Lbl_ReqCodigoIBGE: TLabel;
-    Lbl_ReqComplemento: TLabel;
     Lbl_ReqNumero: TLabel;
     Lbl_ReqPapelCTe: TLabel;
     Lbl_ReqObservacaoFiscal: TLabel;
