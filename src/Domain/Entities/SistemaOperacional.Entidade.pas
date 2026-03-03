@@ -12,6 +12,9 @@ type
     FSistemaAtivo : TSistemaAtivo;
     FResponsavel  : string;
     FDataCadastro : TDateTime;
+
+    procedure ValidarResponsavel;
+    procedure ValidarDados;
    public
     {Public Declarations}
 
@@ -21,9 +24,6 @@ type
 
     constructor Create(AsistemaAtivo: TSistemaAtivo;
   AResponsavel: string);
-    procedure ValidarResponsavel;
-    procedure ValidarDados;
-
     procedure AtivarSistema;
     procedure DesativarSistema;
     function  SistemaEstaAtivo: boolean;
@@ -44,11 +44,17 @@ end;
 
 procedure TSistemaOperacional.AtivarSistema;
 begin
+ if FSistemaAtivo = saAtivo then
+    Exit;
+
   FSistemaAtivo := saAtivo;
 end;
 
 procedure TSistemaOperacional.DesativarSistema;
 begin
+   if FSistemaAtivo = saInativo then
+    Exit;
+
   FSistemaAtivo := saInativo;
 end;
 

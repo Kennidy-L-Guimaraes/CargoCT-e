@@ -20,7 +20,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   Sistema.Utils in 'src\Presentation\UI\Utils\Sistema.Utils.pas',
-  Transportadora.Entidade in 'src\Domain\Entities\Transportadora.Entidade.pas';
+  Transportadora.Entidade in 'src\Domain\Entities\Transportadora.Entidade.pas',
+  SistemaOperacional.Entidade in 'src\Domain\Entities\SistemaOperacional.Entidade.pas';
 
 {$R *.res}
 
