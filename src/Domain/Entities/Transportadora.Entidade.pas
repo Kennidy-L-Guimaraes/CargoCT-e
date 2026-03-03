@@ -2,15 +2,16 @@ unit Transportadora.Entidade;
 
 interface
 uses DadosFiscais.Entidade, DadosOperacionais.Entidade, Endereco.Entidade,
-  IdentidadeFiscal.Entidade, System.SysUtils;
+  IdentidadeFiscal.Entidade, System.SysUtils, Validar.Exceptions;
 
 type
  TTransportadora = class
-  ['{A13A4490-79D6-4C84-8B69-102A8A11018F}']
    private
     {Private Declarations}
+    FGuid             : TGuid;
     FDadosFiscais     : TDadosFiscais;
     FDadosOperacionais: TDadosOperacionais;
+    //FSistemaOperacao  : TSistemaOperacao; Necessário definir nova entidade
     FEndereco         : TEndereco;
     FIdentidadeFiscal : TIdentidadeFiscal;
 
@@ -48,8 +49,24 @@ constructor TTransportadora.Create(ADadosFiscais: TDadosFiscais;
   ADadosOperacionais: TDadosOperacionais; AEndereco: TEndereco;
   AIdentidadeFiscal: TIdentidadeFiscal);
 begin
+   if not Assigned(ADadosFiscais) then
+    TValidar.LancarErro('Dados Fiscais', 'Obrigatório!');
 
+   if not Assigned(ADadosOperacionais) then
+    TValidar.LancarErro('Dados Operacionais', 'Obrigatório!');
 
+   if not Assigned(AEndereco) then
+    TValidar.LancarErro('Endereço', 'Obrigatório!');
+
+   if not Assigned(AIdentidadeFiscal) then
+   TValidar.LancarErro('Identidade Fiscal','Obrigatório!');
+
+   FDadosFiscais      := ADadosFiscais;
+   FDadosOperacionais := ADadosOperacionais;
+   FEndereco          := AEndereco;
+   FIdentidadeFiscal  := AIdentidadeFiscal;
+   FGuid              := TGuid.NewGuid;
+   ValidarDados;
 end;
 
 procedure TTransportadora.InativarTransportadora;
