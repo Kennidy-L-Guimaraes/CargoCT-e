@@ -19,7 +19,8 @@ uses
   CargoCteNovaFrota.View in 'src\Presentation\Views\CargoCteNovaFrota.View.pas' {Frm_NovaFrota},
   Vcl.Themes,
   Vcl.Styles,
-  Sistema.Utils in 'src\Presentation\UI\Utils\Sistema.Utils.pas';
+  Sistema.Utils in 'src\Presentation\UI\Utils\Sistema.Utils.pas',
+  Transportadora.Entidade in 'src\Domain\Entities\Transportadora.Entidade.pas';
 
 {$R *.res}
 

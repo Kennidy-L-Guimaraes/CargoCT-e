@@ -154,6 +154,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="src\Presentation\UI\Utils\Sistema.Utils.pas"/>
+        <DCCReference Include="src\Domain\Entities\Transportadora.Entidade.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
