@@ -3,9 +3,6 @@ unit DadosOperacionais.Entidade;
 interface
 uses Validar.Exceptions;
 type
- //Enum Tipo de Transporte
- TTipoTransporte = (trRodoviario, trAereo, trAquaviario, trMultimodal);
-type
  //Enum Tipo de Operação
  TTipoOperacao   = (opEstadual, opInterestadual, opInternacional);
 
@@ -13,44 +10,39 @@ type
  TDadosOperacionais = class
   private
    {Private Declarations}
-   FTipoTransporte: TTipoTransporte;
+   const
+   MODAL_RODOVIARIO = 'Rodoviario';
+   var
+   FTipoTransporte: string;
    FTipoOperacao  : TTipoOperacao;
    procedure ValidarTipoOperacao;
-   procedure ValidarTipoTransporte;
    procedure ValidarDados;
   public
    {Public Declarations}
-   constructor Create(ATipoOperacao: TTipoOperacao; ATipoTransporte: TTipoTransporte);
+   constructor Create(ATipoOperacao: TTipoOperacao);
    property TipoOperacao  : TTipoOperacao   read FTipoOperacao;
-   property TipoTransporte: TTipoTransporte read FTipoTransporte;
+   property TipoTransporte: string read FTipoTransporte;
  end;
 
 implementation
 
 { TDadosOperacionais }
 
-constructor TDadosOperacionais.Create(ATipoOperacao: TTipoOperacao;
-  ATipoTransporte: TTipoTransporte);
+constructor TDadosOperacionais.Create(ATipoOperacao: TTipoOperacao);
 begin
   FTipoOperacao   := ATipoOperacao;
-  FTipoTransporte := ATipoTransporte;
+  FTipoTransporte := MODAL_RODOVIARIO;
   ValidarDados;
 end;
 
 procedure TDadosOperacionais.ValidarDados;
 begin
  ValidarTipoOperacao;
- ValidarTipoTransporte;
 end;
 
 procedure TDadosOperacionais.ValidarTipoOperacao;
 begin
   TValidar.SeEnumInvalido<TTipoOperacao>('Tipo Operação', FTipoOperacao);
-end;
-
-procedure TDadosOperacionais.ValidarTipoTransporte;
-begin
-  TValidar.SeEnumInvalido<TTipoTransporte>('Tipo de Transporte', FTipoTransporte);
 end;
 
 end.

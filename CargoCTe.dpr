@@ -21,7 +21,8 @@ uses
   Vcl.Styles,
   Sistema.Utils in 'src\Presentation\UI\Utils\Sistema.Utils.pas',
   Transportadora.Entidade in 'src\Domain\Entities\Transportadora.Entidade.pas',
-  SistemaOperacional.Entidade in 'src\Domain\Entities\SistemaOperacional.Entidade.pas';
+  SistemaOperacional.Entidade in 'src\Domain\Entities\SistemaOperacional.Entidade.pas',
+  DadosFiscais.Mapper in 'src\Application\Mappers\DadosFiscais.Mapper.pas';
 
 {$R *.res}
 

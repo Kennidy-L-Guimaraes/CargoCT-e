@@ -120,8 +120,7 @@ begin
       GetEnumName(TypeInfo(TTipoOperacao),
         Ord(FDadosOperacionais.TipoOperacao)) + sLineBreak +
     'Tipo Transporte: ' +
-      GetEnumName(TypeInfo(TTipoTransporte),
-        Ord(FDadosOperacionais.TipoTransporte)) + sLineBreak +
+      DadosOperacionais.TipoTransporte + sLineBreak +
     sLineBreak +
 
     '--- SISTEMA ---' + sLineBreak +

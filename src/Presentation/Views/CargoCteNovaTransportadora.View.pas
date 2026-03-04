@@ -172,8 +172,7 @@ begin
     0.10);
 
   DadosOperacionais := TDadosOperacionais.Create(
-    opEstadual,
-    trRodoviario);
+    opEstadual);
 
   SistemaOperacional := TSistemaOperacional.Create(
     saAtivo,
