@@ -6,14 +6,15 @@ uses System.SysUtils, Validar.Exceptions;
 type
   TCEP = Record
     Private
-    {Private Declarations}
+     {Private Declarations}
       FCEP         : string;
 
     procedure Validar;
     Public
-    {Public Declarations}
+     {Public Declarations}
       constructor Create(ACEP: string);
       property Valor  : string  read FCEP;
+      function ToString: string;
 
 end;
 
@@ -25,6 +26,11 @@ constructor TCEP.Create(ACEP: string);
 begin
  FCEP := Trim(ACep);
  Validar;
+end;
+
+function TCEP.ToString: string;
+begin
+ Result := FCEP;
 end;
 
 procedure TCEP.Validar;

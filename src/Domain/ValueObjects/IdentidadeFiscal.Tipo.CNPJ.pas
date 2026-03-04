@@ -15,6 +15,7 @@ type
   public
     constructor Create(const ACNPJ: string);
     property Valor: string read FCNPJ;
+    function ToString: string;
   end;
 
 implementation
@@ -23,6 +24,11 @@ constructor TCNPJ.Create(const ACNPJ: string);
 begin
   FCNPJ := Trim(ACNPJ);
   Validar;
+end;
+
+function TCNPJ.ToString: string;
+begin
+ Result := Fcnpj;
 end;
 
 procedure TCNPJ.Validar;
