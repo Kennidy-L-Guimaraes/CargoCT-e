@@ -41,6 +41,7 @@ begin
    ValidarDados;
 end;
 
+
 procedure TIdentidadeFiscal.ValidarDados;
 begin
  ValidarRazaoSocial;

@@ -58,13 +58,13 @@ constructor TEndereco.Create(ACEP: TCEP; AEstadoUF, AMunicipio, ABairro, ALograd
   ANumero, ACodigoIBGE, AComplemento: string);
 begin
   FCEP         := ACep; //Não necessita de "TRIM" o objeto já nasce validado.
+  FEstadoUF    := Trim(UpperCase(AEstadoUF));
   FMunicipio   := Trim(AMunicipio);
   FBairro      := Trim(ABairro);
   FLogradouro  := Trim(ALogradouro);
   FNumero      := Trim(ANumero);
   FCodigoIBGE  := Trim(ACodigoIBGE);
   FComplemento := Trim(AComplemento);
-  FEstadoUF    := Trim(AEstadoUF);
   ValidarDados;
 end;
 

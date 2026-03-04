@@ -121,7 +121,11 @@ implementation
 
 {$R *.dfm}
 
-uses CampoVisual.Utils, CargoCteNovaFrota.View, Sistema.Utils;
+uses CampoVisual.Utils, CargoCteNovaFrota.View, Sistema.Utils,
+  DadosFiscais.Entidade, DadosOperacionais.Entidade, Endereco.Entidade,
+  IdentidadeFiscal.Entidade, IdentidadeFiscal.Tipo.CNPJ,
+  SistemaOperacional.Entidade, Transportadora.Entidade, Veiculo.Entidade,
+  Endereco.Tipo.CEP;
 
 procedure TFrm_NovaTransportadora.Btn_CancelarNovaTransportadoraClick(
   Sender: TObject);
@@ -132,8 +136,64 @@ end;
 
 procedure TFrm_NovaTransportadora.Btn_SalvarNovaTransportadoraClick(
   Sender: TObject);
+var
+  Transportadora      : TTransportadora;
+  IdentificacaoFiscal : TIdentidadeFiscal;
+  EnderecoFiscal      : TEndereco;
+  DadosFiscais        : TDadosFiscais;
+  DadosOperacionais   : TDadosOperacionais;
+  SistemaOperacional  : TSistemaOperacional;
+  Cnpj                : TCNPJ;
+  Cep                 : TCEP;
 begin
-  ResetarConfiguracoes;
+  Cnpj := TCNPJ.Create('37736717000106');
+  Cep  := TCEP.Create('76820638');
+
+  IdentificacaoFiscal := TIdentidadeFiscal.Create(
+    Cnpj,
+    'Teste LTDA',
+    '432894a',
+    rtSimplesNacional);
+
+  EnderecoFiscal := TEndereco.Create(
+    Cep,
+    'RO',
+    'Porto Velho',
+    'Flodoaldo Pontes Pinto',
+    'Avenida Engº Anysio da Rocha Compasso',
+    '120',
+    '1541358',
+    'Sem complemento');
+
+  DadosFiscais := TDadosFiscais.Create(
+    pcEmitente,
+    ttNormal,
+    'Simples Observação Não tributável',
+    0.10);
+
+  DadosOperacionais := TDadosOperacionais.Create(
+    opEstadual,
+    trRodoviario);
+
+  SistemaOperacional := TSistemaOperacional.Create(
+    saAtivo,
+    'Rodrigo Pacheco de Meireles Arruda');
+
+  Transportadora := TTransportadora.Create(
+    DadosFiscais,
+    DadosOperacionais,
+    EnderecoFiscal,
+    IdentificacaoFiscal,
+    SistemaOperacional);
+
+  try
+    ShowMessage(Transportadora.DebugCompleto);
+  finally
+    Transportadora.Free;
+  end;
+
+  //Realiza a limpeza dos campos
+  //ResetarConfiguracoes;
 end;
 
 procedure TFrm_NovaTransportadora.Btn_SistemaDataAtualClick(Sender: TObject);
