@@ -10,6 +10,8 @@
 - [ ] Criar novos testes unitários (TVeiculo, TMotoristas e TDadosOperacionais). 
 - [ ] Desenvolver a interface simples para (Vinculo).
 - [ ] Remover Temporário de TTransportadora.
+- [ ] Criar o DTO para a entidade Transportadora (View - DTO - TTransportadora).
+- [ ] Criar o Mapper para Tipos Enum DadosFiscais.
 
 
 ---
