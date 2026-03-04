@@ -23,6 +23,7 @@ TEndereco = class
   procedure ValidarBairro;
   procedure ValidarLogradouro;
   procedure ValidarNumero;
+  procedure ValidarComplemento;
 
   Public
   {Public Declarations}
@@ -83,6 +84,11 @@ begin
   TValidar.SeNaoNumerico('Código IBGE', FCodigoIBGE);
 end;
 
+procedure TEndereco.ValidarComplemento;
+begin
+  TValidar.SeMaiorQue('Complemento', FComplemento.Length, 120);
+end;
+
 procedure TEndereco.ValidarDados;
 begin
   ValidarEstadoUF;
@@ -91,6 +97,7 @@ begin
   ValidarBairro;
   ValidarLogradouro;
   ValidarNumero;
+  ValidarComplemento;
 end;
 
 procedure TEndereco.ValidarEstadoUF;

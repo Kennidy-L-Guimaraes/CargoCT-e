@@ -25,7 +25,6 @@ type
     procedure TearDown; override;
   published
     procedure TestarTipoOperacaoValido;
-    procedure TestarTipoTransporteValido;
     //Enum nasce válido (Teste de verificação)
   end;
 
@@ -45,16 +44,7 @@ end;
 procedure TestTDadosOperacionais.TestarTipoOperacaoValido;
 begin
   FDadosOperacionais := TDadosOperacionais.Create(
-   opEstadual,
-   trRodoviario
-  );
-end;
-
-procedure TestTDadosOperacionais.TestarTipoTransporteValido;
-begin
-  FDadosOperacionais := TDadosOperacionais.Create(
-   opInternacional,
-   trAquaviario
+   opEstadual
   );
 end;
 

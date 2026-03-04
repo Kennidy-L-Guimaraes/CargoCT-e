@@ -34,9 +34,7 @@ type
     procedure TestInscricaoIEInvalida;
 
     //Regime Tributário
-    procedure TestRegimeTributarioValido;
-    procedure TestRegimeTributarioInvalido;
-    procedure TestRegimeTributarioNaoReconhecido;
+    //Migração para tipo enum, o estado é tipo válido.
   end;
 
 implementation
@@ -66,7 +64,7 @@ begin
     CNPJ,
     'Encanadora Real',
     '1234567',
-    'SIMPLES NACIONAL'
+    rtSimplesNacional
   );
     CheckEquals('93771630000140', FIdentidadeFiscal.CNPJ.Valor, 'CNPJ armazenado incorretamente');
 end;
@@ -83,7 +81,7 @@ begin
       CNPJ,
       'Encanadora Real',
       '1234567',
-      'SIMPLES NACIONAL'
+      rtSimplesNacional
       );
     end,
     Exception,
@@ -102,7 +100,7 @@ begin
     CNPJ,
     'Empresa Válida',
     '1234567',
-    'SIMPLES NACIONAL'
+    rtSimplesNacional
   );
     CheckEquals('Empresa Válida', FIdentidadeFiscal.RazaoSocial);
 end;
@@ -119,7 +117,7 @@ begin
       CNPJ,
       '', //inválido
       '1234567',
-      'SIMPLES NACIONAL'
+      rtSimplesNacional
       );
     end,
       Exception,
@@ -138,7 +136,7 @@ begin
     CNPJ,
     'Empresa Válida',
     '1234567',
-    'SIMPLES NACIONAL'
+    rtSimplesNacional
   );
     CheckEquals('1234567', FIdentidadeFiscal.InscricaoIE);
 end;
@@ -155,67 +153,11 @@ begin
       CNPJ,
       'Empresa Válida',
       '', //inválido
-      'SIMPLES NACIONAL'
+      rtSimplesNacional
       );
     end,
     Exception,
     'Inscrição IE inválida não lançou exceção'
-  );
-end;
-
-{ ===== Regime Tributário ===== }
-
-procedure TestTIdentidadeFiscal.TestRegimeTributarioValido;
-var
-  CNPJ: TCNPJ;
-begin
-    CNPJ := TCNPJ.Create('93771630000140');
-    FIdentidadeFiscal := TIdentidadeFiscal.Create(
-    CNPJ,
-    'Empresa Válida',
-    '1234567',
-    'LUCRO PRESUMIDO'
-  );
-    CheckEquals('LUCRO PRESUMIDO', FIdentidadeFiscal.RegimeTributario);
-end;
-
-procedure TestTIdentidadeFiscal.TestRegimeTributarioInvalido;
-var
-  CNPJ: TCNPJ;
-begin
-    CNPJ := TCNPJ.Create('93771630000140');
-    CheckException(
-    procedure
-    begin
-      FIdentidadeFiscal := TIdentidadeFiscal.Create(
-      CNPJ,
-      'Empresa Válida',
-      '1234567',
-      '' //inválido
-      );
-    end,
-    Exception,
-    'Regime tributário inválido, lançou exceção'
-  );
-end;
-
-procedure TestTIdentidadeFiscal.TestRegimeTributarioNaoReconhecido;
-var
-  CNPJ: TCNPJ;
-begin
-    CNPJ := TCNPJ.Create('93771630000140');
-    CheckException(
-    procedure
-    begin
-      FIdentidadeFiscal := TIdentidadeFiscal.Create(
-      CNPJ,
-      'Empresa Válida',
-      '1234567',
-      'REGIME INVÁLIDO' //não reconhecido
-      );
-    end,
-    Exception,
-    'Regime tributário desconhecido não lançou exceção'
   );
 end;
 

@@ -387,7 +387,8 @@ begin
        'Avenida Paulista',
        '123',
        '3550308',
-       ''
+       'Sala 1508, Torre Empresarial Atlântico, Bloco C, 15º Andar,' +
+       'Ala Norte, Condomínio Parque das Nações, próximo a torre Mises'
       );
     end,
     Exception);
