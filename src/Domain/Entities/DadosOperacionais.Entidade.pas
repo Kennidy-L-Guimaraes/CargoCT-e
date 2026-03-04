@@ -15,11 +15,11 @@ type
    {Private Declarations}
    FTipoTransporte: TTipoTransporte;
    FTipoOperacao  : TTipoOperacao;
-  public
-   {Public Declarations}
    procedure ValidarTipoOperacao;
    procedure ValidarTipoTransporte;
    procedure ValidarDados;
+  public
+   {Public Declarations}
    constructor Create(ATipoOperacao: TTipoOperacao; ATipoTransporte: TTipoTransporte);
    property TipoOperacao  : TTipoOperacao   read FTipoOperacao;
    property TipoTransporte: TTipoTransporte read FTipoTransporte;
