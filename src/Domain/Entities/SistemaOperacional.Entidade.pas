@@ -71,6 +71,7 @@ end;
 procedure TSistemaOperacional.ValidarResponsavel;
 begin
  TValidar.SeVazio('Responsável', FResponsavel);
+ TValidar.SeMaiorQue('Responsável', FResponsavel.Length, 50);
 end;
 
 end.
