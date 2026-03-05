@@ -57,7 +57,6 @@ end;
 procedure TVeiculo.ValidarPlaca;
 begin
   TValidar.SeVazio('Placa', FPlaca);
-  //Não validar Caracteres, esse campo pode ser utilizado para (Placa, número de embarcação, e de registros).
 
 end;
 
