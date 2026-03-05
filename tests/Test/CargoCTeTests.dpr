@@ -26,7 +26,8 @@ uses
   DadosFiscais.Entidade in '..\..\src\Domain\Entities\DadosFiscais.Entidade.pas',
   TestValidar.Exceptions in '..\Unit\Domain\Exceptions\TestValidar.Exceptions.pas',
   TestDadosOperacionais.Entidade in '..\Unit\Domain\Entities\TestDadosOperacionais.Entidade.pas',
-  DadosOperacionais.Entidade in '..\..\src\Domain\Entities\DadosOperacionais.Entidade.pas';
+  DadosOperacionais.Entidade in '..\..\src\Domain\Entities\DadosOperacionais.Entidade.pas',
+  Veiculo.Tipo.Placa in '..\..\src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas';
 
 {$R *.RES}
 

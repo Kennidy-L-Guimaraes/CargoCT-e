@@ -27,7 +27,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
       Top = 0
       Width = 785
       Height = 494
-      ActivePage = TbSh_NovoMotorista
+      ActivePage = TbSh_NovoVeiculo
       Align = alClient
       TabOrder = 0
       object TbSh_NovoMotorista: TTabSheet
@@ -1565,6 +1565,7 @@ object Frm_NovaFrota: TFrm_NovaFrota
               Margins.Bottom = 5
               Caption = 'Ativo'
               Checked = True
+              Enabled = False
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -13

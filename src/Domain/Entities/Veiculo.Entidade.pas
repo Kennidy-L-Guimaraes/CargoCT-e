@@ -1,44 +1,77 @@
 unit Veiculo.Entidade;
 
 interface
-uses Validar.Exceptions, System.SysUtils;
+uses Validar.Exceptions, System.SysUtils, Veiculo.Tipo.Placa;
 
  type
   TVeiculo = class
     private
      {Private Declarations}
-     FPlaca      : String;
-     FPlacaUF    : string;
-     FTipoVeiculo: string;
-     FCapacidadeKg : integer;
+     FPlaca      : TPlaca; //*
+     FPlacaUF    : string; //*
+     FTipoVeiculo: string; //*
+     FProprietario : string; //*
+     //Especificações
+     FMarca        : string;
+     FModelo       : string;
+     FCor          : string;
+     FCapacidadeKg : integer; //*
+     //Controle Operacional
+     FKmAtual         : integer;
+     FRastreador      : boolean;
+     FNumeroRastreador: string;
 
-     procedure ValidarPlaca;
-     procedure ValidarPlacaUF;
-     procedure ValidarTipoVeiculo;
-     procedure ValidarCapacidade;
+     procedure ValidarPlacaUF; //*
+     procedure ValidarTipoVeiculo; //*
+     procedure ValidarProprietario; //*
+     procedure ValidarCapacidade; //*
+     procedure ValidarRastreador;
      procedure ValidarDados;
+     //Validadores de Campos Não Obrigatórios
+     procedure ValidarMarca;
+     procedure ValidarModelo;
+     procedure ValidarCor;
+     procedure ValidarKMatual;
+
     public
      {Public Declarations}
-     constructor Create(APlaca, APlacaUF, ATipoVeiculo: string; ACapacidade: integer);
-     property Placa       : string  read FPlaca;
+     constructor Create(APlaca: TPlaca; APlacaUf, ATipoVeiculo, AProprietario, AMarca, AModelo, ACor: string;
+  ACapacidadeKg, AKmAtual: integer; ARastreador: boolean; ANumeroRastreador: string);
+     property Placa       : TPlaca  read FPlaca;
      property PlacaUf     : string  read FPlacaUF;
      property TipoVeiculo : string  read FTipoVeiculo;
+     property Proprietario: string  read FProprietario;
+     property Marca       : string  read FMarca;
+     property Modelo      : string  read FModelo;
+     property Cor         : string  read FCor;
      property CapacidadeKg: integer read FCapacidadeKg;
-
-
+     property KMAtual     : integer read FKmAtual;
+     property Rastreador  : boolean read FRastreador;
+     property NumeroRastreador: string read FNumeroRastreador;
   end;
 
 implementation
 
-{ TDadosEMotorista }
+{ TVeiculo }
 
-constructor TVeiculo.Create(APlaca, APlacaUF, ATipoVeiculo: string; ACapacidade: integer);
+
+constructor TVeiculo.Create(APlaca: TPlaca; APlacaUf, ATipoVeiculo, AProprietario, AMarca, AModelo, ACor: string;
+  ACapacidadeKg, AKmAtual: integer; ARastreador: boolean; ANumeroRastreador: string);
 begin
- FPlaca              := UpperCase(Trim(APlaca));;
- FPlacaUF            := APlacaUf;
- FTipoVeiculo        := ATipoVeiculo;
- FCapacidadeKg       := ACapacidade;
- ValidarDados;
+  inherited Create;
+
+  FPlaca            := APlaca;
+  FPlacaUF          := APlacaUf;
+  FTipoVeiculo      := ATipoVeiculo;
+  FProprietario     := AProprietario;
+  FMarca            := AMarca;
+  FModelo           := AModelo;
+  FCor              := ACor;
+  FCapacidadeKg     := ACapacidadeKg;
+  FKmAtual          := AKmAtual;
+  FRastreador       := ARastreador;
+  FNumeroRastreador := ANumeroRastreador;
+  ValidarDados;
 end;
 
 procedure TVeiculo.ValidarCapacidade;
@@ -46,18 +79,47 @@ begin
   TValidar.SeMenorQue('Capacidade', FCapacidadeKg, 1);
 end;
 
+procedure TVeiculo.ValidarCor;
+begin
+    if not FCor.isEmpty then
+  begin
+   TValidar.SeMaiorQue('Veículo Cor', FCor.Length, 50);
+  end;
+end;
+
 procedure TVeiculo.ValidarDados;
 begin
-  ValidarPlaca;
   ValidarPlacaUF;
   ValidarTipoVeiculo;
   ValidarCapacidade;
+  ValidarProprietario;
+  ValidarRastreador;
+  ValidarMarca;
+  ValidarModelo;
+  ValidarCor;
+  ValidarKMatual;
 end;
 
-procedure TVeiculo.ValidarPlaca;
+procedure TVeiculo.ValidarKMatual;
 begin
-  TValidar.SeVazio('Placa', FPlaca);
+  if FKMAtual < 0 then
+   TValidar.LancarErro('Quilômetro Atual', 'Não deve ser negativo');
+end;
 
+procedure TVeiculo.ValidarMarca;
+begin
+  if not FMarca.isEmpty then
+  begin
+   TValidar.SeMaiorQue('Marca', FMarca.Length, 50);
+  end;
+end;
+
+procedure TVeiculo.ValidarModelo;
+begin
+   if not FModelo.isEmpty then
+  begin
+   TValidar.SeMaiorQue('Modelo', FModelo.Length, 50);
+  end;
 end;
 
 procedure TVeiculo.ValidarPlacaUF;
@@ -68,6 +130,22 @@ const
     'RJ','RN','RS','RO','RR','SC','SP','SE','TO');
 begin
  TValidar.SeNaoContemNaListaText('Placa UF', FPlacaUf, UFsValidas);
+end;
+
+procedure TVeiculo.ValidarProprietario;
+begin
+  TValidar.SeVazio('Proprietário', FProprietario);
+  TValidar.SeMaiorQue('Proprietário', FProprietario.Length, 60);
+  TValidar.SeMenorQue('Proprietário', FProprietario.Length, 5);
+end;
+
+
+procedure TVeiculo.ValidarRastreador;
+begin
+ If FRastreador then
+ begin
+  TValidar.SeVazio('Número do Equipamento', FNumeroRastreador);
+ end;
 end;
 
 procedure TVeiculo.ValidarTipoVeiculo;
