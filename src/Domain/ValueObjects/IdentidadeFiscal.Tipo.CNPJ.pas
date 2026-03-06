@@ -52,7 +52,7 @@ const
   Pesos2: array[0..12] of Integer = (6,5,4,3,2,9,8,7,6,5,4,3,2);
 begin
   if FCNPJ = StringOfChar(FCNPJ[1], 14) then
-    raise Exception.Create('CNPJ inválido.');
+    TValidar.LancarErro('CNPJ','Valor inválido!');
 
   Soma := 0;
   for i := 0 to 11 do
@@ -72,7 +72,7 @@ begin
 
   if (DV1 <> StrToInt(FCNPJ[13])) or
      (DV2 <> StrToInt(FCNPJ[14])) then
-    raise Exception.Create('CNPJ inválido.');
+     TValidar.LancarErro('CNPJ','Valor inválido!');
 end;
 
 end.

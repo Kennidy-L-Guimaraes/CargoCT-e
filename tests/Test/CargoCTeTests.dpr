@@ -29,8 +29,8 @@ uses
   DadosOperacionais.Entidade in '..\..\src\Domain\Entities\DadosOperacionais.Entidade.pas',
   Veiculo.Tipo.Placa in '..\..\src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas',
   TestVeiculo.Entidade in '..\Unit\Domain\Entities\TestVeiculo.Entidade.pas',
-  Veiculo.Entidade in '..\..\src\Domain\Entities\Veiculo.Entidade.pas';
-
+  Veiculo.Entidade in '..\..\src\Domain\Entities\Veiculo.Entidade.pas',
+  TestIdentidadeFiscal.Tipo.CNPJ in '..\Unit\Domain\ValueObjects\TestIdentidadeFiscal.Tipo.CNPJ.pas';
 
 {$R *.RES}
 
