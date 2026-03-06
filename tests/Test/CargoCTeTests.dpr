@@ -27,7 +27,10 @@ uses
   TestValidar.Exceptions in '..\Unit\Domain\Exceptions\TestValidar.Exceptions.pas',
   TestDadosOperacionais.Entidade in '..\Unit\Domain\Entities\TestDadosOperacionais.Entidade.pas',
   DadosOperacionais.Entidade in '..\..\src\Domain\Entities\DadosOperacionais.Entidade.pas',
-  Veiculo.Tipo.Placa in '..\..\src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas';
+  Veiculo.Tipo.Placa in '..\..\src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas',
+  TestVeiculo.Entidade in '..\Unit\Domain\Entities\TestVeiculo.Entidade.pas',
+  Veiculo.Entidade in '..\..\src\Domain\Entities\Veiculo.Entidade.pas';
+
 
 {$R *.RES}
 

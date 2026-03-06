@@ -102,6 +102,8 @@
         <DCCReference Include="..\Unit\Domain\Entities\TestDadosOperacionais.Entidade.pas"/>
         <DCCReference Include="..\..\src\Domain\Entities\DadosOperacionais.Entidade.pas"/>
         <DCCReference Include="..\..\src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas"/>
+        <DCCReference Include="..\Unit\Domain\Entities\TestVeiculo.Entidade.pas"/>
+        <DCCReference Include="..\..\src\Domain\Entities\Veiculo.Entidade.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

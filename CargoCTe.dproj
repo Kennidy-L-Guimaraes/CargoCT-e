@@ -157,6 +157,7 @@
         <DCCReference Include="src\Domain\Entities\Transportadora.Entidade.pas"/>
         <DCCReference Include="src\Domain\Entities\SistemaOperacional.Entidade.pas"/>
         <DCCReference Include="src\Application\Mappers\DadosFiscais.Mapper.pas"/>
+        <DCCReference Include="src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

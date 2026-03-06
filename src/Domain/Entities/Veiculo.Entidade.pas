@@ -83,7 +83,7 @@ procedure TVeiculo.ValidarCor;
 begin
     if not FCor.isEmpty then
   begin
-   TValidar.SeMaiorQue('Veículo Cor', FCor.Length, 50);
+   TValidar.SeMaiorQue('Veículo Cor', FCor.Length, 30);
   end;
 end;
 
@@ -110,7 +110,7 @@ procedure TVeiculo.ValidarMarca;
 begin
   if not FMarca.isEmpty then
   begin
-   TValidar.SeMaiorQue('Marca', FMarca.Length, 50);
+   TValidar.SeMaiorQue('Marca', FMarca.Length, 30);
   end;
 end;
 
@@ -118,7 +118,7 @@ procedure TVeiculo.ValidarModelo;
 begin
    if not FModelo.isEmpty then
   begin
-   TValidar.SeMaiorQue('Modelo', FModelo.Length, 50);
+   TValidar.SeMaiorQue('Modelo', FModelo.Length, 30);
   end;
 end;
 
@@ -145,6 +145,11 @@ begin
  If FRastreador then
  begin
   TValidar.SeVazio('Número do Equipamento', FNumeroRastreador);
+ end
+ else
+ begin
+  if not FNumeroRastreador.IsEmpty then
+   TValidar.LancarErro('Número do Equipamento', 'Veículo não possui Rastreador Ativo!');
  end;
 end;
 

@@ -22,7 +22,8 @@ uses
   Sistema.Utils in 'src\Presentation\UI\Utils\Sistema.Utils.pas',
   Transportadora.Entidade in 'src\Domain\Entities\Transportadora.Entidade.pas',
   SistemaOperacional.Entidade in 'src\Domain\Entities\SistemaOperacional.Entidade.pas',
-  DadosFiscais.Mapper in 'src\Application\Mappers\DadosFiscais.Mapper.pas';
+  DadosFiscais.Mapper in 'src\Application\Mappers\DadosFiscais.Mapper.pas',
+  Veiculo.Tipo.Placa in 'src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas';
 
 {$R *.res}
 
