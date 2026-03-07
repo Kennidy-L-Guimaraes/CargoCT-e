@@ -15,7 +15,7 @@ uses
   TestFramework, Endereco.Tipo.CEP, Validar.Exceptions, System.SysUtils;
 
 type
-  // Test methods for IdentidadeFiscal.Tipo.CNPJ
+  // Test methods for Value Objects CEP
 
   TestTCEP = class(TTestCase)
   private
