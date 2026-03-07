@@ -105,6 +105,7 @@
         <DCCReference Include="..\Unit\Domain\Entities\TestVeiculo.Entidade.pas"/>
         <DCCReference Include="..\..\src\Domain\Entities\Veiculo.Entidade.pas"/>
         <DCCReference Include="..\Unit\Domain\ValueObjects\TestIdentidadeFiscal.Tipo.CNPJ.pas"/>
+        <DCCReference Include="..\Unit\Domain\ValueObjects\TestEndereco.Tipo.CEP.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

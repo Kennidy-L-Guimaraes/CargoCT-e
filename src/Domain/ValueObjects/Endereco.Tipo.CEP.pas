@@ -8,13 +8,11 @@ type
     Private
      {Private Declarations}
       FCEP         : string;
-
-    procedure Validar;
+      procedure ValidarCEP;
     Public
      {Public Declarations}
       constructor Create(ACEP: string);
       property Valor  : string  read FCEP;
-      function ToString: string;
 
 end;
 
@@ -24,22 +22,15 @@ implementation
 
 constructor TCEP.Create(ACEP: string);
 begin
- FCEP := Trim(ACep);
- Validar;
+ FCEP := Trim(ACEP);
+ ValidarCEP;
 end;
 
-function TCEP.ToString: string;
-begin
- Result := FCEP;
-end;
-
-procedure TCEP.Validar;
-var
- C: char; 
+procedure TCEP.ValidarCEP;
 begin
   //VALIDAR CEP
   TValidar.SeVazio('CEP', FCEP);
-  TValidar.SeMenorQue('CEP', FCEP.Length, 8);
+  TValidar.SeDiferenteDe('CEP', FCEP.Length, 8);
   TValidar.SeNaoNumerico('CEP', FCEP);
 end;
 end.

@@ -30,7 +30,8 @@ uses
   Veiculo.Tipo.Placa in '..\..\src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas',
   TestVeiculo.Entidade in '..\Unit\Domain\Entities\TestVeiculo.Entidade.pas',
   Veiculo.Entidade in '..\..\src\Domain\Entities\Veiculo.Entidade.pas',
-  TestIdentidadeFiscal.Tipo.CNPJ in '..\Unit\Domain\ValueObjects\TestIdentidadeFiscal.Tipo.CNPJ.pas';
+  TestIdentidadeFiscal.Tipo.CNPJ in '..\Unit\Domain\ValueObjects\TestIdentidadeFiscal.Tipo.CNPJ.pas',
+  TestEndereco.Tipo.CEP in '..\Unit\Domain\ValueObjects\TestEndereco.Tipo.CEP.pas';
 
 {$R *.RES}
 
