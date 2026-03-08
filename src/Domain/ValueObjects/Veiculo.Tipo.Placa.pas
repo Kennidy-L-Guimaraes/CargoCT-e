@@ -12,7 +12,7 @@ type
    procedure ValidarDados;
   public
    {Public Declarations}
-   property Placa   : string read FPlaca;
+   property Valor   : string read FPlaca;
    constructor Create(APlaca: string);
 
  End;

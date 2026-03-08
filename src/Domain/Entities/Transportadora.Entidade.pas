@@ -94,7 +94,7 @@ begin
     sLineBreak +
 
     '--- ENDEREÇO ---' + sLineBreak +
-    'CEP: ' + FEndereco.CEP.ToString + sLineBreak +
+    'CEP: ' + FEndereco.CEP.Valor + sLineBreak +
     'UF: ' + FEndereco.EstadoUF + sLineBreak +
     'Cidade: ' + FEndereco.Municipio + sLineBreak +
     'Bairro: ' + FEndereco.Bairro + sLineBreak +
