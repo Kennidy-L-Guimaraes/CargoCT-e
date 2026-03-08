@@ -14,8 +14,6 @@ type
     FSistemaOperacional  : TSistemaOperacional;
     FEndereco            : TEndereco;
     FIdentidadeFiscal : TIdentidadeFiscal;
-
-    procedure ValidarDados;
    public
     {Public Declarations}
     property Id                : TGuid              read FGuid;
@@ -29,6 +27,7 @@ type
     constructor Create(ADadosFiscais: TDadosFiscais;
   ADadosOperacionais: TDadosOperacionais; AEndereco: TEndereco;
   AIdentidadeFiscal: TIdentidadeFiscal; ASistemaOperacional: TSistemaOperacional);
+     destructor Destroy;
     procedure AtivarTransportadora;
     procedure InativarTransportadora;
 
@@ -44,6 +43,7 @@ constructor TTransportadora.Create(ADadosFiscais: TDadosFiscais;
   ADadosOperacionais: TDadosOperacionais; AEndereco: TEndereco;
   AIdentidadeFiscal: TIdentidadeFiscal; ASistemaOperacional: TSistemaOperacional);
 begin
+  //Validação Via Constructor
    if not Assigned(ADadosFiscais) then
     TValidar.LancarErro('Dados Fiscais', 'Obrigatório!');
 
@@ -59,14 +59,12 @@ begin
    if not Assigned(ASistemaOperacional) then
     TValidar.LancarErro('Sistema', 'Obrigatório!');
 
-
    FDadosFiscais      := ADadosFiscais;
    FDadosOperacionais := ADadosOperacionais;
    FEndereco          := AEndereco;
    FIdentidadeFiscal  := AIdentidadeFiscal;
    FSistemaOperacional:= ASistemaOperacional;
    FGuid              := TGuid.NewGuid;
-   ValidarDados;
 end;
 
 
@@ -130,6 +128,16 @@ begin
       DateTimeToStr(FSistemaOperacional.DataCadastro);
 end;
 
+destructor TTransportadora.Destroy;
+begin
+  FDadosFiscais.Free;
+  FDadosOperacionais.Free;
+  FEndereco.Free;
+  FIdentidadeFiscal.Free;
+  FSistemaOperacional.Free;
+  inherited;
+end;
+
 procedure TTransportadora.AtivarTransportadora;
 begin
  FSistemaOperacional.AtivarSistema;
@@ -138,11 +146,6 @@ end;
 procedure TTransportadora.InativarTransportadora;
 begin
  FSistemaOperacional.DesativarSistema;
-end;
-
-procedure TTransportadora.ValidarDados;
-begin
-
 end;
 
 end.
