@@ -125,7 +125,8 @@ uses CampoVisual.Utils, CargoCteNovaFrota.View, Sistema.Utils,
   DadosFiscais.Entidade, DadosOperacionais.Entidade, Endereco.Entidade,
   IdentidadeFiscal.Entidade, IdentidadeFiscal.Tipo.CNPJ,
   SistemaOperacional.Entidade, Transportadora.Entidade, Veiculo.Entidade,
-  Endereco.Tipo.CEP;
+  Endereco.Tipo.CEP,
+  TransportadoraContato.Entidade;
 
 procedure TFrm_NovaTransportadora.Btn_CancelarNovaTransportadoraClick(
   Sender: TObject);
@@ -143,6 +144,7 @@ var
   DadosFiscais        : TDadosFiscais;
   DadosOperacionais   : TDadosOperacionais;
   SistemaOperacional  : TSistemaOperacional;
+  Contato             : TContato;
   Cnpj                : TCNPJ;
   Cep                 : TCEP;
 begin
@@ -178,12 +180,15 @@ begin
     saAtivo,
     'Rodrigo Pacheco de Meireles Arruda');
 
+  Contato := TContato.Create('48998845210', 'example.com', 'example@xp.com');
+
   Transportadora := TTransportadora.Create(
     DadosFiscais,
     DadosOperacionais,
     EnderecoFiscal,
     IdentificacaoFiscal,
-    SistemaOperacional);
+    SistemaOperacional,
+    Contato);
 
   try
     ShowMessage(Transportadora.DebugCompleto);

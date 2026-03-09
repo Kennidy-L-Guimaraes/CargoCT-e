@@ -2,7 +2,8 @@ unit Transportadora.Entidade;
 
 interface
 uses DadosFiscais.Entidade, DadosOperacionais.Entidade, Endereco.Entidade,
-  IdentidadeFiscal.Entidade, SistemaOperacional.Entidade, System.SysUtils, Validar.Exceptions, System.TypInfo;
+  IdentidadeFiscal.Entidade, SistemaOperacional.Entidade, System.SysUtils,
+  Validar.Exceptions, System.TypInfo, TransportadoraContato.Entidade;
 
 type
  TTransportadora = class
@@ -13,7 +14,8 @@ type
     FDadosOperacionais   : TDadosOperacionais;
     FSistemaOperacional  : TSistemaOperacional;
     FEndereco            : TEndereco;
-    FIdentidadeFiscal : TIdentidadeFiscal;
+    FIdentidadeFiscal    : TIdentidadeFiscal;
+    FContato             : TContato;
    public
     {Public Declarations}
     property Id                : TGuid              read FGuid;
@@ -21,12 +23,14 @@ type
     property DadosOperacionais : TDadosOperacionais read FDadosOperacionais;
     property Endereco          : TEndereco          read FEndereco;
     property IdentidadeFiscal  : TIdentidadeFiscal  read FIdentidadeFiscal;
+    property Contato           : TContato           read FContato;
+
 
     function DebugCompleto: string; //Para testes
 
     constructor Create(ADadosFiscais: TDadosFiscais;
   ADadosOperacionais: TDadosOperacionais; AEndereco: TEndereco;
-  AIdentidadeFiscal: TIdentidadeFiscal; ASistemaOperacional: TSistemaOperacional);
+  AIdentidadeFiscal: TIdentidadeFiscal; ASistemaOperacional: TSistemaOperacional; AContato: TContato);
      destructor Destroy;
     procedure AtivarTransportadora;
     procedure InativarTransportadora;
@@ -41,7 +45,7 @@ implementation
 
 constructor TTransportadora.Create(ADadosFiscais: TDadosFiscais;
   ADadosOperacionais: TDadosOperacionais; AEndereco: TEndereco;
-  AIdentidadeFiscal: TIdentidadeFiscal; ASistemaOperacional: TSistemaOperacional);
+  AIdentidadeFiscal: TIdentidadeFiscal; ASistemaOperacional: TSistemaOperacional; AContato: TContato);
 begin
   //Validação Via Constructor
    if not Assigned(ADadosFiscais) then
@@ -59,11 +63,15 @@ begin
    if not Assigned(ASistemaOperacional) then
     TValidar.LancarErro('Sistema', 'Obrigatório!');
 
+   if not Assigned(AContato) then
+    TValidar.LancarErro('Contato', 'Obrigatório!');
+
    FDadosFiscais      := ADadosFiscais;
    FDadosOperacionais := ADadosOperacionais;
    FEndereco          := AEndereco;
    FIdentidadeFiscal  := AIdentidadeFiscal;
    FSistemaOperacional:= ASistemaOperacional;
+   FContato           := AContato;
    FGuid              := TGuid.NewGuid;
 end;
 
@@ -125,6 +133,12 @@ begin
     'Status: ' + Status + sLineBreak +
     'Responsável: ' + FSistemaOperacional.Responsavel + sLineBreak +
     'Data Cadastro: ' +
+
+      '--- CONTATO ---' + sLineBreak +
+    'NUMERO: ' + FContato.NumeroTelefone + sLineBreak +
+    'SITE: ' + FContato.Site + sLineBreak +
+    'EMAIL: ' + FContato.Email +
+
       DateTimeToStr(FSistemaOperacional.DataCadastro);
 end;
 
