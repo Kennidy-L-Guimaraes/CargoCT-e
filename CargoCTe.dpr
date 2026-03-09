@@ -23,7 +23,8 @@ uses
   Transportadora.Entidade in 'src\Domain\Entities\Transportadora.Entidade.pas',
   SistemaOperacional.Entidade in 'src\Domain\Entities\SistemaOperacional.Entidade.pas',
   DadosFiscais.Mapper in 'src\Application\Mappers\DadosFiscais.Mapper.pas',
-  Veiculo.Tipo.Placa in 'src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas';
+  Veiculo.Tipo.Placa in 'src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas',
+  TransportadoraContato.Entidade in 'src\Domain\Entities\TransportadoraContato.Entidade.pas';
 
 {$R *.res}
 
