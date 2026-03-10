@@ -25,9 +25,6 @@ type
     property IdentidadeFiscal  : TIdentidadeFiscal  read FIdentidadeFiscal;
     property Contato           : TContato           read FContato;
 
-
-    function DebugCompleto: string; //Para testes
-
     constructor Create(ADadosFiscais: TDadosFiscais;
   ADadosOperacionais: TDadosOperacionais; AEndereco: TEndereco;
   AIdentidadeFiscal: TIdentidadeFiscal; ASistemaOperacional: TSistemaOperacional; AContato: TContato);
@@ -73,73 +70,6 @@ begin
    FSistemaOperacional:= ASistemaOperacional;
    FContato           := AContato;
    FGuid              := TGuid.NewGuid;
-end;
-
-
-function TTransportadora.DebugCompleto: string;  //Temporário
-var
-  Status: string;
-begin
-  if FSistemaOperacional.SistemaEstaAtivo then
-    Status := 'Ativa'
-  else
-    Status := 'Inativa';
-
-  Result :=
-    '===== TRANSPORTADORA =====' + sLineBreak +
-    'ID: ' + GuidToString(FGuid) + sLineBreak +
-    sLineBreak +
-
-    '--- IDENTIDADE FISCAL ---' + sLineBreak +
-    'CNPJ: ' + FIdentidadeFiscal.CNPJ.ToString + sLineBreak +
-    'Razão Social: ' + FIdentidadeFiscal.RazaoSocial + sLineBreak +
-    'Inscrição Estadual: ' + FIdentidadeFiscal.InscricaoIE + sLineBreak +
-    'Regime Tributário: ' +
-      GetEnumName(TypeInfo(TRegimeTributario),
-        Ord(FIdentidadeFiscal.RegimeTributario)) + sLineBreak +
-    sLineBreak +
-
-    '--- ENDEREÇO ---' + sLineBreak +
-    'CEP: ' + FEndereco.CEP.Valor + sLineBreak +
-    'UF: ' + FEndereco.EstadoUF + sLineBreak +
-    'Cidade: ' + FEndereco.Municipio + sLineBreak +
-    'Bairro: ' + FEndereco.Bairro + sLineBreak +
-    'Logradouro: ' + FEndereco.Logradouro + sLineBreak +
-    'Número: ' + FEndereco.Numero + sLineBreak +
-    'Código Município IBGE: ' + FEndereco.CodigoIBGE + sLineBreak +
-    'Complemento: ' + FEndereco.Complemento + sLineBreak +
-    sLineBreak +
-
-    '--- DADOS FISCAIS ---' + sLineBreak +
-    'Papel Comercial: ' +
-      GetEnumName(TypeInfo(TPapelCte),
-        Ord(FDadosFiscais.PapelCte)) + sLineBreak +
-    'Tipo Tributação: ' +
-      GetEnumName(TypeInfo(TTipoTributacao),
-        Ord(FDadosFiscais.TipoTributacao)) + sLineBreak +
-    'Observação: ' + FDadosFiscais.ObservacaoFiscal + sLineBreak +
-    'Percentual: ' + FloatToStr(FDadosFiscais.AliquotaPadrao) + sLineBreak +
-    sLineBreak +
-
-    '--- DADOS OPERACIONAIS ---' + sLineBreak +
-    'Tipo Operação: ' +
-      GetEnumName(TypeInfo(TTipoOperacao),
-        Ord(FDadosOperacionais.TipoOperacao)) + sLineBreak +
-    'Tipo Transporte: ' +
-      DadosOperacionais.TipoTransporte + sLineBreak +
-    sLineBreak +
-
-    '--- SISTEMA ---' + sLineBreak +
-    'Status: ' + Status + sLineBreak +
-    'Responsável: ' + FSistemaOperacional.Responsavel + sLineBreak +
-    'Data Cadastro: ' +
-
-      '--- CONTATO ---' + sLineBreak +
-    'NUMERO: ' + FContato.NumeroTelefone + sLineBreak +
-    'SITE: ' + FContato.Site + sLineBreak +
-    'EMAIL: ' + FContato.Email +
-
-      DateTimeToStr(FSistemaOperacional.DataCadastro);
 end;
 
 destructor TTransportadora.Destroy;
