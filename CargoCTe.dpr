@@ -24,7 +24,8 @@ uses
   SistemaOperacional.Entidade in 'src\Domain\Entities\SistemaOperacional.Entidade.pas',
   DadosFiscais.Mapper in 'src\Application\Mappers\DadosFiscais.Mapper.pas',
   Veiculo.Tipo.Placa in 'src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas',
-  TransportadoraContato.Entidade in 'src\Domain\Entities\TransportadoraContato.Entidade.pas';
+  TransportadoraContato.Entidade in 'src\Domain\Entities\TransportadoraContato.Entidade.pas',
+  Transportadora.DTO in 'src\Application\Dtos\Transportadora.DTO.pas';
 
 {$R *.res}
 
