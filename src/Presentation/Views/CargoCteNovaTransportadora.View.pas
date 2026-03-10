@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg, Vcl.Mask;
+  Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg, Vcl.Mask, Transportadora.DTO;
 
 type
   TFrm_NovaTransportadora = class(TForm)
@@ -103,11 +103,15 @@ type
     Lbl_ReqTelefone: TLabel;
     Lbl_ReqContatoResponsavel: TLabel;
     procedure Btn_CancelarNovaTransportadoraClick(Sender: TObject);
-    procedure ResetarConfiguracoes;
+
     procedure SpeedButton1Click(Sender: TObject);
     procedure Btn_SalvarNovaTransportadoraClick(Sender: TObject);
     procedure Btn_SistemaDataAtualClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+
+    //Procedures
+    procedure ResetarConfiguracoes;
+    procedure PreencherDTO(var ADTO: TTransportadoraDTO);
   private
     { Private declarations }
   public
@@ -137,67 +141,12 @@ end;
 
 procedure TFrm_NovaTransportadora.Btn_SalvarNovaTransportadoraClick(
   Sender: TObject);
-var
-  Transportadora      : TTransportadora;
-  IdentificacaoFiscal : TIdentidadeFiscal;
-  EnderecoFiscal      : TEndereco;
-  DadosFiscais        : TDadosFiscais;
-  DadosOperacionais   : TDadosOperacionais;
-  SistemaOperacional  : TSistemaOperacional;
-  Contato             : TContato;
-  Cnpj                : TCNPJ;
-  Cep                 : TCEP;
-begin
-  Cnpj := TCNPJ.Create('37736717000106');
-  Cep  := TCEP.Create('76820638');
-
-  IdentificacaoFiscal := TIdentidadeFiscal.Create(
-    Cnpj,
-    'Teste LTDA',
-    '432894a',
-    rtSimplesNacional);
-
-  EnderecoFiscal := TEndereco.Create(
-    Cep,
-    'RO',
-    'Porto Velho',
-    'Flodoaldo Pontes Pinto',
-    'Avenida Engº Anysio da Rocha Compasso',
-    '120',
-    '1541358',
-    'Sem complemento');
-
-  DadosFiscais := TDadosFiscais.Create(
-    pcEmitente,
-    ttNormal,
-    'Simples Observação Não tributável',
-    0.10);
-
-  DadosOperacionais := TDadosOperacionais.Create(
-    opEstadual);
-
-  SistemaOperacional := TSistemaOperacional.Create(
-    saAtivo,
-    'Rodrigo Pacheco de Meireles Arruda');
-
-  Contato := TContato.Create('48998845210', 'example.com', 'example@xp.com');
-
-  Transportadora := TTransportadora.Create(
-    DadosFiscais,
-    DadosOperacionais,
-    EnderecoFiscal,
-    IdentificacaoFiscal,
-    SistemaOperacional,
-    Contato);
-
-  try
-    ShowMessage(Transportadora.DebugCompleto);
-  finally
-    Transportadora.Free;
-  end;
-
+ var
+  DTO    : TTransportadoraDTO;
+ begin
   //Realiza a limpeza dos campos
-  //ResetarConfiguracoes;
+  PreencherDTO(DTO); //Preenche o DTO -> UseCaseCadastrarTransportadora ->...
+  ResetarConfiguracoes;
 end;
 
 procedure TFrm_NovaTransportadora.Btn_SistemaDataAtualClick(Sender: TObject);
@@ -209,6 +158,40 @@ procedure TFrm_NovaTransportadora.FormCreate(Sender: TObject);
 begin
    //Configurações Iniciais Aplica a Data atual
   MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
+end;
+
+procedure TFrm_NovaTransportadora.PreencherDTO(var ADTO: TTransportadoraDTO);
+begin
+   // Identificação Fiscal
+  ADTO.CNPJ               := MsEdt_IdentificacaoCNPJ.Text;
+  ADTO.RazaoSocial        := Edt_IdentificacaoFiscalRS.Text;
+  ADTO.InscricaoEstadual  := MsEdt_IdentificacaoInscricaoIE.Text;
+  ADTO.RegimeTributario   := Cmbx_IdentificacaoRegimeTribu.Text;
+  // Endereço
+  ADTO.CEP                := MsEdt_EnderecoCEP.Text;
+  ADTO.Municipio          := Edt_EnderecoMunicipio.Text;
+  ADTO.Bairro             := Edt_EnderecoBairro.Text;
+  ADTO.Logradouro         := Edt_EnderecoLogradouro.Text;
+  ADTO.CodigoIBGE         := Edt_EnderecoCodigoIBGE.Text;
+  ADTO.Complemento        := Edt_EnderecoComplemento.Text;
+  ADTO.EstadoUF           := Cmbx_EnderecoUF.Text;
+  ADTO.Numero             := Edt_EnderecoNumero.Text;
+  // Dados Fiscais
+  ADTO.PapelCTe           := Cmbx_DadosPapelCTe.Text;
+  ADTO.TipoTributacao     := Cmbx_DadosTipoTributacao.Text;
+  ADTO.ObservacaoFiscal   := Edt_DadosObservacaoFiscal.Text;
+  ADTO.Aliquota           := StrToCurr(MsEdt_DadosAliquotaPadrao.Text);
+  // Dados Operacionais
+  ADTO.TipoTransporte     := Cmbx_DadosOperacionaisTipoDeTransporte.Text;
+  ADTO.TipoOperacao       := Cmbx_DadosOperacionaisTipoDeOperacao.Text;
+  // Sistema
+  ADTO.Status             := Cmbx_SistemaStatus.Text;
+  ADTO.Responsavel        := Edt_SistemaResponsavel.Text;
+  ADTO.DataCadastro       := MsEdt_SistemaDataCadastro.Text;
+  // Contato
+  ADTO.Telefone           := MsEdt_ContatoTelefone.Text;
+  ADTO.Site               := Edt_ContatoSite.Text;
+  ADTO.Email              := Edt_ContatoEmail.Text;
 end;
 
 procedure TFrm_NovaTransportadora.ResetarConfiguracoes;

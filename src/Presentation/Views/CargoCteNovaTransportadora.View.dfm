@@ -4762,6 +4762,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
+            ItemIndex = 0
             ParentFont = False
             TabOrder = 1
             Text = 'Simples Nacional'
