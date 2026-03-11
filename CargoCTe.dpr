@@ -25,7 +25,8 @@ uses
   DadosFiscais.Mapper in 'src\Application\Mappers\DadosFiscais.Mapper.pas',
   Veiculo.Tipo.Placa in 'src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas',
   TransportadoraContato.Entidade in 'src\Domain\Entities\TransportadoraContato.Entidade.pas',
-  Transportadora.DTO in 'src\Application\Dtos\Transportadora.DTO.pas';
+  Transportadora.DTO in 'src\Application\Dtos\Transportadora.DTO.pas',
+  NovaTransportadora.UseCase in 'src\Application\UseCase\NovaTransportadora.UseCase.pas';
 
 {$R *.res}
 

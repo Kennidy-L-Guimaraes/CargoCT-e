@@ -160,6 +160,7 @@
         <DCCReference Include="src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas"/>
         <DCCReference Include="src\Domain\Entities\TransportadoraContato.Entidade.pas"/>
         <DCCReference Include="src\Application\Dtos\Transportadora.DTO.pas"/>
+        <DCCReference Include="src\Application\UseCase\NovaTransportadora.UseCase.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
