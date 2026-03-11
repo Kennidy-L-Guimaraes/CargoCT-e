@@ -26,7 +26,11 @@ uses
   Veiculo.Tipo.Placa in 'src\Domain\ValueObjects\Veiculo.Tipo.Placa.pas',
   TransportadoraContato.Entidade in 'src\Domain\Entities\TransportadoraContato.Entidade.pas',
   Transportadora.DTO in 'src\Application\Dtos\Transportadora.DTO.pas',
-  NovaTransportadora.UseCase in 'src\Application\UseCase\NovaTransportadora.UseCase.pas';
+  NovaTransportadora.UseCase in 'src\Application\UseCase\NovaTransportadora.UseCase.pas',
+  Transportadora.Factory in 'src\Application\Factories\Transportadora.Factory.pas',
+  RegimeTributario.Mapper in 'src\Application\Mappers\RegimeTributario.Mapper.pas',
+  PapelCte.Mapper in 'src\Application\Mappers\PapelCte.Mapper.pas',
+  TipoTributacao.Mapper in 'src\Application\Mappers\TipoTributacao.Mapper.pas';
 
 {$R *.res}
 
