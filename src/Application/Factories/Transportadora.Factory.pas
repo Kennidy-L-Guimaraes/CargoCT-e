@@ -6,7 +6,8 @@ interface
   DadosFiscais.Entidade, DadosOperacionais.Entidade, Endereco.Entidade,
   IdentidadeFiscal.Entidade, IdentidadeFiscal.Tipo.CNPJ,
   SistemaOperacional.Entidade, TransportadoraContato.Entidade, Endereco.Tipo.CEP,
-  RegimeTributario.Mapper, PapelCte.Mapper, TipoTributacao.Mapper;
+  RegimeTributario.Mapper, PapelCte.Mapper, TipoTributacao.Mapper, TipoOperacao.Mapper,
+  SistemaAtivo.Mapper;
 
  type
  TFactoryTransportadora = class
@@ -37,18 +38,18 @@ begin
    TextoEnum -> Texto para Enum
    EnumTexto -> Enum para Texto
   }
- //Records
- CEP := TCEP.Create(DTO.CEP);
- CNPJ:= TCNPJ.Create(DTO.CNPJ);
- //Identidade FIscal
- IdentidadeFiscal := TIdentidadeFiscal.Create(
-  CNPJ,
-  DTO.RazaoSocial,
-  DTO.InsCricaoEstadual,
-  TMapperRegimeTributario.TextoEnum(DTO.RegimeTributario));
+   //Records
+   CEP := TCEP.Create(DTO.CEP);
+   CNPJ:= TCNPJ.Create(DTO.CNPJ);
+   //Identidade FIscal
+   IdentidadeFiscal := TIdentidadeFiscal.Create(
+    CNPJ,
+    DTO.RazaoSocial,
+    DTO.InsCricaoEstadual,
+    TMapperRegimeTributario.TextoEnum(DTO.RegimeTributario));
 
-  //Endereço Fiscal
-  Endereco := TEndereco.Create(
+   //Endereço Fiscal
+   Endereco := TEndereco.Create(
    CEP,
    DTO.EstadoUF,
    DTO.Municipio,
@@ -66,9 +67,31 @@ begin
    DTO.Aliquota);
 
    //Dados Operacinais
-   //DadosOperacionais := TDadosOperacionais.Create();
+   DadosOperacionais := TDadosOperacionais.Create(
+   TMapperTipoOperacao.TextoEnum(DTO.TipoOperacao));
 
+   //Sistema
+   SistemaOperacional := TSistemaOperacional.Create(
+    TMapperSistemaAtivo.TextoEnum(DTO.Status),
+    DTO.Responsavel);
 
+   //Contato
+   Contato := TContato.Create(
+    DTO.Telefone,
+    DTO.Site,
+    DTO.Email);
+
+   //Monta a Transportadora
+   Transportadora := TTransportadora.Create(
+    DadosFiscais,
+    DadosOperacionais,
+    Endereco,
+    IdentidadeFiscal,
+    SistemaOperacional,
+    Contato);
+
+    //Retorna Transportadora Montada
+    Result := Transportadora;
 end;
 
 end.
