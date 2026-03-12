@@ -7,7 +7,7 @@ uses
   CargoCteNovaTransportadora.View in 'src\Presentation\Views\CargoCteNovaTransportadora.View.pas' {Frm_NovaTransportadora},
   MenuNavigation.Utils in 'src\Presentation\UI\Utils\MenuNavigation.Utils.pas',
   CampoVisual.Utils in 'src\Presentation\UI\Utils\CampoVisual.Utils.pas',
-  Transportadora.Interfaces in 'src\Domain\Interfaces\Transportadora.Interfaces.pas',
+  TransportadoraRepository.Interfaces in 'src\Domain\Interfaces\TransportadoraRepository.Interfaces.pas',
   Endereco.Tipo.CEP in 'src\Domain\ValueObjects\Endereco.Tipo.CEP.pas',
   IdentidadeFiscal.Tipo.CNPJ in 'src\Domain\ValueObjects\IdentidadeFiscal.Tipo.CNPJ.pas',
   IdentidadeFiscal.Entidade in 'src\Domain\Entities\IdentidadeFiscal.Entidade.pas',
@@ -30,7 +30,9 @@ uses
   Transportadora.Factory in 'src\Application\Factories\Transportadora.Factory.pas',
   RegimeTributario.Mapper in 'src\Application\Mappers\RegimeTributario.Mapper.pas',
   PapelCte.Mapper in 'src\Application\Mappers\PapelCte.Mapper.pas',
-  TipoTributacao.Mapper in 'src\Application\Mappers\TipoTributacao.Mapper.pas';
+  TipoTributacao.Mapper in 'src\Application\Mappers\TipoTributacao.Mapper.pas',
+  TipoOperacao.Mapper in 'src\Application\Mappers\TipoOperacao.Mapper.pas',
+  SistemaAtivo.Mapper in 'src\Application\Mappers\SistemaAtivo.Mapper.pas';
 
 {$R *.res}
 

@@ -140,7 +140,7 @@
         </DCCReference>
         <DCCReference Include="src\Presentation\UI\Utils\MenuNavigation.Utils.pas"/>
         <DCCReference Include="src\Presentation\UI\Utils\CampoVisual.Utils.pas"/>
-        <DCCReference Include="src\Domain\Interfaces\Transportadora.Interfaces.pas"/>
+        <DCCReference Include="src\Domain\Interfaces\TransportadoraRepository.Interfaces.pas"/>
         <DCCReference Include="src\Domain\ValueObjects\Endereco.Tipo.CEP.pas"/>
         <DCCReference Include="src\Domain\ValueObjects\IdentidadeFiscal.Tipo.CNPJ.pas"/>
         <DCCReference Include="src\Domain\Entities\IdentidadeFiscal.Entidade.pas"/>
@@ -165,6 +165,8 @@
         <DCCReference Include="src\Application\Mappers\RegimeTributario.Mapper.pas"/>
         <DCCReference Include="src\Application\Mappers\PapelCte.Mapper.pas"/>
         <DCCReference Include="src\Application\Mappers\TipoTributacao.Mapper.pas"/>
+        <DCCReference Include="src\Application\Mappers\TipoOperacao.Mapper.pas"/>
+        <DCCReference Include="src\Application\Mappers\SistemaAtivo.Mapper.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
