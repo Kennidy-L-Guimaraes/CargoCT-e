@@ -116,7 +116,7 @@ class procedure TValidar.SeMenorOuZero(const ANomeVar: string;
   AValue: currency);
 begin
  If AValue < 0 then
-  raise EArgumentException.CreateFmt('Valor inválido, %%s deve ser maior que zero.',[ANomeVar]);
+  raise EArgumentException.CreateFmt('Valor inválido, %s deve ser maior que zero.',[ANomeVar]);
 end;
 
 class procedure TValidar.SeMenorQue(const ANomeVar: string; AValue,
