@@ -79,6 +79,7 @@ begin
   FEndereco.Free;
   FIdentidadeFiscal.Free;
   FSistemaOperacional.Free;
+  FContato.Free;
   inherited;
 end;
 
