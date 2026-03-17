@@ -32,7 +32,8 @@ uses
   PapelCte.Mapper in 'src\Application\Mappers\PapelCte.Mapper.pas',
   TipoTributacao.Mapper in 'src\Application\Mappers\TipoTributacao.Mapper.pas',
   TipoOperacao.Mapper in 'src\Application\Mappers\TipoOperacao.Mapper.pas',
-  SistemaAtivo.Mapper in 'src\Application\Mappers\SistemaAtivo.Mapper.pas';
+  SistemaAtivo.Mapper in 'src\Application\Mappers\SistemaAtivo.Mapper.pas',
+  Transportadora.Repository.DB in 'src\Application\Repository\Transportadora.Repository.DB.pas';
 
 {$R *.res}
 
