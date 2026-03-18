@@ -22,9 +22,9 @@ class function TMapperRegimeTributario.EnumTexto(
   Enum: TRegimeTributario): string;
 begin
   case Enum of
-    rtSimplesNacional : Result := 'SN';
-    rtLucroPresumido  : Result := 'LP';
-    rtLucroReal       : Result := 'LR';
+    rtSimplesNacional : Result := 'Simples Nacional';
+    rtLucroPresumido  : Result := 'Lucro Presumido';
+    rtLucroReal       : Result := 'Lucro Real';
   else
     TValidar.LancarErro('Regime Tributário', 'Inválido ou não identificado!');
   end;
@@ -33,9 +33,9 @@ end;
 class function TMapperRegimeTributario.TextoEnum(
   Texto: string): TRegimeTributario;
 begin
-  if Texto = 'SN' then Result := rtSimplesNacional
-  else if Texto = 'LP' then Result := rtLucroPresumido
-  else if Texto = 'LR' then Result := rtLucroReal
+  if      Texto = 'Simples Nacional' then Result := rtSimplesNacional
+  else if Texto = 'Lucro Presumido' then Result := rtLucroPresumido
+  else if Texto = 'Lucro Real' then Result := rtLucroReal
   else
    TValidar.LancarErro('Regime Tributário', 'Inválido ou não identificado!');
 end;
