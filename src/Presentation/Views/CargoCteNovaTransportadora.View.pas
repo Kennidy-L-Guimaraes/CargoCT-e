@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg, Vcl.Mask, Transportadora.DTO;
+  Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg, Vcl.Mask, Transportadora.DTO,
+  Transportadora.DB.SQLite, NovaTransportadora.UseCase;
 
 type
   TFrm_NovaTransportadora = class(TForm)
@@ -112,14 +113,23 @@ type
     //Procedures
     procedure ResetarConfiguracoes;
     procedure PreencherDTO(var ADTO: TTransportadoraDTO);
+    procedure UseCaseNovaTransportadora;
   private
     { Private declarations }
+    var
+    FDTO    : TTransportadoraDTO;
+
   public
     { Public declarations }
   end;
 
+
+
 var
   Frm_NovaTransportadora: TFrm_NovaTransportadora;
+
+const
+ CAMINHO_SQLITE='CargoCteDB.db';
 
 implementation
 
@@ -141,12 +151,11 @@ end;
 
 procedure TFrm_NovaTransportadora.Btn_SalvarNovaTransportadoraClick(
   Sender: TObject);
- var
-  DTO    : TTransportadoraDTO;
  begin
   //Realiza a limpeza dos campos
-  PreencherDTO(DTO); //Preenche o DTO -> UseCaseCadastrarTransportadora ->...
-  ResetarConfiguracoes;
+  PreencherDTO(FDTO); //Preenche o DTO -> UseCaseCadastrarTransportadora ->...
+  UseCaseNovaTransportadora; //Salva a Nova Transportadora
+  ResetarConfiguracoes;// Reseta configurações
 end;
 
 procedure TFrm_NovaTransportadora.Btn_SistemaDataAtualClick(Sender: TObject);
@@ -180,7 +189,8 @@ begin
   ADTO.PapelCTe           := Cmbx_DadosPapelCTe.Text;
   ADTO.TipoTributacao     := Cmbx_DadosTipoTributacao.Text;
   ADTO.ObservacaoFiscal   := Edt_DadosObservacaoFiscal.Text;
-  ADTO.Aliquota           := StrToCurr(MsEdt_DadosAliquotaPadrao.Text);
+  ADTO.Aliquota := StrToCurrDef(StringReplace(MsEdt_DadosAliquotaPadrao.Text, '.', ',', [rfReplaceAll]),0);
+
   // Dados Operacionais
   ADTO.TipoTransporte     := Cmbx_DadosOperacionaisTipoDeTransporte.Text;
   ADTO.TipoOperacao       := Cmbx_DadosOperacionaisTipoDeOperacao.Text;
@@ -232,6 +242,27 @@ end;
 procedure TFrm_NovaTransportadora.SpeedButton1Click(Sender: TObject);
 begin
  Frm_NovaFrota.Show;
+end;
+
+procedure TFrm_NovaTransportadora.UseCaseNovaTransportadora;
+var
+  UseCase    : TUseCaseNovaTransportadora;
+  Repository : TTransportadoraDBSQLite;
+begin
+  Repository := TTransportadoraDBSQLite.Create(CAMINHO_SQLITE);
+  UseCase    := TUseCaseNovaTransportadora.Create(Repository);
+  try
+    try
+      UseCase.Executar(FDTO);
+      ShowMessage('Transportadora cadastrada com sucesso!');
+    except
+      on E: Exception do
+        ShowMessage(E.Message);
+    end;
+  finally
+    UseCase.Free;
+    Repository.Free;  //libera explicitamente
+  end;
 end;
 
 end.

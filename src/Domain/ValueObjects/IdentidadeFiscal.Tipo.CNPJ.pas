@@ -23,6 +23,10 @@ implementation
 constructor TCNPJ.Create(const ACNPJ: string);
 begin
   FCNPJ := Trim(ACNPJ);
+  FCNPJ := StringReplace(FCNPJ, '-', '', [rfReplaceAll]);
+  FCNPJ := StringReplace(FCNPJ, '.', '', [rfReplaceAll]);
+  FCNPJ := StringReplace(FCNPJ, ',', '', [rfReplaceAll]);
+  FCNPJ := StringReplace(FCNPJ, '/', '', [rfReplaceAll]); //CLASS NORMALIZE
   Validar;
 end;
 

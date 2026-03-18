@@ -24,6 +24,7 @@ type
     property Endereco          : TEndereco          read FEndereco;
     property IdentidadeFiscal  : TIdentidadeFiscal  read FIdentidadeFiscal;
     property Contato           : TContato           read FContato;
+    property SistemaOperacional: TSistemaOperacional read FSistemaOperacional;
 
     constructor Create(ADadosFiscais: TDadosFiscais;
   ADadosOperacionais: TDadosOperacionais; AEndereco: TEndereco;

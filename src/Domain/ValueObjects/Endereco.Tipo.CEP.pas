@@ -22,7 +22,10 @@ implementation
 
 constructor TCEP.Create(ACEP: string);
 begin
- FCEP := Trim(ACEP);
+  FCEP := Trim(ACEP);
+  FCEP := StringReplace(FCEP, '-', '', [rfReplaceAll]);
+  FCEP := StringReplace(FCEP, '.', '', [rfReplaceAll]);
+  FCEP := StringReplace(FCEP, ',', '', [rfReplaceAll]); //CLASS NORMALIZE
  ValidarCEP;
 end;
 
