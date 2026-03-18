@@ -1,9 +1,9 @@
-unit NovaTransportadora.UseCase;
+Ôªøunit NovaTransportadora.UseCase;
 
 interface
 
 uses Transportadora.DTO, Validar.Exceptions, TransportadoraRepository.Interfaces,
-  Transportadora.Factory;
+  Transportadora.Factory, Transportadora.Entidade;
 
 type
  TUseCaseNovaTransportadora = class
@@ -27,11 +27,19 @@ begin
 end;
 
 procedure TUseCaseNovaTransportadora.Executar(DTO: TTransportadoraDTO);
+var
+ Transportadora : TTransportadora;
 begin
   if FRepository.ExisteNoBanco(DTO.CNPJ) then
-   TValidar.LancarErro('Transportadora','Inv·lido, transportadora j· registrada!');
-   TFactoryTransportadora.CriarTransportadora(DTO);
-   //FRepository.SalvarTransportadora(Transportadora);
+   TValidar.LancarErro('Transportadora','Inv√°lido, transportadora j√° registrada!');
+
+  Transportadora := TFactoryTransportadora.CriarTransportadora(DTO);
+  try
+    FRepository.SalvarTransportadora(Transportadora);
+    FRepository.CommitAndClose;
+  finally
+    Transportadora.Free;
+  end;
 end;
 
 end.
