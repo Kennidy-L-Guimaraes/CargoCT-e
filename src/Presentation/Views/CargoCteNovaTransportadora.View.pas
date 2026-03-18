@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
   Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg, Vcl.Mask, Transportadora.DTO,
-  Transportadora.DB.SQLite, NovaTransportadora.UseCase;
+  Transportadora.DB.SQLite, NovaTransportadora.UseCase, ConfiguracaoSistema.Db;
 
 type
   TFrm_NovaTransportadora = class(TForm)
@@ -113,6 +113,7 @@ type
     //Procedures
     procedure ResetarConfiguracoes;
     procedure PreencherDTO(var ADTO: TTransportadoraDTO);
+    procedure PreencherDTOFAKE(var ADTO: TTransportadoraDTO);
     procedure UseCaseNovaTransportadora;
   private
     { Private declarations }
@@ -127,10 +128,7 @@ type
 
 var
   Frm_NovaTransportadora: TFrm_NovaTransportadora;
-
-const
- CAMINHO_SQLITE='CargoCteDB.db';
-
+  CAMINHO_SQLITE        : string;
 implementation
 
 {$R *.dfm}
@@ -153,7 +151,7 @@ procedure TFrm_NovaTransportadora.Btn_SalvarNovaTransportadoraClick(
   Sender: TObject);
  begin
   //Realiza a limpeza dos campos
-  PreencherDTO(FDTO); //Preenche o DTO -> UseCaseCadastrarTransportadora ->...
+  PreencherDTOFAKE(FDTO); //Preenche o DTO -> UseCaseCadastrarTransportadora ->...
   UseCaseNovaTransportadora; //Salva a Nova Transportadora
   ResetarConfiguracoes;// Reseta configurações
 end;
@@ -204,6 +202,47 @@ begin
   ADTO.Email              := Edt_ContatoEmail.Text;
 end;
 
+procedure TFrm_NovaTransportadora.PreencherDTOFAKE(
+  var ADTO: TTransportadoraDTO);
+begin
+ // Identificação Fiscal
+  ADTO.CNPJ              := '12.345.678/0001-95'; // Formato válido com máscara
+  ADTO.RazaoSocial       := 'Transportadora Atlas Logística LTDA';
+  ADTO.InscricaoEstadual := '123.456.789.112';
+  ADTO.RegimeTributario  := 'Simples Nacional';
+
+  // Endereço
+  ADTO.CEP         := '88000-000'; // Formato válido
+  ADTO.Municipio   := 'Florianópolis';
+  ADTO.Bairro      := 'Centro';
+  ADTO.Logradouro  := 'Rua das Palmeiras';
+  ADTO.CodigoIBGE  := '4205407'; // Código real de Florianópolis
+  ADTO.Complemento := 'Sala 305';
+  ADTO.EstadoUF    := 'SC';
+  ADTO.Numero      := '1234';
+
+  // Dados Fiscais
+  ADTO.PapelCTe         := 'Emitente';
+  ADTO.TipoTributacao   := 'Normal';
+  ADTO.ObservacaoFiscal := 'Empresa optante pelo regime simplificado.';
+  ADTO.Aliquota         := 12.50; // Já como Currency
+
+  // Dados Operacionais
+  ADTO.TipoTransporte := 'Rodoviário';
+  ADTO.TipoOperacao   := 'Estadual';
+
+  // Sistema
+  ADTO.Status        := 'Ativo';
+  ADTO.Responsavel   := 'João da Silva';
+  ADTO.DataCadastro  := '18/03/2026'; // Formato coerente com MaskEdit
+
+  // Contato
+  ADTO.Telefone := '(48) 99999-1234';
+  ADTO.Site     := 'https://www.atlaslogistica.com.br';
+  ADTO.Email    := 'contato@atlaslogistica.com.br';
+
+end;
+
 procedure TFrm_NovaTransportadora.ResetarConfiguracoes;
 begin
   //Identificação Fiscal
@@ -249,6 +288,7 @@ var
   UseCase    : TUseCaseNovaTransportadora;
   Repository : TTransportadoraDBSQLite;
 begin
+  CAMINHO_SQLITE := TConfiguracaoSistema.ObterCaminhoBanco;
   Repository := TTransportadoraDBSQLite.Create(CAMINHO_SQLITE);
   UseCase    := TUseCaseNovaTransportadora.Create(Repository);
   try
@@ -261,7 +301,6 @@ begin
     end;
   finally
     UseCase.Free;
-    Repository.Free;  //libera explicitamente
   end;
 end;
 
