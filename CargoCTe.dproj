@@ -168,8 +168,8 @@
         <DCCReference Include="src\Application\Mappers\TipoOperacao.Mapper.pas"/>
         <DCCReference Include="src\Application\Mappers\SistemaAtivo.Mapper.pas"/>
         <DCCReference Include="src\Application\Repository\Transportadora.Repository.DB.pas"/>
-        <DCCReference Include="src\Infrastructure\database service\Transportadora.DB.SQLite.pas"/>
-        <DCCReference Include="src\Infrastructure\databases utils\ConfiguracaoSistema.Db.pas"/>
+        <DCCReference Include="src\Infrastructure\database_service\Transportadora.DB.SQLite.pas"/>
+        <DCCReference Include="src\Infrastructure\databases_utils\ConfiguracaoSistema.Db.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

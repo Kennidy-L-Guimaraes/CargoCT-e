@@ -34,8 +34,8 @@ uses
   TipoOperacao.Mapper in 'src\Application\Mappers\TipoOperacao.Mapper.pas',
   SistemaAtivo.Mapper in 'src\Application\Mappers\SistemaAtivo.Mapper.pas',
   Transportadora.Repository.DB in 'src\Application\Repository\Transportadora.Repository.DB.pas',
-  Transportadora.DB.SQLite in 'src\Infrastructure\database service\Transportadora.DB.SQLite.pas',
-  ConfiguracaoSistema.Db in 'src\Infrastructure\databases utils\ConfiguracaoSistema.Db.pas';
+  Transportadora.DB.SQLite in 'src\Infrastructure\database_service\Transportadora.DB.SQLite.pas',
+  ConfiguracaoSistema.Db in 'src\Infrastructure\databases_utils\ConfiguracaoSistema.Db.pas';
 
 {$R *.res}
 
