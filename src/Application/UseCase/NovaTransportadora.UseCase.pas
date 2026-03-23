@@ -3,18 +3,18 @@
 interface
 
 uses Transportadora.DTO, Validar.Exceptions, TransportadoraRepository.Interfaces,
-  Transportadora.Factory, Transportadora.Entidade;
+  Transportadora.Factory, Transportadora.Entidade, System.SysUtils, Classes;
 
 type
  TUseCaseNovaTransportadora = class
    private
     {Private Declarations}
-     FRepository : ITransportadoraRepository;
+     FRepository          : ITransportadoraRepository;
 
    public
     {Public Declarations}
     constructor Create(ARepository: ITransportadoraRepository);
-    procedure Executar(DTO: TTransportadoraDTO);
+    procedure Executar(DTO: TTransportadoraDTO; AImagem: TMemoryStream);
  end;
 
 implementation
@@ -26,7 +26,7 @@ begin
  FRepository := ARepository;
 end;
 
-procedure TUseCaseNovaTransportadora.Executar(DTO: TTransportadoraDTO);
+procedure TUseCaseNovaTransportadora.Executar(DTO: TTransportadoraDTO; AImagem: TMemoryStream);
 var
  Transportadora : TTransportadora;
 begin
@@ -36,6 +36,7 @@ begin
   Transportadora := TFactoryTransportadora.CriarTransportadora(DTO);
   try
     FRepository.SalvarTransportadora(Transportadora);
+    FRepository.SalvarImagemTransportadora(FImagemTransportadora);
     FRepository.CommitAndClose;
   finally
     Transportadora.Free;

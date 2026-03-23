@@ -15,7 +15,7 @@ uses
   FireDAC.Phys.SQLiteDef,
   System.SysUtils,
   FireDAC.Comp.UI,
-  FireDac.Stan.Param;
+  FireDac.Stan.Param, Classes;
 
  type
   TTransportadoraDBSQLite = class(TInterfacedObject, ITransportadoraRepository)
@@ -34,6 +34,7 @@ uses
       constructor Create(const ADatabase: string);
       destructor  Destroy; override;
       procedure SalvarTransportadora(ATransportadora: TTransportadora);
+      procedure SalvarImagemTransportadora(AImagem: TMemoryStream);
       procedure CommitAndClose;
       function  ExisteNoBanco(ACNPJ: string): boolean;
   end;
@@ -143,6 +144,12 @@ begin
   finally
     Query.Free;
   end;
+end;
+
+procedure TTransportadoraDBSQLite.SalvarImagemTransportadora(
+  AImagem: TMemoryStream);
+begin
+
 end;
 
 procedure TTransportadoraDBSQLite.SalvarTransportadora(

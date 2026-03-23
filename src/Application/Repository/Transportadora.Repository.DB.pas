@@ -5,7 +5,8 @@ uses
   Validar.Exceptions,
   TransportadoraRepository.Interfaces,
   Transportadora.Entidade,
-  Transportadora.DB.SQLite;
+  Transportadora.DB.SQLite,
+  Classes;
 
 type
  TTransportadoraRepositoryDataBase = class(TInterfacedObject, ITransportadoraRepository)
@@ -15,6 +16,7 @@ type
    public
     {Public Declarations}
     procedure SalvarTransportadora(Transportadora: TTransportadora);
+    procedure SalvarImagemTransportadora(AImagem: TMemoryStream);
     function  ExisteNoBanco(CNPJ: string): boolean;
     procedure CommitAndClose;
     constructor Create(ACaminhoBanco: string);
@@ -47,6 +49,12 @@ end;
 function TTransportadoraRepositoryDataBase.ExisteNoBanco(CNPJ: string): boolean;
 begin
   Result := FDAO.ExisteNoBanco(CNPJ);
+end;
+
+procedure TTransportadoraRepositoryDataBase.SalvarImagemTransportadora(
+  AImagem: TMemoryStream);
+begin
+  FDAO.SalvarImagemTransportadora(AImagem);
 end;
 
 procedure TTransportadoraRepositoryDataBase.SalvarTransportadora(

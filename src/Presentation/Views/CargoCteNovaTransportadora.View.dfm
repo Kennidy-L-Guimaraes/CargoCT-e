@@ -13,6 +13,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poMainFormCenter
+  OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 15
   object Pnl_Background: TPanel
@@ -31,7 +32,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       Width = 624
       Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 799
       VertScrollBar.Range = 1600
       VertScrollBar.Tracking = True
       Align = alClient
@@ -43,7 +43,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       UseWheelForScrolling = True
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -799
+        Top = 0
         Width = 607
         Height = 161
         Align = alTop
@@ -4471,7 +4471,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = -638
+        Top = 161
         Width = 607
         Height = 220
         Align = alTop
@@ -4823,9 +4823,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
           TabOrder = 1
           object Img_IdentificacaoLogo: TImage
             Left = 0
-            Top = 1
+            Top = 0
             Width = 107
-            Height = 108
+            Height = 109
             ParentShowHint = False
             Picture.Data = {
               0954506E67496D61676589504E470D0A1A0A0000000D49484452000000640000
@@ -4897,12 +4897,13 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
             Font.Style = []
             ParentFont = False
             TabOrder = 0
+            OnClick = Btn_IdentificacaoLogoClick
           end
         end
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = -418
+        Top = 381
         Width = 607
         Height = 359
         Align = alTop
@@ -5399,7 +5400,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 463
+        Top = 1262
         Width = 607
         Height = 185
         Align = alTop
@@ -5566,7 +5567,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = 151
+        Top = 950
         Width = 607
         Height = 131
         Align = alTop
@@ -5704,7 +5705,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = -59
+        Top = 740
         Width = 607
         Height = 210
         Align = alTop
@@ -5949,7 +5950,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = 282
+        Top = 1081
         Width = 607
         Height = 181
         Align = alTop
@@ -6095,7 +6096,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 746
+        Top = 1545
         Width = 607
         Height = 55
         Align = alBottom
@@ -6202,11 +6203,11 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
     end
   end
-  object Opd_BuscarImagem: TOpenPictureDialog
+  object Opdg_BuscarImagem: TOpenPictureDialog
     Filter = 
       'JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Po' +
       'rtable Network Graphics (*.png)|*.png'
-    Left = 598
-    Top = 65534
+    Left = 518
+    Top = 54
   end
 end

@@ -11,7 +11,7 @@ uses
 type
   TFrm_NovaTransportadora = class(TForm)
     Pnl_Background: TPanel;
-    Opd_BuscarImagem: TOpenPictureDialog;
+    Opdg_BuscarImagem: TOpenPictureDialog;
     Scbx_NovaTransportadora: TScrollBox;
     Grbx_IdentificacaoFiscal: TGroupBox;
     Pnl_IdentificacaoCte: TPanel;
@@ -115,10 +115,13 @@ type
     procedure PreencherDTO(var ADTO: TTransportadoraDTO);
     procedure PreencherDTOFAKE(var ADTO: TTransportadoraDTO);
     procedure UseCaseNovaTransportadora;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Btn_IdentificacaoLogoClick(Sender: TObject);
   private
     { Private declarations }
     var
     FDTO    : TTransportadoraDTO;
+    FImage  : TMemoryStream;
 
   public
     { Public declarations }
@@ -147,6 +150,21 @@ begin
   Frm_NovaTransportadora.Close;
 end;
 
+procedure TFrm_NovaTransportadora.Btn_IdentificacaoLogoClick(Sender: TObject);
+begin
+   if Opdg_BuscarImagem.Execute then
+  begin
+    //limpa stream anterior
+    FImage.Clear;
+
+    //carrega arquivo para o stream
+    FImage.LoadFromFile(Opdg_BuscarImagem.FileName);
+
+    //Exibe a imagem selecionada em Img_IdentificacaoLogo
+    Img_IdentificacaoLogo.Picture.LoadFromFile(Opdg_BuscarImagem.FileName);
+  end;
+end;
+
 procedure TFrm_NovaTransportadora.Btn_SalvarNovaTransportadoraClick(
   Sender: TObject);
  begin
@@ -161,10 +179,19 @@ begin
   MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
 end;
 
+procedure TFrm_NovaTransportadora.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+ //Libera o Stream da Imagem
+ FImage.Free;
+end;
+
 procedure TFrm_NovaTransportadora.FormCreate(Sender: TObject);
 begin
    //Configurações Iniciais Aplica a Data atual
   MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
+  //Cria um Stream para imagem
+  FImage := TMemoryStream.Create;
 end;
 
 procedure TFrm_NovaTransportadora.PreencherDTO(var ADTO: TTransportadoraDTO);
