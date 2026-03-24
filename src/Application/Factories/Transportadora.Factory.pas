@@ -7,7 +7,7 @@ interface
   IdentidadeFiscal.Entidade, IdentidadeFiscal.Tipo.CNPJ,
   SistemaOperacional.Entidade, TransportadoraContato.Entidade, Endereco.Tipo.CEP,
   RegimeTributario.Mapper, PapelCte.Mapper, TipoTributacao.Mapper, TipoOperacao.Mapper,
-  SistemaAtivo.Mapper;
+  SistemaAtivo.Mapper, Classes;
 
  type
  TFactoryTransportadora = class
@@ -24,6 +24,7 @@ implementation
 
 class function TFactoryTransportadora.CriarTransportadora(DTO: TTransportadoraDTO): TTransportadora;
   var
+  Imagem            : TmemoryStream;
   Transportadora    : TTransportadora;
   DadosFiscais      : TDadosFiscais;
   DadosOperacionais : TDadosOperacionais;
@@ -38,6 +39,10 @@ begin
    TextoEnum -> Texto para Enum
    EnumTexto -> Enum para Texto
   }
+
+   //Imagem
+   Imagem := DTO.Imagem;
+
    //Records
    CEP := TCEP.Create(DTO.CEP);
    CNPJ:= TCNPJ.Create(DTO.CNPJ);
@@ -83,6 +88,7 @@ begin
 
    //Monta a Transportadora
    Transportadora := TTransportadora.Create(
+    Imagem,
     DadosFiscais,
     DadosOperacionais,
     Endereco,
