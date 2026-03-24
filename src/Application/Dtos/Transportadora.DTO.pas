@@ -1,11 +1,14 @@
 unit Transportadora.DTO;
 
 interface
+uses Classes;
 
 type
  TTransportadoraDTO = record
    Public
     {Public Declarations}
+    //Imagem
+    Imagem             : TMemoryStream;
 
     //Identificação Fiscal
     CNPJ               : string;
