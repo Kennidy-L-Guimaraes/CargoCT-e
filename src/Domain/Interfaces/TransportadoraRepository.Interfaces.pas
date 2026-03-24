@@ -1,7 +1,7 @@
 unit TransportadoraRepository.Interfaces;
 
 interface
- uses Transportadora.Entidade;
+ uses Transportadora.Entidade, Classes;
 
 type
  ITransportadoraRepository = interface

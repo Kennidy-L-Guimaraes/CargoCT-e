@@ -14,7 +14,7 @@ type
    public
     {Public Declarations}
     constructor Create(ARepository: ITransportadoraRepository);
-    procedure Executar(DTO: TTransportadoraDTO; AImagem: TMemoryStream);
+    procedure Executar(DTO: TTransportadoraDTO);
  end;
 
 implementation
@@ -26,7 +26,7 @@ begin
  FRepository := ARepository;
 end;
 
-procedure TUseCaseNovaTransportadora.Executar(DTO: TTransportadoraDTO; AImagem: TMemoryStream);
+procedure TUseCaseNovaTransportadora.Executar(DTO: TTransportadoraDTO);
 var
  Transportadora : TTransportadora;
 begin
@@ -36,7 +36,6 @@ begin
   Transportadora := TFactoryTransportadora.CriarTransportadora(DTO);
   try
     FRepository.SalvarTransportadora(Transportadora);
-    FRepository.SalvarImagemTransportadora(FImagemTransportadora);
     FRepository.CommitAndClose;
   finally
     Transportadora.Free;

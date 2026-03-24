@@ -197,6 +197,7 @@ end;
 procedure TFrm_NovaTransportadora.PreencherDTO(var ADTO: TTransportadoraDTO);
 begin
    // Identificação Fiscal
+  ADTO.Imagem             := FImage;
   ADTO.CNPJ               := MsEdt_IdentificacaoCNPJ.Text;
   ADTO.RazaoSocial        := Edt_IdentificacaoFiscalRS.Text;
   ADTO.InscricaoEstadual  := MsEdt_IdentificacaoInscricaoIE.Text;
@@ -233,6 +234,7 @@ procedure TFrm_NovaTransportadora.PreencherDTOFAKE(
   var ADTO: TTransportadoraDTO);
 begin
  // Identificação Fiscal
+  ADTO.Imagem            := FImage;
   ADTO.CNPJ              := '12.345.678/0001-95'; // Formato válido com máscara
   ADTO.RazaoSocial       := 'Transportadora Atlas Logística LTDA';
   ADTO.InscricaoEstadual := '123.456.789.112';
@@ -316,8 +318,8 @@ var
   Repository : TTransportadoraDBSQLite;
 begin
   CAMINHO_SQLITE := TConfiguracaoSistema.ObterCaminhoBanco;
-  Repository := TTransportadoraDBSQLite.Create(CAMINHO_SQLITE);
-  UseCase    := TUseCaseNovaTransportadora.Create(Repository);
+  Repository     := TTransportadoraDBSQLite.Create(CAMINHO_SQLITE);
+  UseCase        := TUseCaseNovaTransportadora.Create(Repository);
   try
     try
       UseCase.Executar(FDTO);

@@ -15,7 +15,7 @@ uses
   FireDAC.Phys.SQLiteDef,
   System.SysUtils,
   FireDAC.Comp.UI,
-  FireDac.Stan.Param, Classes;
+  FireDac.Stan.Param, Classes, Data.DB;
 
  type
   TTransportadoraDBSQLite = class(TInterfacedObject, ITransportadoraRepository)
@@ -88,6 +88,7 @@ begin
   FConnection.ExecSQL(
   'CREATE TABLE IF NOT EXISTS Transportadora (' +
   '  id                INTEGER PRIMARY KEY NOT NULL UNIQUE,' +
+  '  Image             BLOB,' +
   '  CNPJ              TEXT    NOT NULL UNIQUE,' +
   '  RazaoSocial       TEXT,' +
   '  InscricaoEstadual TEXT,' +
@@ -152,12 +153,11 @@ begin
 
 end;
 
-procedure TTransportadoraDBSQLite.SalvarTransportadora(
-  ATransportadora: TTransportadora);
+procedure TTransportadoraDBSQLite.SalvarTransportadora(ATransportadora: TTransportadora);
 begin
   FQuery.SQL.Text :=
     'INSERT INTO Transportadora (' +
-    '  CNPJ, RazaoSocial, InscricaoEstadual, RegimeTributario,' +
+    '  Image, CNPJ, RazaoSocial, InscricaoEstadual, RegimeTributario,' +
     '  CEP, EstadoUF, Municipio, Bairro, Logradouro, Numero, CodigoIBGE, Complemento,' +
     '  PapelCte, TipoTributacao, ObservacaoFiscal, Aliquota,' +
     '  TipoOperacao,' +
@@ -165,7 +165,7 @@ begin
     '  DataCadastro,' +
     '  Telefone, Site, Email' +
     ') VALUES (' +
-    '  :CNPJ, :RazaoSocial, :InscricaoEstadual, :RegimeTributario,' +
+    '  :Imagem, :CNPJ, :RazaoSocial, :InscricaoEstadual, :RegimeTributario,' +
     '  :CEP, :EstadoUF, :Municipio, :Bairro, :Logradouro, :Numero, :CodigoIBGE, :Complemento,' +
     '  :PapelCte, :TipoTributacao, :ObservacaoFiscal, :Aliquota,' +
     '  :TipoOperacao,' +
@@ -175,6 +175,8 @@ begin
     ')';
 
   // --- IdentidadeFiscal ---
+  ATransportadora.Imagem.Position := 0;
+  FQuery.ParamByName('Imagem').LoadFromStream(ATransportadora.Imagem, ftBlob);
   FQuery.ParamByName('CNPJ').AsString               := ATransportadora.IdentidadeFiscal.CNPJ.Valor;
   FQuery.ParamByName('RazaoSocial').AsString        := ATransportadora.IdentidadeFiscal.RazaoSocial;
   FQuery.ParamByName('InscricaoEstadual').AsString  := ATransportadora.IdentidadeFiscal.InscricaoIE;
