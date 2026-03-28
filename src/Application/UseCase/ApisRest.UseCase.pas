@@ -4,7 +4,7 @@ interface
 
 uses Endereco.Tipo.CEP, IdentidadeFiscal.Tipo.CNPJ, APIs.DTO, RestCep.Service;
  type
-  TBuscarCepUseCase = class
+  TUseCaseBuscarCep = class
   public
     function Execute(ACep: string): TDTOCep;
   end;
@@ -25,7 +25,7 @@ end;
 
 { TBuscarCepUseCase }
 
-function TBuscarCepUseCase.Execute(ACep: string): TDTOCep;
+function TUseCaseBuscarCep.Execute(ACep: string): TDTOCep;
 var
  ServiceCep : TServiceRestCep;
  Cep        : TCep;
