@@ -3532,7 +3532,8 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Font.Style = []
           ParentFont = False
           OnClick = Btn_NotasEmitidasClick
-          ExplicitWidth = 150
+          ExplicitLeft = 5
+          ExplicitTop = 2
         end
       end
       object Pnl_BtnConfiguracoes: TPanel

@@ -4,7 +4,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
   AutoSize = True
   BorderIcons = [biSystemMenu]
   Caption = 'Configura'#231#245'es'
-  ClientHeight = 346
+  ClientHeight = 471
   ClientWidth = 399
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,15 +18,16 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
     Left = 0
     Top = 0
     Width = 399
-    Height = 346
+    Height = 471
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 346
     object Pnl_ConfiguracoesBtns: TPanel
       Left = 0
-      Top = 298
+      Top = 423
       Width = 399
       Height = 48
       Margins.Top = 0
@@ -36,6 +37,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       AutoSize = True
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitTop = 298
       object Pnl_BtnSalvarConfiguracoes: TPanel
         AlignWithMargins = True
         Left = 5
@@ -202,7 +204,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
     end
     object Pnl_BtnsBancoDeDados: TPanel
       Left = 0
-      Top = 221
+      Top = 346
       Width = 399
       Height = 77
       Margins.Top = 0
@@ -210,6 +212,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Align = alBottom
       BevelOuter = bvLowered
       TabOrder = 3
+      ExplicitTop = 221
       object Btn_ExcluirBancoDeDados: TBitBtn
         Left = 16
         Top = 10
@@ -221,14 +224,107 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         TabOrder = 0
       end
       object Btn_ExcluirTransportadoras: TBitBtn
-        Left = 16
-        Top = 41
+        Left = 161
+        Top = 9
         Width = 192
         Height = 25
         Caption = 'Excluir todas as transportadoras'
         DragCursor = crHandPoint
         Enabled = False
         TabOrder = 1
+      end
+      object Btn_ConfiguracoesPadrao: TBitBtn
+        Left = 16
+        Top = 41
+        Width = 139
+        Height = 25
+        Caption = 'Configura'#231#245'es Padr'#227'o'
+        DragCursor = crHandPoint
+        Enabled = False
+        TabOrder = 2
+      end
+    end
+    object GrBx_ConfiguracoesdeDesign: TGroupBox
+      Left = 0
+      Top = 215
+      Width = 399
+      Height = 114
+      Caption = 'Configura'#231#245'es de Design'
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 4
+      object Pnl_ConfigCordeFundo: TLabel
+        AlignWithMargins = True
+        Left = 16
+        Top = 26
+        Width = 78
+        Height = 15
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Caption = 'Cor de Fundo: '
+      end
+      object Lbl_ConfigCorBotoes: TLabel
+        AlignWithMargins = True
+        Left = 16
+        Top = 58
+        Width = 86
+        Height = 15
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Caption = 'Cor dos Bot'#245'es: '
+      end
+      object Lbl_ConfigCordaFonte: TLabel
+        AlignWithMargins = True
+        Left = 16
+        Top = 90
+        Width = 71
+        Height = 15
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Caption = 'Cor da Fonte:'
+      end
+      object Clbx_CorFundo: TColorBox
+        AlignWithMargins = True
+        Left = 104
+        Top = 23
+        Width = 145
+        Height = 22
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        TabOrder = 0
+      end
+      object Clbx_Botoes: TColorBox
+        AlignWithMargins = True
+        Left = 112
+        Top = 55
+        Width = 137
+        Height = 22
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        TabOrder = 1
+      end
+      object ColorBox1: TColorBox
+        AlignWithMargins = True
+        Left = 97
+        Top = 87
+        Width = 152
+        Height = 22
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        TabOrder = 2
       end
     end
   end

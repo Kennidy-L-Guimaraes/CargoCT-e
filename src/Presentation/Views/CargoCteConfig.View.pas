@@ -26,6 +26,14 @@ type
     Btn_ExcluirTransportadoras: TBitBtn;
     Chbx_HabilitarBtnBancoDeDados: TCheckBox;
     Btn_ExcluirBancoDeDados: TBitBtn;
+    GrBx_ConfiguracoesdeDesign: TGroupBox;
+    Clbx_CorFundo: TColorBox;
+    Pnl_ConfigCordeFundo: TLabel;
+    Clbx_Botoes: TColorBox;
+    Lbl_ConfigCorBotoes: TLabel;
+    Btn_ConfiguracoesPadrao: TBitBtn;
+    Lbl_ConfigCordaFonte: TLabel;
+    ColorBox1: TColorBox;
     procedure Btn_BtnSalvarrConfiguracoesClick(Sender: TObject);
     procedure Btn_BtnCancelarConfiguracoesClick(Sender: TObject);
   private
