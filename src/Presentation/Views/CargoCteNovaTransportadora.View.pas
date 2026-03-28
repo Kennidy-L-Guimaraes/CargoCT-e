@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
   Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg, Vcl.Mask, Transportadora.DTO,
-  Transportadora.DB.SQLite, NovaTransportadora.UseCase, ConfiguracaoSistema.Db;
+  Transportadora.DB.SQLite, NovaTransportadora.UseCase, ConfiguracaoSistema.Db,
+  ApisRest.UseCase, APIs.DTO;
 
 type
   TFrm_NovaTransportadora = class(TForm)
@@ -117,6 +118,7 @@ type
     procedure UseCaseNovaTransportadora;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Btn_IdentificacaoLogoClick(Sender: TObject);
+    procedure Img_EnderecoLupaClick(Sender: TObject);
   private
     { Private declarations }
     var
@@ -192,6 +194,25 @@ begin
   MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
   //Cria um Stream para imagem
   FImage := TMemoryStream.Create;
+end;
+
+procedure TFrm_NovaTransportadora.Img_EnderecoLupaClick(Sender: TObject);
+ var
+  UseCaseApi: TBuscarCepUseCase;
+  DTOCep     : TDTOCep;
+begin
+ UseCaseApi := TBuscarCepUseCase.Create;
+ try
+  DTOCep := UseCaseApi.Execute(MsEdt_EnderecoCEP.Text);
+  Edt_EnderecoMunicipio.Text := DTOCep.Municipio;
+  Edt_EnderecoBairro.Text    := DTOCep.Bairro;
+  Edt_EnderecoLogradouro.Text:= DTOCep.Logradouro;
+  Edt_EnderecoCodigoIBGE.Text:= DTOCep.CodigoIBGE;
+  Cmbx_EnderecoUF.Text       := DTOCep.EstadoUF;
+
+ finally
+  UseCaseApi.Free;
+ end;
 end;
 
 procedure TFrm_NovaTransportadora.PreencherDTO(var ADTO: TTransportadoraDTO);

@@ -35,7 +35,10 @@ uses
   SistemaAtivo.Mapper in 'src\Application\Mappers\SistemaAtivo.Mapper.pas',
   Transportadora.Repository.DB in 'src\Application\Repository\Transportadora.Repository.DB.pas',
   Transportadora.DB.SQLite in 'src\Infrastructure\database_service\Transportadora.DB.SQLite.pas',
-  ConfiguracaoSistema.Db in 'src\Infrastructure\databases_utils\ConfiguracaoSistema.Db.pas';
+  ConfiguracaoSistema.Db in 'src\Infrastructure\databases_utils\ConfiguracaoSistema.Db.pas',
+  ApisRest.UseCase in 'src\Application\UseCase\ApisRest.UseCase.pas',
+  APIs.DTO in 'src\Application\Dtos\APIs.DTO.pas',
+  RestCep.Service in 'src\Application\Services\RestCep.Service.pas';
 
 {$R *.res}
 
