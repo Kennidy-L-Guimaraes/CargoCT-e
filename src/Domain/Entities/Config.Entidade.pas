@@ -72,8 +72,7 @@ end;
 
 procedure TConfig.ValidarCor(const ACor: string);
 begin
-  if ACor.Trim.IsEmpty then
-   TValidar.LancarErro(ACor, 'Cor Inválida!');
+  TValidar.SeVazio(Acor, 'Cor');
 end;
 
 procedure TConfig.AlterarCores(AFundo, ABotoes, AFonte: string);
