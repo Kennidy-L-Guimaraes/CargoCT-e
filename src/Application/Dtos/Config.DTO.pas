@@ -2,7 +2,7 @@ unit Config.DTO;
 
 interface
  type
-  TConfig = Record
+  TDTOConfig = Record
   public
    {Public Declarations}
 

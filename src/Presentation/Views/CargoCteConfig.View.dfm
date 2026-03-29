@@ -178,6 +178,14 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Width = 329
         Height = 17
         Caption = 'Habilitar Bot'#245'es de Acesso ao Banco de Dados (Perigoso)? '
+        Color = 8421631
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 8421631
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
         TabOrder = 3
       end
     end
@@ -300,9 +308,10 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Margins.Top = 5
         Margins.Right = 5
         Margins.Bottom = 5
+        Selected = clCream
         TabOrder = 0
       end
-      object Clbx_Botoes: TColorBox
+      object Clbx_CordosBotoes: TColorBox
         AlignWithMargins = True
         Left = 112
         Top = 55
@@ -314,7 +323,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Margins.Bottom = 5
         TabOrder = 1
       end
-      object ColorBox1: TColorBox
+      object Clbx_CordaFonte: TColorBox
         AlignWithMargins = True
         Left = 97
         Top = 87

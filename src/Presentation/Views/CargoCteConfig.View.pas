@@ -4,7 +4,9 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
+  Config.UseCase, Config.DB.SQLite, ConfiguracaoSistema.Db, Config.DTO,
+  ConfiRepository.Interfaces;
 
 type
   TFrm_CargoCteConfig = class(TForm)
@@ -29,21 +31,25 @@ type
     GrBx_ConfiguracoesdeDesign: TGroupBox;
     Clbx_CorFundo: TColorBox;
     Pnl_ConfigCordeFundo: TLabel;
-    Clbx_Botoes: TColorBox;
+    Clbx_CordosBotoes: TColorBox;
     Lbl_ConfigCorBotoes: TLabel;
     Btn_ConfiguracoesPadrao: TBitBtn;
     Lbl_ConfigCordaFonte: TLabel;
-    ColorBox1: TColorBox;
-    procedure Btn_BtnSalvarrConfiguracoesClick(Sender: TObject);
+    Clbx_CordaFonte: TColorBox;
     procedure Btn_BtnCancelarConfiguracoesClick(Sender: TObject);
+    procedure Btn_BtnSalvarrConfiguracoesClick(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    var
+    ADTO : TDTOConfig;
+    procedure preencherDTO;
   end;
 
 var
   Frm_CargoCteConfig: TFrm_CargoCteConfig;
+  CAMINHO_SQLITE    : string;
 
 implementation
 
@@ -56,12 +62,33 @@ begin
 end;
 
 procedure TFrm_CargoCteConfig.Btn_BtnSalvarrConfiguracoesClick(Sender: TObject);
+var
+  UseCase   : TUsecaseConfig;
+  Repository: IConfigRepository;
 begin
- If Chbx_HabilitarBtnBancoDeDados.Checked = True then
- begin
-  Btn_ExcluirBancoDeDados.Enabled    := True;
-  Btn_ExcluirTransportadoras.Enabled := True;
- end;
+  preencherDTO;
+  CAMINHO_SQLITE := TConfiguracaoSistema.ObterCaminhoBancoConfig;
+  Repository := TConfigDBSqlite.Create(CAMINHO_SQLITE);
+  UseCase    := TUsecaseConfig.Create(Repository);
+  try
+    UseCase.Salvar(ADTO);
+    ShowMessage('Configurações Salvas com Sucesso!');
+  finally
+    UseCase.Free;
+  end;
+  Frm_CargoCteConfig.Close;
+end;
+
+procedure TFrm_CargoCteConfig.preencherDTO;
+begin
+  ADTO.ExibirHelPanel     := Chbx_ExibirHelpPanel.Checked;
+  ADTO.ExibirBanners      := Chbx_ExibirBanners.Checked;
+  ADTO.ExibirValorTotal   := Chbx_ExibirValorTotalNotasEmitidas.Checked;
+  ADTO.HabilitarBtnsBanco := Chbx_HabilitarBtnBancoDeDados.Checked;
+  ADTO.ExibirLogo         := Chbx_ExibirLogoNotaCte.Checked;
+  ADTO.CordeFundo         := ColorToString(Clbx_CorFundo.Selected);
+  ADTO.CordosBotoes       := ColorToString(Clbx_CordosBotoes.Selected);
+  ADTO.CordaFonte         := ColorToString(Clbx_CordaFonte.Selected);
 end;
 
 end.
