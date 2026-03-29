@@ -173,6 +173,11 @@
         <DCCReference Include="src\Application\UseCase\ApisRest.UseCase.pas"/>
         <DCCReference Include="src\Application\Dtos\APIs.DTO.pas"/>
         <DCCReference Include="src\Application\Services\RestCep.Service.pas"/>
+        <DCCReference Include="src\Application\UseCase\Config.UseCase.pas"/>
+        <DCCReference Include="src\Application\Dtos\Config.DTO.pas"/>
+        <DCCReference Include="src\Domain\Interfaces\ConfiRepository.Interfaces.pas"/>
+        <DCCReference Include="src\Domain\Entities\Config.Entidade.pas"/>
+        <DCCReference Include="src\Infrastructure\database_service\Config.DB.SQLite.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

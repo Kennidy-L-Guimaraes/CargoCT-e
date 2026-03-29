@@ -38,7 +38,12 @@ uses
   ConfiguracaoSistema.Db in 'src\Infrastructure\databases_utils\ConfiguracaoSistema.Db.pas',
   ApisRest.UseCase in 'src\Application\UseCase\ApisRest.UseCase.pas',
   APIs.DTO in 'src\Application\Dtos\APIs.DTO.pas',
-  RestCep.Service in 'src\Application\Services\RestCep.Service.pas';
+  RestCep.Service in 'src\Application\Services\RestCep.Service.pas',
+  Config.UseCase in 'src\Application\UseCase\Config.UseCase.pas',
+  Config.DTO in 'src\Application\Dtos\Config.DTO.pas',
+  ConfiRepository.Interfaces in 'src\Domain\Interfaces\ConfiRepository.Interfaces.pas',
+  Config.Entidade in 'src\Domain\Entities\Config.Entidade.pas',
+  Config.DB.SQLite in 'src\Infrastructure\database_service\Config.DB.SQLite.pas';
 
 {$R *.res}
 
