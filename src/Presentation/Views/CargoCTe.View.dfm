@@ -3693,7 +3693,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Top = 1
           Width = 755
           Height = 462
-          ActivePage = Tbsh_IdentificacaoETomador
+          ActivePage = Tbsh_Nota
           Align = alClient
           TabOrder = 0
           object Tbsh_IdentificacaoETomador: TTabSheet

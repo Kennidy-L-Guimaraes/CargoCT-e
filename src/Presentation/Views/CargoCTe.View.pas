@@ -12,7 +12,8 @@ uses
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys,
   FireDAC.VCLUI.Wait, FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat,
-  FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite;
+  FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite, Config.UseCase, Config.Factory,
+  Config.DTO;
 
 type
   // PADRÃO DE NOMENCLATURA
@@ -337,6 +338,12 @@ type
     { Public declarations }
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
+
+    //Procedures
+    procedure AplicarConfiguracoesDesign; 
+    procedure AplicarConfiguracoesSistema; 
+    procedure AplicarConfiguracoesDB; 
+    function DarkenColor(Color: TColor; Percent: Byte): TColor; //Escurece as Bordas dos Botões
   end;
 
 var
@@ -350,6 +357,99 @@ uses CargoCteConfig.View, CargoCteNovaTransportadora.View,
   CargoCteNovaFrota.View, Sistema.Utils;
 
 { TFrm_CargoCTe }
+
+procedure TFrm_CargoCTe.AplicarConfiguracoesDB;
+begin
+
+end;
+
+procedure TFrm_CargoCTe.AplicarConfiguracoesDesign;
+var
+ Usecase: TUsecaseConfig;
+ Dto    : TDTOConfig;
+ CorBase, CorBorda, CorFonte, CorFundo: TColor; 
+begin  
+  UseCase  := TConfigFactory.NovoUseCase;
+ try 
+  Dto := UseCase.Inicializar;
+  CorBase  := StringToColor(Dto.CordosBotoes);
+  CorFonte := StringToColor(Dto.CordaFonte);
+  CorBorda := DarkenColor(CorBase, 30);
+  CorFundo := StringToColor(Dto.CordeFundo);
+  
+  //Cor dos Shapes 
+  //Shp_BtnSair.Brush.Color               := StringToColor(Dto.CordosBotoes); -> Botão de maior atenção
+  Shp_BtnNovaNota.Brush.Color           := CorBase;
+  Shp_BtnMotoristas.Brush.Color         := CorBase;
+  Shp_BtnTransportadoras.Brush.Color    := CorBase;
+  Shp_BtnNotasEmitidas.Brush.Color      := CorBase;
+  Shp_BtnConfiguracoes.Brush.Color      := CorBase;
+  Shp_BtnClientes.Brush.Color           := CorBase;
+  Shp_BtnNovaTransportadora.Brush.Color := CorBase;
+  Shp_BtnAdicionarVeiculo.Brush.Color   := CorBase;
+  Shp_BtnAdicionarMotorista.Brush.Color := CorBase;
+
+  //Cor da borda dos TShapes -> Personalização futura
+  //Shp_BtnSair.Brush.Color               := StringToColor(Dto.CordosBotoes); -> Botão de maior atenção
+  Shp_BtnMotoristas.Pen.Color         := CorBorda;
+  Shp_BtnTransportadoras.Pen.Color    := CorBorda;
+  Shp_BtnNotasEmitidas.Pen.Color      := CorBorda;
+  Shp_BtnConfiguracoes.Pen.Color      := CorBorda;
+  Shp_BtnClientes.Pen.Color           := CorBorda;
+  Shp_BtnNovaTransportadora.Pen.Color := CorBorda;
+  Shp_BtnNovaNota.Pen.Color           := CorBorda;
+  Shp_BtnAdicionarVeiculo.Pen.Color   := CorBorda;
+  Shp_BtnAdicionarMotorista.Pen.Color := CorBorda;
+
+  //Btn_Sair.Font.Color                   := StringToColor(Dto.CordaFonte); -> Botão de maior atenção
+  Btn_NotasCancelarOperacao.Font.Color  := CorFonte;
+  Btn_Motoristas.Font.Color             := CorFonte;
+  Btn_Transportadora.Font.Color         := CorFonte;
+  Btn_NotasEmitidas.Font.Color          := CorFonte;
+  Btn_Configuracoes.Font.Color          := CorFonte;
+  Btn_Clientes.Font.Color               := CorFonte;
+  Btn_NovaTransportadora.Font.Color     := CorFonte;
+  Btn_BtnNovaNota.Font.Color            := CorFonte;
+  Btn_AdicionarVeiculo.Font.Color       := CorFonte;
+  Btn_AdicionarMotorista.Font.Color     := CorFonte;
+
+  //Cores de Fundo
+  Pnl_Menu.Color        := CorFundo; 
+  Pnl_Background.Color  := CorFundo;
+  Pnl_Content.Color     := CorFundo;
+  Pnl_SubMenu.Color     := CorFundo; 
+  Pnl_Logo.Color        := CorFundo; 
+  Pnl_Ajuda.Color       := CorFundo; 
+  Mem_Ajuda.Color       := CorFundo;
+
+  Pnl_NotaInfo.Color        := CorFundo; 
+  Pnl_IdentificacaoCte.Color        := CorFundo; 
+  Pnl_TomadorDeServico.Color        := CorFundo; 
+  Pnl_ParticipantesRemetente.Color        := CorFundo; 
+  Pnl_ParticipantesTransportadora.Color        := CorFundo; 
+  Pnl_ParticipantesDestinatario.Color        := CorFundo; 
+  Pnl_TransporteOrigem.Color        := CorFundo; 
+  Pnl_TransporteDestino.Color        := CorFundo; 
+  Pnl_TransporteCarga.Color        := CorFundo; 
+  Pnl_DocumentosTaxas.Color        := CorFundo; 
+  Pnl_ImpostosImpostos.Color        := CorFundo; 
+  Pnl_ImpostosModal.Color        := CorFundo; 
+  Pnl_DocumentosIdentificacao.Color        := CorFundo; 
+  Pnl_DocumentosIdentificacaoBtnAdicionarDoc.Color        := CorFundo; 
+  Pnl_NotasEmitidas.Color        := CorFundo; 
+  Pnl_Motoristas.Color        := CorFundo; 
+  Pnl_MotoristasBusca.Color        := CorFundo; 
+  Pnl_MotoristasTopo.Color        := CorFundo; 
+  
+ finally
+  UseCase.Free; 
+ end;
+end;
+
+procedure TFrm_CargoCTe.AplicarConfiguracoesSistema;
+begin
+
+end;
 
 procedure TFrm_CargoCTe.Btn_AdicionarVeiculoClick(Sender: TObject);
 begin
@@ -398,6 +498,23 @@ begin
   FMenuService := TMenuNavigationUtils.Create;
 end;
 
+function TFrm_CargoCTe.DarkenColor(Color: TColor; Percent: Byte): TColor;
+var
+  R, G, B: Byte;
+begin
+  Color := ColorToRGB(Color);
+
+  R := GetRValue(Color);
+  G := GetGValue(Color);
+  B := GetBValue(Color);
+
+  R := Round(R * (100 - Percent) / 100);
+  G := Round(G * (100 - Percent) / 100);
+  B := Round(B * (100 - Percent) / 100);
+
+  Result := RGB(R, G, B);
+end;
+
 destructor TFrm_CargoCTe.Destroy;
 begin
   FMenuService.Free;
@@ -406,10 +523,16 @@ end;
 
 procedure TFrm_CargoCTe.FormCreate(Sender: TObject);
 begin
-FMenuService.RegisterPanel(Pnl_NotaInfo);
-FMenuService.RegisterPanel(Pnl_NotasEmitidas);
-FMenuService.RegisterPanel(Pnl_Transportadoras);
-FMenuService.RegisterPanel(Pnl_Motoristas);
+//Registra os Panels para o Menu
+  FMenuService.RegisterPanel(Pnl_NotaInfo);
+  FMenuService.RegisterPanel(Pnl_NotasEmitidas);
+  FMenuService.RegisterPanel(Pnl_Transportadoras);
+  FMenuService.RegisterPanel(Pnl_Motoristas);
+
+//Inicializa as configurações do sistema (DESIGN)
+  AplicarConfiguracoesDesign; 
+  AplicarConfiguracoesSistema;
+  AplicarConfiguracoesDB; 
 end;
 
 procedure TFrm_CargoCTe.Srbx_PesquisarTransportadoraClick(Sender: TObject);
