@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
-  Config.UseCase, Config.DB.SQLite, ConfiguracaoSistema.Db, Config.DTO,
-  ConfiRepository.Interfaces;
+  Config.UseCase, Config.DTO, Config.Factory, CargoCTe.View;
 
 type
   TFrm_CargoCteConfig = class(TForm)
@@ -49,7 +48,6 @@ type
 
 var
   Frm_CargoCteConfig: TFrm_CargoCteConfig;
-  CAMINHO_SQLITE    : string;
 
 implementation
 
@@ -64,19 +62,17 @@ end;
 procedure TFrm_CargoCteConfig.Btn_BtnSalvarrConfiguracoesClick(Sender: TObject);
 var
   UseCase   : TUsecaseConfig;
-  Repository: IConfigRepository;
 begin
   preencherDTO;
-  CAMINHO_SQLITE := TConfiguracaoSistema.ObterCaminhoBancoConfig;
-  Repository := TConfigDBSqlite.Create(CAMINHO_SQLITE);
-  UseCase    := TUsecaseConfig.Create(Repository);
+  UseCase    := TConfigFactory.NovoUseCase;
   try
     UseCase.Salvar(ADTO);
-    ShowMessage('Configurações Salvas com Sucesso!');
+    ShowMessage('Configurações Salvas com Sucesso! O sistema Reiniciara para aplicar as novas configurações...');
   finally
     UseCase.Free;
   end;
   Frm_CargoCteConfig.Close;
+  Frm_CargoCTe.Close;
 end;
 
 procedure TFrm_CargoCteConfig.preencherDTO;

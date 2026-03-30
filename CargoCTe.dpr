@@ -43,7 +43,8 @@ uses
   Config.DTO in 'src\Application\Dtos\Config.DTO.pas',
   ConfiRepository.Interfaces in 'src\Domain\Interfaces\ConfiRepository.Interfaces.pas',
   Config.Entidade in 'src\Domain\Entities\Config.Entidade.pas',
-  Config.DB.SQLite in 'src\Infrastructure\database_service\Config.DB.SQLite.pas';
+  Config.DB.SQLite in 'src\Infrastructure\database_service\Config.DB.SQLite.pas',
+  Config.Factory in 'src\Application\Factories\Config.Factory.pas';
 
 {$R *.res}
 
