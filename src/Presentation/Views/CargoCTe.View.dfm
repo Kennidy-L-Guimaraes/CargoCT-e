@@ -33,7 +33,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Width = 150
       Height = 649
       Align = alLeft
-      BevelOuter = bvSpace
+      BevelOuter = bvLowered
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
@@ -44,6 +44,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Width = 148
         Height = 57
         Align = alTop
+        BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
         TabOrder = 0
@@ -3678,3130 +3679,2848 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Width = 759
       Height = 466
       Anchors = [akLeft, akTop, akRight]
+      BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
       object Pnl_NotaInfo: TPanel
-        Left = 1
-        Top = 1
-        Width = 757
-        Height = 464
+        Left = 0
+        Top = 0
+        Width = 759
+        Height = 466
         Align = alClient
+        BevelOuter = bvNone
+        ParentColor = True
         TabOrder = 0
+        ExplicitLeft = 1
+        ExplicitTop = 1
+        ExplicitWidth = 757
+        ExplicitHeight = 464
         object Pgc_NotaInfo: TPageControl
-          Left = 1
-          Top = 1
-          Width = 755
-          Height = 462
-          ActivePage = Tbsh_Nota
+          Left = 0
+          Top = 0
+          Width = 759
+          Height = 466
+          Margins.Left = 0
+          Margins.Top = 0
+          Margins.Right = 0
+          Margins.Bottom = 0
+          ActivePage = Tbsh_IdentificacaoETomador
           Align = alClient
           TabOrder = 0
+          ExplicitLeft = 1
+          ExplicitTop = 1
+          ExplicitWidth = 755
+          ExplicitHeight = 462
           object Tbsh_IdentificacaoETomador: TTabSheet
             Caption = 'Identifica'#231#227'o e Tomador'
-            object Lbl_Identificacao: TLabel
-              Left = 19
-              Top = 11
-              Width = 120
-              Height = 21
-              Caption = 'Identifica'#231#227'o Ct-e'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Lbl_TomadorDeServico: TLabel
-              Left = 371
-              Top = 11
-              Width = 137
-              Height = 21
-              Caption = 'Tomador de Servi'#231'o'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Label14: TLabel
-              AlignWithMargins = True
-              Left = 19
-              Top = 343
-              Width = 225
-              Height = 20
-              Margins.Left = 5
-              Margins.Top = 5
-              Margins.Right = 5
-              Margins.Bottom = 5
-              Caption = 'Aplicar tomador de servi'#231'o salvo: '
+            object Pnl_IdentificadorTomador: TPanel
+              Left = 0
+              Top = 0
+              Width = 751
+              Height = 436
+              Align = alClient
+              DockSite = True
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -15
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
-            end
-            object Pnl_IdentificacaoCte: TPanel
-              Left = 19
-              Top = 38
-              Width = 334
-              Height = 291
               TabOrder = 0
-              object Lbl_IdentificacaoSerie: TLabel
-                AlignWithMargins = True
-                Left = 20
-                Top = 15
-                Width = 40
+              ExplicitLeft = -40
+              ExplicitTop = 17
+              object Lbl_Identificacao: TLabel
+                Left = 18
+                Top = 20
+                Width = 118
                 Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'S'#233'rie: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+                Caption = 'Identifica'#231#227'o Ct-e'
               end
-              object Lbl_IdentificacaoNumero: TLabel
-                AlignWithMargins = True
-                Left = 20
-                Top = 83
-                Width = 61
+              object Lbl_TomadorDeServico: TLabel
+                Left = 370
+                Top = 20
+                Width = 133
                 Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'N'#250'mero: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+                Caption = 'Tomador de Servi'#231'o'
               end
-              object Lbl_IdentificacaoTipodeCte: TLabel
-                AlignWithMargins = True
-                Left = 20
-                Top = 148
-                Width = 93
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Tipo de CT-e: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_IdentificacaoFinalidade: TLabel
-                AlignWithMargins = True
-                Left = 20
-                Top = 213
-                Width = 76
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Finalidade: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_IdentificacaoModal: TLabel
-                AlignWithMargins = True
-                Left = 164
-                Top = 15
-                Width = 50
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Modal: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_FormaDeEnvio: TLabel
-                AlignWithMargins = True
-                Left = 164
-                Top = 83
-                Width = 98
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Forma de E.M: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_IdentificacaoCFOP: TLabel
-                AlignWithMargins = True
-                Left = 164
-                Top = 148
-                Width = 42
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CFOP: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_IdentificacaoCEP: TLabel
-                AlignWithMargins = True
-                Left = 164
-                Top = 213
-                Width = 32
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CEP: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ReqIdentificacaoSerie: TLabel
-                Left = 68
-                Top = 15
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqIdentificacaoNumero: TLabel
-                Left = 89
-                Top = 83
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqIdentificacaoTipoCte: TLabel
-                Left = 121
-                Top = 148
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqIdentificacaoFinalidade: TLabel
-                Left = 104
-                Top = 213
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqIdentificacaoModal: TLabel
-                Left = 222
-                Top = 15
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqIdentificacaoFormaEmissao: TLabel
-                Left = 270
-                Top = 80
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqIdentificacaoCFOP: TLabel
-                Left = 214
-                Top = 148
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqIdentificacaoCEP: TLabel
-                Left = 204
-                Top = 213
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Edt_IdentificacaoSerie: TEdit
-                AlignWithMargins = True
-                Left = 20
-                Top = 45
-                Width = 104
-                Height = 28
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
+              object Pnl_TomadorDeServico: TPanel
+                Left = 370
+                Top = 47
+                Width = 334
+                Height = 291
                 TabOrder = 0
+                object Lbl_TomadorTipoTomador: TLabel
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 15
+                  Width = 101
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Tipo Tomador: '
+                end
+                object Lbl_TomadorCpfCnpj: TLabel
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 83
+                  Width = 31
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CPF: '
+                end
+                object Lbl_TomadorIE: TLabel
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 151
+                  Width = 125
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Inscri'#231#227'o Estadual: '
+                end
+                object Lbl_TomadorNomeRS: TLabel
+                  AlignWithMargins = True
+                  Left = 171
+                  Top = 15
+                  Width = 48
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Nome: '
+                end
+                object Lbl_TomadorCep: TLabel
+                  AlignWithMargins = True
+                  Left = 171
+                  Top = 83
+                  Width = 32
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CEP: '
+                end
+                object Lbl_ReqTomadorInscricaoEstadual: TLabel
+                  Left = 152
+                  Top = 151
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqTomadorCEP: TLabel
+                  Left = 211
+                  Top = 83
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqTomadorNome: TLabel
+                  Left = 227
+                  Top = 15
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqTomadorTipoTomador: TLabel
+                  Left = 128
+                  Top = 15
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqTomadorCPF: TLabel
+                  Left = 58
+                  Top = 83
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Edt_TomadorNome: TEdit
+                  AlignWithMargins = True
+                  Left = 171
+                  Top = 45
+                  Width = 134
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 0
+                end
+                object Cmbx_TipoTomador: TComboBox
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 45
+                  Width = 129
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 1
+                  Text = 'Remetente'
+                  Items.Strings = (
+                    'Remetente'
+                    'Destinat'#225'rio'
+                    'Expedidor'
+                    'Recebedor'
+                    'Outros')
+                end
+                object MsEdt_TomadorCEP: TMaskEdit
+                  AlignWithMargins = True
+                  Left = 172
+                  Top = 113
+                  Width = 133
+                  Height = 28
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  EditMask = '99999-999;1;_'
+                  MaxLength = 9
+                  ParentColor = True
+                  TabOrder = 2
+                  Text = '00000-000'
+                end
+                object MsEdt_TomadorIE: TMaskEdit
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 181
+                  Width = 134
+                  Height = 28
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  EditMask = '999.999.999.999;1;_'
+                  MaxLength = 15
+                  ParentColor = True
+                  TabOrder = 3
+                  Text = '000.000.000.000'
+                end
+                object MsEdt_TomadorCpfCnpj: TMaskEdit
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 113
+                  Width = 125
+                  Height = 28
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  EditMask = '999.999.999.-99;1;_'
+                  MaxLength = 15
+                  ParentColor = True
+                  TabOrder = 4
+                  Text = '000.000.000.-00'
+                end
               end
-              object Edt_IdentificacaoNumero: TEdit
-                AlignWithMargins = True
-                Left = 20
-                Top = 113
-                Width = 104
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 2
-              end
-              object Edt_IdentificacaoFinalidade: TEdit
-                AlignWithMargins = True
-                Left = 20
-                Top = 244
-                Width = 104
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 6
-              end
-              object Cmbx_IdentificacaoTipodeCTe: TComboBox
-                AlignWithMargins = True
-                Left = 20
-                Top = 178
-                Width = 104
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 4
-                Text = 'Normal'
-                Items.Strings = (
-                  'Normal'
-                  'Complementar'
-                  'Substitui'#231#227'o')
-              end
-              object Cmbx_Modal: TComboBox
-                AlignWithMargins = True
-                Left = 164
-                Top = 45
-                Width = 104
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+              object Pnl_IdentificacaoCte: TPanel
+                Left = 18
+                Top = 47
+                Width = 334
+                Height = 291
+                ParentColor = True
                 TabOrder = 1
-                Text = 'Normal'
-                Items.Strings = (
-                  'Rodovi'#225'rio'
-                  'A'#233'reo'
-                  'Aquavi'#225'rio'
-                  'Ferrovi'#225'rio')
-              end
-              object Cmbx_FormaDeEmissao: TComboBox
-                AlignWithMargins = True
-                Left = 164
-                Top = 113
-                Width = 151
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 3
-                Text = 'Normal'
-                Items.Strings = (
-                  'Normal'
-                  'Conting'#234'ncia')
-              end
-              object Cmbx_CFOP: TComboBox
-                AlignWithMargins = True
-                Left = 164
-                Top = 178
-                Width = 151
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ItemIndex = 1
-                ParentFont = False
-                TabOrder = 5
-                Text = '1.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DO ESTADO'
-                Items.Strings = (
-                  '1.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DO ESTADO'
-                  
+                object Lbl_IdentificacaoSerie: TLabel
+                  AlignWithMargins = True
+                  Left = 20
+                  Top = 15
+                  Width = 40
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'S'#233'rie: '
+                end
+                object Lbl_IdentificacaoNumero: TLabel
+                  AlignWithMargins = True
+                  Left = 20
+                  Top = 83
+                  Width = 61
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'N'#250'mero: '
+                end
+                object Lbl_IdentificacaoTipodeCte: TLabel
+                  AlignWithMargins = True
+                  Left = 20
+                  Top = 148
+                  Width = 93
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Tipo de CT-e: '
+                end
+                object Lbl_IdentificacaoFinalidade: TLabel
+                  AlignWithMargins = True
+                  Left = 20
+                  Top = 213
+                  Width = 76
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Finalidade: '
+                end
+                object Lbl_IdentificacaoModal: TLabel
+                  AlignWithMargins = True
+                  Left = 164
+                  Top = 15
+                  Width = 50
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Modal: '
+                end
+                object Lbl_FormaDeEnvio: TLabel
+                  AlignWithMargins = True
+                  Left = 164
+                  Top = 83
+                  Width = 98
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Forma de E.M: '
+                end
+                object Lbl_IdentificacaoCFOP: TLabel
+                  AlignWithMargins = True
+                  Left = 164
+                  Top = 148
+                  Width = 42
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CFOP: '
+                end
+                object Lbl_IdentificacaoCEP: TLabel
+                  AlignWithMargins = True
+                  Left = 164
+                  Top = 213
+                  Width = 32
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CEP: '
+                end
+                object Lbl_ReqIdentificacaoSerie: TLabel
+                  Left = 68
+                  Top = 15
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqIdentificacaoNumero: TLabel
+                  Left = 89
+                  Top = 83
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqIdentificacaoTipoCte: TLabel
+                  Left = 121
+                  Top = 148
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqIdentificacaoFinalidade: TLabel
+                  Left = 104
+                  Top = 213
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqIdentificacaoModal: TLabel
+                  Left = 222
+                  Top = 15
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqIdentificacaoFormaEmissao: TLabel
+                  Left = 270
+                  Top = 80
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqIdentificacaoCFOP: TLabel
+                  Left = 214
+                  Top = 148
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqIdentificacaoCEP: TLabel
+                  Left = 204
+                  Top = 213
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Edt_IdentificacaoSerie: TEdit
+                  AlignWithMargins = True
+                  Left = 20
+                  Top = 45
+                  Width = 104
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  NumbersOnly = True
+                  ParentColor = True
+                  TabOrder = 0
+                end
+                object Edt_IdentificacaoNumero: TEdit
+                  AlignWithMargins = True
+                  Left = 20
+                  Top = 113
+                  Width = 104
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  NumbersOnly = True
+                  ParentColor = True
+                  TabOrder = 2
+                end
+                object Edt_IdentificacaoFinalidade: TEdit
+                  AlignWithMargins = True
+                  Left = 20
+                  Top = 244
+                  Width = 104
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 6
+                end
+                object Cmbx_IdentificacaoTipodeCTe: TComboBox
+                  AlignWithMargins = True
+                  Left = 20
+                  Top = 178
+                  Width = 104
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 4
+                  Text = 'Normal'
+                  Items.Strings = (
+                    'Normal'
+                    'Complementar'
+                    'Substitui'#231#227'o')
+                end
+                object Cmbx_Modal: TComboBox
+                  AlignWithMargins = True
+                  Left = 164
+                  Top = 45
+                  Width = 104
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 1
+                  Text = 'Normal'
+                  Items.Strings = (
+                    'Rodovi'#225'rio'
+                    'A'#233'reo'
+                    'Aquavi'#225'rio'
+                    'Ferrovi'#225'rio')
+                end
+                object Cmbx_FormaDeEmissao: TComboBox
+                  AlignWithMargins = True
+                  Left = 164
+                  Top = 113
+                  Width = 151
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 3
+                  Text = 'Normal'
+                  Items.Strings = (
+                    'Normal'
+                    'Conting'#234'ncia')
+                end
+                object Cmbx_CFOP: TComboBox
+                  AlignWithMargins = True
+                  Left = 164
+                  Top = 178
+                  Width = 151
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ItemIndex = 1
+                  ParentColor = True
+                  TabOrder = 5
+                  Text = 
                     '1.100 - COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU PRESTA' +
                     #199#195'O DE SERVI'#199'OS'
-                  '1.101 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural'
-                  '1.102 - Compra para comercializa'#231#227'o'
-                  
-                    '1.111 - Compra para industrializa'#231#227'o de mercadoria recebida ante' +
-                    'riormente em consigna'#231#227'o industrial'
-                  
-                    '1.113 - Compra para comercializa'#231#227'o, de mercadoria recebida ante' +
-                    'riormente em consigna'#231#227'o mercantil'
-                  
-                    '1.116 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural originada' +
-                    ' de encomenda para recebimento futuro'
-                  
-                    '1.117 - Compra para comercializa'#231#227'o originada de encomenda para ' +
-                    'recebimento futuro'
-                  
-                    '1.118 - Compra de mercadoria para comercializa'#231#227'o pelo adquirent' +
-                    'e origin'#225'rio, entregue pelo vendedor remetente'
-                  'ao destinat'#225'rio, em venda '#224' ordem'
-                  
-                    '1.120 - Compra para industrializa'#231#227'o, em venda '#224' ordem, j'#225' receb' +
-                    'ida do vendedor remetente'
-                  
-                    '1.121 - Compra para comercializa'#231#227'o, em venda '#224' ordem, j'#225' recebi' +
-                    'da do vendedor remetente'
-                  
-                    '1.122 - Compra para industrializa'#231#227'o em que a mercadoria foi rem' +
-                    'etida pelo fornecedor ao industrializador sem'
-                  'transitar pelo estabelecimento adquirente'
-                  '1.124 - Industrializa'#231#227'o efetuada por outra empresa'
-                  
-                    '1.125 - Industrializa'#231#227'o efetuada por outra empresa quando a mer' +
-                    'cadoria remetida para utiliza'#231#227'o no processo de'
-                  
-                    'industrializa'#231#227'o n'#227'o transitou pelo estabelecimento adquirente d' +
-                    'a mercadoria'
-                  
-                    '1.126 - compras para utiliza'#231#227'o na presta'#231#227'o de servi'#231'os sujeita' +
-                    's ao ICMS'
-                  
-                    '1.128 - compras para utiliza'#231#227'o na presta'#231#227'o de servi'#231'os sujeita' +
-                    's ao ISSQN'
-                  
-                    '1.150 - TRANSFER'#202'NCIAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU' +
-                    ' PRESTA'#199#195'O DE SERVI'#199'OS'
-                  '1.151 - Transfer'#234'ncia para industrializa'#231#227'o ou produ'#231#227'o rural'
-                  '1.152 - Transfer'#234'ncia para comercializa'#231#227'o'
-                  '1.153 - Transfer'#234'ncia de energia el'#233'trica para distribui'#231#227'o'
-                  '1.154 - Transfer'#234'ncia para utiliza'#231#227'o na presta'#231#227'o de servi'#231'o'
-                  
-                    '1.200 - DEVOLU'#199#213'ES DE VENDAS DE PRODU'#199#195'O PR'#211'PRIA, DE TERCEIROS O' +
-                    'U ANULA'#199#213'ES DE VALORES'
-                  '1.201 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento'
-                  
-                    '1.202 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
-                    'e terceiros'
-                  
-                    '1.203 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento, desti' +
-                    'nada '#224' Zona Franca de Manaus ou '#193'reas de'
-                  'Livre Com'#233'rcio'
-                  
-                    '1.204 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
-                    'e terceiros, destinada '#224' Zona Franca de Manaus'
-                  'ou '#193'reas de Livre Com'#233'rcio'
-                  
-                    '1.205 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de com' +
-                    'unica'#231#227'o'
-                  
-                    '1.206 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de tra' +
-                    'nsporte'
-                  '1.207 - Anula'#231#227'o de valor relativo '#224' venda de energia el'#233'trica'
-                  
-                    '1.208 - Devolu'#231#227'o de produ'#231#227'o do estabelecimento, remetida em tr' +
-                    'ansfer'#234'ncia'
-                  
-                    '1.209 - Devolu'#231#227'o de mercadoria adquirida ou recebida de terceir' +
-                    'os, remetida em transfer'#234'ncia'
-                  '1.250 - COMPRAS DE ENERGIA EL'#201'TRICA'
-                  
-                    '1.251 - Compra de energia el'#233'trica para distribui'#231#227'o ou comercia' +
-                    'liza'#231#227'o'
-                  
-                    '1.252 - Compra de energia el'#233'trica por estabelecimento industria' +
-                    'l'
-                  '1.253 - Compra de energia el'#233'trica por estabelecimento comercial'
-                  
-                    '1.254 - Compra de energia el'#233'trica por estabelecimento prestador' +
-                    ' de servi'#231'o de transporte'
-                  
-                    '1.255 - Compra de energia el'#233'trica por estabelecimento prestador' +
-                    ' de servi'#231'o de comunica'#231#227'o'
-                  
-                    '1.256 - Compra de energia el'#233'trica por estabelecimento de produt' +
-                    'or rural'
-                  
-                    '1.257 - Compra de energia el'#233'trica para consumo por demanda cont' +
-                    'ratada'
-                  '1.300 - AQUISI'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
-                  
-                    '1.301 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
-                    'vi'#231'o da mesma natureza'
-                  
-                    '1.302 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'industrial'
-                  
-                    '1.303 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'comercial'
-                  
-                    '1.304 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'de prestador de servi'#231'o de transporte'
-                  
-                    '1.305 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'de geradora ou de distribuidora de energia'
-                  'el'#233'trica'
-                  
-                    '1.306 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'de produtor rural'
-                  '1.350 - AQUISI'#199#213'ES DE SERVI'#199'OS DE TRANSPORTE'
-                  
-                    '1.351 - Aquisi'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
-                    'i'#231'o da mesma natureza'
-                  
-                    '1.352 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento i' +
-                    'ndustrial'
-                  
-                    '1.353 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento c' +
-                    'omercial'
-                  
-                    '1.354 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e prestador de servi'#231'o de comunica'#231#227'o'
-                  
-                    '1.355 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e geradora ou de distribuidora de energia el'#233'trica'
-                  
-                    '1.356 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e produtor rural'
-                  
-                    '1.360 - Aquisi'#231#227'o de servi'#231'o de transporte por contribuinte subs' +
-                    'tituto em rela'#231#227'o ao servi'#231'o de transporte'
-                  
-                    '1.400 - ENTRADAS DE MERCADORIAS SUJEITAS AO REGIME DE SUBSTITUI'#199 +
-                    #195'O TRIBUT'#193'RIA'
-                  
-                    '1.401 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural em opera'#231 +
-                    #227'o com mercadoria sujeita ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria'
-                  
-                    '1.403 - Compra para comercializa'#231#227'o em opera'#231#227'o com mercadoria s' +
-                    'ujeita ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '1.406 - Compra de bem para o ativo imobilizado cuja mercadoria e' +
-                    'st'#225' sujeita ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '1.407 - Compra de mercadoria para uso ou consumo cuja mercadoria' +
-                    ' est'#225' sujeita ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria'
-                  
-                    '1.408 - Transfer'#234'ncia para industrializa'#231#227'o ou produ'#231#227'o rural em' +
-                    ' opera'#231#227'o com mercadoria sujeita ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria'
-                  
-                    '1.409 - Transfer'#234'ncia para comercializa'#231#227'o em opera'#231#227'o com merca' +
-                    'doria sujeita ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria'
-                  
-                    '1.410 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento em ope' +
-                    'ra'#231#227'o com produto sujeito ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria'
-                  
-                    '1.411 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
-                    'e terceiros em opera'#231#227'o com mercadoria sujeita'
-                  'ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '1.414 - Retorno de produ'#231#227'o do estabelecimento, remetida para ve' +
-                    'nda fora do estabelecimento em opera'#231#227'o com'
-                  'produto sujeito ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '1.415 - Retorno de mercadoria adquirida ou recebida de terceiros' +
-                    ', remetida para venda fora do estabelecimento em'
-                  
-                    'opera'#231#227'o com mercadoria sujeita ao regime de substitui'#231#227'o tribut' +
-                    #225'ria'
-                  '1.450 - SISTEMAS DE INTEGRA'#199#195'O'
-                  '1.451 - Retorno de animal do estabelecimento produtor'
-                  '1.452 - Retorno de insumo n'#227'o utilizado na produ'#231#227'o'
-                  
-                    '1.500 - ENTRADAS DE MERCADORIAS REMETIDAS COM FIM ESPEC'#205'FICO DE ' +
-                    'EXPORTA'#199#195'O E EVENTUAIS'
-                  'DEVOLU'#199#213'ES'
-                  
-                    '1.501 - Entrada de mercadoria recebida com fim espec'#237'fico de exp' +
-                    'orta'#231#227'o'
-                  
-                    '1.503 - Entrada decorrente de devolu'#231#227'o de produto remetido com ' +
-                    'fim espec'#237'fico de exporta'#231#227'o, de produ'#231#227'o do'
-                  'estabelecimento'
-                  
-                    '1.504 - Entrada decorrente de devolu'#231#227'o de mercadoria remetida c' +
-                    'om fim espec'#237'fico de exporta'#231#227'o, adquirida ou'
-                  'recebida de terceiros'
-                  
-                    '1.505 - Entrada decorrente de devolu'#231#227'o simb'#243'lica de mercadorias' +
-                    ' remetidas para forma'#231#227'o de lote de'
-                  
-                    'exporta'#231#227'o, de produtos industrializados ou produzidos pelo pr'#243'p' +
-                    'rio estabelecimento'
-                  
-                    '1.506 - Entrada decorrente de devolu'#231#227'o simb'#243'lica de mercadorias' +
-                    ', adquiridas ou recebidas de terceiros,'
-                  'remetidas para forma'#231#227'o de lote de exporta'#231#227'o'
-                  
-                    '1.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
-                    ' USO OU CONSUMO'
-                  '1.551 - Compra de bem para o ativo imobilizado'
-                  '1.552 - Transfer'#234'ncia de bem do ativo imobilizado'
-                  '1.553 - Devolu'#231#227'o de venda de bem do ativo imobilizado'
-                  
-                    '1.554 - Retorno de bem do ativo imobilizado remetido para uso fo' +
-                    'ra do estabelecimento'
-                  
-                    '1.555 - Entrada de bem do ativo imobilizado de terceiro, remetid' +
-                    'o para uso no estabelecimento'
-                  '1.556 - Compra de material para uso ou consumo'
-                  '1.557 - Transfer'#234'ncia de material para uso ou consumo'
-                  '1.600 - CR'#201'DITOS E RESSARCIMENTOS DE ICMS'
-                  '1.601 - Recebimento, por transfer'#234'ncia, de cr'#233'dito de ICMS'
-                  
-                    '1.602 - Recebimento, por transfer'#234'ncia, de saldo credor de ICMS ' +
-                    'de outro estabelecimento da mesma empresa,'
-                  'para compensa'#231#227'o de saldo devedor de ICMS'
-                  '1.603 - Ressarcimento de ICMS retido por substitui'#231#227'o tribut'#225'ria'
-                  
-                    '1.604 - Lan'#231'amento do cr'#233'dito relativo '#224' compra de bem para o at' +
-                    'ivo imobilizado'
-                  
-                    '1.605 - Recebimento, por transfer'#234'ncia, de saldo devedor de ICMS' +
-                    ' de outro estabelecimento da mesma empresa'
-                  
-                    '1.652 - Compra de combust'#237'vel ou lubrificante para comercializa'#231 +
-                    #227'o'
-                  
-                    '1.653 - Compra de combust'#237'vel ou lubrificante por consumidor ou ' +
+                  Items.Strings = (
+                    '1.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DO ESTADO'
+                    
+                      '1.100 - COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU PRESTA' +
+                      #199#195'O DE SERVI'#199'OS'
+                    '1.101 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural'
+                    '1.102 - Compra para comercializa'#231#227'o'
+                    
+                      '1.111 - Compra para industrializa'#231#227'o de mercadoria recebida ante' +
+                      'riormente em consigna'#231#227'o industrial'
+                    
+                      '1.113 - Compra para comercializa'#231#227'o, de mercadoria recebida ante' +
+                      'riormente em consigna'#231#227'o mercantil'
+                    
+                      '1.116 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural originada' +
+                      ' de encomenda para recebimento futuro'
+                    
+                      '1.117 - Compra para comercializa'#231#227'o originada de encomenda para ' +
+                      'recebimento futuro'
+                    
+                      '1.118 - Compra de mercadoria para comercializa'#231#227'o pelo adquirent' +
+                      'e origin'#225'rio, entregue pelo vendedor remetente'
+                    'ao destinat'#225'rio, em venda '#224' ordem'
+                    
+                      '1.120 - Compra para industrializa'#231#227'o, em venda '#224' ordem, j'#225' receb' +
+                      'ida do vendedor remetente'
+                    
+                      '1.121 - Compra para comercializa'#231#227'o, em venda '#224' ordem, j'#225' recebi' +
+                      'da do vendedor remetente'
+                    
+                      '1.122 - Compra para industrializa'#231#227'o em que a mercadoria foi rem' +
+                      'etida pelo fornecedor ao industrializador sem'
+                    'transitar pelo estabelecimento adquirente'
+                    '1.124 - Industrializa'#231#227'o efetuada por outra empresa'
+                    
+                      '1.125 - Industrializa'#231#227'o efetuada por outra empresa quando a mer' +
+                      'cadoria remetida para utiliza'#231#227'o no processo de'
+                    
+                      'industrializa'#231#227'o n'#227'o transitou pelo estabelecimento adquirente d' +
+                      'a mercadoria'
+                    
+                      '1.126 - compras para utiliza'#231#227'o na presta'#231#227'o de servi'#231'os sujeita' +
+                      's ao ICMS'
+                    
+                      '1.128 - compras para utiliza'#231#227'o na presta'#231#227'o de servi'#231'os sujeita' +
+                      's ao ISSQN'
+                    
+                      '1.150 - TRANSFER'#202'NCIAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU' +
+                      ' PRESTA'#199#195'O DE SERVI'#199'OS'
+                    '1.151 - Transfer'#234'ncia para industrializa'#231#227'o ou produ'#231#227'o rural'
+                    '1.152 - Transfer'#234'ncia para comercializa'#231#227'o'
+                    '1.153 - Transfer'#234'ncia de energia el'#233'trica para distribui'#231#227'o'
+                    '1.154 - Transfer'#234'ncia para utiliza'#231#227'o na presta'#231#227'o de servi'#231'o'
+                    
+                      '1.200 - DEVOLU'#199#213'ES DE VENDAS DE PRODU'#199#195'O PR'#211'PRIA, DE TERCEIROS O' +
+                      'U ANULA'#199#213'ES DE VALORES'
+                    '1.201 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento'
+                    
+                      '1.202 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
+                      'e terceiros'
+                    
+                      '1.203 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento, desti' +
+                      'nada '#224' Zona Franca de Manaus ou '#193'reas de'
+                    'Livre Com'#233'rcio'
+                    
+                      '1.204 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
+                      'e terceiros, destinada '#224' Zona Franca de Manaus'
+                    'ou '#193'reas de Livre Com'#233'rcio'
+                    
+                      '1.205 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de com' +
+                      'unica'#231#227'o'
+                    
+                      '1.206 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de tra' +
+                      'nsporte'
+                    '1.207 - Anula'#231#227'o de valor relativo '#224' venda de energia el'#233'trica'
+                    
+                      '1.208 - Devolu'#231#227'o de produ'#231#227'o do estabelecimento, remetida em tr' +
+                      'ansfer'#234'ncia'
+                    
+                      '1.209 - Devolu'#231#227'o de mercadoria adquirida ou recebida de terceir' +
+                      'os, remetida em transfer'#234'ncia'
+                    '1.250 - COMPRAS DE ENERGIA EL'#201'TRICA'
+                    
+                      '1.251 - Compra de energia el'#233'trica para distribui'#231#227'o ou comercia' +
+                      'liza'#231#227'o'
+                    
+                      '1.252 - Compra de energia el'#233'trica por estabelecimento industria' +
+                      'l'
+                    '1.253 - Compra de energia el'#233'trica por estabelecimento comercial'
+                    
+                      '1.254 - Compra de energia el'#233'trica por estabelecimento prestador' +
+                      ' de servi'#231'o de transporte'
+                    
+                      '1.255 - Compra de energia el'#233'trica por estabelecimento prestador' +
+                      ' de servi'#231'o de comunica'#231#227'o'
+                    
+                      '1.256 - Compra de energia el'#233'trica por estabelecimento de produt' +
+                      'or rural'
+                    
+                      '1.257 - Compra de energia el'#233'trica para consumo por demanda cont' +
+                      'ratada'
+                    '1.300 - AQUISI'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
+                    
+                      '1.301 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
+                      'vi'#231'o da mesma natureza'
+                    
+                      '1.302 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'industrial'
+                    
+                      '1.303 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'comercial'
+                    
+                      '1.304 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'de prestador de servi'#231'o de transporte'
+                    
+                      '1.305 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'de geradora ou de distribuidora de energia'
+                    'el'#233'trica'
+                    
+                      '1.306 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'de produtor rural'
+                    '1.350 - AQUISI'#199#213'ES DE SERVI'#199'OS DE TRANSPORTE'
+                    
+                      '1.351 - Aquisi'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
+                      'i'#231'o da mesma natureza'
+                    
+                      '1.352 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento i' +
+                      'ndustrial'
+                    
+                      '1.353 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento c' +
+                      'omercial'
+                    
+                      '1.354 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e prestador de servi'#231'o de comunica'#231#227'o'
+                    
+                      '1.355 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e geradora ou de distribuidora de energia el'#233'trica'
+                    
+                      '1.356 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e produtor rural'
+                    
+                      '1.360 - Aquisi'#231#227'o de servi'#231'o de transporte por contribuinte subs' +
+                      'tituto em rela'#231#227'o ao servi'#231'o de transporte'
+                    
+                      '1.400 - ENTRADAS DE MERCADORIAS SUJEITAS AO REGIME DE SUBSTITUI'#199 +
+                      #195'O TRIBUT'#193'RIA'
+                    
+                      '1.401 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural em opera'#231 +
+                      #227'o com mercadoria sujeita ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria'
+                    
+                      '1.403 - Compra para comercializa'#231#227'o em opera'#231#227'o com mercadoria s' +
+                      'ujeita ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '1.406 - Compra de bem para o ativo imobilizado cuja mercadoria e' +
+                      'st'#225' sujeita ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '1.407 - Compra de mercadoria para uso ou consumo cuja mercadoria' +
+                      ' est'#225' sujeita ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria'
+                    
+                      '1.408 - Transfer'#234'ncia para industrializa'#231#227'o ou produ'#231#227'o rural em' +
+                      ' opera'#231#227'o com mercadoria sujeita ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria'
+                    
+                      '1.409 - Transfer'#234'ncia para comercializa'#231#227'o em opera'#231#227'o com merca' +
+                      'doria sujeita ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria'
+                    
+                      '1.410 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento em ope' +
+                      'ra'#231#227'o com produto sujeito ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria'
+                    
+                      '1.411 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
+                      'e terceiros em opera'#231#227'o com mercadoria sujeita'
+                    'ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '1.414 - Retorno de produ'#231#227'o do estabelecimento, remetida para ve' +
+                      'nda fora do estabelecimento em opera'#231#227'o com'
+                    'produto sujeito ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '1.415 - Retorno de mercadoria adquirida ou recebida de terceiros' +
+                      ', remetida para venda fora do estabelecimento em'
+                    
+                      'opera'#231#227'o com mercadoria sujeita ao regime de substitui'#231#227'o tribut' +
+                      #225'ria'
+                    '1.450 - SISTEMAS DE INTEGRA'#199#195'O'
+                    '1.451 - Retorno de animal do estabelecimento produtor'
+                    '1.452 - Retorno de insumo n'#227'o utilizado na produ'#231#227'o'
+                    
+                      '1.500 - ENTRADAS DE MERCADORIAS REMETIDAS COM FIM ESPEC'#205'FICO DE ' +
+                      'EXPORTA'#199#195'O E EVENTUAIS'
+                    'DEVOLU'#199#213'ES'
+                    
+                      '1.501 - Entrada de mercadoria recebida com fim espec'#237'fico de exp' +
+                      'orta'#231#227'o'
+                    
+                      '1.503 - Entrada decorrente de devolu'#231#227'o de produto remetido com ' +
+                      'fim espec'#237'fico de exporta'#231#227'o, de produ'#231#227'o do'
+                    'estabelecimento'
+                    
+                      '1.504 - Entrada decorrente de devolu'#231#227'o de mercadoria remetida c' +
+                      'om fim espec'#237'fico de exporta'#231#227'o, adquirida ou'
+                    'recebida de terceiros'
+                    
+                      '1.505 - Entrada decorrente de devolu'#231#227'o simb'#243'lica de mercadorias' +
+                      ' remetidas para forma'#231#227'o de lote de'
+                    
+                      'exporta'#231#227'o, de produtos industrializados ou produzidos pelo pr'#243'p' +
+                      'rio estabelecimento'
+                    
+                      '1.506 - Entrada decorrente de devolu'#231#227'o simb'#243'lica de mercadorias' +
+                      ', adquiridas ou recebidas de terceiros,'
+                    'remetidas para forma'#231#227'o de lote de exporta'#231#227'o'
+                    
+                      '1.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
+                      ' USO OU CONSUMO'
+                    '1.551 - Compra de bem para o ativo imobilizado'
+                    '1.552 - Transfer'#234'ncia de bem do ativo imobilizado'
+                    '1.553 - Devolu'#231#227'o de venda de bem do ativo imobilizado'
+                    
+                      '1.554 - Retorno de bem do ativo imobilizado remetido para uso fo' +
+                      'ra do estabelecimento'
+                    
+                      '1.555 - Entrada de bem do ativo imobilizado de terceiro, remetid' +
+                      'o para uso no estabelecimento'
+                    '1.556 - Compra de material para uso ou consumo'
+                    '1.557 - Transfer'#234'ncia de material para uso ou consumo'
+                    '1.600 - CR'#201'DITOS E RESSARCIMENTOS DE ICMS'
+                    '1.601 - Recebimento, por transfer'#234'ncia, de cr'#233'dito de ICMS'
+                    
+                      '1.602 - Recebimento, por transfer'#234'ncia, de saldo credor de ICMS ' +
+                      'de outro estabelecimento da mesma empresa,'
+                    'para compensa'#231#227'o de saldo devedor de ICMS'
+                    '1.603 - Ressarcimento de ICMS retido por substitui'#231#227'o tribut'#225'ria'
+                    
+                      '1.604 - Lan'#231'amento do cr'#233'dito relativo '#224' compra de bem para o at' +
+                      'ivo imobilizado'
+                    
+                      '1.605 - Recebimento, por transfer'#234'ncia, de saldo devedor de ICMS' +
+                      ' de outro estabelecimento da mesma empresa'
+                    
+                      '1.652 - Compra de combust'#237'vel ou lubrificante para comercializa'#231 +
+                      #227'o'
+                    
+                      '1.653 - Compra de combust'#237'vel ou lubrificante por consumidor ou ' +
+                      'usu'#225'rio final'
+                    
+                      '1.658 - Transfer'#234'ncia de combust'#237'vel e lubrificante para industr' +
+                      'ializa'#231#227'o'
+                    
+                      '1.659 - Transfer'#234'ncia de combust'#237'vel e lubrificante para comerci' +
+                      'aliza'#231#227'o'
+                    
+                      '1.660 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
+                      'ado '#224' industrializa'#231#227'o subseq'#252'ente'
+                    
+                      '1.661 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
+                      'ado '#224' comercializa'#231#227'o'
+                    
+                      '1.662 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
+                      'ado a consumidor ou usu'#225'rio final'
+                    '1.663 - Entrada de combust'#237'vel ou lubrificante para armazenagem'
+                    
+                      '1.664 - Retorno de combust'#237'vel ou lubrificante remetido para arm' +
+                      'azenagem'
+                    '1.900 - OUTRAS ENTRADAS DE MERCADORIAS OU AQUISI'#199#213'ES DE SERVI'#199'OS'
+                    '1.901 - Entrada para industrializa'#231#227'o por encomenda'
+                    
+                      '1.902 - Retorno de mercadoria remetida para industrializa'#231#227'o por' +
+                      ' encomenda'
+                    
+                      '1.903 - Entrada de mercadoria remetida para industrializa'#231#227'o e n' +
+                      #227'o aplicada no referido processo'
+                    '1.904 - Retorno de remessa para venda fora do estabelecimento'
+                    
+                      '1.905 - Entrada de mercadoria recebida para dep'#243'sito em dep'#243'sito' +
+                      ' fechado ou armaz'#233'm geral'
+                    
+                      '1.906 - Retorno de mercadoria remetida para dep'#243'sito fechado ou ' +
+                      'armaz'#233'm geral'
+                    
+                      '1.907 - Retorno simb'#243'lico de mercadoria remetida para dep'#243'sito f' +
+                      'echado ou armaz'#233'm geral'
+                    '1.908 - Entrada de bem por conta de contrato de comodato'
+                    
+                      '1.909 - Retorno de bem remetido por conta de contrato de comodat' +
+                      'o'
+                    '1.910 - Entrada de bonifica'#231#227'o, doa'#231#227'o ou brinde'
+                    '1.911 - Entrada de amostra gr'#225'tis'
+                    '1.912 - Entrada de mercadoria ou bem recebido para demonstra'#231#227'o'
+                    '1.913 - Retorno de mercadoria ou bem remetido para demonstra'#231#227'o'
+                    
+                      '1.914 - Retorno de mercadoria ou bem remetido para exposi'#231#227'o ou ' +
+                      'feira'
+                    
+                      '1.915 - Entrada de mercadoria ou bem recebido para conserto ou r' +
+                      'eparo'
+                    
+                      '1.916 - Retorno de mercadoria ou bem remetido para conserto ou r' +
+                      'eparo'
+                    
+                      '1.917 - Entrada de mercadoria recebida em consigna'#231#227'o mercantil ' +
+                      'ou industrial'
+                    
+                      '1.918 - Devolu'#231#227'o de mercadoria remetida em consigna'#231#227'o mercanti' +
+                      'l ou industrial'
+                    
+                      '1.919 - Devolu'#231#227'o simb'#243'lica de mercadoria vendida ou utilizada e' +
+                      'm processo industrial, remetida anteriormente'
+                    'em consigna'#231#227'o mercantil ou industrial'
+                    '1.920 - Entrada de vasilhame ou sacaria'
+                    '1.921 - Retorno de vasilhame ou sacaria'
+                    
+                      '1.922 - Lan'#231'amento efetuado a t'#237'tulo de simples faturamento deco' +
+                      'rrente de compra para recebimento futuro'
+                    
+                      '1.923 - Entrada de mercadoria recebida do vendedor remetente, em' +
+                      ' venda '#224' ordem'
+                    
+                      '1.924 - Entrada para industrializa'#231#227'o por conta e ordem do adqui' +
+                      'rente da mercadoria, quando esta n'#227'o transitar'
+                    'pelo estabelecimento do adquirente'
+                    
+                      '1.925 - Retorno de mercadoria remetida para industrializa'#231#227'o por' +
+                      ' conta e ordem do adquirente da mercadoria,'
+                    'quando esta n'#227'o transitar pelo estabelecimento do adquirente'
+                    
+                      '1.926 - Lan'#231'amento efetuado a t'#237'tulo de reclassifica'#231#227'o de merca' +
+                      'doria decorrente de forma'#231#227'o de kit ou de sua'
+                    'desagrega'#231#227'o'
+                    
+                      '1.931 - Lan'#231'amento efetuado pelo tomador do servi'#231'o de transport' +
+                      'e quando a responsabilidade de reten'#231#227'o do'
+                    
+                      'imposto for atribu'#237'da ao remetente ou alienante da mercadoria, p' +
+                      'elo servi'#231'o de transporte realizado por'
+                    
+                      'transportador aut'#244'nomo ou por transportador n'#227'o inscrito na unid' +
+                      'ade da Federa'#231#227'o onde iniciado o servi'#231'o'
+                    
+                      '1.932 - Aquisi'#231#227'o de servi'#231'o de transporte iniciado em unidade d' +
+                      'a Federa'#231#227'o diversa daquela onde inscrito o'
+                    'prestador'
+                    '1.933 - Aquisi'#231#227'o de servi'#231'o tributado pelo ISSQN'
+                    
+                      '1.949 - Outra entrada de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o ' +
+                      'especificada'
+                    '2.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DE OUTROS ESTADOS'
+                    
+                      '2.100 - COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU PRESTA' +
+                      #199#195'O DE SERVI'#199'OS'
+                    '2.101 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural'
+                    '2.102 - Compra para comercializa'#231#227'o'
+                    
+                      '2.111 - Compra para industrializa'#231#227'o de mercadoria recebida ante' +
+                      'riormente em consigna'#231#227'o industrial'
+                    
+                      '2.113 - Compra para comercializa'#231#227'o, de mercadoria recebida ante' +
+                      'riormente em consigna'#231#227'o mercantil'
+                    
+                      '2.116 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural originada' +
+                      ' de encomenda para recebimento futuro'
+                    
+                      '2.117 - Compra para comercializa'#231#227'o originada de encomenda para ' +
+                      'recebimento futuro'
+                    
+                      '2.118 - Compra de mercadoria para comercializa'#231#227'o pelo adquirent' +
+                      'e origin'#225'rio, entregue pelo vendedor remetente'
+                    'ao destinat'#225'rio, em venda '#224' ordem'
+                    
+                      '2.120 - Compra para industrializa'#231#227'o, em venda '#224' ordem, j'#225' receb' +
+                      'ida do vendedor remetente'
+                    
+                      '2.121 - Compra para comercializa'#231#227'o, em venda '#224' ordem, j'#225' recebi' +
+                      'da do vendedor remetente'
+                    
+                      '2.122 - Compra para industrializa'#231#227'o em que a mercadoria foi rem' +
+                      'etida pelo fornecedor ao industrializador sem'
+                    'transitar pelo estabelecimento adquirente'
+                    '2.124 - Industrializa'#231#227'o efetuada por outra empresa'
+                    
+                      '2.125 - Industrializa'#231#227'o efetuada por outra empresa quando a mer' +
+                      'cadoria remetida para utiliza'#231#227'o no processo de'
+                    
+                      'industrializa'#231#227'o n'#227'o transitou pelo estabelecimento adquirente d' +
+                      'a mercadoria'
+                    '2.126 - Compra para utiliza'#231#227'o na presta'#231#227'o de servi'#231'o'
+                    
+                      '2.150 - TRANSFER'#202'NCIAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU' +
+                      ' PRESTA'#199#195'O DE SERVI'#199'OS'
+                    '2.151 - Transfer'#234'ncia para industrializa'#231#227'o ou produ'#231#227'o rural'
+                    '2.152 - Transfer'#234'ncia para comercializa'#231#227'o'
+                    '2.153 - Transfer'#234'ncia de energia el'#233'trica para distribui'#231#227'o'
+                    '2.154 - Transfer'#234'ncia para utiliza'#231#227'o na presta'#231#227'o de servi'#231'o'
+                    
+                      '2.200 - DEVOLU'#199#213'ES DE VENDAS DE PRODU'#199#195'O PR'#211'PRIA, DE TERCEIROS O' +
+                      'U ANULA'#199#213'ES DE VALORES'
+                    '2.201 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento'
+                    
+                      '2.202 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
+                      'e terceiros'
+                    
+                      '2.203 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento, desti' +
+                      'nada '#224' Zona Franca de Manaus ou '#193'reas de'
+                    'Livre Com'#233'rcio'
+                    
+                      '2.204 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
+                      'e terceiros, destinada '#224' Zona Franca de Manaus'
+                    'ou '#193'reas de Livre Com'#233'rcio'
+                    
+                      '2.205 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de com' +
+                      'unica'#231#227'o'
+                    
+                      '2.206 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de tra' +
+                      'nsporte'
+                    '2.207 - Anula'#231#227'o de valor relativo '#224' venda de energia el'#233'trica'
+                    
+                      '2.208 - Devolu'#231#227'o de produ'#231#227'o do estabelecimento, remetida em tr' +
+                      'ansfer'#234'ncia'
+                    
+                      '2.209 - Devolu'#231#227'o de mercadoria adquirida ou recebida de terceir' +
+                      'os, remetida em transfer'#234'ncia'
+                    '2.250 - COMPRAS DE ENERGIA EL'#201'TRICA'
+                    
+                      '2.251 - Compra de energia el'#233'trica para distribui'#231#227'o ou comercia' +
+                      'liza'#231#227'o'
+                    
+                      '2.252 - Compra de energia el'#233'trica por estabelecimento industria' +
+                      'l'
+                    '2.253 - Compra de energia el'#233'trica por estabelecimento comercial'
+                    
+                      '2.254 - Compra de energia el'#233'trica por estabelecimento prestador' +
+                      ' de servi'#231'o de transporte'
+                    
+                      '2.255 - Compra de energia el'#233'trica por estabelecimento prestador' +
+                      ' de servi'#231'o de comunica'#231#227'o'
+                    
+                      '2.256 - Compra de energia el'#233'trica por estabelecimento de produt' +
+                      'or rural'
+                    
+                      '2.257 - Compra de energia el'#233'trica para consumo por demanda cont' +
+                      'ratada'
+                    '2.300 - AQUISI'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
+                    
+                      '2.301 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
+                      'vi'#231'o da mesma natureza'
+                    
+                      '2.302 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'industrial'
+                    
+                      '2.303 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'comercial'
+                    
+                      '2.304 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'de prestador de servi'#231'o de transporte'
+                    
+                      '2.305 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'de geradora ou de distribuidora de energia'
+                    'el'#233'trica'
+                    
+                      '2.306 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
+                      'de produtor rural'
+                    
+                      '2.351 - Aquisi'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
+                      'i'#231'o da mesma natureza'
+                    
+                      '2.352 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento i' +
+                      'ndustrial'
+                    
+                      '2.353 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento c' +
+                      'omercial'
+                    
+                      '2.354 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e prestador de servi'#231'o de comunica'#231#227'o'
+                    
+                      '2.355 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e geradora ou de distribuidora de energia el'#233'trica'
+                    
+                      '2.356 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e produtor rural'
+                    
+                      '2.400 - ENTRADAS DE MERCADORIAS SUJEITAS AO REGIME DE SUBSTITUI'#199 +
+                      #195'O TRIBUT'#193'RIA'
+                    
+                      '2.401 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural em opera'#231 +
+                      #227'o com mercadoria sujeita ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria'
+                    
+                      '2.403 - Compra para comercializa'#231#227'o em opera'#231#227'o com mercadoria s' +
+                      'ujeita ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '2.406 - Compra de bem para o ativo imobilizado cuja mercadoria e' +
+                      'st'#225' sujeita ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '2.407 - Compra de mercadoria para uso ou consumo cuja mercadoria' +
+                      ' est'#225' sujeita ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria'
+                    
+                      '2.408 - Transfer'#234'ncia para industrializa'#231#227'o ou produ'#231#227'o rural em' +
+                      ' opera'#231#227'o com mercadoria sujeita ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria'
+                    
+                      '2.409 - Transfer'#234'ncia para comercializa'#231#227'o em opera'#231#227'o com merca' +
+                      'doria sujeita ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria'
+                    
+                      '2.410 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento em ope' +
+                      'ra'#231#227'o com produto sujeito ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria'
+                    
+                      '2.411 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
+                      'e terceiros em opera'#231#227'o com mercadoria sujeita'
+                    'ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '2.414 - Retorno de produ'#231#227'o do estabelecimento, remetida para ve' +
+                      'nda fora do estabelecimento em opera'#231#227'o com'
+                    'produto sujeito ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '2.415 - Retorno de mercadoria adquirida ou recebida de terceiros' +
+                      ', remetida para venda fora do estabelecimento em'
+                    
+                      'opera'#231#227'o com mercadoria sujeita ao regime de substitui'#231#227'o tribut' +
+                      #225'ria'
+                    
+                      '2.500 - ENTRADAS DE MERCADORIAS REMETIDAS COM FIM ESPEC'#205'FICO DE ' +
+                      'EXPORTA'#199#195'O E EVENTUAIS'
+                    'DEVOLU'#199#213'ES'
+                    
+                      '2.501 - Entrada de mercadoria recebida com fim espec'#237'fico de exp' +
+                      'orta'#231#227'o'
+                    
+                      '2.503 - Entrada decorrente de devolu'#231#227'o de produto remetido com ' +
+                      'fim espec'#237'fico de exporta'#231#227'o, de produ'#231#227'o do'
+                    'estabelecimento'
+                    
+                      '2.504 - Entrada decorrente de devolu'#231#227'o de mercadoria remetida c' +
+                      'om fim espec'#237'fico de exporta'#231#227'o, adquirida ou'
+                    'recebida de terceiros'
+                    
+                      '2.505 - Entrada decorrente de devolu'#231#227'o simb'#243'lica de mercadorias' +
+                      ' remetidas para forma'#231#227'o de lote de'
+                    
+                      'exporta'#231#227'o, de produtos industrializados ou produzidos pelo pr'#243'p' +
+                      'rio estabelecimento'
+                    
+                      '2.506 - Entrada decorrente de devolu'#231#227'o simb'#243'lica de mercadorias' +
+                      ', adquiridas ou recebidas de terceiros,'
+                    'remetidas para forma'#231#227'o de lote de exporta'#231#227'o'
+                    
+                      '2.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
+                      ' USO OU CONSUMO'
+                    '2.551 - Compra de bem para o ativo imobilizado'
+                    '2.552 - Transfer'#234'ncia de bem do ativo imobilizado'
+                    '2.553 - Devolu'#231#227'o de venda de bem do ativo imobilizado'
+                    
+                      '2.554 - Retorno de bem do ativo imobilizado remetido para uso fo' +
+                      'ra do estabelecimento'
+                    
+                      '2.555 - Entrada de bem do ativo imobilizado de terceiro, remetid' +
+                      'o para uso no estabelecimento'
+                    '2.556 - Compra de material para uso ou consumo'
+                    '2.557 - Transfer'#234'ncia de material para uso ou consumo'
+                    '2.600 - CR'#201'DITOS E RESSARCIMENTOS DE ICMS'
+                    '2.603 - Ressarcimento de ICMS retido por substitui'#231#227'o tribut'#225'ria'
+                    
+                      '2.651 - Compra de combust'#237'vel ou lubrificante para industrializa' +
+                      #231#227'o subseq'#252'ente'
+                    
+                      '2.652 - Compra de combust'#237'vel ou lubrificante para comercializa'#231 +
+                      #227'o'
+                    
+                      '2.653 - Compra de combust'#237'vel ou lubrificante por consumidor ou ' +
+                      'usu'#225'rio final'
+                    
+                      '2.658 - Transfer'#234'ncia de combust'#237'vel e lubrificante para industr' +
+                      'ializa'#231#227'o'
+                    
+                      '2.659 - Transfer'#234'ncia de combust'#237'vel e lubrificante para comerci' +
+                      'aliza'#231#227'o'
+                    
+                      '2.660 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
+                      'ado '#224' industrializa'#231#227'o subseq'#252'ente'
+                    
+                      '2.661 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
+                      'ado '#224' comercializa'#231#227'o'
+                    
+                      '2.662 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
+                      'ado a consumidor ou usu'#225'rio final'
+                    '2.663 - Entrada de combust'#237'vel ou lubrificante para armazenagem'
+                    
+                      '2.664 - Retorno de combust'#237'vel ou lubrificante remetido para arm' +
+                      'azenagem'
+                    '2.900 - OUTRAS ENTRADAS DE MERCADORIAS OU AQUISI'#199#213'ES DE SERVI'#199'OS'
+                    '2.901 - Entrada para industrializa'#231#227'o por encomenda'
+                    
+                      '2.902 - Retorno de mercadoria remetida para industrializa'#231#227'o por' +
+                      ' encomenda'
+                    
+                      '2.903 - Entrada de mercadoria remetida para industrializa'#231#227'o e n' +
+                      #227'o aplicada no referido processo'
+                    '2.904 - Retorno de remessa para venda fora do estabelecimento'
+                    
+                      '2.905 - Entrada de mercadoria recebida para dep'#243'sito em dep'#243'sito' +
+                      ' fechado ou armaz'#233'm geral'
+                    
+                      '2.906 - Retorno de mercadoria remetida para dep'#243'sito fechado ou ' +
+                      'armaz'#233'm geral'
+                    
+                      '2.907 - Retorno simb'#243'lico de mercadoria remetida para dep'#243'sito f' +
+                      'echado ou armaz'#233'm geral'
+                    '2.908 - Entrada de bem por conta de contrato de comodato'
+                    
+                      '2.909 - Retorno de bem remetido por conta de contrato de comodat' +
+                      'o'
+                    '2.910 - Entrada de bonifica'#231#227'o, doa'#231#227'o ou brinde'
+                    '2.911 - Entrada de amostra gr'#225'tis'
+                    '2.912 - Entrada de mercadoria ou bem recebido para demonstra'#231#227'o'
+                    '2.913 - Retorno de mercadoria ou bem remetido para demonstra'#231#227'o'
+                    
+                      '2.914 - Retorno de mercadoria ou bem remetido para exposi'#231#227'o ou ' +
+                      'feira'
+                    
+                      '2.915 - Entrada de mercadoria ou bem recebido para conserto ou r' +
+                      'eparo'
+                    
+                      '2.916 - Retorno de mercadoria ou bem remetido para conserto ou r' +
+                      'eparo'
+                    
+                      '2.917 - Entrada de mercadoria recebida em consigna'#231#227'o mercantil ' +
+                      'ou industrial'
+                    
+                      '2.918 - Devolu'#231#227'o de mercadoria remetida em consigna'#231#227'o mercanti' +
+                      'l ou industrial'
+                    
+                      '2.919 - Devolu'#231#227'o simb'#243'lica de mercadoria vendida ou utilizada e' +
+                      'm processo industrial, remetida anteriormente'
+                    'em consigna'#231#227'o mercantil ou industrial'
+                    '2.920 - Entrada de vasilhame ou sacaria'
+                    '2.921 - Retorno de vasilhame ou sacaria'
+                    
+                      '2.922 - Lan'#231'amento efetuado a t'#237'tulo de simples faturamento deco' +
+                      'rrente de compra para recebimento futuro'
+                    
+                      '2.923 - Entrada de mercadoria recebida do vendedor remetente, em' +
+                      ' venda '#224' ordem'
+                    
+                      '2.924 - Entrada para industrializa'#231#227'o por conta e ordem do adqui' +
+                      'rente da mercadoria, quando esta n'#227'o transitar'
+                    'pelo estabelecimento do adquirente'
+                    
+                      '2.925 - Retorno de mercadoria remetida para industrializa'#231#227'o por' +
+                      ' conta e ordem do adquirente da mercadoria,'
+                    'quando esta n'#227'o transitar pelo estabelecimento do adquirente'
+                    
+                      '2.931 - Lan'#231'amento efetuado pelo tomador do servi'#231'o de transport' +
+                      'e quando a responsabilidade de reten'#231#227'o do'
+                    
+                      'imposto for atribu'#237'da ao remetente ou alienante da mercadoria, p' +
+                      'elo servi'#231'o de transporte realizado por'
+                    
+                      'transportador aut'#244'nomo ou por transportador n'#227'o inscrito na unid' +
+                      'ade da Federa'#231#227'o onde iniciado o servi'#231'o'
+                    
+                      '2.932 - Aquisi'#231#227'o de servi'#231'o de transporte iniciado em unidade d' +
+                      'a Federa'#231#227'o diversa daquela onde inscrito o'
+                    'prestador'
+                    '2.933 - Aquisi'#231#227'o de servi'#231'o tributado pelo ISSQN'
+                    
+                      '2.949 - Outra entrada de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o ' +
+                      'especificado'
+                    '3.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DO EXTERIOR'
+                    
+                      '3.100 - COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU PRESTA' +
+                      #199#195'O DE SERVI'#199'OS'
+                    '3.101 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural'
+                    '3.102 - Compra para comercializa'#231#227'o'
+                    '3.126 - Compra para utiliza'#231#227'o na presta'#231#227'o de servi'#231'o'
+                    '3.127 - Compra para industrializa'#231#227'o sob o regime de "drawback"'
+                    
+                      '3.200 - DEVOLU'#199#213'ES DE VENDAS DE PRODU'#199#195'O PR'#211'PRIA, DE TERCEIROS O' +
+                      'U ANULA'#199#213'ES DE VALORES'
+                    '3.201 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento'
+                    
+                      '3.202 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
+                      'e terceiros'
+                    
+                      '3.205 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de com' +
+                      'unica'#231#227'o'
+                    
+                      '3.206 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de tra' +
+                      'nsporte'
+                    '3.207 - Anula'#231#227'o de valor relativo '#224' venda de energia el'#233'trica'
+                    
+                      '3.211 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento sob o ' +
+                      'regime de "drawback"'
+                    '3.250 - COMPRAS DE ENERGIA EL'#201'TRICA'
+                    
+                      '3.251 - Compra de energia el'#233'trica para distribui'#231#227'o ou comercia' +
+                      'liza'#231#227'o'
+                    '3.300 - AQUISI'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
+                    
+                      '3.301 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
+                      'vi'#231'o da mesma natureza'
+                    '3.350 - AQUISI'#199#213'ES DE SERVI'#199'OS DE TRANSPORTE'
+                    
+                      '3.351 - Aquisi'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
+                      'i'#231'o da mesma natureza'
+                    
+                      '3.352 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento i' +
+                      'ndustrial'
+                    
+                      '3.353 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento c' +
+                      'omercial'
+                    
+                      '3.354 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e prestador de servi'#231'o de comunica'#231#227'o'
+                    
+                      '3.355 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e geradora ou de distribuidora de energia el'#233'trica'
+                    
+                      '3.356 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
+                      'e produtor rural'
+                    
+                      '3.500 - ENTRADAS DE MERCADORIAS REMETIDAS COM FIM ESPEC'#205'FICO DE ' +
+                      'EXPORTA'#199#195'O E EVENTUAIS'
+                    'DEVOLU'#199#213'ES'
+                    
+                      '3.503 - Devolu'#231#227'o de mercadoria exportada que tenha sido recebid' +
+                      'a com fim espec'#237'fico de exporta'#231#227'o'
+                    
+                      '3.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
+                      ' USO OU CONSUMO'
+                    '3.551 - Compra de bem para o ativo imobilizado'
+                    '3.553 - Devolu'#231#227'o de venda de bem do ativo imobilizado'
+                    '3.556 - Compra de material para uso ou consumo'
+                    
+                      '3.651 - Compra de combust'#237'vel ou lubrificante para industrializa' +
+                      #231#227'o subseq'#252'ente'
+                    
+                      '3.652 - Compra de combust'#237'vel ou lubrificante para comercializa'#231 +
+                      #227'o'
+                    
+                      '3.653 - Compra de combust'#237'vel ou lubrificante por consumidor ou ' +
+                      'usu'#225'rio final'
+                    '3.900 - OUTRAS ENTRADAS DE MERCADORIAS OU AQUISI'#199#213'ES DE SERVI'#199'OS'
+                    
+                      '3.930 - Lan'#231'amento efetuado a t'#237'tulo de entrada de bem sob ampar' +
+                      'o de regime especial aduaneiro de admiss'#227'o'
+                    'tempor'#225'ria'
+                    
+                      '3.949 - Outra entrada de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o ' +
+                      'especificado'
+                    '5.000 - SA'#205'DAS OU PRESTA'#199#213'ES DE SERVI'#199'OS PARA O ESTADO'
+                    '5.100 - VENDAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
+                    '5.101 - Venda de produ'#231#227'o do estabelecimento'
+                    '5.102 - Venda de mercadoria adquirida ou recebida de terceiros'
+                    
+                      '5.103 - Venda de produ'#231#227'o do estabelecimento, efetuada fora do e' +
+                      'stabelecimento'
+                    
+                      '5.104 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'efetuada fora do estabelecimento'
+                    
+                      '5.105 - Venda de produ'#231#227'o do estabelecimento que n'#227'o deva por el' +
+                      'e transitar'
+                    
+                      '5.106 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'que n'#227'o deva por ele transitar'
+                    
+                      '5.109 - Venda de produ'#231#227'o do estabelecimento, destinada '#224' Zona F' +
+                      'ranca de Manaus ou '#193'reas de Livre Com'#233'rcio'
+                    
+                      '5.110 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'destinada '#224' Zona Franca de Manaus ou '#193'reas de'
+                    'Livre Com'#233'rcio'
+                    
+                      '5.111 - Venda de produ'#231#227'o do estabelecimento remetida anteriorme' +
+                      'nte em consigna'#231#227'o industrial'
+                    
+                      '5.112 - Venda de mercadoria adquirida ou recebida de terceiros r' +
+                      'emetida anteriormente em consigna'#231#227'o industrial'
+                    
+                      '5.113 - Venda de produ'#231#227'o do estabelecimento remetida anteriorme' +
+                      'nte em consigna'#231#227'o mercantil'
+                    
+                      '5.114 - Venda de mercadoria adquirida ou recebida de terceiros r' +
+                      'emetida anteriormente em consigna'#231#227'o mercantil'
+                    
+                      '5.115 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'recebida anteriormente em consigna'#231#227'o mercantil'
+                    
+                      '5.116 - Venda de produ'#231#227'o do estabelecimento originada de encome' +
+                      'nda para entrega futura'
+                    
+                      '5.117 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'originada de encomenda para entrega futura'
+                    
+                      '5.118 - Venda de produ'#231#227'o do estabelecimento entregue ao destina' +
+                      't'#225'rio por conta e ordem do adquirente'
+                    'origin'#225'rio, em venda '#224' ordem'
+                    
+                      '5.119 - Venda de mercadoria adquirida ou recebida de terceiros e' +
+                      'ntregue ao destinat'#225'rio por conta e ordem do'
+                    'adquirente origin'#225'rio, em venda '#224' ordem'
+                    
+                      '5.120 - Venda de mercadoria adquirida ou recebida de terceiros e' +
+                      'ntregue ao destinat'#225'rio pelo vendedor remetente,'
+                    'em venda '#224' ordem'
+                    
+                      '5.122 - Venda de produ'#231#227'o do estabelecimento remetida para indus' +
+                      'trializa'#231#227'o, por conta e ordem do adquirente,'
+                    'sem transitar pelo estabelecimento do adquirente'
+                    
+                      '5.123 - Venda de mercadoria adquirida ou recebida de terceiros r' +
+                      'emetida para industrializa'#231#227'o, por conta e ordem'
+                    'do adquirente, sem transitar pelo estabelecimento do adquirente'
+                    '5.124 - Industrializa'#231#227'o efetuada para outra empresa'
+                    
+                      '5.125 - Industrializa'#231#227'o efetuada para outra empresa quando a me' +
+                      'rcadoria recebida para utiliza'#231#227'o no processo de'
+                    
+                      'industrializa'#231#227'o n'#227'o transitar pelo estabelecimento adquirente d' +
+                      'a mercadoria'
+                    '5.150 - TRANSFER'#202'NCIAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
+                    '5.151 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento'
+                    
+                      '5.152 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
+                      'ceiros'
+                    '5.153 - Transfer'#234'ncia de energia el'#233'trica'
+                    
+                      '5.155 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento, que n'#227'o de' +
+                      'va por ele transitar'
+                    
+                      '5.156 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
+                      'ceiros, que n'#227'o deva por ele transitar'
+                    
+                      '5.200 - DEVOLU'#199#213'ES DE COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZ' +
+                      'A'#199#195'O OU ANULA'#199#213'ES DE'
+                    'VALORES'
+                    
+                      '5.201 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
+                      'ral'
+                    '5.202 - Devolu'#231#227'o de compra para comercializa'#231#227'o'
+                    
+                      '5.205 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de com' +
+                      'unica'#231#227'o'
+                    
+                      '5.206 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de tra' +
+                      'nsporte'
+                    '5.207 - Anula'#231#227'o de valor relativo '#224' compra de energia el'#233'trica'
+                    
+                      '5.208 - Devolu'#231#227'o de mercadoria recebida em transfer'#234'ncia para i' +
+                      'ndustrializa'#231#227'o ou produ'#231#227'o rural'
+                    
+                      '5.209 - Devolu'#231#227'o de mercadoria recebida em transfer'#234'ncia para c' +
+                      'omercializa'#231#227'o'
+                    
+                      '5.210 - Devolu'#231#227'o de compra para utiliza'#231#227'o na presta'#231#227'o de serv' +
+                      'i'#231'o sujeitas ao ICMS ou ISSQN'
+                    '5.250 - VENDAS DE ENERGIA EL'#201'TRICA'
+                    
+                      '5.251 - Venda de energia el'#233'trica para distribui'#231#227'o ou comercial' +
+                      'iza'#231#227'o'
+                    
+                      '5.252 - Venda de energia el'#233'trica para estabelecimento industria' +
+                      'l'
+                    '5.253 - Venda de energia el'#233'trica para estabelecimento comercial'
+                    
+                      '5.254 - Venda de energia el'#233'trica para estabelecimento prestador' +
+                      ' de servi'#231'o de transporte'
+                    
+                      '5.255 - Venda de energia el'#233'trica para estabelecimento prestador' +
+                      ' de servi'#231'o de comunica'#231#227'o'
+                    
+                      '5.256 - Venda de energia el'#233'trica para estabelecimento de produt' +
+                      'or rural'
+                    
+                      '5.257 - Venda de energia el'#233'trica para consumo por demanda contr' +
+                      'atada'
+                    '5.258 - Venda de energia el'#233'trica a n'#227'o contribuinte'
+                    '5.300 - PRESTA'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
+                    
+                      '5.301 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
+                      'vi'#231'o da mesma natureza'
+                    
+                      '5.302 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento in' +
+                      'dustrial'
+                    
+                      '5.303 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento co' +
+                      'mercial'
+                    
+                      '5.304 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
+                      ' prestador de servi'#231'o de transporte'
+                    
+                      '5.305 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
+                      ' geradora ou de distribuidora de energia'
+                    'el'#233'trica'
+                    
+                      '5.306 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
+                      ' produtor rural'
+                    '5.307 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a n'#227'o contribuinte'
+                    '5.350 - PRESTA'#199#213'ES DE SERVI'#199'OS DE TRANSPORTE'
+                    
+                      '5.351 - Presta'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
+                      'i'#231'o da mesma natureza'
+                    
+                      '5.352 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento ind' +
+                      'ustrial'
+                    
+                      '5.353 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento com' +
+                      'ercial'
+                    
+                      '5.354 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
+                      'prestador de servi'#231'o de comunica'#231#227'o'
+                    
+                      '5.355 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
+                      'geradora ou de distribuidora de energia el'#233'trica'
+                    
+                      '5.356 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
+                      'produtor rural'
+                    '5.357 - Presta'#231#227'o de servi'#231'o de transporte a n'#227'o contribuinte'
+                    
+                      '5.359 - Presta'#231#227'o de servi'#231'o de transporte a contribuinte ou a n' +
+                      #227'o contribuinte quando a mercadoria transportada'
+                    'est'#225' dispensada de emiss'#227'o de nota fiscal'
+                    
+                      '5.360 - Presta'#231#227'o de servi'#231'o de transporte a contribuinte substi' +
+                      'tuto em rela'#231#227'o ao servi'#231'o de transporte'
+                    
+                      '5.400 - SA'#205'DAS DE MERCADORIAS SUJEITAS AO REGIME DE SUBSTITUI'#199#195'O' +
+                      ' TRIBUT'#193'RIA'
+                    
+                      '5.401 - Venda de produ'#231#227'o do estabelecimento em opera'#231#227'o com pro' +
+                      'duto sujeito ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria, na condi'#231#227'o de contribuinte substituto'
+                    
+                      '5.402 - Venda de produ'#231#227'o do estabelecimento de produto sujeito ' +
+                      'ao regime de substitui'#231#227'o tribut'#225'ria, em'
+                    'opera'#231#227'o entre contribuintes substitutos do mesmo produto'
+                    
+                      '5.403 - Venda de mercadoria adquirida ou recebida de terceiros e' +
+                      'm opera'#231#227'o com mercadoria sujeita ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria, na condi'#231#227'o de contribuinte substituto'
+                    
+                      '5.405 - Venda de mercadoria adquirida ou recebida de terceiros e' +
+                      'm opera'#231#227'o com mercadoria sujeita ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria, na condi'#231#227'o de contribuinte substitu'#237'do'
+                    
+                      '5.408 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento em opera'#231#227'o' +
+                      ' com produto sujeito ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria'
+                    
+                      '5.409 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
+                      'ceiros em opera'#231#227'o com mercadoria sujeita ao'
+                    'regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '5.410 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
+                      'ral em opera'#231#227'o com mercadoria sujeita ao'
+                    'regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '5.411 - Devolu'#231#227'o de compra para comercializa'#231#227'o em opera'#231#227'o com' +
+                      ' mercadoria sujeita ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria'
+                    
+                      '5.412 - Devolu'#231#227'o de bem do ativo imobilizado, em opera'#231#227'o com m' +
+                      'ercadoria sujeita ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria'
+                    
+                      '5.413 - Devolu'#231#227'o de mercadoria destinada ao uso ou consumo, em ' +
+                      'opera'#231#227'o com mercadoria sujeita ao regime'
+                    'de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '5.414 - Remessa de produ'#231#227'o do estabelecimento para venda fora d' +
+                      'o estabelecimento em opera'#231#227'o com produto'
+                    'sujeito ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '5.415 - Remessa de mercadoria adquirida ou recebida de terceiros' +
+                      ' para venda fora do estabelecimento, em'
+                    
+                      'opera'#231#227'o com mercadoria sujeita ao regime de substitui'#231#227'o tribut' +
+                      #225'ria'
+                    '5.450 - SISTEMAS DE INTEGRA'#199#195'O'
+                    
+                      '5.451 - Remessa de animal e de insumo para estabelecimento produ' +
+                      'tor'
+                    
+                      '5.500 - REMESSAS COM FIM ESPEC'#205'FICO DE EXPORTA'#199#195'O E EVENTUAIS DE' +
+                      'VOLU'#199#213'ES'
+                    
+                      '5.501 - Remessa de produ'#231#227'o do estabelecimento, com fim espec'#237'fi' +
+                      'co de exporta'#231#227'o'
+                    
+                      '5.502 - Remessa de mercadoria adquirida ou recebida de terceiros' +
+                      ', com fim espec'#237'fico de exporta'#231#227'o'
+                    
+                      '5.503 - Devolu'#231#227'o de mercadoria recebida com fim espec'#237'fico de e' +
+                      'xporta'#231#227'o'
+                    
+                      '5.504 - Remessa de mercadorias para forma'#231#227'o de lote de exporta'#231 +
+                      #227'o, de produtos industrializados ou produzidos'
+                    'pelo pr'#243'prio estabelecimento'
+                    
+                      '5.505 - Remessa de mercadorias, adquiridas ou recebidas de terce' +
+                      'iros, para forma'#231#227'o de lote de exporta'#231#227'o'
+                    
+                      '5.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
+                      ' USO OU CONSUMO'
+                    '5.551 - Venda de bem do ativo imobilizado'
+                    '5.552 - Transfer'#234'ncia de bem do ativo imobilizado'
+                    '5.553 - Devolu'#231#227'o de compra de bem para o ativo imobilizado'
+                    
+                      '5.554 - Remessa de bem do ativo imobilizado para uso fora do est' +
+                      'abelecimento'
+                    
+                      '5.555 - Devolu'#231#227'o de bem do ativo imobilizado de terceiro, receb' +
+                      'ido para uso no estabelecimento'
+                    '5.556 - Devolu'#231#227'o de compra de material de uso ou consumo'
+                    '5.557 - Transfer'#234'ncia de material de uso ou consumo'
+                    '5.600 - CR'#201'DITOS E RESSARCIMENTOS DE ICMS'
+                    '5.601 - Transfer'#234'ncia de cr'#233'dito de ICMS acumulado'
+                    
+                      '5.602 - Transfer'#234'ncia de saldo credor de ICMS para outro estabel' +
+                      'ecimento da mesma empresa, destinado '#224
+                    'compensa'#231#227'o de saldo devedor de ICMS'
+                    '5.603 - Ressarcimento de ICMS retido por substitui'#231#227'o tribut'#225'ria'
+                    
+                      '5.605 - Transfer'#234'ncia de saldo devedor de ICMS de outro estabele' +
+                      'cimento da mesma empresa'
+                    
+                      '5.606 - Utiliza'#231#227'o de saldo credor de ICMS para extin'#231#227'o por com' +
+                      'pensa'#231#227'o de d'#233'bitos fiscais'
+                    
+                      '5.651 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
+                      'belecimento destinado '#224' industrializa'#231#227'o'
+                    'subseq'#252'ente'
+                    
+                      '5.652 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
+                      'belecimento destinado '#224' comercializa'#231#227'o'
+                    
+                      '5.653 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
+                      'belecimento destinado a consumidor ou usu'#225'rio'
+                    'final'
+                    
+                      '5.654 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
+                      'do de terceiros destinado '#224' industrializa'#231#227'o'
+                    'subseq'#252'ente'
+                    
+                      '5.655 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
+                      'do de terceiros destinado '#224' comercializa'#231#227'o'
+                    
+                      '5.656 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
+                      'do de terceiros destinado a consumidor ou'
                     'usu'#225'rio final'
-                  
-                    '1.658 - Transfer'#234'ncia de combust'#237'vel e lubrificante para industr' +
-                    'ializa'#231#227'o'
-                  
-                    '1.659 - Transfer'#234'ncia de combust'#237'vel e lubrificante para comerci' +
-                    'aliza'#231#227'o'
-                  
-                    '1.660 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
-                    'ado '#224' industrializa'#231#227'o subseq'#252'ente'
-                  
-                    '1.661 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
-                    'ado '#224' comercializa'#231#227'o'
-                  
-                    '1.662 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
-                    'ado a consumidor ou usu'#225'rio final'
-                  '1.663 - Entrada de combust'#237'vel ou lubrificante para armazenagem'
-                  
-                    '1.664 - Retorno de combust'#237'vel ou lubrificante remetido para arm' +
-                    'azenagem'
-                  '1.900 - OUTRAS ENTRADAS DE MERCADORIAS OU AQUISI'#199#213'ES DE SERVI'#199'OS'
-                  '1.901 - Entrada para industrializa'#231#227'o por encomenda'
-                  
-                    '1.902 - Retorno de mercadoria remetida para industrializa'#231#227'o por' +
-                    ' encomenda'
-                  
-                    '1.903 - Entrada de mercadoria remetida para industrializa'#231#227'o e n' +
-                    #227'o aplicada no referido processo'
-                  '1.904 - Retorno de remessa para venda fora do estabelecimento'
-                  
-                    '1.905 - Entrada de mercadoria recebida para dep'#243'sito em dep'#243'sito' +
-                    ' fechado ou armaz'#233'm geral'
-                  
-                    '1.906 - Retorno de mercadoria remetida para dep'#243'sito fechado ou ' +
-                    'armaz'#233'm geral'
-                  
-                    '1.907 - Retorno simb'#243'lico de mercadoria remetida para dep'#243'sito f' +
-                    'echado ou armaz'#233'm geral'
-                  '1.908 - Entrada de bem por conta de contrato de comodato'
-                  
-                    '1.909 - Retorno de bem remetido por conta de contrato de comodat' +
-                    'o'
-                  '1.910 - Entrada de bonifica'#231#227'o, doa'#231#227'o ou brinde'
-                  '1.911 - Entrada de amostra gr'#225'tis'
-                  '1.912 - Entrada de mercadoria ou bem recebido para demonstra'#231#227'o'
-                  '1.913 - Retorno de mercadoria ou bem remetido para demonstra'#231#227'o'
-                  
-                    '1.914 - Retorno de mercadoria ou bem remetido para exposi'#231#227'o ou ' +
-                    'feira'
-                  
-                    '1.915 - Entrada de mercadoria ou bem recebido para conserto ou r' +
-                    'eparo'
-                  
-                    '1.916 - Retorno de mercadoria ou bem remetido para conserto ou r' +
-                    'eparo'
-                  
-                    '1.917 - Entrada de mercadoria recebida em consigna'#231#227'o mercantil ' +
-                    'ou industrial'
-                  
-                    '1.918 - Devolu'#231#227'o de mercadoria remetida em consigna'#231#227'o mercanti' +
-                    'l ou industrial'
-                  
-                    '1.919 - Devolu'#231#227'o simb'#243'lica de mercadoria vendida ou utilizada e' +
-                    'm processo industrial, remetida anteriormente'
-                  'em consigna'#231#227'o mercantil ou industrial'
-                  '1.920 - Entrada de vasilhame ou sacaria'
-                  '1.921 - Retorno de vasilhame ou sacaria'
-                  
-                    '1.922 - Lan'#231'amento efetuado a t'#237'tulo de simples faturamento deco' +
-                    'rrente de compra para recebimento futuro'
-                  
-                    '1.923 - Entrada de mercadoria recebida do vendedor remetente, em' +
-                    ' venda '#224' ordem'
-                  
-                    '1.924 - Entrada para industrializa'#231#227'o por conta e ordem do adqui' +
-                    'rente da mercadoria, quando esta n'#227'o transitar'
-                  'pelo estabelecimento do adquirente'
-                  
-                    '1.925 - Retorno de mercadoria remetida para industrializa'#231#227'o por' +
-                    ' conta e ordem do adquirente da mercadoria,'
-                  'quando esta n'#227'o transitar pelo estabelecimento do adquirente'
-                  
-                    '1.926 - Lan'#231'amento efetuado a t'#237'tulo de reclassifica'#231#227'o de merca' +
-                    'doria decorrente de forma'#231#227'o de kit ou de sua'
-                  'desagrega'#231#227'o'
-                  
-                    '1.931 - Lan'#231'amento efetuado pelo tomador do servi'#231'o de transport' +
-                    'e quando a responsabilidade de reten'#231#227'o do'
-                  
-                    'imposto for atribu'#237'da ao remetente ou alienante da mercadoria, p' +
-                    'elo servi'#231'o de transporte realizado por'
-                  
-                    'transportador aut'#244'nomo ou por transportador n'#227'o inscrito na unid' +
-                    'ade da Federa'#231#227'o onde iniciado o servi'#231'o'
-                  
-                    '1.932 - Aquisi'#231#227'o de servi'#231'o de transporte iniciado em unidade d' +
-                    'a Federa'#231#227'o diversa daquela onde inscrito o'
-                  'prestador'
-                  '1.933 - Aquisi'#231#227'o de servi'#231'o tributado pelo ISSQN'
-                  
-                    '1.949 - Outra entrada de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o ' +
-                    'especificada'
-                  '2.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DE OUTROS ESTADOS'
-                  
-                    '2.100 - COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU PRESTA' +
-                    #199#195'O DE SERVI'#199'OS'
-                  '2.101 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural'
-                  '2.102 - Compra para comercializa'#231#227'o'
-                  
-                    '2.111 - Compra para industrializa'#231#227'o de mercadoria recebida ante' +
-                    'riormente em consigna'#231#227'o industrial'
-                  
-                    '2.113 - Compra para comercializa'#231#227'o, de mercadoria recebida ante' +
-                    'riormente em consigna'#231#227'o mercantil'
-                  
-                    '2.116 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural originada' +
-                    ' de encomenda para recebimento futuro'
-                  
-                    '2.117 - Compra para comercializa'#231#227'o originada de encomenda para ' +
-                    'recebimento futuro'
-                  
-                    '2.118 - Compra de mercadoria para comercializa'#231#227'o pelo adquirent' +
-                    'e origin'#225'rio, entregue pelo vendedor remetente'
-                  'ao destinat'#225'rio, em venda '#224' ordem'
-                  
-                    '2.120 - Compra para industrializa'#231#227'o, em venda '#224' ordem, j'#225' receb' +
-                    'ida do vendedor remetente'
-                  
-                    '2.121 - Compra para comercializa'#231#227'o, em venda '#224' ordem, j'#225' recebi' +
-                    'da do vendedor remetente'
-                  
-                    '2.122 - Compra para industrializa'#231#227'o em que a mercadoria foi rem' +
-                    'etida pelo fornecedor ao industrializador sem'
-                  'transitar pelo estabelecimento adquirente'
-                  '2.124 - Industrializa'#231#227'o efetuada por outra empresa'
-                  
-                    '2.125 - Industrializa'#231#227'o efetuada por outra empresa quando a mer' +
-                    'cadoria remetida para utiliza'#231#227'o no processo de'
-                  
-                    'industrializa'#231#227'o n'#227'o transitou pelo estabelecimento adquirente d' +
-                    'a mercadoria'
-                  '2.126 - Compra para utiliza'#231#227'o na presta'#231#227'o de servi'#231'o'
-                  
-                    '2.150 - TRANSFER'#202'NCIAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU' +
-                    ' PRESTA'#199#195'O DE SERVI'#199'OS'
-                  '2.151 - Transfer'#234'ncia para industrializa'#231#227'o ou produ'#231#227'o rural'
-                  '2.152 - Transfer'#234'ncia para comercializa'#231#227'o'
-                  '2.153 - Transfer'#234'ncia de energia el'#233'trica para distribui'#231#227'o'
-                  '2.154 - Transfer'#234'ncia para utiliza'#231#227'o na presta'#231#227'o de servi'#231'o'
-                  
-                    '2.200 - DEVOLU'#199#213'ES DE VENDAS DE PRODU'#199#195'O PR'#211'PRIA, DE TERCEIROS O' +
-                    'U ANULA'#199#213'ES DE VALORES'
-                  '2.201 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento'
-                  
-                    '2.202 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
-                    'e terceiros'
-                  
-                    '2.203 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento, desti' +
-                    'nada '#224' Zona Franca de Manaus ou '#193'reas de'
-                  'Livre Com'#233'rcio'
-                  
-                    '2.204 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
-                    'e terceiros, destinada '#224' Zona Franca de Manaus'
-                  'ou '#193'reas de Livre Com'#233'rcio'
-                  
-                    '2.205 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de com' +
-                    'unica'#231#227'o'
-                  
-                    '2.206 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de tra' +
-                    'nsporte'
-                  '2.207 - Anula'#231#227'o de valor relativo '#224' venda de energia el'#233'trica'
-                  
-                    '2.208 - Devolu'#231#227'o de produ'#231#227'o do estabelecimento, remetida em tr' +
-                    'ansfer'#234'ncia'
-                  
-                    '2.209 - Devolu'#231#227'o de mercadoria adquirida ou recebida de terceir' +
-                    'os, remetida em transfer'#234'ncia'
-                  '2.250 - COMPRAS DE ENERGIA EL'#201'TRICA'
-                  
-                    '2.251 - Compra de energia el'#233'trica para distribui'#231#227'o ou comercia' +
-                    'liza'#231#227'o'
-                  
-                    '2.252 - Compra de energia el'#233'trica por estabelecimento industria' +
-                    'l'
-                  '2.253 - Compra de energia el'#233'trica por estabelecimento comercial'
-                  
-                    '2.254 - Compra de energia el'#233'trica por estabelecimento prestador' +
-                    ' de servi'#231'o de transporte'
-                  
-                    '2.255 - Compra de energia el'#233'trica por estabelecimento prestador' +
-                    ' de servi'#231'o de comunica'#231#227'o'
-                  
-                    '2.256 - Compra de energia el'#233'trica por estabelecimento de produt' +
-                    'or rural'
-                  
-                    '2.257 - Compra de energia el'#233'trica para consumo por demanda cont' +
-                    'ratada'
-                  '2.300 - AQUISI'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
-                  
-                    '2.301 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
-                    'vi'#231'o da mesma natureza'
-                  
-                    '2.302 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'industrial'
-                  
-                    '2.303 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'comercial'
-                  
-                    '2.304 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'de prestador de servi'#231'o de transporte'
-                  
-                    '2.305 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'de geradora ou de distribuidora de energia'
-                  'el'#233'trica'
-                  
-                    '2.306 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o por estabelecimento ' +
-                    'de produtor rural'
-                  
-                    '2.351 - Aquisi'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
-                    'i'#231'o da mesma natureza'
-                  
-                    '2.352 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento i' +
-                    'ndustrial'
-                  
-                    '2.353 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento c' +
-                    'omercial'
-                  
-                    '2.354 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e prestador de servi'#231'o de comunica'#231#227'o'
-                  
-                    '2.355 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e geradora ou de distribuidora de energia el'#233'trica'
-                  
-                    '2.356 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e produtor rural'
-                  
-                    '2.400 - ENTRADAS DE MERCADORIAS SUJEITAS AO REGIME DE SUBSTITUI'#199 +
-                    #195'O TRIBUT'#193'RIA'
-                  
-                    '2.401 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural em opera'#231 +
-                    #227'o com mercadoria sujeita ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria'
-                  
-                    '2.403 - Compra para comercializa'#231#227'o em opera'#231#227'o com mercadoria s' +
-                    'ujeita ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '2.406 - Compra de bem para o ativo imobilizado cuja mercadoria e' +
-                    'st'#225' sujeita ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '2.407 - Compra de mercadoria para uso ou consumo cuja mercadoria' +
-                    ' est'#225' sujeita ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria'
-                  
-                    '2.408 - Transfer'#234'ncia para industrializa'#231#227'o ou produ'#231#227'o rural em' +
-                    ' opera'#231#227'o com mercadoria sujeita ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria'
-                  
-                    '2.409 - Transfer'#234'ncia para comercializa'#231#227'o em opera'#231#227'o com merca' +
-                    'doria sujeita ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria'
-                  
-                    '2.410 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento em ope' +
-                    'ra'#231#227'o com produto sujeito ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria'
-                  
-                    '2.411 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
-                    'e terceiros em opera'#231#227'o com mercadoria sujeita'
-                  'ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '2.414 - Retorno de produ'#231#227'o do estabelecimento, remetida para ve' +
-                    'nda fora do estabelecimento em opera'#231#227'o com'
-                  'produto sujeito ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '2.415 - Retorno de mercadoria adquirida ou recebida de terceiros' +
-                    ', remetida para venda fora do estabelecimento em'
-                  
-                    'opera'#231#227'o com mercadoria sujeita ao regime de substitui'#231#227'o tribut' +
-                    #225'ria'
-                  
-                    '2.500 - ENTRADAS DE MERCADORIAS REMETIDAS COM FIM ESPEC'#205'FICO DE ' +
-                    'EXPORTA'#199#195'O E EVENTUAIS'
-                  'DEVOLU'#199#213'ES'
-                  
-                    '2.501 - Entrada de mercadoria recebida com fim espec'#237'fico de exp' +
-                    'orta'#231#227'o'
-                  
-                    '2.503 - Entrada decorrente de devolu'#231#227'o de produto remetido com ' +
-                    'fim espec'#237'fico de exporta'#231#227'o, de produ'#231#227'o do'
-                  'estabelecimento'
-                  
-                    '2.504 - Entrada decorrente de devolu'#231#227'o de mercadoria remetida c' +
-                    'om fim espec'#237'fico de exporta'#231#227'o, adquirida ou'
-                  'recebida de terceiros'
-                  
-                    '2.505 - Entrada decorrente de devolu'#231#227'o simb'#243'lica de mercadorias' +
-                    ' remetidas para forma'#231#227'o de lote de'
-                  
-                    'exporta'#231#227'o, de produtos industrializados ou produzidos pelo pr'#243'p' +
-                    'rio estabelecimento'
-                  
-                    '2.506 - Entrada decorrente de devolu'#231#227'o simb'#243'lica de mercadorias' +
-                    ', adquiridas ou recebidas de terceiros,'
-                  'remetidas para forma'#231#227'o de lote de exporta'#231#227'o'
-                  
-                    '2.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
-                    ' USO OU CONSUMO'
-                  '2.551 - Compra de bem para o ativo imobilizado'
-                  '2.552 - Transfer'#234'ncia de bem do ativo imobilizado'
-                  '2.553 - Devolu'#231#227'o de venda de bem do ativo imobilizado'
-                  
-                    '2.554 - Retorno de bem do ativo imobilizado remetido para uso fo' +
-                    'ra do estabelecimento'
-                  
-                    '2.555 - Entrada de bem do ativo imobilizado de terceiro, remetid' +
-                    'o para uso no estabelecimento'
-                  '2.556 - Compra de material para uso ou consumo'
-                  '2.557 - Transfer'#234'ncia de material para uso ou consumo'
-                  '2.600 - CR'#201'DITOS E RESSARCIMENTOS DE ICMS'
-                  '2.603 - Ressarcimento de ICMS retido por substitui'#231#227'o tribut'#225'ria'
-                  
-                    '2.651 - Compra de combust'#237'vel ou lubrificante para industrializa' +
-                    #231#227'o subseq'#252'ente'
-                  
-                    '2.652 - Compra de combust'#237'vel ou lubrificante para comercializa'#231 +
-                    #227'o'
-                  
-                    '2.653 - Compra de combust'#237'vel ou lubrificante por consumidor ou ' +
+                    
+                      '5.657 - Remessa de combust'#237'vel ou lubrificante adquirido ou rece' +
+                      'bido de terceiros para venda fora do'
+                    'estabelecimento'
+                    
+                      '5.658 - Transfer'#234'ncia de combust'#237'vel ou lubrificante de produ'#231#227'o' +
+                      ' do estabelecimento'
+                    
+                      '5.659 - Transfer'#234'ncia de combust'#237'vel ou lubrificante adquirido o' +
+                      'u recebido de terceiro'
+                    
+                      '5.660 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
+                      'rido para industrializa'#231#227'o subseq'#252'ente'
+                    
+                      '5.661 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
+                      'rido para comercializa'#231#227'o'
+                    
+                      '5.662 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
+                      'rido por consumidor ou usu'#225'rio final'
+                    '5.663 - Remessa para armazenagem de combust'#237'vel ou lubrificante'
+                    
+                      '5.664 - Retorno de combust'#237'vel ou lubrificante recebido para arm' +
+                      'azenagem'
+                    
+                      '5.665 - Retorno simb'#243'lico de combust'#237'vel ou lubrificante recebid' +
+                      'o para armazenagem'
+                    
+                      '5.666 - Remessa por conta e ordem de terceiros de combust'#237'vel ou' +
+                      ' lubrificante recebido para armazenagem'
+                    ''
+                    '5.900 - OUTRAS SA'#205'DAS DE MERCADORIAS OU PRESTA'#199#213'ES DE SERVI'#199'OS'
+                    '5.901 - Remessa para industrializa'#231#227'o por encomenda'
+                    
+                      '5.902 - Retorno de mercadoria utilizada na industrializa'#231#227'o por ' +
+                      'encomenda'
+                    
+                      '5.903 - Retorno de mercadoria recebida para industrializa'#231#227'o e n' +
+                      #227'o aplicada no referido processo'
+                    '5.904 - Remessa para venda fora do estabelecimento'
+                    '5.905 - Remessa para dep'#243'sito fechado ou armaz'#233'm geral'
+                    
+                      '5.906 - Retorno de mercadoria depositada em dep'#243'sito fechado ou ' +
+                      'armaz'#233'm geral'
+                    
+                      '5.907 - Retorno simb'#243'lico de mercadoria depositada em dep'#243'sito f' +
+                      'echado ou armaz'#233'm geral'
+                    '5.908 - Remessa de bem por conta de contrato de comodato'
+                    
+                      '5.909 - Retorno de bem recebido por conta de contrato de comodat' +
+                      'o'
+                    '5.910 - Remessa em bonifica'#231#227'o, doa'#231#227'o ou brinde'
+                    '5.911 - Remessa de amostra gr'#225'tis'
+                    '5.912 - Remessa de mercadoria ou bem para demonstra'#231#227'o'
+                    '5.913 - Retorno de mercadoria ou bem recebido para demonstra'#231#227'o'
+                    '5.914 - Remessa de mercadoria ou bem para exposi'#231#227'o ou feira'
+                    '5.915 - Remessa de mercadoria ou bem para conserto ou reparo'
+                    
+                      '5.916 - Retorno de mercadoria ou bem recebido para conserto ou r' +
+                      'eparo'
+                    
+                      '5.917 - Remessa de mercadoria em consigna'#231#227'o mercantil ou indust' +
+                      'rial'
+                    
+                      '5.918 - Devolu'#231#227'o de mercadoria recebida em consigna'#231#227'o mercanti' +
+                      'l ou industrial'
+                    
+                      '5.919 - Devolu'#231#227'o simb'#243'lica de mercadoria vendida ou utilizada e' +
+                      'm processo industrial, recebida anteriormente'
+                    'em consigna'#231#227'o mercantil ou industrial'
+                    '5.920 - Remessa de vasilhame ou sacaria'
+                    '5.921 - Devolu'#231#227'o de vasilhame ou sacaria'
+                    
+                      '5.922 - Lan'#231'amento efetuado a t'#237'tulo de simples faturamento deco' +
+                      'rrente de venda para entrega futura'
+                    
+                      '5.923 - Remessa de mercadoria por conta e ordem de terceiros, em' +
+                      ' venda '#224' ordem'
+                    
+                      '5.924 - Remessa para industrializa'#231#227'o por conta e ordem do adqui' +
+                      'rente da mercadoria, quando esta n'#227'o transitar'
+                    'pelo estabelecimento do adquirente'
+                    
+                      '5.925 - Retorno de mercadoria recebida para industrializa'#231#227'o por' +
+                      ' conta e ordem do adquirente da mercadoria,'
+                    'quando aquela n'#227'o transitar pelo estabelecimento do adquirente'
+                    
+                      '5.926 - Lan'#231'amento efetuado a t'#237'tulo de reclassifica'#231#227'o de merca' +
+                      'doria decorrente de forma'#231#227'o de kit ou de sua'
+                    'desagrega'#231#227'o'
+                    
+                      '5.927 - Lan'#231'amento efetuado a t'#237'tulo de baixa de estoque decorre' +
+                      'nte de perda, roubo ou deteriora'#231#227'o'
+                    
+                      '5.928 - Lan'#231'amento efetuado a t'#237'tulo de baixa de estoque decorre' +
+                      'nte do encerramento da atividade da empresa'
+                    
+                      '5.929 - Lan'#231'amento efetuado em decorr'#234'ncia de emiss'#227'o de documen' +
+                      'to fiscal relativo a opera'#231#227'o ou presta'#231#227'o'
+                    'tamb'#233'm registrada em equipamento Emissor de Cupom Fiscal - ECF'
+                    
+                      '5.931 - Lan'#231'amento efetuado em decorr'#234'ncia da responsabilidade d' +
+                      'e reten'#231#227'o do imposto por substitui'#231#227'o'
+                    
+                      'tribut'#225'ria, atribu'#237'da ao remetente ou alienante da mercadoria, p' +
+                      'elo servi'#231'o de transporte realizado por'
+                    
+                      'transportador aut'#244'nomo ou por transportador n'#227'o inscrito na unid' +
+                      'ade da Federa'#231#227'o onde iniciado o servi'#231'o'
+                    
+                      '5.932 - Presta'#231#227'o de servi'#231'o de transporte iniciada em unidade d' +
+                      'a Federa'#231#227'o diversa daquela onde inscrito o'
+                    'prestador'
+                    '5.933 - Presta'#231#227'o de servi'#231'o tributado pelo ISSQN'
+                    
+                      '5.949 - Outra sa'#237'da de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o es' +
+                      'pecificado'
+                    ''
+                    '6.000 - SA'#205'DAS OU PRESTA'#199#213'ES DE SERVI'#199'OS PARA OUTROS ESTADOS'
+                    ''
+                    ''
+                    '6.100 - VENDAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
+                    '6.101 - Venda de produ'#231#227'o do estabelecimento'
+                    '6.102 - Venda de mercadoria adquirida ou recebida de terceiros'
+                    
+                      '6.103 - Venda de produ'#231#227'o do estabelecimento, efetuada fora do e' +
+                      'stabelecimento'
+                    
+                      '6.104 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'efetuada fora do estabelecimento'
+                    
+                      '6.105 - Venda de produ'#231#227'o do estabelecimento que n'#227'o deva por el' +
+                      'e transitar'
+                    
+                      '6.106 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'que n'#227'o deva por ele transitar'
+                    
+                      '6.107 - Venda de produ'#231#227'o do estabelecimento, destinada a n'#227'o co' +
+                      'ntribuinte'
+                    
+                      '6.108 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'destinada a n'#227'o contribuinte'
+                    
+                      '6.109 - Venda de produ'#231#227'o do estabelecimento, destinada '#224' Zona F' +
+                      'ranca de Manaus ou '#193'reas de Livre Com'#233'rcio'
+                    
+                      '6.110 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'destinada '#224' Zona Franca de Manaus ou '#193'reas de'
+                    'Livre Com'#233'rcio'
+                    
+                      '6.111 - Venda de produ'#231#227'o do estabelecimento remetida anteriorme' +
+                      'nte em consigna'#231#227'o industrial'
+                    
+                      '6.112 - Venda de mercadoria adquirida ou recebida de Terceiros r' +
+                      'emetida anteriormente em consigna'#231#227'o industrial'
+                    
+                      '6.113 - Venda de produ'#231#227'o do estabelecimento remetida anteriorme' +
+                      'nte em consigna'#231#227'o mercantil'
+                    
+                      '6.114 - Venda de mercadoria adquirida ou recebida de terceiros r' +
+                      'emetida anteriormente em consigna'#231#227'o mercantil'
+                    
+                      '6.115 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'recebida anteriormente em consigna'#231#227'o mercantil'
+                    
+                      '6.116 - Venda de produ'#231#227'o do estabelecimento originada de encome' +
+                      'nda para entrega futura'
+                    
+                      '6.117 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'originada de encomenda para entrega futura'
+                    
+                      '6.118 - Venda de produ'#231#227'o do estabelecimento entregue ao destina' +
+                      't'#225'rio por conta e ordem do adquirente'
+                    'origin'#225'rio, em venda '#224' ordem'
+                    
+                      '6.119 - Venda de mercadoria adquirida ou recebida de terceiros e' +
+                      'ntregue ao destinat'#225'rio por conta e ordem do'
+                    'adquirente origin'#225'rio, em venda '#224' ordem'
+                    
+                      '6.120 - Venda de mercadoria adquirida ou recebida de terceiros e' +
+                      'ntregue ao destinat'#225'rio pelo vendedor remetente,'
+                    'em venda '#224' ordem'
+                    
+                      '6.122 - Venda de produ'#231#227'o do estabelecimento remetida para indus' +
+                      'trializa'#231#227'o, por conta e ordem do adquirente,'
+                    'sem transitar pelo estabelecimento do adquirente'
+                    
+                      '6.123 - Venda de mercadoria adquirida ou recebida de terceiros r' +
+                      'emetida para industrializa'#231#227'o, por conta e ordem'
+                    'do adquirente, sem transitar pelo estabelecimento do adquirente'
+                    '6.124 - Industrializa'#231#227'o efetuada para outra empresa'
+                    
+                      '6.125 - Industrializa'#231#227'o efetuada para outra empresa quando a me' +
+                      'rcadoria recebida para utiliza'#231#227'o no processo de'
+                    
+                      'industrializa'#231#227'o n'#227'o transitar pelo estabelecimento adquirente d' +
+                      'a mercadoria'
+                    ''
+                    '6.150 - TRANSFER'#202'NCIAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
+                    '6.151 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento'
+                    
+                      '6.152 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
+                      'ceiros'
+                    '6.153 - Transfer'#234'ncia de energia el'#233'trica'
+                    
+                      '6.155 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento, que n'#227'o de' +
+                      'va por ele transitar'
+                    
+                      '6.156 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
+                      'ceiros, que n'#227'o deva por ele transitar'
+                    ''
+                    
+                      '6.200 - DEVOLU'#199#213'ES DE COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZ' +
+                      'A'#199#195'O OU ANULA'#199#213'ES DE'
+                    'VALORES'
+                    
+                      '6.201 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
+                      'ral'
+                    '6.202 - Devolu'#231#227'o de compra para comercializa'#231#227'o'
+                    
+                      '6.205 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de com' +
+                      'unica'#231#227'o'
+                    
+                      '6.206 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de tra' +
+                      'nsporte'
+                    '6.207 - Anula'#231#227'o de valor relativo '#224' compra de energia el'#233'trica'
+                    
+                      '6.208 - Devolu'#231#227'o de mercadoria recebida em transfer'#234'ncia para i' +
+                      'ndustrializa'#231#227'o ou produ'#231#227'o rural'
+                    
+                      '6.209 - Devolu'#231#227'o de mercadoria recebida em transfer'#234'ncia para c' +
+                      'omercializa'#231#227'o'
+                    
+                      '6.210 - Devolu'#231#227'o de compra para utiliza'#231#227'o na presta'#231#227'o de serv' +
+                      'i'#231'o'
+                    ''
+                    '6.250 - VENDAS DE ENERGIA EL'#201'TRICA'
+                    
+                      '6.251 - Venda de energia el'#233'trica para distribui'#231#227'o ou comercial' +
+                      'iza'#231#227'o'
+                    
+                      '6.252 - Venda de energia el'#233'trica para estabelecimento industria' +
+                      'l'
+                    '6.253 - Venda de energia el'#233'trica para estabelecimento comercial'
+                    
+                      '6.254 - Venda de energia el'#233'trica para estabelecimento prestador' +
+                      ' de servi'#231'o de transporte'
+                    
+                      '6.255 - Venda de energia el'#233'trica para estabelecimento prestador' +
+                      ' de servi'#231'o de comunica'#231#227'o'
+                    
+                      '6.256 - Venda de energia el'#233'trica para estabelecimento de produt' +
+                      'or rural'
+                    
+                      '6.257 - Venda de energia el'#233'trica para consumo por demanda contr' +
+                      'atada'
+                    '6.258 - Venda de energia el'#233'trica a n'#227'o contribuinte'
+                    ''
+                    '6.300 - PRESTA'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
+                    
+                      '6.301 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
+                      'vi'#231'o da mesma natureza'
+                    
+                      '6.302 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento in' +
+                      'dustrial'
+                    
+                      '6.303 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento co' +
+                      'mercial'
+                    
+                      '6.304 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
+                      ' prestador de servi'#231'o de transporte'
+                    
+                      '6.305 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
+                      ' geradora ou de distribuidora de energia'
+                    'el'#233'trica'
+                    
+                      '6.306 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
+                      ' produtor rural'
+                    '6.307 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a n'#227'o contribuinte'
+                    ''
+                    '6.350 - PRESTA'#199#213'ES DE SERVI'#199'OS DE TRANSPORTE'
+                    
+                      '6.351 - Presta'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
+                      'i'#231'o da mesma natureza'
+                    
+                      '6.352 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento ind' +
+                      'ustrial'
+                    
+                      '6.353 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento com' +
+                      'ercial'
+                    
+                      '6.354 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
+                      'prestador de servi'#231'o de comunica'#231#227'o'
+                    
+                      '6.355 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
+                      'geradora ou de distribuidora de energia el'#233'trica'
+                    
+                      '6.356 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
+                      'produtor rural'
+                    '6.357 - Presta'#231#227'o de servi'#231'o de transporte a n'#227'o contribuinte'
+                    
+                      '6.359 - Presta'#231#227'o de servi'#231'o de transporte a contribuinte ou a n' +
+                      #227'o contribuinte quando a mercadoria transportada'
+                    'est'#225' dispensada de emiss'#227'o de nota fiscal -'
+                    ''
+                    
+                      '6.400 - SA'#205'DAS DE MERCADORIAS SUJEITAS AO REGIME DE SUBSTITUI'#199#195'O' +
+                      ' TRIBUT'#193'RIA'
+                    
+                      '6.401 - Venda de produ'#231#227'o do estabelecimento em opera'#231#227'o com pro' +
+                      'duto sujeito ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria, na condi'#231#227'o de contribuinte substituto'
+                    
+                      '6.402 - Venda de produ'#231#227'o do estabelecimento de produto sujeito ' +
+                      'ao regime de substitui'#231#227'o tribut'#225'ria, em'
+                    'opera'#231#227'o entre contribuintes substitutos do mesmo produto'
+                    
+                      '6.403 - Venda de mercadoria adquirida ou recebida de terceiros e' +
+                      'm opera'#231#227'o com mercadoria sujeita ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria, na condi'#231#227'o de contribuinte substituto'
+                    
+                      '6.404 - Venda de mercadoria sujeita ao regime de substitui'#231#227'o tr' +
+                      'ibut'#225'ria, cujo imposto j'#225' tenha sido retido'
+                    'anteriormente'
+                    
+                      '6.408 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento em opera'#231#227'o' +
+                      ' com produto sujeito ao regime de'
+                    'substitui'#231#227'o tribut'#225'ria'
+                    
+                      '6.409 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
+                      'ceiros em opera'#231#227'o com mercadoria sujeita ao'
+                    'regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '6.410 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
+                      'ral em opera'#231#227'o com mercadoria sujeita ao'
+                    'regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '6.411 - Devolu'#231#227'o de compra para comercializa'#231#227'o em opera'#231#227'o com' +
+                      ' mercadoria sujeita ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria'
+                    
+                      '6.412 - Devolu'#231#227'o de bem do ativo imobilizado, em opera'#231#227'o com m' +
+                      'ercadoria sujeita ao regime de substitui'#231#227'o'
+                    'tribut'#225'ria'
+                    
+                      '6.413 - Devolu'#231#227'o de mercadoria destinada ao uso ou consumo, em ' +
+                      'opera'#231#227'o com mercadoria sujeita ao regime'
+                    'de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '6.414 - Remessa de produ'#231#227'o do estabelecimento para venda fora d' +
+                      'o estabelecimento em opera'#231#227'o com produto'
+                    'sujeito ao regime de substitui'#231#227'o tribut'#225'ria'
+                    
+                      '6.415 - Remessa de mercadoria adquirida ou recebida de terceiros' +
+                      ' para venda fora do estabelecimento, em'
+                    
+                      'opera'#231#227'o com mercadoria sujeita ao regime de substitui'#231#227'o tribut' +
+                      #225'ria'
+                    ''
+                    
+                      '6.500 - REMESSAS COM FIM ESPEC'#205'FICO DE EXPORTA'#199#195'O E EVENTUAIS DE' +
+                      'VOLU'#199#213'ES'
+                    
+                      '6.501 - Remessa de produ'#231#227'o do estabelecimento, com fim espec'#237'fi' +
+                      'co de exporta'#231#227'o'
+                    
+                      '6.502 - Remessa de mercadoria adquirida ou recebida de terceiros' +
+                      ', com fim espec'#237'fico de exporta'#231#227'o'
+                    
+                      '6.503 - Devolu'#231#227'o de mercadoria recebida com fim espec'#237'fico de e' +
+                      'xporta'#231#227'o'
+                    
+                      '6.504 - Remessa de mercadorias para forma'#231#227'o de lote de exporta'#231 +
+                      #227'o, de produtos industrializados ou produzidos'
+                    'pelo pr'#243'prio estabelecimento'
+                    
+                      '6.505 - Remessa de mercadorias, adquiridas ou recebidas de terce' +
+                      'iros, para forma'#231#227'o de lote de exporta'#231#227'o'
+                    ''
+                    
+                      '6.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
+                      ' USO OU CONSUMO'
+                    '6.551 - Venda de bem do ativo imobilizado'
+                    '6.552 - Transfer'#234'ncia de bem do ativo imobilizado'
+                    '6.553 - Devolu'#231#227'o de compra de bem para o ativo imobilizado'
+                    
+                      '6.554 - Remessa de bem do ativo imobilizado para uso fora do est' +
+                      'abelecimento'
+                    
+                      '6.555 - Devolu'#231#227'o de bem do ativo imobilizado de terceiro, receb' +
+                      'ido para uso no estabelecimento'
+                    '6.556 - Devolu'#231#227'o de compra de material de uso ou consumo'
+                    '6.557 - Transfer'#234'ncia de material de uso ou consumo'
+                    ''
+                    '6.600 - CR'#201'DITOS E RESSARCIMENTOS DE ICMS'
+                    '6.603 - Ressarcimento de ICMS retido por substitui'#231#227'o tribut'#225'ria'
+                    ''
+                    
+                      '6.651 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
+                      'belecimento destinado '#224' industrializa'#231#227'o'
+                    'subseq'#252'ente'
+                    
+                      '6.652 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
+                      'belecimento destinado '#224' comercializa'#231#227'o'
+                    
+                      '6.653 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
+                      'belecimento destinado a consumidor ou usu'#225'rio'
+                    'final'
+                    
+                      '6.654 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
+                      'do de terceiros destinado '#224' industrializa'#231#227'o'
+                    'subseq'#252'ente'
+                    
+                      '6.655 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
+                      'do de terceiros destinado '#224' comercializa'#231#227'o'
+                    
+                      '6.656 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
+                      'do de terceiros destinado a consumidor ou'
                     'usu'#225'rio final'
-                  
-                    '2.658 - Transfer'#234'ncia de combust'#237'vel e lubrificante para industr' +
-                    'ializa'#231#227'o'
-                  
-                    '2.659 - Transfer'#234'ncia de combust'#237'vel e lubrificante para comerci' +
-                    'aliza'#231#227'o'
-                  
-                    '2.660 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
-                    'ado '#224' industrializa'#231#227'o subseq'#252'ente'
-                  
-                    '2.661 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
-                    'ado '#224' comercializa'#231#227'o'
-                  
-                    '2.662 - Devolu'#231#227'o de venda de combust'#237'vel ou lubrificante destin' +
-                    'ado a consumidor ou usu'#225'rio final'
-                  '2.663 - Entrada de combust'#237'vel ou lubrificante para armazenagem'
-                  
-                    '2.664 - Retorno de combust'#237'vel ou lubrificante remetido para arm' +
-                    'azenagem'
-                  '2.900 - OUTRAS ENTRADAS DE MERCADORIAS OU AQUISI'#199#213'ES DE SERVI'#199'OS'
-                  '2.901 - Entrada para industrializa'#231#227'o por encomenda'
-                  
-                    '2.902 - Retorno de mercadoria remetida para industrializa'#231#227'o por' +
-                    ' encomenda'
-                  
-                    '2.903 - Entrada de mercadoria remetida para industrializa'#231#227'o e n' +
-                    #227'o aplicada no referido processo'
-                  '2.904 - Retorno de remessa para venda fora do estabelecimento'
-                  
-                    '2.905 - Entrada de mercadoria recebida para dep'#243'sito em dep'#243'sito' +
-                    ' fechado ou armaz'#233'm geral'
-                  
-                    '2.906 - Retorno de mercadoria remetida para dep'#243'sito fechado ou ' +
-                    'armaz'#233'm geral'
-                  
-                    '2.907 - Retorno simb'#243'lico de mercadoria remetida para dep'#243'sito f' +
-                    'echado ou armaz'#233'm geral'
-                  '2.908 - Entrada de bem por conta de contrato de comodato'
-                  
-                    '2.909 - Retorno de bem remetido por conta de contrato de comodat' +
-                    'o'
-                  '2.910 - Entrada de bonifica'#231#227'o, doa'#231#227'o ou brinde'
-                  '2.911 - Entrada de amostra gr'#225'tis'
-                  '2.912 - Entrada de mercadoria ou bem recebido para demonstra'#231#227'o'
-                  '2.913 - Retorno de mercadoria ou bem remetido para demonstra'#231#227'o'
-                  
-                    '2.914 - Retorno de mercadoria ou bem remetido para exposi'#231#227'o ou ' +
-                    'feira'
-                  
-                    '2.915 - Entrada de mercadoria ou bem recebido para conserto ou r' +
-                    'eparo'
-                  
-                    '2.916 - Retorno de mercadoria ou bem remetido para conserto ou r' +
-                    'eparo'
-                  
-                    '2.917 - Entrada de mercadoria recebida em consigna'#231#227'o mercantil ' +
-                    'ou industrial'
-                  
-                    '2.918 - Devolu'#231#227'o de mercadoria remetida em consigna'#231#227'o mercanti' +
-                    'l ou industrial'
-                  
-                    '2.919 - Devolu'#231#227'o simb'#243'lica de mercadoria vendida ou utilizada e' +
-                    'm processo industrial, remetida anteriormente'
-                  'em consigna'#231#227'o mercantil ou industrial'
-                  '2.920 - Entrada de vasilhame ou sacaria'
-                  '2.921 - Retorno de vasilhame ou sacaria'
-                  
-                    '2.922 - Lan'#231'amento efetuado a t'#237'tulo de simples faturamento deco' +
-                    'rrente de compra para recebimento futuro'
-                  
-                    '2.923 - Entrada de mercadoria recebida do vendedor remetente, em' +
-                    ' venda '#224' ordem'
-                  
-                    '2.924 - Entrada para industrializa'#231#227'o por conta e ordem do adqui' +
-                    'rente da mercadoria, quando esta n'#227'o transitar'
-                  'pelo estabelecimento do adquirente'
-                  
-                    '2.925 - Retorno de mercadoria remetida para industrializa'#231#227'o por' +
-                    ' conta e ordem do adquirente da mercadoria,'
-                  'quando esta n'#227'o transitar pelo estabelecimento do adquirente'
-                  
-                    '2.931 - Lan'#231'amento efetuado pelo tomador do servi'#231'o de transport' +
-                    'e quando a responsabilidade de reten'#231#227'o do'
-                  
-                    'imposto for atribu'#237'da ao remetente ou alienante da mercadoria, p' +
-                    'elo servi'#231'o de transporte realizado por'
-                  
-                    'transportador aut'#244'nomo ou por transportador n'#227'o inscrito na unid' +
-                    'ade da Federa'#231#227'o onde iniciado o servi'#231'o'
-                  
-                    '2.932 - Aquisi'#231#227'o de servi'#231'o de transporte iniciado em unidade d' +
-                    'a Federa'#231#227'o diversa daquela onde inscrito o'
-                  'prestador'
-                  '2.933 - Aquisi'#231#227'o de servi'#231'o tributado pelo ISSQN'
-                  
-                    '2.949 - Outra entrada de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o ' +
-                    'especificado'
-                  '3.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DO EXTERIOR'
-                  
-                    '3.100 - COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU PRESTA' +
-                    #199#195'O DE SERVI'#199'OS'
-                  '3.101 - Compra para industrializa'#231#227'o ou produ'#231#227'o rural'
-                  '3.102 - Compra para comercializa'#231#227'o'
-                  '3.126 - Compra para utiliza'#231#227'o na presta'#231#227'o de servi'#231'o'
-                  '3.127 - Compra para industrializa'#231#227'o sob o regime de "drawback"'
-                  
-                    '3.200 - DEVOLU'#199#213'ES DE VENDAS DE PRODU'#199#195'O PR'#211'PRIA, DE TERCEIROS O' +
-                    'U ANULA'#199#213'ES DE VALORES'
-                  '3.201 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento'
-                  
-                    '3.202 - Devolu'#231#227'o de venda de mercadoria adquirida ou recebida d' +
-                    'e terceiros'
-                  
-                    '3.205 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de com' +
-                    'unica'#231#227'o'
-                  
-                    '3.206 - Anula'#231#227'o de valor relativo '#224' presta'#231#227'o de servi'#231'o de tra' +
-                    'nsporte'
-                  '3.207 - Anula'#231#227'o de valor relativo '#224' venda de energia el'#233'trica'
-                  
-                    '3.211 - Devolu'#231#227'o de venda de produ'#231#227'o do estabelecimento sob o ' +
-                    'regime de "drawback"'
-                  '3.250 - COMPRAS DE ENERGIA EL'#201'TRICA'
-                  
-                    '3.251 - Compra de energia el'#233'trica para distribui'#231#227'o ou comercia' +
-                    'liza'#231#227'o'
-                  '3.300 - AQUISI'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
-                  
-                    '3.301 - Aquisi'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
-                    'vi'#231'o da mesma natureza'
-                  '3.350 - AQUISI'#199#213'ES DE SERVI'#199'OS DE TRANSPORTE'
-                  
-                    '3.351 - Aquisi'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
-                    'i'#231'o da mesma natureza'
-                  
-                    '3.352 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento i' +
-                    'ndustrial'
-                  
-                    '3.353 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento c' +
-                    'omercial'
-                  
-                    '3.354 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e prestador de servi'#231'o de comunica'#231#227'o'
-                  
-                    '3.355 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e geradora ou de distribuidora de energia el'#233'trica'
-                  
-                    '3.356 - Aquisi'#231#227'o de servi'#231'o de transporte por estabelecimento d' +
-                    'e produtor rural'
-                  
-                    '3.500 - ENTRADAS DE MERCADORIAS REMETIDAS COM FIM ESPEC'#205'FICO DE ' +
-                    'EXPORTA'#199#195'O E EVENTUAIS'
-                  'DEVOLU'#199#213'ES'
-                  
-                    '3.503 - Devolu'#231#227'o de mercadoria exportada que tenha sido recebid' +
-                    'a com fim espec'#237'fico de exporta'#231#227'o'
-                  
-                    '3.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
-                    ' USO OU CONSUMO'
-                  '3.551 - Compra de bem para o ativo imobilizado'
-                  '3.553 - Devolu'#231#227'o de venda de bem do ativo imobilizado'
-                  '3.556 - Compra de material para uso ou consumo'
-                  
-                    '3.651 - Compra de combust'#237'vel ou lubrificante para industrializa' +
-                    #231#227'o subseq'#252'ente'
-                  
-                    '3.652 - Compra de combust'#237'vel ou lubrificante para comercializa'#231 +
-                    #227'o'
-                  
-                    '3.653 - Compra de combust'#237'vel ou lubrificante por consumidor ou ' +
-                    'usu'#225'rio final'
-                  '3.900 - OUTRAS ENTRADAS DE MERCADORIAS OU AQUISI'#199#213'ES DE SERVI'#199'OS'
-                  
-                    '3.930 - Lan'#231'amento efetuado a t'#237'tulo de entrada de bem sob ampar' +
-                    'o de regime especial aduaneiro de admiss'#227'o'
-                  'tempor'#225'ria'
-                  
-                    '3.949 - Outra entrada de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o ' +
-                    'especificado'
-                  '5.000 - SA'#205'DAS OU PRESTA'#199#213'ES DE SERVI'#199'OS PARA O ESTADO'
-                  '5.100 - VENDAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
-                  '5.101 - Venda de produ'#231#227'o do estabelecimento'
-                  '5.102 - Venda de mercadoria adquirida ou recebida de terceiros'
-                  
-                    '5.103 - Venda de produ'#231#227'o do estabelecimento, efetuada fora do e' +
-                    'stabelecimento'
-                  
-                    '5.104 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'efetuada fora do estabelecimento'
-                  
-                    '5.105 - Venda de produ'#231#227'o do estabelecimento que n'#227'o deva por el' +
-                    'e transitar'
-                  
-                    '5.106 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'que n'#227'o deva por ele transitar'
-                  
-                    '5.109 - Venda de produ'#231#227'o do estabelecimento, destinada '#224' Zona F' +
-                    'ranca de Manaus ou '#193'reas de Livre Com'#233'rcio'
-                  
-                    '5.110 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'destinada '#224' Zona Franca de Manaus ou '#193'reas de'
-                  'Livre Com'#233'rcio'
-                  
-                    '5.111 - Venda de produ'#231#227'o do estabelecimento remetida anteriorme' +
-                    'nte em consigna'#231#227'o industrial'
-                  
-                    '5.112 - Venda de mercadoria adquirida ou recebida de terceiros r' +
-                    'emetida anteriormente em consigna'#231#227'o industrial'
-                  
-                    '5.113 - Venda de produ'#231#227'o do estabelecimento remetida anteriorme' +
-                    'nte em consigna'#231#227'o mercantil'
-                  
-                    '5.114 - Venda de mercadoria adquirida ou recebida de terceiros r' +
-                    'emetida anteriormente em consigna'#231#227'o mercantil'
-                  
-                    '5.115 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'recebida anteriormente em consigna'#231#227'o mercantil'
-                  
-                    '5.116 - Venda de produ'#231#227'o do estabelecimento originada de encome' +
-                    'nda para entrega futura'
-                  
-                    '5.117 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'originada de encomenda para entrega futura'
-                  
-                    '5.118 - Venda de produ'#231#227'o do estabelecimento entregue ao destina' +
-                    't'#225'rio por conta e ordem do adquirente'
-                  'origin'#225'rio, em venda '#224' ordem'
-                  
-                    '5.119 - Venda de mercadoria adquirida ou recebida de terceiros e' +
-                    'ntregue ao destinat'#225'rio por conta e ordem do'
-                  'adquirente origin'#225'rio, em venda '#224' ordem'
-                  
-                    '5.120 - Venda de mercadoria adquirida ou recebida de terceiros e' +
-                    'ntregue ao destinat'#225'rio pelo vendedor remetente,'
-                  'em venda '#224' ordem'
-                  
-                    '5.122 - Venda de produ'#231#227'o do estabelecimento remetida para indus' +
-                    'trializa'#231#227'o, por conta e ordem do adquirente,'
-                  'sem transitar pelo estabelecimento do adquirente'
-                  
-                    '5.123 - Venda de mercadoria adquirida ou recebida de terceiros r' +
-                    'emetida para industrializa'#231#227'o, por conta e ordem'
-                  'do adquirente, sem transitar pelo estabelecimento do adquirente'
-                  '5.124 - Industrializa'#231#227'o efetuada para outra empresa'
-                  
-                    '5.125 - Industrializa'#231#227'o efetuada para outra empresa quando a me' +
-                    'rcadoria recebida para utiliza'#231#227'o no processo de'
-                  
-                    'industrializa'#231#227'o n'#227'o transitar pelo estabelecimento adquirente d' +
-                    'a mercadoria'
-                  '5.150 - TRANSFER'#202'NCIAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
-                  '5.151 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento'
-                  
-                    '5.152 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
-                    'ceiros'
-                  '5.153 - Transfer'#234'ncia de energia el'#233'trica'
-                  
-                    '5.155 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento, que n'#227'o de' +
-                    'va por ele transitar'
-                  
-                    '5.156 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
-                    'ceiros, que n'#227'o deva por ele transitar'
-                  
-                    '5.200 - DEVOLU'#199#213'ES DE COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZ' +
-                    'A'#199#195'O OU ANULA'#199#213'ES DE'
-                  'VALORES'
-                  
-                    '5.201 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
-                    'ral'
-                  '5.202 - Devolu'#231#227'o de compra para comercializa'#231#227'o'
-                  
-                    '5.205 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de com' +
-                    'unica'#231#227'o'
-                  
-                    '5.206 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de tra' +
-                    'nsporte'
-                  '5.207 - Anula'#231#227'o de valor relativo '#224' compra de energia el'#233'trica'
-                  
-                    '5.208 - Devolu'#231#227'o de mercadoria recebida em transfer'#234'ncia para i' +
-                    'ndustrializa'#231#227'o ou produ'#231#227'o rural'
-                  
-                    '5.209 - Devolu'#231#227'o de mercadoria recebida em transfer'#234'ncia para c' +
-                    'omercializa'#231#227'o'
-                  
-                    '5.210 - Devolu'#231#227'o de compra para utiliza'#231#227'o na presta'#231#227'o de serv' +
-                    'i'#231'o sujeitas ao ICMS ou ISSQN'
-                  '5.250 - VENDAS DE ENERGIA EL'#201'TRICA'
-                  
-                    '5.251 - Venda de energia el'#233'trica para distribui'#231#227'o ou comercial' +
-                    'iza'#231#227'o'
-                  
-                    '5.252 - Venda de energia el'#233'trica para estabelecimento industria' +
-                    'l'
-                  '5.253 - Venda de energia el'#233'trica para estabelecimento comercial'
-                  
-                    '5.254 - Venda de energia el'#233'trica para estabelecimento prestador' +
-                    ' de servi'#231'o de transporte'
-                  
-                    '5.255 - Venda de energia el'#233'trica para estabelecimento prestador' +
-                    ' de servi'#231'o de comunica'#231#227'o'
-                  
-                    '5.256 - Venda de energia el'#233'trica para estabelecimento de produt' +
-                    'or rural'
-                  
-                    '5.257 - Venda de energia el'#233'trica para consumo por demanda contr' +
-                    'atada'
-                  '5.258 - Venda de energia el'#233'trica a n'#227'o contribuinte'
-                  '5.300 - PRESTA'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
-                  
-                    '5.301 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
-                    'vi'#231'o da mesma natureza'
-                  
-                    '5.302 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento in' +
-                    'dustrial'
-                  
-                    '5.303 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento co' +
-                    'mercial'
-                  
-                    '5.304 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
-                    ' prestador de servi'#231'o de transporte'
-                  
-                    '5.305 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
-                    ' geradora ou de distribuidora de energia'
-                  'el'#233'trica'
-                  
-                    '5.306 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
-                    ' produtor rural'
-                  '5.307 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a n'#227'o contribuinte'
-                  '5.350 - PRESTA'#199#213'ES DE SERVI'#199'OS DE TRANSPORTE'
-                  
-                    '5.351 - Presta'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
-                    'i'#231'o da mesma natureza'
-                  
-                    '5.352 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento ind' +
-                    'ustrial'
-                  
-                    '5.353 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento com' +
-                    'ercial'
-                  
-                    '5.354 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
-                    'prestador de servi'#231'o de comunica'#231#227'o'
-                  
-                    '5.355 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
-                    'geradora ou de distribuidora de energia el'#233'trica'
-                  
-                    '5.356 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
-                    'produtor rural'
-                  '5.357 - Presta'#231#227'o de servi'#231'o de transporte a n'#227'o contribuinte'
-                  
-                    '5.359 - Presta'#231#227'o de servi'#231'o de transporte a contribuinte ou a n' +
-                    #227'o contribuinte quando a mercadoria transportada'
-                  'est'#225' dispensada de emiss'#227'o de nota fiscal'
-                  
-                    '5.360 - Presta'#231#227'o de servi'#231'o de transporte a contribuinte substi' +
-                    'tuto em rela'#231#227'o ao servi'#231'o de transporte'
-                  
-                    '5.400 - SA'#205'DAS DE MERCADORIAS SUJEITAS AO REGIME DE SUBSTITUI'#199#195'O' +
-                    ' TRIBUT'#193'RIA'
-                  
-                    '5.401 - Venda de produ'#231#227'o do estabelecimento em opera'#231#227'o com pro' +
-                    'duto sujeito ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria, na condi'#231#227'o de contribuinte substituto'
-                  
-                    '5.402 - Venda de produ'#231#227'o do estabelecimento de produto sujeito ' +
-                    'ao regime de substitui'#231#227'o tribut'#225'ria, em'
-                  'opera'#231#227'o entre contribuintes substitutos do mesmo produto'
-                  
-                    '5.403 - Venda de mercadoria adquirida ou recebida de terceiros e' +
-                    'm opera'#231#227'o com mercadoria sujeita ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria, na condi'#231#227'o de contribuinte substituto'
-                  
-                    '5.405 - Venda de mercadoria adquirida ou recebida de terceiros e' +
-                    'm opera'#231#227'o com mercadoria sujeita ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria, na condi'#231#227'o de contribuinte substitu'#237'do'
-                  
-                    '5.408 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento em opera'#231#227'o' +
-                    ' com produto sujeito ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria'
-                  
-                    '5.409 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
-                    'ceiros em opera'#231#227'o com mercadoria sujeita ao'
-                  'regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '5.410 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
-                    'ral em opera'#231#227'o com mercadoria sujeita ao'
-                  'regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '5.411 - Devolu'#231#227'o de compra para comercializa'#231#227'o em opera'#231#227'o com' +
-                    ' mercadoria sujeita ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria'
-                  
-                    '5.412 - Devolu'#231#227'o de bem do ativo imobilizado, em opera'#231#227'o com m' +
-                    'ercadoria sujeita ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria'
-                  
-                    '5.413 - Devolu'#231#227'o de mercadoria destinada ao uso ou consumo, em ' +
-                    'opera'#231#227'o com mercadoria sujeita ao regime'
-                  'de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '5.414 - Remessa de produ'#231#227'o do estabelecimento para venda fora d' +
-                    'o estabelecimento em opera'#231#227'o com produto'
-                  'sujeito ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '5.415 - Remessa de mercadoria adquirida ou recebida de terceiros' +
-                    ' para venda fora do estabelecimento, em'
-                  
-                    'opera'#231#227'o com mercadoria sujeita ao regime de substitui'#231#227'o tribut' +
-                    #225'ria'
-                  '5.450 - SISTEMAS DE INTEGRA'#199#195'O'
-                  
-                    '5.451 - Remessa de animal e de insumo para estabelecimento produ' +
-                    'tor'
-                  
-                    '5.500 - REMESSAS COM FIM ESPEC'#205'FICO DE EXPORTA'#199#195'O E EVENTUAIS DE' +
-                    'VOLU'#199#213'ES'
-                  
-                    '5.501 - Remessa de produ'#231#227'o do estabelecimento, com fim espec'#237'fi' +
-                    'co de exporta'#231#227'o'
-                  
-                    '5.502 - Remessa de mercadoria adquirida ou recebida de terceiros' +
-                    ', com fim espec'#237'fico de exporta'#231#227'o'
-                  
-                    '5.503 - Devolu'#231#227'o de mercadoria recebida com fim espec'#237'fico de e' +
-                    'xporta'#231#227'o'
-                  
-                    '5.504 - Remessa de mercadorias para forma'#231#227'o de lote de exporta'#231 +
-                    #227'o, de produtos industrializados ou produzidos'
-                  'pelo pr'#243'prio estabelecimento'
-                  
-                    '5.505 - Remessa de mercadorias, adquiridas ou recebidas de terce' +
-                    'iros, para forma'#231#227'o de lote de exporta'#231#227'o'
-                  
-                    '5.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
-                    ' USO OU CONSUMO'
-                  '5.551 - Venda de bem do ativo imobilizado'
-                  '5.552 - Transfer'#234'ncia de bem do ativo imobilizado'
-                  '5.553 - Devolu'#231#227'o de compra de bem para o ativo imobilizado'
-                  
-                    '5.554 - Remessa de bem do ativo imobilizado para uso fora do est' +
-                    'abelecimento'
-                  
-                    '5.555 - Devolu'#231#227'o de bem do ativo imobilizado de terceiro, receb' +
-                    'ido para uso no estabelecimento'
-                  '5.556 - Devolu'#231#227'o de compra de material de uso ou consumo'
-                  '5.557 - Transfer'#234'ncia de material de uso ou consumo'
-                  '5.600 - CR'#201'DITOS E RESSARCIMENTOS DE ICMS'
-                  '5.601 - Transfer'#234'ncia de cr'#233'dito de ICMS acumulado'
-                  
-                    '5.602 - Transfer'#234'ncia de saldo credor de ICMS para outro estabel' +
-                    'ecimento da mesma empresa, destinado '#224
-                  'compensa'#231#227'o de saldo devedor de ICMS'
-                  '5.603 - Ressarcimento de ICMS retido por substitui'#231#227'o tribut'#225'ria'
-                  
-                    '5.605 - Transfer'#234'ncia de saldo devedor de ICMS de outro estabele' +
-                    'cimento da mesma empresa'
-                  
-                    '5.606 - Utiliza'#231#227'o de saldo credor de ICMS para extin'#231#227'o por com' +
-                    'pensa'#231#227'o de d'#233'bitos fiscais'
-                  
-                    '5.651 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
-                    'belecimento destinado '#224' industrializa'#231#227'o'
-                  'subseq'#252'ente'
-                  
-                    '5.652 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
-                    'belecimento destinado '#224' comercializa'#231#227'o'
-                  
-                    '5.653 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
-                    'belecimento destinado a consumidor ou usu'#225'rio'
-                  'final'
-                  
-                    '5.654 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
-                    'do de terceiros destinado '#224' industrializa'#231#227'o'
-                  'subseq'#252'ente'
-                  
-                    '5.655 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
-                    'do de terceiros destinado '#224' comercializa'#231#227'o'
-                  
-                    '5.656 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
-                    'do de terceiros destinado a consumidor ou'
-                  'usu'#225'rio final'
-                  
-                    '5.657 - Remessa de combust'#237'vel ou lubrificante adquirido ou rece' +
-                    'bido de terceiros para venda fora do'
-                  'estabelecimento'
-                  
-                    '5.658 - Transfer'#234'ncia de combust'#237'vel ou lubrificante de produ'#231#227'o' +
-                    ' do estabelecimento'
-                  
-                    '5.659 - Transfer'#234'ncia de combust'#237'vel ou lubrificante adquirido o' +
-                    'u recebido de terceiro'
-                  
-                    '5.660 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
-                    'rido para industrializa'#231#227'o subseq'#252'ente'
-                  
-                    '5.661 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
-                    'rido para comercializa'#231#227'o'
-                  
-                    '5.662 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
-                    'rido por consumidor ou usu'#225'rio final'
-                  '5.663 - Remessa para armazenagem de combust'#237'vel ou lubrificante'
-                  
-                    '5.664 - Retorno de combust'#237'vel ou lubrificante recebido para arm' +
-                    'azenagem'
-                  
-                    '5.665 - Retorno simb'#243'lico de combust'#237'vel ou lubrificante recebid' +
-                    'o para armazenagem'
-                  
-                    '5.666 - Remessa por conta e ordem de terceiros de combust'#237'vel ou' +
-                    ' lubrificante recebido para armazenagem'
-                  ''
-                  '5.900 - OUTRAS SA'#205'DAS DE MERCADORIAS OU PRESTA'#199#213'ES DE SERVI'#199'OS'
-                  '5.901 - Remessa para industrializa'#231#227'o por encomenda'
-                  
-                    '5.902 - Retorno de mercadoria utilizada na industrializa'#231#227'o por ' +
-                    'encomenda'
-                  
-                    '5.903 - Retorno de mercadoria recebida para industrializa'#231#227'o e n' +
-                    #227'o aplicada no referido processo'
-                  '5.904 - Remessa para venda fora do estabelecimento'
-                  '5.905 - Remessa para dep'#243'sito fechado ou armaz'#233'm geral'
-                  
-                    '5.906 - Retorno de mercadoria depositada em dep'#243'sito fechado ou ' +
-                    'armaz'#233'm geral'
-                  
-                    '5.907 - Retorno simb'#243'lico de mercadoria depositada em dep'#243'sito f' +
-                    'echado ou armaz'#233'm geral'
-                  '5.908 - Remessa de bem por conta de contrato de comodato'
-                  
-                    '5.909 - Retorno de bem recebido por conta de contrato de comodat' +
-                    'o'
-                  '5.910 - Remessa em bonifica'#231#227'o, doa'#231#227'o ou brinde'
-                  '5.911 - Remessa de amostra gr'#225'tis'
-                  '5.912 - Remessa de mercadoria ou bem para demonstra'#231#227'o'
-                  '5.913 - Retorno de mercadoria ou bem recebido para demonstra'#231#227'o'
-                  '5.914 - Remessa de mercadoria ou bem para exposi'#231#227'o ou feira'
-                  '5.915 - Remessa de mercadoria ou bem para conserto ou reparo'
-                  
-                    '5.916 - Retorno de mercadoria ou bem recebido para conserto ou r' +
-                    'eparo'
-                  
-                    '5.917 - Remessa de mercadoria em consigna'#231#227'o mercantil ou indust' +
-                    'rial'
-                  
-                    '5.918 - Devolu'#231#227'o de mercadoria recebida em consigna'#231#227'o mercanti' +
-                    'l ou industrial'
-                  
-                    '5.919 - Devolu'#231#227'o simb'#243'lica de mercadoria vendida ou utilizada e' +
-                    'm processo industrial, recebida anteriormente'
-                  'em consigna'#231#227'o mercantil ou industrial'
-                  '5.920 - Remessa de vasilhame ou sacaria'
-                  '5.921 - Devolu'#231#227'o de vasilhame ou sacaria'
-                  
-                    '5.922 - Lan'#231'amento efetuado a t'#237'tulo de simples faturamento deco' +
-                    'rrente de venda para entrega futura'
-                  
-                    '5.923 - Remessa de mercadoria por conta e ordem de terceiros, em' +
-                    ' venda '#224' ordem'
-                  
-                    '5.924 - Remessa para industrializa'#231#227'o por conta e ordem do adqui' +
-                    'rente da mercadoria, quando esta n'#227'o transitar'
-                  'pelo estabelecimento do adquirente'
-                  
-                    '5.925 - Retorno de mercadoria recebida para industrializa'#231#227'o por' +
-                    ' conta e ordem do adquirente da mercadoria,'
-                  'quando aquela n'#227'o transitar pelo estabelecimento do adquirente'
-                  
-                    '5.926 - Lan'#231'amento efetuado a t'#237'tulo de reclassifica'#231#227'o de merca' +
-                    'doria decorrente de forma'#231#227'o de kit ou de sua'
-                  'desagrega'#231#227'o'
-                  
-                    '5.927 - Lan'#231'amento efetuado a t'#237'tulo de baixa de estoque decorre' +
-                    'nte de perda, roubo ou deteriora'#231#227'o'
-                  
-                    '5.928 - Lan'#231'amento efetuado a t'#237'tulo de baixa de estoque decorre' +
-                    'nte do encerramento da atividade da empresa'
-                  
-                    '5.929 - Lan'#231'amento efetuado em decorr'#234'ncia de emiss'#227'o de documen' +
-                    'to fiscal relativo a opera'#231#227'o ou presta'#231#227'o'
-                  'tamb'#233'm registrada em equipamento Emissor de Cupom Fiscal - ECF'
-                  
-                    '5.931 - Lan'#231'amento efetuado em decorr'#234'ncia da responsabilidade d' +
-                    'e reten'#231#227'o do imposto por substitui'#231#227'o'
-                  
-                    'tribut'#225'ria, atribu'#237'da ao remetente ou alienante da mercadoria, p' +
-                    'elo servi'#231'o de transporte realizado por'
-                  
-                    'transportador aut'#244'nomo ou por transportador n'#227'o inscrito na unid' +
-                    'ade da Federa'#231#227'o onde iniciado o servi'#231'o'
-                  
-                    '5.932 - Presta'#231#227'o de servi'#231'o de transporte iniciada em unidade d' +
-                    'a Federa'#231#227'o diversa daquela onde inscrito o'
-                  'prestador'
-                  '5.933 - Presta'#231#227'o de servi'#231'o tributado pelo ISSQN'
-                  
-                    '5.949 - Outra sa'#237'da de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o es' +
-                    'pecificado'
-                  ''
-                  '6.000 - SA'#205'DAS OU PRESTA'#199#213'ES DE SERVI'#199'OS PARA OUTROS ESTADOS'
-                  ''
-                  ''
-                  '6.100 - VENDAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
-                  '6.101 - Venda de produ'#231#227'o do estabelecimento'
-                  '6.102 - Venda de mercadoria adquirida ou recebida de terceiros'
-                  
-                    '6.103 - Venda de produ'#231#227'o do estabelecimento, efetuada fora do e' +
-                    'stabelecimento'
-                  
-                    '6.104 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'efetuada fora do estabelecimento'
-                  
-                    '6.105 - Venda de produ'#231#227'o do estabelecimento que n'#227'o deva por el' +
-                    'e transitar'
-                  
-                    '6.106 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'que n'#227'o deva por ele transitar'
-                  
-                    '6.107 - Venda de produ'#231#227'o do estabelecimento, destinada a n'#227'o co' +
-                    'ntribuinte'
-                  
-                    '6.108 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'destinada a n'#227'o contribuinte'
-                  
-                    '6.109 - Venda de produ'#231#227'o do estabelecimento, destinada '#224' Zona F' +
-                    'ranca de Manaus ou '#193'reas de Livre Com'#233'rcio'
-                  
-                    '6.110 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'destinada '#224' Zona Franca de Manaus ou '#193'reas de'
-                  'Livre Com'#233'rcio'
-                  
-                    '6.111 - Venda de produ'#231#227'o do estabelecimento remetida anteriorme' +
-                    'nte em consigna'#231#227'o industrial'
-                  
-                    '6.112 - Venda de mercadoria adquirida ou recebida de Terceiros r' +
-                    'emetida anteriormente em consigna'#231#227'o industrial'
-                  
-                    '6.113 - Venda de produ'#231#227'o do estabelecimento remetida anteriorme' +
-                    'nte em consigna'#231#227'o mercantil'
-                  
-                    '6.114 - Venda de mercadoria adquirida ou recebida de terceiros r' +
-                    'emetida anteriormente em consigna'#231#227'o mercantil'
-                  
-                    '6.115 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'recebida anteriormente em consigna'#231#227'o mercantil'
-                  
-                    '6.116 - Venda de produ'#231#227'o do estabelecimento originada de encome' +
-                    'nda para entrega futura'
-                  
-                    '6.117 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'originada de encomenda para entrega futura'
-                  
-                    '6.118 - Venda de produ'#231#227'o do estabelecimento entregue ao destina' +
-                    't'#225'rio por conta e ordem do adquirente'
-                  'origin'#225'rio, em venda '#224' ordem'
-                  
-                    '6.119 - Venda de mercadoria adquirida ou recebida de terceiros e' +
-                    'ntregue ao destinat'#225'rio por conta e ordem do'
-                  'adquirente origin'#225'rio, em venda '#224' ordem'
-                  
-                    '6.120 - Venda de mercadoria adquirida ou recebida de terceiros e' +
-                    'ntregue ao destinat'#225'rio pelo vendedor remetente,'
-                  'em venda '#224' ordem'
-                  
-                    '6.122 - Venda de produ'#231#227'o do estabelecimento remetida para indus' +
-                    'trializa'#231#227'o, por conta e ordem do adquirente,'
-                  'sem transitar pelo estabelecimento do adquirente'
-                  
-                    '6.123 - Venda de mercadoria adquirida ou recebida de terceiros r' +
-                    'emetida para industrializa'#231#227'o, por conta e ordem'
-                  'do adquirente, sem transitar pelo estabelecimento do adquirente'
-                  '6.124 - Industrializa'#231#227'o efetuada para outra empresa'
-                  
-                    '6.125 - Industrializa'#231#227'o efetuada para outra empresa quando a me' +
-                    'rcadoria recebida para utiliza'#231#227'o no processo de'
-                  
-                    'industrializa'#231#227'o n'#227'o transitar pelo estabelecimento adquirente d' +
-                    'a mercadoria'
-                  ''
-                  '6.150 - TRANSFER'#202'NCIAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
-                  '6.151 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento'
-                  
-                    '6.152 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
-                    'ceiros'
-                  '6.153 - Transfer'#234'ncia de energia el'#233'trica'
-                  
-                    '6.155 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento, que n'#227'o de' +
-                    'va por ele transitar'
-                  
-                    '6.156 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
-                    'ceiros, que n'#227'o deva por ele transitar'
-                  ''
-                  
-                    '6.200 - DEVOLU'#199#213'ES DE COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZ' +
-                    'A'#199#195'O OU ANULA'#199#213'ES DE'
-                  'VALORES'
-                  
-                    '6.201 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
-                    'ral'
-                  '6.202 - Devolu'#231#227'o de compra para comercializa'#231#227'o'
-                  
-                    '6.205 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de com' +
-                    'unica'#231#227'o'
-                  
-                    '6.206 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de tra' +
-                    'nsporte'
-                  '6.207 - Anula'#231#227'o de valor relativo '#224' compra de energia el'#233'trica'
-                  
-                    '6.208 - Devolu'#231#227'o de mercadoria recebida em transfer'#234'ncia para i' +
-                    'ndustrializa'#231#227'o ou produ'#231#227'o rural'
-                  
-                    '6.209 - Devolu'#231#227'o de mercadoria recebida em transfer'#234'ncia para c' +
-                    'omercializa'#231#227'o'
-                  
-                    '6.210 - Devolu'#231#227'o de compra para utiliza'#231#227'o na presta'#231#227'o de serv' +
-                    'i'#231'o'
-                  ''
-                  '6.250 - VENDAS DE ENERGIA EL'#201'TRICA'
-                  
-                    '6.251 - Venda de energia el'#233'trica para distribui'#231#227'o ou comercial' +
-                    'iza'#231#227'o'
-                  
-                    '6.252 - Venda de energia el'#233'trica para estabelecimento industria' +
-                    'l'
-                  '6.253 - Venda de energia el'#233'trica para estabelecimento comercial'
-                  
-                    '6.254 - Venda de energia el'#233'trica para estabelecimento prestador' +
-                    ' de servi'#231'o de transporte'
-                  
-                    '6.255 - Venda de energia el'#233'trica para estabelecimento prestador' +
-                    ' de servi'#231'o de comunica'#231#227'o'
-                  
-                    '6.256 - Venda de energia el'#233'trica para estabelecimento de produt' +
-                    'or rural'
-                  
-                    '6.257 - Venda de energia el'#233'trica para consumo por demanda contr' +
-                    'atada'
-                  '6.258 - Venda de energia el'#233'trica a n'#227'o contribuinte'
-                  ''
-                  '6.300 - PRESTA'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
-                  
-                    '6.301 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
-                    'vi'#231'o da mesma natureza'
-                  
-                    '6.302 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento in' +
-                    'dustrial'
-                  
-                    '6.303 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento co' +
-                    'mercial'
-                  
-                    '6.304 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
-                    ' prestador de servi'#231'o de transporte'
-                  
-                    '6.305 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
-                    ' geradora ou de distribuidora de energia'
-                  'el'#233'trica'
-                  
-                    '6.306 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a estabelecimento de' +
-                    ' produtor rural'
-                  '6.307 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o a n'#227'o contribuinte'
-                  ''
-                  '6.350 - PRESTA'#199#213'ES DE SERVI'#199'OS DE TRANSPORTE'
-                  
-                    '6.351 - Presta'#231#227'o de servi'#231'o de transporte para execu'#231#227'o de serv' +
-                    'i'#231'o da mesma natureza'
-                  
-                    '6.352 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento ind' +
-                    'ustrial'
-                  
-                    '6.353 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento com' +
-                    'ercial'
-                  
-                    '6.354 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
-                    'prestador de servi'#231'o de comunica'#231#227'o'
-                  
-                    '6.355 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
-                    'geradora ou de distribuidora de energia el'#233'trica'
-                  
-                    '6.356 - Presta'#231#227'o de servi'#231'o de transporte a estabelecimento de ' +
-                    'produtor rural'
-                  '6.357 - Presta'#231#227'o de servi'#231'o de transporte a n'#227'o contribuinte'
-                  
-                    '6.359 - Presta'#231#227'o de servi'#231'o de transporte a contribuinte ou a n' +
-                    #227'o contribuinte quando a mercadoria transportada'
-                  'est'#225' dispensada de emiss'#227'o de nota fiscal -'
-                  ''
-                  
-                    '6.400 - SA'#205'DAS DE MERCADORIAS SUJEITAS AO REGIME DE SUBSTITUI'#199#195'O' +
-                    ' TRIBUT'#193'RIA'
-                  
-                    '6.401 - Venda de produ'#231#227'o do estabelecimento em opera'#231#227'o com pro' +
-                    'duto sujeito ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria, na condi'#231#227'o de contribuinte substituto'
-                  
-                    '6.402 - Venda de produ'#231#227'o do estabelecimento de produto sujeito ' +
-                    'ao regime de substitui'#231#227'o tribut'#225'ria, em'
-                  'opera'#231#227'o entre contribuintes substitutos do mesmo produto'
-                  
-                    '6.403 - Venda de mercadoria adquirida ou recebida de terceiros e' +
-                    'm opera'#231#227'o com mercadoria sujeita ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria, na condi'#231#227'o de contribuinte substituto'
-                  
-                    '6.404 - Venda de mercadoria sujeita ao regime de substitui'#231#227'o tr' +
-                    'ibut'#225'ria, cujo imposto j'#225' tenha sido retido'
-                  'anteriormente'
-                  
-                    '6.408 - Transfer'#234'ncia de produ'#231#227'o do estabelecimento em opera'#231#227'o' +
-                    ' com produto sujeito ao regime de'
-                  'substitui'#231#227'o tribut'#225'ria'
-                  
-                    '6.409 - Transfer'#234'ncia de mercadoria adquirida ou recebida de ter' +
-                    'ceiros em opera'#231#227'o com mercadoria sujeita ao'
-                  'regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '6.410 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
-                    'ral em opera'#231#227'o com mercadoria sujeita ao'
-                  'regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '6.411 - Devolu'#231#227'o de compra para comercializa'#231#227'o em opera'#231#227'o com' +
-                    ' mercadoria sujeita ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria'
-                  
-                    '6.412 - Devolu'#231#227'o de bem do ativo imobilizado, em opera'#231#227'o com m' +
-                    'ercadoria sujeita ao regime de substitui'#231#227'o'
-                  'tribut'#225'ria'
-                  
-                    '6.413 - Devolu'#231#227'o de mercadoria destinada ao uso ou consumo, em ' +
-                    'opera'#231#227'o com mercadoria sujeita ao regime'
-                  'de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '6.414 - Remessa de produ'#231#227'o do estabelecimento para venda fora d' +
-                    'o estabelecimento em opera'#231#227'o com produto'
-                  'sujeito ao regime de substitui'#231#227'o tribut'#225'ria'
-                  
-                    '6.415 - Remessa de mercadoria adquirida ou recebida de terceiros' +
-                    ' para venda fora do estabelecimento, em'
-                  
-                    'opera'#231#227'o com mercadoria sujeita ao regime de substitui'#231#227'o tribut' +
-                    #225'ria'
-                  ''
-                  
-                    '6.500 - REMESSAS COM FIM ESPEC'#205'FICO DE EXPORTA'#199#195'O E EVENTUAIS DE' +
-                    'VOLU'#199#213'ES'
-                  
-                    '6.501 - Remessa de produ'#231#227'o do estabelecimento, com fim espec'#237'fi' +
-                    'co de exporta'#231#227'o'
-                  
-                    '6.502 - Remessa de mercadoria adquirida ou recebida de terceiros' +
-                    ', com fim espec'#237'fico de exporta'#231#227'o'
-                  
-                    '6.503 - Devolu'#231#227'o de mercadoria recebida com fim espec'#237'fico de e' +
-                    'xporta'#231#227'o'
-                  
-                    '6.504 - Remessa de mercadorias para forma'#231#227'o de lote de exporta'#231 +
-                    #227'o, de produtos industrializados ou produzidos'
-                  'pelo pr'#243'prio estabelecimento'
-                  
-                    '6.505 - Remessa de mercadorias, adquiridas ou recebidas de terce' +
-                    'iros, para forma'#231#227'o de lote de exporta'#231#227'o'
-                  ''
-                  
-                    '6.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
-                    ' USO OU CONSUMO'
-                  '6.551 - Venda de bem do ativo imobilizado'
-                  '6.552 - Transfer'#234'ncia de bem do ativo imobilizado'
-                  '6.553 - Devolu'#231#227'o de compra de bem para o ativo imobilizado'
-                  
-                    '6.554 - Remessa de bem do ativo imobilizado para uso fora do est' +
-                    'abelecimento'
-                  
-                    '6.555 - Devolu'#231#227'o de bem do ativo imobilizado de terceiro, receb' +
-                    'ido para uso no estabelecimento'
-                  '6.556 - Devolu'#231#227'o de compra de material de uso ou consumo'
-                  '6.557 - Transfer'#234'ncia de material de uso ou consumo'
-                  ''
-                  '6.600 - CR'#201'DITOS E RESSARCIMENTOS DE ICMS'
-                  '6.603 - Ressarcimento de ICMS retido por substitui'#231#227'o tribut'#225'ria'
-                  ''
-                  
-                    '6.651 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
-                    'belecimento destinado '#224' industrializa'#231#227'o'
-                  'subseq'#252'ente'
-                  
-                    '6.652 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
-                    'belecimento destinado '#224' comercializa'#231#227'o'
-                  
-                    '6.653 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
-                    'belecimento destinado a consumidor ou usu'#225'rio'
-                  'final'
-                  
-                    '6.654 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
-                    'do de terceiros destinado '#224' industrializa'#231#227'o'
-                  'subseq'#252'ente'
-                  
-                    '6.655 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
-                    'do de terceiros destinado '#224' comercializa'#231#227'o'
-                  
-                    '6.656 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
-                    'do de terceiros destinado a consumidor ou'
-                  'usu'#225'rio final'
-                  
-                    '6.657 - Remessa de combust'#237'vel ou lubrificante adquirido ou rece' +
-                    'bido de terceiros para venda fora do'
-                  'estabelecimento'
-                  
-                    '6.658 - Transfer'#234'ncia de combust'#237'vel ou lubrificante de produ'#231#227'o' +
-                    ' do estabelecimento'
-                  
-                    '6.659 - Transfer'#234'ncia de combust'#237'vel ou lubrificante adquirido o' +
-                    'u recebido de terceiro'
-                  
-                    '6.660 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
-                    'rido para industrializa'#231#227'o subseq'#252'ente'
-                  
-                    '6.661 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
-                    'rido para comercializa'#231#227'o'
-                  
-                    '6.662 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
-                    'rido por consumidor ou usu'#225'rio final'
-                  '6.663 - Remessa para armazenagem de combust'#237'vel ou lubrificante'
-                  
-                    '6.664 - Retorno de combust'#237'vel ou lubrificante recebido para arm' +
-                    'azenagem'
-                  
-                    '6.665 - Retorno simb'#243'lico de combust'#237'vel ou lubrificante recebid' +
-                    'o para armazenagem'
-                  
-                    '6.666 - Remessa por conta e ordem de terceiros de combust'#237'vel ou' +
-                    ' lubrificante recebido para armazenagem'
-                  ''
-                  '6.900 - OUTRAS SA'#205'DAS DE MERCADORIAS OU PRESTA'#199#213'ES DE SERVI'#199'OS'
-                  '6.901 - Remessa para industrializa'#231#227'o por encomenda'
-                  
-                    '6.902 - Retorno de mercadoria utilizada na industrializa'#231#227'o por ' +
-                    'encomenda'
-                  
-                    '6.903 - Retorno de mercadoria recebida para industrializa'#231#227'o e n' +
-                    #227'o aplicada no referido processo'
-                  '6.904 - Remessa para venda fora do estabelecimento'
-                  '6.905 - Remessa para dep'#243'sito fechado ou armaz'#233'm geral'
-                  
-                    '6.906 - Retorno de mercadoria depositada em dep'#243'sito fechado ou ' +
-                    'armaz'#233'm geral'
-                  
-                    '6.907 - Retorno simb'#243'lico de mercadoria depositada em dep'#243'sito f' +
-                    'echado ou armaz'#233'm geral'
-                  '6.908 - Remessa de bem por conta de contrato de comodato'
-                  
-                    '6.909 - Retorno de bem recebido por conta de contrato de comodat' +
-                    'o'
-                  '6.910 - Remessa em bonifica'#231#227'o, doa'#231#227'o ou brinde'
-                  '6.911 - Remessa de amostra gr'#225'tis'
-                  '6.912 - Remessa de mercadoria ou bem para demonstra'#231#227'o'
-                  '6.913 - Retorno de mercadoria ou bem recebido para demonstra'#231#227'o'
-                  '6.914 - Remessa de mercadoria ou bem para exposi'#231#227'o ou feira'
-                  '6.915 - Remessa de mercadoria ou bem para conserto ou reparo'
-                  
-                    '6.916 - Retorno de mercadoria ou bem recebido para conserto ou r' +
-                    'eparo'
-                  
-                    '6.917 - Remessa de mercadoria em consigna'#231#227'o mercantil ou indust' +
-                    'rial'
-                  
-                    '6.918 - Devolu'#231#227'o de mercadoria recebida em consigna'#231#227'o mercanti' +
-                    'l ou industrial'
-                  
-                    '6.919 - Devolu'#231#227'o simb'#243'lica de mercadoria vendida ou utilizada e' +
-                    'm processo industrial, recebida anteriormente'
-                  'em consigna'#231#227'o mercantil ou industrial'
-                  '6.920 - Remessa de vasilhame ou sacaria'
-                  '6.921 - Devolu'#231#227'o de vasilhame ou sacaria'
-                  
-                    '6.922 - Lan'#231'amento efetuado a t'#237'tulo de simples faturamento deco' +
-                    'rrente de venda para entrega futura'
-                  
-                    '6.923 - Remessa de mercadoria por conta e ordem de terceiros, em' +
-                    ' venda '#224' ordem'
-                  
-                    '6.924 - Remessa para industrializa'#231#227'o por conta e ordem do adqui' +
-                    'rente da mercadoria, quando esta n'#227'o transitar'
-                  'pelo estabelecimento do adquirente'
-                  
-                    '6.925 - Retorno de mercadoria recebida para industrializa'#231#227'o por' +
-                    ' conta e ordem do adquirente da mercadoria,'
-                  'quando aquela n'#227'o transitar pelo estabelecimento do adquirente'
-                  
-                    '6.929 - Lan'#231'amento efetuado em decorr'#234'ncia de emiss'#227'o de documen' +
-                    'to fiscal relativo a opera'#231#227'o ou presta'#231#227'o'
-                  'tamb'#233'm registrada em equipamento Emissor de Cupom Fiscal - ECF'
-                  
-                    '6.931 - Lan'#231'amento efetuado em decorr'#234'ncia da responsabilidade d' +
-                    'e reten'#231#227'o do imposto por substitui'#231#227'o'
-                  
-                    'tribut'#225'ria, atribu'#237'da ao remetente ou alienante da mercadoria, p' +
-                    'elo servi'#231'o de transporte realizado por'
-                  
-                    'transportador aut'#244'nomo ou por transportador n'#227'o inscrito na unid' +
-                    'ade da Federa'#231#227'o onde iniciado o servi'#231'o'
-                  
-                    '6.932 - Presta'#231#227'o de servi'#231'o de transporte iniciada em unidade d' +
-                    'a Federa'#231#227'o diversa daquela onde inscrito o'
-                  'prestador'
-                  '6.933 - Presta'#231#227'o de servi'#231'o tributado pelo ISSQN'
-                  
-                    '6.949 - Outra sa'#237'da de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o es' +
-                    'pecificado'
-                  ''
-                  '7.000 - SA'#205'DAS OU PRESTA'#199#213'ES DE SERVI'#199'OS PARA O EXTERIOR'
-                  ''
-                  '7.100 - VENDAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
-                  '7.101 - Venda de produ'#231#227'o do estabelecimento'
-                  '7.102 - Venda de mercadoria adquirida ou recebida de terceiros'
-                  
-                    '7.105 - Venda de produ'#231#227'o do estabelecimento, que n'#227'o deva por e' +
-                    'le transitar'
-                  
-                    '7.106 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
-                    'que n'#227'o deva por ele transitar'
-                  
-                    '7.127 - Venda de produ'#231#227'o do estabelecimento sob o regime de "dr' +
-                    'awback"'
-                  ''
-                  
-                    '7.200 - DEVOLU'#199#213'ES DE COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZ' +
-                    'A'#199#195'O OU ANULA'#199#213'ES DE'
-                  'VALORES'
-                  
-                    '7.201 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
-                    'ral'
-                  '7.202 - Devolu'#231#227'o de compra para comercializa'#231#227'o'
-                  
-                    '7.205 - Anula'#231#227'o de valor relativo '#224' aquisi'#231#227'o de servi'#231'o de com' +
-                    'unica'#231#227'o'
-                  
-                    '7.206 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de tra' +
-                    'nsporte'
-                  '7.207 - Anula'#231#227'o de valor relativo '#224' compra de energia el'#233'trica'
-                  
-                    '7.210 - Devolu'#231#227'o de compra para utiliza'#231#227'o na presta'#231#227'o de serv' +
-                    'i'#231'o'
-                  
-                    '7.211 - Devolu'#231#227'o de compras para industrializa'#231#227'o sob o regime ' +
-                    'de drawback"'
-                  ''
-                  '7.250 - VENDAS DE ENERGIA EL'#201'TRICA'
-                  '7.251 - Venda de energia el'#233'trica para o exterior'
-                  ''
-                  '7.300 - PRESTA'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
-                  
-                    '7.301 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
-                    'vi'#231'o da mesma natureza'
-                  '7.350 - PRESTA'#199#213'ES DE SERVI'#199'O DE TRANSPORTE'
-                  '7.358 - Presta'#231#227'o de servi'#231'o de transporte'
-                  
-                    '7.500 - EXPORTA'#199#195'O DE MERCADORIAS RECEBIDAS COM FIM ESPEC'#205'FICO D' +
-                    'E EXPORTA'#199#195'O'
-                  
-                    '7.501 - Exporta'#231#227'o de mercadorias recebidas com fim espec'#237'fico d' +
-                    'e exporta'#231#227'o'
-                  
-                    '7.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
-                    ' USO OU CONSUMO'
-                  '7.551 - Venda de bem do ativo imobilizado'
-                  '7.553 - Devolu'#231#227'o de compra de bem para o ativo imobilizado'
-                  '7.556 - Devolu'#231#227'o de compra de material de uso ou consumo'
-                  
-                    '7.651 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
-                    'belecimento'
-                  
-                    '7.654 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
-                    'do de terceiros'
-                  '7.900 - OUTRAS SA'#205'DAS DE MERCADORIAS OU PRESTA'#199#213'ES DE SERVI'#199'OS'
-                  
-                    '7.930 - Lan'#231'amento efetuado at'#237'tulo de devolu'#231#227'o de bem cuja ent' +
-                    'rada tenha ocorrido sob amparo de regime'
-                  'especial aduaneiro de admiss'#227'o tempor'#225'ria'
-                  
-                    '7.949 - Outra sa'#237'da de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o es' +
-                    'pecificado ')
+                    
+                      '6.657 - Remessa de combust'#237'vel ou lubrificante adquirido ou rece' +
+                      'bido de terceiros para venda fora do'
+                    'estabelecimento'
+                    
+                      '6.658 - Transfer'#234'ncia de combust'#237'vel ou lubrificante de produ'#231#227'o' +
+                      ' do estabelecimento'
+                    
+                      '6.659 - Transfer'#234'ncia de combust'#237'vel ou lubrificante adquirido o' +
+                      'u recebido de terceiro'
+                    
+                      '6.660 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
+                      'rido para industrializa'#231#227'o subseq'#252'ente'
+                    
+                      '6.661 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
+                      'rido para comercializa'#231#227'o'
+                    
+                      '6.662 - Devolu'#231#227'o de compra de combust'#237'vel ou lubrificante adqui' +
+                      'rido por consumidor ou usu'#225'rio final'
+                    '6.663 - Remessa para armazenagem de combust'#237'vel ou lubrificante'
+                    
+                      '6.664 - Retorno de combust'#237'vel ou lubrificante recebido para arm' +
+                      'azenagem'
+                    
+                      '6.665 - Retorno simb'#243'lico de combust'#237'vel ou lubrificante recebid' +
+                      'o para armazenagem'
+                    
+                      '6.666 - Remessa por conta e ordem de terceiros de combust'#237'vel ou' +
+                      ' lubrificante recebido para armazenagem'
+                    ''
+                    '6.900 - OUTRAS SA'#205'DAS DE MERCADORIAS OU PRESTA'#199#213'ES DE SERVI'#199'OS'
+                    '6.901 - Remessa para industrializa'#231#227'o por encomenda'
+                    
+                      '6.902 - Retorno de mercadoria utilizada na industrializa'#231#227'o por ' +
+                      'encomenda'
+                    
+                      '6.903 - Retorno de mercadoria recebida para industrializa'#231#227'o e n' +
+                      #227'o aplicada no referido processo'
+                    '6.904 - Remessa para venda fora do estabelecimento'
+                    '6.905 - Remessa para dep'#243'sito fechado ou armaz'#233'm geral'
+                    
+                      '6.906 - Retorno de mercadoria depositada em dep'#243'sito fechado ou ' +
+                      'armaz'#233'm geral'
+                    
+                      '6.907 - Retorno simb'#243'lico de mercadoria depositada em dep'#243'sito f' +
+                      'echado ou armaz'#233'm geral'
+                    '6.908 - Remessa de bem por conta de contrato de comodato'
+                    
+                      '6.909 - Retorno de bem recebido por conta de contrato de comodat' +
+                      'o'
+                    '6.910 - Remessa em bonifica'#231#227'o, doa'#231#227'o ou brinde'
+                    '6.911 - Remessa de amostra gr'#225'tis'
+                    '6.912 - Remessa de mercadoria ou bem para demonstra'#231#227'o'
+                    '6.913 - Retorno de mercadoria ou bem recebido para demonstra'#231#227'o'
+                    '6.914 - Remessa de mercadoria ou bem para exposi'#231#227'o ou feira'
+                    '6.915 - Remessa de mercadoria ou bem para conserto ou reparo'
+                    
+                      '6.916 - Retorno de mercadoria ou bem recebido para conserto ou r' +
+                      'eparo'
+                    
+                      '6.917 - Remessa de mercadoria em consigna'#231#227'o mercantil ou indust' +
+                      'rial'
+                    
+                      '6.918 - Devolu'#231#227'o de mercadoria recebida em consigna'#231#227'o mercanti' +
+                      'l ou industrial'
+                    
+                      '6.919 - Devolu'#231#227'o simb'#243'lica de mercadoria vendida ou utilizada e' +
+                      'm processo industrial, recebida anteriormente'
+                    'em consigna'#231#227'o mercantil ou industrial'
+                    '6.920 - Remessa de vasilhame ou sacaria'
+                    '6.921 - Devolu'#231#227'o de vasilhame ou sacaria'
+                    
+                      '6.922 - Lan'#231'amento efetuado a t'#237'tulo de simples faturamento deco' +
+                      'rrente de venda para entrega futura'
+                    
+                      '6.923 - Remessa de mercadoria por conta e ordem de terceiros, em' +
+                      ' venda '#224' ordem'
+                    
+                      '6.924 - Remessa para industrializa'#231#227'o por conta e ordem do adqui' +
+                      'rente da mercadoria, quando esta n'#227'o transitar'
+                    'pelo estabelecimento do adquirente'
+                    
+                      '6.925 - Retorno de mercadoria recebida para industrializa'#231#227'o por' +
+                      ' conta e ordem do adquirente da mercadoria,'
+                    'quando aquela n'#227'o transitar pelo estabelecimento do adquirente'
+                    
+                      '6.929 - Lan'#231'amento efetuado em decorr'#234'ncia de emiss'#227'o de documen' +
+                      'to fiscal relativo a opera'#231#227'o ou presta'#231#227'o'
+                    'tamb'#233'm registrada em equipamento Emissor de Cupom Fiscal - ECF'
+                    
+                      '6.931 - Lan'#231'amento efetuado em decorr'#234'ncia da responsabilidade d' +
+                      'e reten'#231#227'o do imposto por substitui'#231#227'o'
+                    
+                      'tribut'#225'ria, atribu'#237'da ao remetente ou alienante da mercadoria, p' +
+                      'elo servi'#231'o de transporte realizado por'
+                    
+                      'transportador aut'#244'nomo ou por transportador n'#227'o inscrito na unid' +
+                      'ade da Federa'#231#227'o onde iniciado o servi'#231'o'
+                    
+                      '6.932 - Presta'#231#227'o de servi'#231'o de transporte iniciada em unidade d' +
+                      'a Federa'#231#227'o diversa daquela onde inscrito o'
+                    'prestador'
+                    '6.933 - Presta'#231#227'o de servi'#231'o tributado pelo ISSQN'
+                    
+                      '6.949 - Outra sa'#237'da de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o es' +
+                      'pecificado'
+                    ''
+                    '7.000 - SA'#205'DAS OU PRESTA'#199#213'ES DE SERVI'#199'OS PARA O EXTERIOR'
+                    ''
+                    '7.100 - VENDAS DE PRODU'#199#195'O PR'#211'PRIA OU DE TERCEIROS'
+                    '7.101 - Venda de produ'#231#227'o do estabelecimento'
+                    '7.102 - Venda de mercadoria adquirida ou recebida de terceiros'
+                    
+                      '7.105 - Venda de produ'#231#227'o do estabelecimento, que n'#227'o deva por e' +
+                      'le transitar'
+                    
+                      '7.106 - Venda de mercadoria adquirida ou recebida de terceiros, ' +
+                      'que n'#227'o deva por ele transitar'
+                    
+                      '7.127 - Venda de produ'#231#227'o do estabelecimento sob o regime de "dr' +
+                      'awback"'
+                    ''
+                    
+                      '7.200 - DEVOLU'#199#213'ES DE COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZ' +
+                      'A'#199#195'O OU ANULA'#199#213'ES DE'
+                    'VALORES'
+                    
+                      '7.201 - Devolu'#231#227'o de compra para industrializa'#231#227'o ou produ'#231#227'o ru' +
+                      'ral'
+                    '7.202 - Devolu'#231#227'o de compra para comercializa'#231#227'o'
+                    
+                      '7.205 - Anula'#231#227'o de valor relativo '#224' aquisi'#231#227'o de servi'#231'o de com' +
+                      'unica'#231#227'o'
+                    
+                      '7.206 - Anula'#231#227'o de valor relativo a aquisi'#231#227'o de servi'#231'o de tra' +
+                      'nsporte'
+                    '7.207 - Anula'#231#227'o de valor relativo '#224' compra de energia el'#233'trica'
+                    
+                      '7.210 - Devolu'#231#227'o de compra para utiliza'#231#227'o na presta'#231#227'o de serv' +
+                      'i'#231'o'
+                    
+                      '7.211 - Devolu'#231#227'o de compras para industrializa'#231#227'o sob o regime ' +
+                      'de drawback"'
+                    ''
+                    '7.250 - VENDAS DE ENERGIA EL'#201'TRICA'
+                    '7.251 - Venda de energia el'#233'trica para o exterior'
+                    ''
+                    '7.300 - PRESTA'#199#213'ES DE SERVI'#199'OS DE COMUNICA'#199#195'O'
+                    
+                      '7.301 - Presta'#231#227'o de servi'#231'o de comunica'#231#227'o para execu'#231#227'o de ser' +
+                      'vi'#231'o da mesma natureza'
+                    '7.350 - PRESTA'#199#213'ES DE SERVI'#199'O DE TRANSPORTE'
+                    '7.358 - Presta'#231#227'o de servi'#231'o de transporte'
+                    
+                      '7.500 - EXPORTA'#199#195'O DE MERCADORIAS RECEBIDAS COM FIM ESPEC'#205'FICO D' +
+                      'E EXPORTA'#199#195'O'
+                    
+                      '7.501 - Exporta'#231#227'o de mercadorias recebidas com fim espec'#237'fico d' +
+                      'e exporta'#231#227'o'
+                    
+                      '7.550 - OPERA'#199#213'ES COM BENS DE ATIVO IMOBILIZADO E MATERIAIS PARA' +
+                      ' USO OU CONSUMO'
+                    '7.551 - Venda de bem do ativo imobilizado'
+                    '7.553 - Devolu'#231#227'o de compra de bem para o ativo imobilizado'
+                    '7.556 - Devolu'#231#227'o de compra de material de uso ou consumo'
+                    
+                      '7.651 - Venda de combust'#237'vel ou lubrificante de produ'#231#227'o do esta' +
+                      'belecimento'
+                    
+                      '7.654 - Venda de combust'#237'vel ou lubrificante adquirido ou recebi' +
+                      'do de terceiros'
+                    '7.900 - OUTRAS SA'#205'DAS DE MERCADORIAS OU PRESTA'#199#213'ES DE SERVI'#199'OS'
+                    
+                      '7.930 - Lan'#231'amento efetuado at'#237'tulo de devolu'#231#227'o de bem cuja ent' +
+                      'rada tenha ocorrido sob amparo de regime'
+                    'especial aduaneiro de admiss'#227'o tempor'#225'ria'
+                    
+                      '7.949 - Outra sa'#237'da de mercadoria ou presta'#231#227'o de servi'#231'o n'#227'o es' +
+                      'pecificado ')
+                end
+                object MsEdt_IdentificacaoCEP: TMaskEdit
+                  AlignWithMargins = True
+                  Left = 164
+                  Top = 243
+                  Width = 151
+                  Height = 28
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  EditMask = '99999-999;1;_'
+                  MaxLength = 9
+                  ParentColor = True
+                  TabOrder = 7
+                  Text = '00000-000'
+                end
               end
-              object MsEdt_IdentificacaoCEP: TMaskEdit
-                AlignWithMargins = True
-                Left = 164
-                Top = 243
-                Width = 151
-                Height = 25
-                Margins.Top = 5
-                Margins.Bottom = 5
-                EditMask = '99999-999;1;_'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = 4934475
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                MaxLength = 9
-                ParentFont = False
-                TabOrder = 7
-                Text = '00000-000'
-              end
-            end
-            object Pnl_TomadorDeServico: TPanel
-              Left = 371
-              Top = 38
-              Width = 334
-              Height = 291
-              TabOrder = 1
-              object Lbl_TomadorTipoTomador: TLabel
-                AlignWithMargins = True
-                Left = 19
-                Top = 15
-                Width = 101
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Tipo Tomador: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_TomadorCpfCnpj: TLabel
-                AlignWithMargins = True
-                Left = 19
-                Top = 83
-                Width = 31
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CPF: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_TomadorIE: TLabel
-                AlignWithMargins = True
-                Left = 19
-                Top = 151
-                Width = 125
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Inscri'#231#227'o Estadual: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_TomadorNomeRS: TLabel
-                AlignWithMargins = True
-                Left = 171
-                Top = 15
-                Width = 48
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Nome: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_TomadorCep: TLabel
-                AlignWithMargins = True
-                Left = 171
-                Top = 83
-                Width = 32
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CEP: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ReqTomadorInscricaoEstadual: TLabel
-                Left = 152
-                Top = 151
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqTomadorCEP: TLabel
-                Left = 211
-                Top = 83
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqTomadorNome: TLabel
-                Left = 227
-                Top = 15
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqTomadorTipoTomador: TLabel
-                Left = 128
-                Top = 15
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqTomadorCPF: TLabel
-                Left = 58
-                Top = 83
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Edt_TomadorNome: TEdit
-                AlignWithMargins = True
-                Left = 171
-                Top = 45
-                Width = 134
-                Height = 28
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 0
-              end
-              object Cmbx_TipoTomador: TComboBox
-                AlignWithMargins = True
-                Left = 19
-                Top = 45
-                Width = 129
-                Height = 28
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 1
-                Text = 'Remetente'
-                Items.Strings = (
-                  'Remetente'
-                  'Destinat'#225'rio'
-                  'Expedidor'
-                  'Recebedor'
-                  'Outros')
-              end
-              object MsEdt_TomadorCEP: TMaskEdit
-                AlignWithMargins = True
-                Left = 172
-                Top = 113
-                Width = 133
-                Height = 28
-                Margins.Top = 5
-                Margins.Bottom = 5
-                EditMask = '99999-999;1;_'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = 4934475
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                MaxLength = 9
-                ParentFont = False
-                TabOrder = 2
-                Text = '00000-000'
-              end
-              object MsEdt_TomadorIE: TMaskEdit
-                AlignWithMargins = True
-                Left = 19
-                Top = 181
-                Width = 134
-                Height = 28
-                Margins.Top = 5
-                Margins.Bottom = 5
-                EditMask = '999.999.999.999;1;_'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = 4934475
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                MaxLength = 15
-                ParentFont = False
-                TabOrder = 3
-                Text = '000.000.000.000'
-              end
-              object MsEdt_TomadorCpfCnpj: TMaskEdit
-                AlignWithMargins = True
-                Left = 19
-                Top = 113
-                Width = 125
-                Height = 28
-                Margins.Top = 5
-                Margins.Bottom = 5
-                EditMask = '999.999.999.-99;1;_'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = 4934475
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                MaxLength = 15
-                ParentFont = False
-                TabOrder = 4
-                Text = '000.000.000.-00'
-              end
-            end
-            object ComboBox1: TComboBox
-              AlignWithMargins = True
-              Left = 19
-              Top = 373
-              Width = 686
-              Height = 28
-              Margins.Left = 5
-              Margins.Top = 5
-              Margins.Right = 5
-              Margins.Bottom = 5
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ItemIndex = 0
-              ParentFont = False
-              TabOrder = 2
-              Text = 'Remetente'
-              Items.Strings = (
-                'Remetente'
-                'Destinat'#225'rio'
-                'Expedidor'
-                'Recebedor'
-                'Outros')
             end
           end
           object Tbsh_Participantes: TTabSheet
             Caption = 'Participantes'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = []
             ImageIndex = 1
-            object Lbl_ParticipantesRemetente: TLabel
-              Left = 19
-              Top = 11
-              Width = 75
-              Height = 21
-              Caption = 'Remetente'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Lbl_ParticipantesTransportadoraEmitente: TLabel
-              Left = 19
-              Top = 234
-              Width = 181
-              Height = 21
-              Caption = 'Transportadora (Emitente)'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Lbl_ParticipantesDestinatario: TLabel
-              Left = 368
-              Top = 11
-              Width = 84
-              Height = 21
-              Caption = 'Destinat'#225'rio'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Pnl_ParticipantesRemetente: TPanel
-              Left = 19
-              Top = 38
-              Width = 334
-              Height = 178
+            ParentFont = False
+            object Pnl_Participantes: TPanel
+              Left = 0
+              Top = 0
+              Width = 751
+              Height = 436
+              Align = alClient
               TabOrder = 0
-              object Lbl_ParticipantesRemetenteNomeRS: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 22
-                Width = 74
+              ExplicitLeft = 432
+              ExplicitTop = 275
+              ExplicitWidth = 185
+              ExplicitHeight = 41
+              object Lbl_ParticipantesTransportadoraEmitente: TLabel
+                Left = 19
+                Top = 234
+                Width = 174
                 Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Nome/R.S: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+                Caption = 'Transportadora (Emitente)'
               end
-              object Lbl_ParticipantesRemetenteCpfCnpj: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 85
-                Width = 69
+              object Lbl_ParticipantesRemetente: TLabel
+                Left = 19
+                Top = 19
+                Width = 72
                 Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CPF/CNPJ: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+                Caption = 'Remetente'
               end
-              object Lbl_ParticipantesRemetenteCEP: TLabel
-                AlignWithMargins = True
-                Left = 184
-                Top = 22
-                Width = 32
+              object Lbl_ParticipantesDestinatario: TLabel
+                Left = 372
+                Top = 19
+                Width = 81
                 Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CEP: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+                Caption = 'Destinat'#225'rio'
               end
-              object Lbl_ParticipantesRemetenteEmail: TLabel
-                AlignWithMargins = True
-                Left = 184
-                Top = 85
-                Width = 50
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'E-Mail: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ReqRemetenteCEP: TLabel
-                Left = 224
-                Top = 22
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqRemetenteNome: TLabel
-                Left = 98
-                Top = 22
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqRemetenteCPF: TLabel
-                Left = 93
-                Top = 85
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Edt_ParticipantesRemetenteNomeRS: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 52
-                Width = 135
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+              object Pnl_ParticipantesTransportadora: TPanel
+                Left = 19
+                Top = 261
+                Width = 334
+                Height = 158
+                ParentColor = True
                 TabOrder = 0
+                object Lbl_ParticipantesTransportadoraNomeRS: TLabel
+                  Left = 16
+                  Top = 14
+                  Width = 74
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Nome/R.S: '
+                end
+                object Lbl_ParticipantesTransportadoraCpfCnpj: TLabel
+                  Left = 16
+                  Top = 82
+                  Width = 69
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CPF/CNPJ: '
+                end
+                object Lbl_ParticipantesTransportadoraNFantasia: TLabel
+                  Left = 184
+                  Top = 14
+                  Width = 74
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'N.Fantasia: '
+                end
+                object Lbl_ParticipantesTransportadoraCEP: TLabel
+                  Left = 40
+                  Top = 189
+                  Width = 28
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CEP:'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                end
+                object Lbl_ParticipantesTransportadoraContato: TLabel
+                  Left = 40
+                  Top = 215
+                  Width = 56
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Contato:'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                end
+                object Lbl_ReqTransportadoraNomeFantasia: TLabel
+                  Left = 266
+                  Top = 14
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqTransportadoraCNPJ: TLabel
+                  Left = 93
+                  Top = 82
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqTransportadoraNome: TLabel
+                  Left = 98
+                  Top = 14
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Edt_ParticipantesTransportadoraNomeRS: TEdit
+                  Left = 16
+                  Top = 44
+                  Width = 135
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 0
+                end
+                object Edt_ParticipantesTransportadoraCpfCnpj: TEdit
+                  Left = 16
+                  Top = 112
+                  Width = 135
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  NumbersOnly = True
+                  ParentColor = True
+                  TabOrder = 1
+                end
+                object Edt_ParticipantesTransportadoraNFantasia: TEdit
+                  Left = 184
+                  Top = 44
+                  Width = 135
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 2
+                end
+                object Edt_ParticipantesTransportadoraCEP: TEdit
+                  Left = 147
+                  Top = 190
+                  Width = 201
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 3
+                end
+                object Edt_ParticipantesTransportadoraContato: TEdit
+                  Left = 147
+                  Top = 219
+                  Width = 201
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 4
+                end
               end
-              object Edt_ParticipantesRemetenteCpfCnpj: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 115
-                Width = 135
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
+              object Pnl_ParticipantesRemetente: TPanel
+                Left = 19
+                Top = 46
+                Width = 334
+                Height = 178
+                ParentColor = True
                 TabOrder = 1
+                object Lbl_ParticipantesRemetenteNomeRS: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 22
+                  Width = 74
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Nome/R.S: '
+                end
+                object Lbl_ParticipantesRemetenteCpfCnpj: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 85
+                  Width = 69
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CPF/CNPJ: '
+                end
+                object Lbl_ParticipantesRemetenteCEP: TLabel
+                  AlignWithMargins = True
+                  Left = 184
+                  Top = 22
+                  Width = 32
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CEP: '
+                end
+                object Lbl_ParticipantesRemetenteEmail: TLabel
+                  AlignWithMargins = True
+                  Left = 184
+                  Top = 85
+                  Width = 50
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'E-Mail: '
+                end
+                object Lbl_ReqRemetenteCEP: TLabel
+                  Left = 224
+                  Top = 22
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqRemetenteNome: TLabel
+                  Left = 98
+                  Top = 22
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqRemetenteCPF: TLabel
+                  Left = 93
+                  Top = 85
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Edt_ParticipantesRemetenteNomeRS: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 52
+                  Width = 135
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 0
+                end
+                object Edt_ParticipantesRemetenteCpfCnpj: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 115
+                  Width = 135
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  NumbersOnly = True
+                  ParentColor = True
+                  TabOrder = 1
+                end
+                object Edt_ParticipantesRemetenteEmail: TEdit
+                  AlignWithMargins = True
+                  Left = 184
+                  Top = 115
+                  Width = 135
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 2
+                end
+                object MsEdt_ParticipantesRemetenteCEP: TMaskEdit
+                  AlignWithMargins = True
+                  Left = 184
+                  Top = 52
+                  Width = 135
+                  Height = 28
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  EditMask = '99999-999;1;_'
+                  MaxLength = 9
+                  ParentColor = True
+                  TabOrder = 3
+                  Text = '00000-000'
+                end
               end
-              object Edt_ParticipantesRemetenteEmail: TEdit
-                AlignWithMargins = True
-                Left = 184
-                Top = 115
-                Width = 135
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+              object Pnl_ParticipantesDestinatario: TPanel
+                Left = 372
+                Top = 46
+                Width = 334
+                Height = 178
+                ParentColor = True
                 TabOrder = 2
-              end
-              object MsEdt_ParticipantesRemetenteCEP: TMaskEdit
-                AlignWithMargins = True
-                Left = 184
-                Top = 52
-                Width = 135
-                Height = 28
-                Margins.Top = 5
-                Margins.Bottom = 5
-                EditMask = '99999-999;1;_'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = 4934475
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                MaxLength = 9
-                ParentFont = False
-                TabOrder = 3
-                Text = '00000-000'
-              end
-            end
-            object Pnl_ParticipantesTransportadora: TPanel
-              Left = 19
-              Top = 261
-              Width = 334
-              Height = 158
-              TabOrder = 1
-              object Lbl_ParticipantesTransportadoraNomeRS: TLabel
-                Left = 16
-                Top = 14
-                Width = 74
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Nome/R.S: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ParticipantesTransportadoraCpfCnpj: TLabel
-                Left = 16
-                Top = 82
-                Width = 69
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CPF/CNPJ: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ParticipantesTransportadoraNFantasia: TLabel
-                Left = 184
-                Top = 14
-                Width = 74
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'N.Fantasia: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ParticipantesTransportadoraCEP: TLabel
-                Left = 40
-                Top = 189
-                Width = 28
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CEP:'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ParticipantesTransportadoraContato: TLabel
-                Left = 40
-                Top = 215
-                Width = 56
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Contato:'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ReqTransportadoraNomeFantasia: TLabel
-                Left = 266
-                Top = 14
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqTransportadoraCNPJ: TLabel
-                Left = 93
-                Top = 82
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqTransportadoraNome: TLabel
-                Left = 98
-                Top = 14
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Edt_ParticipantesTransportadoraNomeRS: TEdit
-                Left = 16
-                Top = 44
-                Width = 135
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 0
-              end
-              object Edt_ParticipantesTransportadoraCpfCnpj: TEdit
-                Left = 16
-                Top = 112
-                Width = 135
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 1
-              end
-              object Edt_ParticipantesTransportadoraNFantasia: TEdit
-                Left = 184
-                Top = 44
-                Width = 135
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 2
-              end
-              object Edt_ParticipantesTransportadoraCEP: TEdit
-                Left = 147
-                Top = 190
-                Width = 201
-                Height = 28
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 3
-              end
-              object Edt_ParticipantesTransportadoraContato: TEdit
-                Left = 147
-                Top = 219
-                Width = 201
-                Height = 28
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 4
-              end
-            end
-            object Pnl_ParticipantesDestinatario: TPanel
-              Left = 368
-              Top = 38
-              Width = 334
-              Height = 178
-              TabOrder = 2
-              object Lbl_ParticipantesDestinatarioNomeRS: TLabel
-                AlignWithMargins = True
-                Left = 19
-                Top = 22
-                Width = 74
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Nome/R.S: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ParticipantesDestinatarioCpfCnpj: TLabel
-                AlignWithMargins = True
-                Left = 19
-                Top = 87
-                Width = 69
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CPF/CNPJ: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ParticipantesDestinatarioCEP: TLabel
-                AlignWithMargins = True
-                Left = 190
-                Top = 22
-                Width = 28
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CEP:'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ParticipantesDestinatarioEmail: TLabel
-                AlignWithMargins = True
-                Left = 190
-                Top = 87
-                Width = 50
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'E-Mail: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ReqDestinatarioCEP: TLabel
-                Left = 226
-                Top = 20
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqDestinatarioNome: TLabel
-                Left = 101
-                Top = 20
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqDestinatarioCPF: TLabel
-                Left = 96
-                Top = 85
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqDestinatarioEmail: TLabel
-                Left = 248
-                Top = 85
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Edt_ParticipantesDestinatarioNomeRS: TEdit
-                AlignWithMargins = True
-                Left = 19
-                Top = 50
-                Width = 135
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 0
-              end
-              object Edt_ParticipantesDestinatarioCpfCnpj: TEdit
-                AlignWithMargins = True
-                Left = 19
-                Top = 117
-                Width = 139
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 1
-              end
-              object Edt_ParticipantesDestinatarioEmail: TEdit
-                AlignWithMargins = True
-                Left = 190
-                Top = 115
-                Width = 135
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 2
-              end
-              object MsEdt_ParticipantesDestinatarioCEP: TMaskEdit
-                AlignWithMargins = True
-                Left = 190
-                Top = 50
-                Width = 135
-                Height = 28
-                Margins.Top = 5
-                Margins.Bottom = 5
-                EditMask = '99999-999;1;_'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = 4934475
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                MaxLength = 9
-                ParentFont = False
-                TabOrder = 3
-                Text = '00000-000'
+                object Lbl_ParticipantesDestinatarioNomeRS: TLabel
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 22
+                  Width = 74
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Nome/R.S: '
+                end
+                object Lbl_ParticipantesDestinatarioCpfCnpj: TLabel
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 87
+                  Width = 69
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CPF/CNPJ: '
+                end
+                object Lbl_ParticipantesDestinatarioCEP: TLabel
+                  AlignWithMargins = True
+                  Left = 190
+                  Top = 22
+                  Width = 28
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CEP:'
+                end
+                object Lbl_ParticipantesDestinatarioEmail: TLabel
+                  AlignWithMargins = True
+                  Left = 190
+                  Top = 87
+                  Width = 50
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'E-Mail: '
+                end
+                object Lbl_ReqDestinatarioCEP: TLabel
+                  Left = 226
+                  Top = 20
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqDestinatarioNome: TLabel
+                  Left = 101
+                  Top = 20
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqDestinatarioCPF: TLabel
+                  Left = 96
+                  Top = 85
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqDestinatarioEmail: TLabel
+                  Left = 248
+                  Top = 85
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Edt_ParticipantesDestinatarioNomeRS: TEdit
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 50
+                  Width = 135
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 0
+                end
+                object Edt_ParticipantesDestinatarioCpfCnpj: TEdit
+                  AlignWithMargins = True
+                  Left = 19
+                  Top = 117
+                  Width = 139
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  NumbersOnly = True
+                  ParentColor = True
+                  TabOrder = 1
+                end
+                object Edt_ParticipantesDestinatarioEmail: TEdit
+                  AlignWithMargins = True
+                  Left = 190
+                  Top = 115
+                  Width = 135
+                  Height = 28
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  ParentColor = True
+                  TabOrder = 2
+                end
+                object MsEdt_ParticipantesDestinatarioCEP: TMaskEdit
+                  AlignWithMargins = True
+                  Left = 190
+                  Top = 50
+                  Width = 135
+                  Height = 28
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  EditMask = '99999-999;1;_'
+                  MaxLength = 9
+                  ParentColor = True
+                  TabOrder = 3
+                  Text = '00000-000'
+                end
               end
             end
           end
@@ -8922,14 +8641,16 @@ object Frm_CargoCTe: TFrm_CargoCTe
             ImageIndex = 5
             object Pnl_BtnsNotas: TPanel
               Left = 0
-              Top = 384
-              Width = 747
+              Top = 388
+              Width = 751
               Height = 48
               Align = alBottom
               Anchors = [akLeft, akTop, akRight]
               AutoSize = True
               BevelOuter = bvNone
               TabOrder = 0
+              ExplicitTop = 384
+              ExplicitWidth = 747
               object Pnl_BtnsNotasGerarNota: TPanel
                 AlignWithMargins = True
                 Left = 4
@@ -9028,14 +8749,17 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_NotasEmitidas: TPanel
-        Left = 758
-        Top = 1
+        Left = 759
+        Top = 0
         Width = 0
-        Height = 464
+        Height = 466
         Align = alRight
         Color = clWhite
         ParentBackground = False
         TabOrder = 1
+        ExplicitLeft = 758
+        ExplicitTop = 1
+        ExplicitHeight = 464
         object Img_NotasEmitidas: TImage
           Left = 3
           Top = 55
@@ -11998,7 +11722,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
         object Dbgd_NotasEmitidas: TDBGrid
           Left = 1
-          Top = 243
+          Top = 245
           Width = 740
           Height = 220
           Align = alBottom
@@ -12011,13 +11735,14 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
         object Pnl_NotasEmitidasPesquisarNotas: TPanel
           Left = 1
-          Top = 201
+          Top = 203
           Width = 740
           Height = 42
           Align = alBottom
           Color = clWhite
           ParentBackground = False
           TabOrder = 2
+          ExplicitTop = 201
           object Srbx_PesquisarNotas: TSearchBox
             Left = 2
             Top = 11
@@ -12030,14 +11755,17 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_Transportadoras: TPanel
-        Left = 758
-        Top = 1
+        Left = 759
+        Top = 0
         Width = 0
-        Height = 464
+        Height = 466
         Align = alRight
         Color = clWhite
         ParentBackground = False
         TabOrder = 2
+        ExplicitLeft = 758
+        ExplicitTop = 1
+        ExplicitHeight = 464
         object Img_Transportadoras: TImage
           Left = 1
           Top = 44
@@ -15772,13 +15500,14 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
         object Pnl_TransportadorasSearch: TPanel
           Left = 1
-          Top = 199
+          Top = 201
           Width = 740
           Height = 42
           Align = alBottom
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 199
           object Lbl_TransportadorasTotal: TLabel
             Left = 13
             Top = 11
@@ -15817,7 +15546,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
         object Dbgd_Transportadoras: TDBGrid
           Left = 1
-          Top = 241
+          Top = 243
           Width = 740
           Height = 222
           Align = alBottom
@@ -15853,14 +15582,17 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
       end
       object Pnl_Motoristas: TPanel
-        Left = 758
-        Top = 1
+        Left = 759
+        Top = 0
         Width = 0
-        Height = 464
+        Height = 466
         Align = alRight
         Color = clWhite
         ParentBackground = False
         TabOrder = 3
+        ExplicitLeft = 758
+        ExplicitTop = 1
+        ExplicitHeight = 464
         object Img_Motoristas: TImage
           Left = 3
           Top = 44
@@ -19942,13 +19674,14 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
         object Pnl_MotoristasBusca: TPanel
           Left = 1
-          Top = 199
+          Top = 201
           Width = 740
           Height = 42
           Align = alBottom
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 199
           object Lbl_MotoristasBuscaTotalMotoristas: TLabel
             Left = 13
             Top = 11
@@ -19987,7 +19720,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         end
         object Dbgd_MotoristasRegistrados: TDBGrid
           Left = 1
-          Top = 241
+          Top = 243
           Width = 740
           Height = 222
           Align = alBottom
@@ -20029,6 +19762,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Width = 725
       Height = 51
       Anchors = [akLeft, akTop, akRight]
+      BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 2
@@ -20060,24 +19794,26 @@ object Frm_CargoCTe: TFrm_CargoCTe
       end
       object Pnl_BtnNovaTransportadora: TPanel
         AlignWithMargins = True
-        Left = 562
-        Top = 4
+        Left = 563
+        Top = 3
         Width = 160
-        Height = 43
+        Height = 45
         Margins.Left = 2
         Margins.Right = 2
         Align = alRight
         BevelOuter = bvNone
-        Color = clWhite
         Ctl3D = False
         ParentBackground = False
         ParentCtl3D = False
         TabOrder = 0
+        ExplicitLeft = 562
+        ExplicitTop = 4
+        ExplicitHeight = 43
         object Shp_BtnNovaTransportadora: TShape
           Left = 0
           Top = 0
           Width = 160
-          Height = 43
+          Height = 45
           Align = alClient
           Brush.Color = 4227072
           Pen.Color = clGreen
@@ -20091,7 +19827,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Left = 0
           Top = 0
           Width = 160
-          Height = 43
+          Height = 45
           Cursor = crHandPoint
           Margins.Left = 10
           Margins.Right = 10
@@ -20113,10 +19849,10 @@ object Frm_CargoCTe: TFrm_CargoCTe
       end
       object Pnl_BtnAdicionarVeiculo: TPanel
         AlignWithMargins = True
-        Left = 478
-        Top = 4
+        Left = 479
+        Top = 3
         Width = 80
-        Height = 43
+        Height = 45
         Margins.Left = 2
         Margins.Right = 2
         Align = alRight
@@ -20124,11 +19860,14 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 1
+        ExplicitLeft = 478
+        ExplicitTop = 4
+        ExplicitHeight = 43
         object Shp_BtnAdicionarVeiculo: TShape
           Left = 0
           Top = 0
           Width = 80
-          Height = 43
+          Height = 45
           Align = alClient
           Brush.Color = 4227072
           Pen.Color = clGreen
@@ -20142,7 +19881,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Left = 0
           Top = 0
           Width = 80
-          Height = 43
+          Height = 45
           Cursor = crHandPoint
           Align = alClient
           Caption = '+ Frota'
@@ -20155,14 +19894,15 @@ object Frm_CargoCTe: TFrm_CargoCTe
           ParentFont = False
           OnClick = Btn_AdicionarVeiculoClick
           ExplicitWidth = 130
+          ExplicitHeight = 43
         end
       end
       object Pnl_BtnAdicionarMotorista: TPanel
         AlignWithMargins = True
-        Left = 374
-        Top = 4
+        Left = 375
+        Top = 3
         Width = 100
-        Height = 43
+        Height = 45
         Margins.Left = 2
         Margins.Right = 2
         Align = alRight
@@ -20170,11 +19910,14 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Ctl3D = False
         ParentCtl3D = False
         TabOrder = 2
+        ExplicitLeft = 374
+        ExplicitTop = 4
+        ExplicitHeight = 43
         object Shp_BtnAdicionarMotorista: TShape
           Left = 0
           Top = 0
           Width = 100
-          Height = 43
+          Height = 45
           Align = alClient
           Brush.Color = 4227072
           Pen.Color = clTeal
@@ -20188,7 +19931,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Left = 0
           Top = 0
           Width = 100
-          Height = 43
+          Height = 45
           Cursor = crHandPoint
           Align = alClient
           Caption = '+ Vinculo'
@@ -20212,6 +19955,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Width = 725
       Height = 112
       Anchors = [akLeft, akTop, akRight, akBottom]
+      BevelOuter = bvLowered
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
