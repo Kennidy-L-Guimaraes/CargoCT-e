@@ -115,9 +115,10 @@ type
     procedure ResetarConfiguracoes;
     procedure PreencherDTO(var ADTO: TTransportadoraDTO);
     procedure UseCaseNovaTransportadora;
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Btn_IdentificacaoLogoClick(Sender: TObject);
     procedure Img_EnderecoLupaClick(Sender: TObject);
+
+    destructor Destroy;
   private
     { Private declarations }
     var
@@ -180,11 +181,11 @@ begin
   MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
 end;
 
-procedure TFrm_NovaTransportadora.FormClose(Sender: TObject;
-  var Action: TCloseAction);
+destructor TFrm_NovaTransportadora.Destroy;
 begin
  //Libera o Stream da Imagem
- FImage.Free;
+ if Assigned(Fimage) then FImage.Free;
+ inherited Destroy;
 end;
 
 procedure TFrm_NovaTransportadora.FormCreate(Sender: TObject);

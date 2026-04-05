@@ -13,7 +13,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poMainFormCenter
-  OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 15
   object Pnl_Background: TPanel
@@ -26,13 +25,13 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 439
     object Scbx_NovaTransportadora: TScrollBox
       Left = 0
       Top = 0
       Width = 624
-      Height = 439
+      Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 377
       VertScrollBar.Range = 1600
       VertScrollBar.Tracking = True
       Align = alClient
@@ -42,10 +41,10 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       BorderStyle = bsNone
       TabOrder = 0
       UseWheelForScrolling = True
-      ExplicitHeight = 441
+      ExplicitHeight = 439
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -377
+        Top = 0
         Width = 605
         Height = 161
         Align = alTop
@@ -4472,7 +4471,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = -216
+        Top = 161
         Width = 605
         Height = 220
         Align = alTop
@@ -4487,7 +4486,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 607
         object Pnl_IdentificacaoCte: TPanel
           AlignWithMargins = True
           Left = 141
@@ -4905,7 +4903,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = 4
+        Top = 381
         Width = 605
         Height = 359
         Align = alTop
@@ -4920,7 +4918,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 1
-        ExplicitWidth = 607
         object Pnl_EnderecoFiscal: TPanel
           Left = 108
           Top = 20
@@ -5404,7 +5401,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 885
+        Top = 1262
         Width = 605
         Height = 185
         Align = alTop
@@ -5419,7 +5416,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 2
-        ExplicitWidth = 607
         object Pnl_Contato: TPanel
           Left = 108
           Top = 28
@@ -5572,7 +5568,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = 573
+        Top = 950
         Width = 605
         Height = 131
         Align = alTop
@@ -5587,7 +5583,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 3
-        ExplicitWidth = 607
         object Pnl_DadosOperacionais: TPanel
           Left = 108
           Top = 35
@@ -5711,7 +5706,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = 363
+        Top = 740
         Width = 605
         Height = 210
         Align = alTop
@@ -5726,7 +5721,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 4
-        ExplicitWidth = 607
         object Pnl_DadosFiscais: TPanel
           Left = 108
           Top = 28
@@ -5957,7 +5951,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = 704
+        Top = 1081
         Width = 605
         Height = 181
         Align = alTop
@@ -5972,7 +5966,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         ParentColor = False
         ParentFont = False
         TabOrder = 5
-        ExplicitWidth = 607
         object Panel_Sistema: TPanel
           Left = 108
           Top = 34
@@ -6104,7 +6097,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 1168
+        Top = 1545
         Width = 605
         Height = 55
         Align = alBottom
@@ -6113,10 +6106,9 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         Color = clWhite
         ParentBackground = False
         TabOrder = 6
-        ExplicitWidth = 607
         object Pnl_BtnSalvarNovaTransportadora: TPanel
           AlignWithMargins = True
-          Left = 445
+          Left = 443
           Top = 10
           Width = 150
           Height = 35
@@ -6163,7 +6155,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
         end
         object Pnl_BtnCancelarNovaTransportadora: TPanel
           AlignWithMargins = True
-          Left = 291
+          Left = 289
           Top = 10
           Width = 150
           Height = 35
