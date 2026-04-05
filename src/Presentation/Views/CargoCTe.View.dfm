@@ -3712,6 +3712,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
               Width = 751
               Height = 436
               Align = alClient
+              BevelOuter = bvNone
               DockSite = True
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
@@ -6049,6 +6050,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
               Width = 751
               Height = 436
               Align = alClient
+              BevelOuter = bvNone
               TabOrder = 0
               object Lbl_ParticipantesTransportadoraEmitente: TLabel
                 Left = 19
@@ -6665,6 +6667,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
               Width = 751
               Height = 436
               Align = alClient
+              BevelOuter = bvNone
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -15
@@ -7300,6 +7303,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
               Width = 751
               Height = 436
               Align = alClient
+              BevelOuter = bvNone
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -15
@@ -7307,10 +7311,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
               Font.Style = []
               ParentFont = False
               TabOrder = 0
-              ExplicitLeft = 304
-              ExplicitTop = 168
-              ExplicitWidth = 185
-              ExplicitHeight = 41
               object Lbl_DocumentosIdentificacaoCte: TLabel
                 Left = 21
                 Top = 11
@@ -7693,930 +7693,758 @@ object Frm_CargoCTe: TFrm_CargoCTe
           object Tbsh_ImpostosEModal: TTabSheet
             Caption = 'Impostos e Modal'
             ImageIndex = 4
-            object Lbl_ImpostosImpostos: TLabel
-              Left = 20
-              Top = 8
-              Width = 64
-              Height = 21
-              Caption = 'Impostos'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Lbl_ImpostosModal: TLabel
-              Left = 371
-              Top = 8
-              Width = 100
-              Height = 21
-              Caption = 'Model/Veiculo'
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -16
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-            end
-            object Label41: TLabel
-              AlignWithMargins = True
-              Left = 20
-              Top = 369
-              Width = 263
-              Height = 20
-              Margins.Left = 5
-              Margins.Top = 5
-              Margins.Right = 5
-              Margins.Bottom = 5
-              Caption = 'Lista de Motoristas e ve'#237'culo vinculado: '
+            object Pnl_ImpostosEModal: TPanel
+              Left = 0
+              Top = 0
+              Width = 751
+              Height = 436
+              Align = alClient
+              BevelOuter = bvNone
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -15
               Font.Name = 'Segoe UI'
               Font.Style = []
               ParentFont = False
-            end
-            object Pnl_ImpostosImpostos: TPanel
-              Left = 20
-              Top = 35
-              Width = 345
-              Height = 318
               TabOrder = 0
-              object Lbl_ImpostosImpostosCST: TLabel
-                AlignWithMargins = True
-                Left = 16
+              ExplicitLeft = 368
+              ExplicitTop = 144
+              ExplicitWidth = 185
+              ExplicitHeight = 41
+              object Lbl_ImpostosImpostos: TLabel
+                Left = 11
                 Top = 12
-                Width = 32
+                Width = 61
                 Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CST: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+                Caption = 'Impostos'
               end
-              object Lbl_ImpostosImpostosAtencao: TLabel
-                Left = 60
-                Top = 288
-                Width = 240
-                Height = 13
-                Caption = 'Aten'#231#227'o o valor total '#233' calculado na nota final.'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -11
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosImpostosBaseCalculo: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 77
-                Width = 91
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Base Calculo: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosImpostosAliquota: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 142
-                Width = 64
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Aliquota: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosImpostosICMS: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 207
-                Width = 37
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'ICMS:'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosImpostosReBase: TLabel
-                AlignWithMargins = True
-                Left = 200
+              object Lbl_ImpostosModal: TLabel
+                Left = 362
                 Top = 12
-                Width = 57
+                Width = 97
                 Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Re/Base:'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
+                Caption = 'Model/Veiculo'
               end
-              object Lbl_BaseCalculoPercent: TLabel
-                AlignWithMargins = True
-                Left = 126
-                Top = 108
-                Width = 15
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = '%.'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsItalic]
-                ParentFont = False
-              end
-              object Lbl_CSTPercent: TLabel
-                AlignWithMargins = True
-                Left = 126
-                Top = 42
-                Width = 15
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = '%.'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsItalic]
-                ParentFont = False
-              end
-              object Lbl_AliquotaPercent: TLabel
-                AlignWithMargins = True
-                Left = 126
-                Top = 239
-                Width = 15
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = '%.'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsItalic]
-                ParentFont = False
-              end
-              object Lbl_ICMSPercent: TLabel
-                AlignWithMargins = True
-                Left = 126
-                Top = 172
-                Width = 15
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = '%.'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsItalic]
-                ParentFont = False
-              end
-              object Lbl_ReBasePercent: TLabel
-                AlignWithMargins = True
-                Left = 311
-                Top = 42
-                Width = 15
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = '%.'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsItalic]
-                ParentFont = False
-              end
-              object Lbl_ICMSStPercent: TLabel
-                AlignWithMargins = True
-                Left = 311
-                Top = 108
-                Width = 15
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = '%.'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsItalic]
-                ParentFont = False
-              end
-              object Lbl_ImpostosImpostosICMSST: TLabel
-                AlignWithMargins = True
-                Left = 200
-                Top = 77
-                Width = 57
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'ICMS ST:'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_DesoneracaoPercent: TLabel
-                AlignWithMargins = True
-                Left = 311
-                Top = 172
-                Width = 15
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = '%.'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsItalic]
-                ParentFont = False
-              end
-              object Lbl_ImpostosImpostosDesoneracao: TLabel
-                AlignWithMargins = True
-                Left = 200
-                Top = 142
-                Width = 90
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Desonera'#231#227'o:'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Edt_ImpostosImpostosBaseCalculo: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 107
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Color = 11467263
-                Enabled = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
+              object Pnl_ImpostosImpostos: TPanel
+                Left = 11
+                Top = 46
+                Width = 345
+                Height = 318
+                ParentColor = True
                 TabOrder = 0
-                Text = '00,00'
+                object Lbl_ImpostosImpostosCST: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 12
+                  Width = 32
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CST: '
+                end
+                object Lbl_ImpostosImpostosAtencao: TLabel
+                  Left = 60
+                  Top = 288
+                  Width = 240
+                  Height = 13
+                  Caption = 'Aten'#231#227'o o valor total '#233' calculado na nota final.'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -11
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                end
+                object Lbl_ImpostosImpostosBaseCalculo: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 77
+                  Width = 91
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Base Calculo: '
+                end
+                object Lbl_ImpostosImpostosAliquota: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 142
+                  Width = 64
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Aliquota: '
+                end
+                object Lbl_ImpostosImpostosICMS: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 207
+                  Width = 37
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'ICMS:'
+                end
+                object Lbl_ImpostosImpostosReBase: TLabel
+                  AlignWithMargins = True
+                  Left = 200
+                  Top = 12
+                  Width = 57
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Re/Base:'
+                end
+                object Lbl_BaseCalculoPercent: TLabel
+                  AlignWithMargins = True
+                  Left = 126
+                  Top = 108
+                  Width = 15
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = '%.'
+                end
+                object Lbl_CSTPercent: TLabel
+                  AlignWithMargins = True
+                  Left = 126
+                  Top = 42
+                  Width = 15
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = '%.'
+                end
+                object Lbl_AliquotaPercent: TLabel
+                  AlignWithMargins = True
+                  Left = 126
+                  Top = 239
+                  Width = 15
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = '%.'
+                end
+                object Lbl_ICMSPercent: TLabel
+                  AlignWithMargins = True
+                  Left = 126
+                  Top = 172
+                  Width = 15
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = '%.'
+                end
+                object Lbl_ReBasePercent: TLabel
+                  AlignWithMargins = True
+                  Left = 311
+                  Top = 42
+                  Width = 15
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = '%.'
+                end
+                object Lbl_ICMSStPercent: TLabel
+                  AlignWithMargins = True
+                  Left = 311
+                  Top = 108
+                  Width = 15
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = '%.'
+                end
+                object Lbl_ImpostosImpostosICMSST: TLabel
+                  AlignWithMargins = True
+                  Left = 200
+                  Top = 77
+                  Width = 57
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'ICMS ST:'
+                end
+                object Lbl_DesoneracaoPercent: TLabel
+                  AlignWithMargins = True
+                  Left = 311
+                  Top = 172
+                  Width = 15
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = '%.'
+                end
+                object Lbl_ImpostosImpostosDesoneracao: TLabel
+                  AlignWithMargins = True
+                  Left = 200
+                  Top = 142
+                  Width = 90
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Desonera'#231#227'o:'
+                end
+                object Edt_ImpostosImpostosBaseCalculo: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 107
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Color = 11467263
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 0
+                  Text = '00,00'
+                end
+                object Edt_ImpostosImpostosCST: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 42
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Color = 11467263
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 1
+                  Text = '00,00'
+                end
+                object Edt_ImpostosImpostosAliquota: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 172
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Color = 11467263
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 2
+                  Text = '00,00'
+                end
+                object Edt_ImpostosImpostosICMS: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 237
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Color = 11467263
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 3
+                  Text = '00,00'
+                end
+                object Edt_ImpostosImpostosREBase: TEdit
+                  AlignWithMargins = True
+                  Left = 201
+                  Top = 42
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Color = 11467263
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 4
+                  Text = '00,00'
+                end
+                object Edt_ImpostosImpostosICMSST: TEdit
+                  AlignWithMargins = True
+                  Left = 201
+                  Top = 107
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Color = 11467263
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 5
+                  Text = '00,00'
+                end
+                object Edt_ImpostosImpostosDesoneracao: TEdit
+                  AlignWithMargins = True
+                  Left = 201
+                  Top = 172
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Color = 11467263
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 6
+                  Text = '00,00'
+                end
               end
-              object Edt_ImpostosImpostosCST: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 42
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Color = 11467263
-                Enabled = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
+              object Pnl_ImpostosModal: TPanel
+                Left = 362
+                Top = 46
+                Width = 334
+                Height = 318
+                ParentColor = True
                 TabOrder = 1
-                Text = '00,00'
+                object Lbl_ImpostosModalPlaca: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 7
+                  Width = 42
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Placa: '
+                end
+                object Lbl_ImpostosModalUfPlaca: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 72
+                  Width = 63
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'UF Placa: '
+                end
+                object Lbl_ImpostosModalRenavam: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 137
+                  Width = 75
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'RENAVAM: '
+                end
+                object Lbl_ImpostosModalTara: TLabel
+                  AlignWithMargins = True
+                  Left = 167
+                  Top = 7
+                  Width = 43
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'TARA: '
+                end
+                object Lbl_ImpostosModalTRodado: TLabel
+                  AlignWithMargins = True
+                  Left = 167
+                  Top = 72
+                  Width = 115
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Tipo de Rodado: '
+                end
+                object Lbl_ImpostosModalTCarroceria: TLabel
+                  AlignWithMargins = True
+                  Left = 167
+                  Top = 137
+                  Width = 130
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Tipo de Carroceria: '
+                end
+                object Lbl_ImpostosModalMotorista: TLabel
+                  Left = 16
+                  Top = 200
+                  Width = 64
+                  Height = 20
+                  Caption = 'Motorista'
+                end
+                object Lbl_ImpostosModalMotoristaCpfCnpj: TLabel
+                  AlignWithMargins = True
+                  Left = 167
+                  Top = 228
+                  Width = 69
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'CPF/CNPJ: '
+                end
+                object Lbl_ImpostosModalMotoristaNome: TLabel
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 228
+                  Width = 48
+                  Height = 20
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Nome: '
+                end
+                object Lbl_ReqVeiculoPlaca: TLabel
+                  Left = 66
+                  Top = 7
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqVeiculoTARA: TLabel
+                  Left = 218
+                  Top = 7
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqVeiculoPlacaUF: TLabel
+                  Left = 87
+                  Top = 72
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqVeiculoRENAVAM: TLabel
+                  Left = 99
+                  Top = 137
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqVeiculoMotoristaNome: TLabel
+                  Left = 72
+                  Top = 228
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqVeiculoMotoristaCPF: TLabel
+                  Left = 244
+                  Top = 228
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqVeiculoCarroceria: TLabel
+                  Left = 305
+                  Top = 137
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Lbl_ReqVeiculoTipoRodado: TLabel
+                  Left = 290
+                  Top = 72
+                  Width = 7
+                  Height = 20
+                  Margins.Top = 5
+                  Margins.Bottom = 5
+                  Caption = '*'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                end
+                object Edt_ImpostosModalPlaca: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 37
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 0
+                end
+                object Edt_ImpostosModalRenavam: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 167
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 1
+                end
+                object Edt_ImpostosModalTara: TEdit
+                  AlignWithMargins = True
+                  Left = 167
+                  Top = 37
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 2
+                end
+                object Edt_ImpostosModalTRodado: TEdit
+                  AlignWithMargins = True
+                  Left = 167
+                  Top = 102
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 3
+                end
+                object Edt_ImpostosModalTCarroceria: TEdit
+                  AlignWithMargins = True
+                  Left = 167
+                  Top = 167
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 4
+                end
+                object Cmbx_ImpostosModalUfPlaca: TComboBox
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 102
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 5
+                  Text = 'UF'
+                end
+                object Edt_ImpostosModaMotoristaNome: TEdit
+                  AlignWithMargins = True
+                  Left = 16
+                  Top = 258
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  TabOrder = 6
+                end
+                object Edt_ImpostosModalMotoristaCpfCnpj: TEdit
+                  AlignWithMargins = True
+                  Left = 167
+                  Top = 258
+                  Width = 100
+                  Height = 25
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -13
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  NumbersOnly = True
+                  ParentFont = False
+                  TabOrder = 7
+                end
               end
-              object Edt_ImpostosImpostosAliquota: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 172
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Color = 11467263
-                Enabled = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 2
-                Text = '00,00'
-              end
-              object Edt_ImpostosImpostosICMS: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 237
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Color = 11467263
-                Enabled = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 3
-                Text = '00,00'
-              end
-              object Edt_ImpostosImpostosREBase: TEdit
-                AlignWithMargins = True
-                Left = 201
-                Top = 42
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Color = 11467263
-                Enabled = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 4
-                Text = '00,00'
-              end
-              object Edt_ImpostosImpostosICMSST: TEdit
-                AlignWithMargins = True
-                Left = 201
-                Top = 107
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Color = 11467263
-                Enabled = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 5
-                Text = '00,00'
-              end
-              object Edt_ImpostosImpostosDesoneracao: TEdit
-                AlignWithMargins = True
-                Left = 201
-                Top = 172
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Color = 11467263
-                Enabled = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 6
-                Text = '00,00'
-              end
-            end
-            object Pnl_ImpostosModal: TPanel
-              Left = 371
-              Top = 35
-              Width = 334
-              Height = 318
-              TabOrder = 1
-              object Lbl_ImpostosModalPlaca: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 7
-                Width = 42
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Placa: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosModalUfPlaca: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 72
-                Width = 63
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'UF Placa: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosModalRenavam: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 137
-                Width = 75
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'RENAVAM: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosModalTara: TLabel
-                AlignWithMargins = True
-                Left = 167
-                Top = 7
-                Width = 43
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'TARA: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosModalTRodado: TLabel
-                AlignWithMargins = True
-                Left = 167
-                Top = 72
-                Width = 115
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Tipo de Rodado: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosModalTCarroceria: TLabel
-                AlignWithMargins = True
-                Left = 167
-                Top = 137
-                Width = 130
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Tipo de Carroceria: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosModalMotorista: TLabel
-                Left = 16
-                Top = 200
-                Width = 69
-                Height = 20
-                Caption = 'Motorista'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ImpostosModalMotoristaCpfCnpj: TLabel
-                AlignWithMargins = True
-                Left = 167
-                Top = 228
-                Width = 69
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'CPF/CNPJ: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ImpostosModalMotoristaNome: TLabel
-                AlignWithMargins = True
-                Left = 16
-                Top = 228
-                Width = 48
-                Height = 20
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Caption = 'Nome: '
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-              end
-              object Lbl_ReqVeiculoPlaca: TLabel
-                Left = 66
-                Top = 7
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqVeiculoTARA: TLabel
-                Left = 218
-                Top = 7
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqVeiculoPlacaUF: TLabel
-                Left = 87
-                Top = 72
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqVeiculoRENAVAM: TLabel
-                Left = 99
-                Top = 137
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqVeiculoMotoristaNome: TLabel
-                Left = 72
-                Top = 228
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqVeiculoMotoristaCPF: TLabel
-                Left = 244
-                Top = 228
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqVeiculoCarroceria: TLabel
-                Left = 305
-                Top = 137
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Lbl_ReqVeiculoTipoRodado: TLabel
-                Left = 290
-                Top = 72
-                Width = 7
-                Height = 20
-                Margins.Top = 5
-                Margins.Bottom = 5
-                Caption = '*'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clRed
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-              end
-              object Edt_ImpostosModalPlaca: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 37
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 0
-              end
-              object Edt_ImpostosModalRenavam: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 167
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 1
-              end
-              object Edt_ImpostosModalTara: TEdit
-                AlignWithMargins = True
-                Left = 167
-                Top = 37
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 2
-              end
-              object Edt_ImpostosModalTRodado: TEdit
-                AlignWithMargins = True
-                Left = 167
-                Top = 102
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 3
-              end
-              object Edt_ImpostosModalTCarroceria: TEdit
-                AlignWithMargins = True
-                Left = 167
-                Top = 167
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 4
-              end
-              object Cmbx_ImpostosModalUfPlaca: TComboBox
-                AlignWithMargins = True
-                Left = 16
-                Top = 102
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 5
-                Text = 'UF'
-              end
-              object Edt_ImpostosModaMotoristaNome: TEdit
-                AlignWithMargins = True
-                Left = 16
-                Top = 258
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                ParentFont = False
-                TabOrder = 6
-              end
-              object Edt_ImpostosModalMotoristaCpfCnpj: TEdit
-                AlignWithMargins = True
-                Left = 167
-                Top = 258
-                Width = 100
-                Height = 25
-                Margins.Left = 5
-                Margins.Top = 5
-                Margins.Right = 5
-                Margins.Bottom = 5
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -13
-                Font.Name = 'Segoe UI'
-                Font.Style = []
-                NumbersOnly = True
-                ParentFont = False
-                TabOrder = 7
-              end
-            end
-            object ComboBox2: TComboBox
-              AlignWithMargins = True
-              Left = 20
-              Top = 399
-              Width = 686
-              Height = 28
-              Margins.Left = 5
-              Margins.Top = 5
-              Margins.Right = 5
-              Margins.Bottom = 5
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clWindowText
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-              TabOrder = 2
-              Text = 'Remetente'
-              Items.Strings = (
-                'Remetente'
-                'Destinat'#225'rio'
-                'Expedidor'
-                'Recebedor'
-                'Outros')
             end
           end
           object Tbsh_Nota: TTabSheet
@@ -8725,6 +8553,19 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ExplicitHeight = 22
                 end
               end
+            end
+            object Pnl_Nota: TPanel
+              Left = 0
+              Top = 0
+              Width = 751
+              Height = 388
+              Align = alClient
+              BevelOuter = bvNone
+              TabOrder = 1
+              ExplicitLeft = 336
+              ExplicitTop = 96
+              ExplicitWidth = 185
+              ExplicitHeight = 41
             end
           end
         end

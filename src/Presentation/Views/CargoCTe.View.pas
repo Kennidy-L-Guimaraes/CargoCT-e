@@ -36,49 +36,6 @@ type
     Tbsh_ImpostosEModal: TTabSheet;
     Tbsh_Nota: TTabSheet;
     Pnl_SubMenu: TPanel;
-    Pnl_ImpostosImpostos: TPanel;
-    Lbl_ImpostosImpostosCST: TLabel;
-    Lbl_ImpostosImpostosAtencao: TLabel;
-    Lbl_ImpostosImpostosBaseCalculo: TLabel;
-    Lbl_ImpostosImpostosAliquota: TLabel;
-    Lbl_ImpostosImpostosICMS: TLabel;
-    Lbl_ImpostosImpostosReBase: TLabel;
-    Lbl_BaseCalculoPercent: TLabel;
-    Lbl_CSTPercent: TLabel;
-    Lbl_AliquotaPercent: TLabel;
-    Lbl_ICMSPercent: TLabel;
-    Lbl_ReBasePercent: TLabel;
-    Edt_ImpostosImpostosBaseCalculo: TEdit;
-    Edt_ImpostosImpostosCST: TEdit;
-    Edt_ImpostosImpostosAliquota: TEdit;
-    Edt_ImpostosImpostosICMS: TEdit;
-    Edt_ImpostosImpostosREBase: TEdit;
-    Lbl_ImpostosImpostos: TLabel;
-    Lbl_ICMSStPercent: TLabel;
-    Edt_ImpostosImpostosICMSST: TEdit;
-    Lbl_ImpostosImpostosICMSST: TLabel;
-    Lbl_DesoneracaoPercent: TLabel;
-    Edt_ImpostosImpostosDesoneracao: TEdit;
-    Lbl_ImpostosImpostosDesoneracao: TLabel;
-    Pnl_ImpostosModal: TPanel;
-    Lbl_ImpostosModalPlaca: TLabel;
-    Lbl_ImpostosModalUfPlaca: TLabel;
-    Lbl_ImpostosModalRenavam: TLabel;
-    Lbl_ImpostosModalTara: TLabel;
-    Lbl_ImpostosModalTRodado: TLabel;
-    Lbl_ImpostosModalTCarroceria: TLabel;
-    Edt_ImpostosModalPlaca: TEdit;
-    Edt_ImpostosModalRenavam: TEdit;
-    Edt_ImpostosModalTara: TEdit;
-    Edt_ImpostosModalTRodado: TEdit;
-    Edt_ImpostosModalTCarroceria: TEdit;
-    Lbl_ImpostosModal: TLabel;
-    Cmbx_ImpostosModalUfPlaca: TComboBox;
-    Lbl_ImpostosModalMotorista: TLabel;
-    Lbl_ImpostosModalMotoristaCpfCnpj: TLabel;
-    Edt_ImpostosModaMotoristaNome: TEdit;
-    Lbl_ImpostosModalMotoristaNome: TLabel;
-    Edt_ImpostosModalMotoristaCpfCnpj: TEdit;
     Pnl_Ajuda: TPanel;
     Mem_Ajuda: TMemo;
     Lbl_Ajuda: TLabel;
@@ -150,16 +107,6 @@ type
     Shp_BtnAdicionarMotorista: TShape;
     Btn_AdicionarMotorista: TSpeedButton;
     TimerDataEHora: TTimer;
-    ComboBox2: TComboBox;
-    Label41: TLabel;
-    Lbl_ReqVeiculoPlaca: TLabel;
-    Lbl_ReqVeiculoTARA: TLabel;
-    Lbl_ReqVeiculoPlacaUF: TLabel;
-    Lbl_ReqVeiculoRENAVAM: TLabel;
-    Lbl_ReqVeiculoMotoristaNome: TLabel;
-    Lbl_ReqVeiculoMotoristaCPF: TLabel;
-    Lbl_ReqVeiculoCarroceria: TLabel;
-    Lbl_ReqVeiculoTipoRodado: TLabel;
     Pnl_IdentificadorTomador: TPanel;
     Pnl_TomadorDeServico: TPanel;
     Lbl_TomadorTipoTomador: TLabel;
@@ -321,6 +268,59 @@ type
     MsEdt_DocumentosTaxasSeguro: TMaskEdit;
     MsEdt_DocumentosTaxasOutros: TMaskEdit;
     Lbl_DocumentosIdentificacaoCte: TLabel;
+    Pnl_ImpostosEModal: TPanel;
+    Lbl_ImpostosImpostos: TLabel;
+    Lbl_ImpostosModal: TLabel;
+    Pnl_ImpostosImpostos: TPanel;
+    Lbl_ImpostosImpostosCST: TLabel;
+    Lbl_ImpostosImpostosAtencao: TLabel;
+    Lbl_ImpostosImpostosBaseCalculo: TLabel;
+    Lbl_ImpostosImpostosAliquota: TLabel;
+    Lbl_ImpostosImpostosICMS: TLabel;
+    Lbl_ImpostosImpostosReBase: TLabel;
+    Lbl_BaseCalculoPercent: TLabel;
+    Lbl_CSTPercent: TLabel;
+    Lbl_AliquotaPercent: TLabel;
+    Lbl_ICMSPercent: TLabel;
+    Lbl_ReBasePercent: TLabel;
+    Lbl_ICMSStPercent: TLabel;
+    Lbl_ImpostosImpostosICMSST: TLabel;
+    Lbl_DesoneracaoPercent: TLabel;
+    Lbl_ImpostosImpostosDesoneracao: TLabel;
+    Edt_ImpostosImpostosBaseCalculo: TEdit;
+    Edt_ImpostosImpostosCST: TEdit;
+    Edt_ImpostosImpostosAliquota: TEdit;
+    Edt_ImpostosImpostosICMS: TEdit;
+    Edt_ImpostosImpostosREBase: TEdit;
+    Edt_ImpostosImpostosICMSST: TEdit;
+    Edt_ImpostosImpostosDesoneracao: TEdit;
+    Pnl_ImpostosModal: TPanel;
+    Lbl_ImpostosModalPlaca: TLabel;
+    Lbl_ImpostosModalUfPlaca: TLabel;
+    Lbl_ImpostosModalRenavam: TLabel;
+    Lbl_ImpostosModalTara: TLabel;
+    Lbl_ImpostosModalTRodado: TLabel;
+    Lbl_ImpostosModalTCarroceria: TLabel;
+    Lbl_ImpostosModalMotorista: TLabel;
+    Lbl_ImpostosModalMotoristaCpfCnpj: TLabel;
+    Lbl_ImpostosModalMotoristaNome: TLabel;
+    Lbl_ReqVeiculoPlaca: TLabel;
+    Lbl_ReqVeiculoTARA: TLabel;
+    Lbl_ReqVeiculoPlacaUF: TLabel;
+    Lbl_ReqVeiculoRENAVAM: TLabel;
+    Lbl_ReqVeiculoMotoristaNome: TLabel;
+    Lbl_ReqVeiculoMotoristaCPF: TLabel;
+    Lbl_ReqVeiculoCarroceria: TLabel;
+    Lbl_ReqVeiculoTipoRodado: TLabel;
+    Edt_ImpostosModalPlaca: TEdit;
+    Edt_ImpostosModalRenavam: TEdit;
+    Edt_ImpostosModalTara: TEdit;
+    Edt_ImpostosModalTRodado: TEdit;
+    Edt_ImpostosModalTCarroceria: TEdit;
+    Cmbx_ImpostosModalUfPlaca: TComboBox;
+    Edt_ImpostosModaMotoristaNome: TEdit;
+    Edt_ImpostosModalMotoristaCpfCnpj: TEdit;
+    Pnl_Nota: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure Btn_BtnNovaNotaClick(Sender: TObject);
     procedure Btn_NotasEmitidasClick(Sender: TObject);
@@ -344,7 +344,7 @@ type
     //Procedures
     procedure AplicarConfiguracoesDesign; 
     procedure AplicarConfiguracoesSistema; 
-    procedure AplicarConfiguracoesDB; 
+    procedure AplicarConfiguracoesDB;
     function DarkenColor(Color: TColor; Percent: Byte): TColor; //Escurece as Bordas dos Botões
   end;
 
@@ -456,17 +456,33 @@ begin
   Pnl_IdentificadorTomador.Color            := CorBorda;
   Pnl_IdentificadorTomador.Font.Color       := CorFonte;
 
-  Pnl_Participantes.ParentBackground := False;
-  Pnl_Participantes.Color            := CorBorda;
-  Pnl_Participantes.Font.Color       := CorFonte;
+  Pnl_Participantes.ParentBackground        := False;
+  Pnl_Participantes.Color                   := CorBorda;
+  Pnl_Participantes.Font.Color              := CorFonte;
 
-  Pnl_TransporteECarga.ParentBackground := False;
-  Pnl_TransporteECarga.Color            := CorBorda;
-  Pnl_TransporteECarga.Font.Color       := CorFonte;
+  Pnl_TransporteECarga.ParentBackground     := False;
+  Pnl_TransporteECarga.Color                := CorBorda;
+  Pnl_TransporteECarga.Font.Color           := CorFonte;
 
-  Pnl_DocumentosETaxas.ParentBackground := False;
-  Pnl_DocumentosETaxas.Color            := CorBorda;
-  Pnl_DocumentosETaxas.Font.Color       := CorFonte;
+  Pnl_DocumentosETaxas.ParentBackground     := False;
+  Pnl_DocumentosETaxas.Color                := CorBorda;
+  Pnl_DocumentosETaxas.Font.Color           := CorFonte;
+
+  Pnl_ImpostosEModal.ParentBackground       := False;
+  Pnl_ImpostosEModal.Color                  := CorBorda;
+  Pnl_ImpostosEModal.Font.Color             := CorFonte;
+
+  Pnl_Nota.ParentBackground                 := False;
+  Pnl_Nota.Color                            := CorBorda;
+  Pnl_Nota.Font.Color                       := CorFonte;
+  Pnl_BtnsNotas.ParentBackground            := False;
+  Pnl_BtnsNotas.Color                       := CorBorda;
+
+
+    //Configurações para outros forms
+   //Frm_NovaTransportadora
+   //Frm_NovaFrota
+   //Frm_Config
 
 
  finally
