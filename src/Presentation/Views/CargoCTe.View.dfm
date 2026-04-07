@@ -23,7 +23,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 647
     DesignSize = (
       891
       649)
@@ -37,7 +36,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3367,7 +3365,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -7707,10 +7704,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
               Font.Style = []
               ParentFont = False
               TabOrder = 0
-              ExplicitLeft = 368
-              ExplicitTop = 144
-              ExplicitWidth = 185
-              ExplicitHeight = 41
               object Lbl_ImpostosImpostos: TLabel
                 Left = 11
                 Top = 12
@@ -8562,10 +8555,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
               Align = alClient
               BevelOuter = bvNone
               TabOrder = 1
-              ExplicitLeft = 336
-              ExplicitTop = 96
-              ExplicitWidth = 185
-              ExplicitHeight = 41
             end
           end
         end
@@ -11492,12 +11481,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Pnl_NotasEmitidasTotal: TPanel
           Left = 1
           Top = 1
-          Width = 740
+          Width = 757
           Height = 52
           Align = alTop
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 740
           object Lbl_NotasEmitidasTotal: TLabel
             Left = 13
             Top = 11
@@ -11512,7 +11502,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
             ParentFont = False
           end
           object Pnl_NotasEmitidasTotalValor: TPanel
-            Left = 152
+            Left = 169
             Top = 1
             Width = 587
             Height = 50
@@ -11521,6 +11511,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
             Color = clSilver
             ParentBackground = False
             TabOrder = 0
+            ExplicitLeft = 152
             object Lbl_NotasEmitidasTotalValor: TLabel
               Left = 16
               Top = 13
@@ -11542,7 +11533,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Dbgd_NotasEmitidas: TDBGrid
           Left = 1
           Top = 245
-          Width = 740
+          Width = 757
           Height = 220
           Align = alBottom
           TabOrder = 1
@@ -11555,12 +11546,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Pnl_NotasEmitidasPesquisarNotas: TPanel
           Left = 1
           Top = 203
-          Width = 740
+          Width = 757
           Height = 42
           Align = alBottom
           Color = clWhite
           ParentBackground = False
           TabOrder = 2
+          ExplicitWidth = 740
           object Srbx_PesquisarNotas: TSearchBox
             Left = 2
             Top = 11
@@ -15316,12 +15308,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Pnl_TransportadorasSearch: TPanel
           Left = 1
           Top = 201
-          Width = 740
+          Width = 757
           Height = 42
           Align = alBottom
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 740
           object Lbl_TransportadorasTotal: TLabel
             Left = 13
             Top = 11
@@ -15361,7 +15354,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Dbgd_Transportadoras: TDBGrid
           Left = 1
           Top = 243
-          Width = 740
+          Width = 757
           Height = 222
           Align = alBottom
           TabOrder = 1
@@ -15374,12 +15367,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Pnl_TransportadorasTopo: TPanel
           Left = 1
           Top = 1
-          Width = 740
+          Width = 757
           Height = 42
           Align = alTop
           Color = clWhite
           ParentBackground = False
           TabOrder = 2
+          ExplicitWidth = 740
           object Lbl_TransportadorasTopo: TLabel
             Left = 13
             Top = 6
@@ -19486,12 +19480,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Pnl_MotoristasBusca: TPanel
           Left = 1
           Top = 201
-          Width = 740
+          Width = 757
           Height = 42
           Align = alBottom
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 740
           object Lbl_MotoristasBuscaTotalMotoristas: TLabel
             Left = 13
             Top = 11
@@ -19531,7 +19526,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Dbgd_MotoristasRegistrados: TDBGrid
           Left = 1
           Top = 243
-          Width = 740
+          Width = 757
           Height = 222
           Align = alBottom
           TabOrder = 1
@@ -19544,12 +19539,13 @@ object Frm_CargoCTe: TFrm_CargoCTe
         object Pnl_MotoristasTopo: TPanel
           Left = 1
           Top = 1
-          Width = 740
+          Width = 757
           Height = 42
           Align = alTop
           Color = clWhite
           ParentBackground = False
           TabOrder = 2
+          ExplicitWidth = 740
           object Lbl_MotoristasTopo: TLabel
             Left = 13
             Top = 6
@@ -19760,7 +19756,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
-      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
@@ -19797,7 +19792,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
-        ExplicitHeight = 87
       end
     end
   end

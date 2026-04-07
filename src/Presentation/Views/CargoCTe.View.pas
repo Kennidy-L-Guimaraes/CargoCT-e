@@ -373,6 +373,10 @@ var
  Aba    : TTabSheet;
 begin
   UseCase  := TConfigFactory.NovoUseCase;
+  { Optei por não utilizar uma classe genérica com loop para aplicar estilos a todos os componentes,
+    pois, apesar de automatizar, isso tornaria alterações de layout mais complicadas.
+    Embora mais manual, este método permite alterações de layout de forma fácil, simples e direta. }
+
  try
   Dto := UseCase.Inicializar;
   CorBase  := StringToColor(Dto.CordosBotoes);
@@ -478,13 +482,27 @@ begin
   Pnl_BtnsNotas.ParentBackground            := False;
   Pnl_BtnsNotas.Color                       := CorBorda;
 
+  //Notas Emitidas
+  Pnl_NotasEmitidasTotal.Color          := CorFundo;
+  Pnl_NotasEmitidasTotalValor.Color     := CorBorda;
+  Pnl_NotasEmitidasPesquisarNotas.Color := CorFundo;
+  Lbl_NotasEmitidasTotal.Font.Color     := CorFonte;
 
-    //Configurações para outros forms
-   //Frm_NovaTransportadora
-   //Frm_NovaFrota
-   //Frm_Config
+  //Trasnportdoras registradas
+  Pnl_Transportadoras.Color                   := CorFundo;
+  Pnl_TransportadorasTopo.Color               := CorBorda;
+  Pnl_TransportadorasSearch.Color             := CorBorda;
+  Lbl_TransportadorasTopo.Font.Color          := CorFonte;
+  Lbl_TransportadorasTotal.Font.Color         := CorFonte;
+  Lbl_TransportadorasTotalInativas.Font.Color := CorFonte;
 
-
+  //Motoristas
+  Pnl_Motoristas.Color                          := CorFundo;
+  Pnl_MotoristasTopo.Color                      := CorBorda;
+  Pnl_MotoristasBusca.Color                     := CorBorda;
+  Lbl_MotoristasTopo.Font.Color                 := CorFonte;
+  Lbl_MotoristasBuscaTotalInativos.Font.Color   := CorFonte;
+  Lbl_MotoristasBuscaTotalMotoristas.Font.Color := CorFonte;
  finally
   UseCase.Free;
  end;
