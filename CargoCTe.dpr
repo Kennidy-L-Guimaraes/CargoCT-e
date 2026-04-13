@@ -44,7 +44,8 @@ uses
   ConfiRepository.Interfaces in 'src\Domain\Interfaces\ConfiRepository.Interfaces.pas',
   Config.Entidade in 'src\Domain\Entities\Config.Entidade.pas',
   Config.DB.SQLite in 'src\Infrastructure\database_service\Config.DB.SQLite.pas',
-  Config.Factory in 'src\Application\Factories\Config.Factory.pas';
+  Config.Factory in 'src\Application\Factories\Config.Factory.pas',
+  Design.Utils in 'src\Presentation\UI\Utils\Design.Utils.pas';
 
 {$R *.res}
 

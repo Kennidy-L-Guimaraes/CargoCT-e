@@ -13,7 +13,7 @@ uses
   FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys,
   FireDAC.VCLUI.Wait, FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat,
   FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite, Config.UseCase, Config.Factory,
-  Config.DTO;
+  Config.DTO, Design.Utils;
 
 type
   // PADRÃO DE NOMENCLATURA
@@ -345,7 +345,6 @@ type
     procedure AplicarConfiguracoesDesign; 
     procedure AplicarConfiguracoesSistema; 
     procedure AplicarConfiguracoesDB;
-    function DarkenColor(Color: TColor; Percent: Byte): TColor; //Escurece as Bordas dos Botões
   end;
 
 var
@@ -381,7 +380,7 @@ begin
   Dto := UseCase.Inicializar;
   CorBase  := StringToColor(Dto.CordosBotoes);
   CorFonte := StringToColor(Dto.CordaFonte);
-  CorBorda := DarkenColor(CorBase, 30);
+  CorBorda := TDesign.DarkenColor(CorBase, 30);
   CorFundo := StringToColor(Dto.CordeFundo);
 
   //Cor dos Shapes 
@@ -558,23 +557,6 @@ constructor TFrm_CargoCTe.Create(AOwner: TComponent);
 begin
   Inherited Create(AOwner);
   FMenuService := TMenuNavigationUtils.Create;
-end;
-
-function TFrm_CargoCTe.DarkenColor(Color: TColor; Percent: Byte): TColor;
-var
-  R, G, B: Byte;
-begin
-  Color := ColorToRGB(Color);
-
-  R := GetRValue(Color);
-  G := GetGValue(Color);
-  B := GetBValue(Color);
-
-  R := Round(R * (100 - Percent) / 100);
-  G := Round(G * (100 - Percent) / 100);
-  B := Round(B * (100 - Percent) / 100);
-
-  Result := RGB(R, G, B);
 end;
 
 destructor TFrm_CargoCTe.Destroy;

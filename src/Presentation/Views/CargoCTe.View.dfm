@@ -11487,7 +11487,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 740
           object Lbl_NotasEmitidasTotal: TLabel
             Left = 13
             Top = 11
@@ -11511,7 +11510,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
             Color = clSilver
             ParentBackground = False
             TabOrder = 0
-            ExplicitLeft = 152
             object Lbl_NotasEmitidasTotalValor: TLabel
               Left = 16
               Top = 13
@@ -11552,7 +11550,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Color = clWhite
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 740
           object Srbx_PesquisarNotas: TSearchBox
             Left = 2
             Top = 11
@@ -15314,7 +15311,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 740
           object Lbl_TransportadorasTotal: TLabel
             Left = 13
             Top = 11
@@ -15373,7 +15369,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Color = clWhite
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 740
           object Lbl_TransportadorasTopo: TLabel
             Left = 13
             Top = 6
@@ -19486,7 +19481,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Color = clWhite
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 740
           object Lbl_MotoristasBuscaTotalMotoristas: TLabel
             Left = 13
             Top = 11
@@ -19545,7 +19539,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Color = clWhite
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 740
           object Lbl_MotoristasTopo: TLabel
             Left = 13
             Top = 6

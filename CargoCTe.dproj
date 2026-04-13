@@ -179,6 +179,7 @@
         <DCCReference Include="src\Domain\Entities\Config.Entidade.pas"/>
         <DCCReference Include="src\Infrastructure\database_service\Config.DB.SQLite.pas"/>
         <DCCReference Include="src\Application\Factories\Config.Factory.pas"/>
+        <DCCReference Include="src\Presentation\UI\Utils\Design.Utils.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

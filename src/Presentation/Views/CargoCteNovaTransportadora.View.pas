@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
   Vcl.Imaging.pngimage, Vcl.ExtDlgs, Vcl.Imaging.jpeg, Vcl.Mask, Transportadora.DTO,
   Transportadora.DB.SQLite, NovaTransportadora.UseCase, ConfiguracaoSistema.Db,
-  ApisRest.UseCase, APIs.DTO;
+  ApisRest.UseCase, APIs.DTO, Config.UseCase, Config.DTO, Config.Factory,
+  Design.Utils;
 
 type
   TFrm_NovaTransportadora = class(TForm)
@@ -117,6 +118,7 @@ type
     procedure UseCaseNovaTransportadora;
     procedure Btn_IdentificacaoLogoClick(Sender: TObject);
     procedure Img_EnderecoLupaClick(Sender: TObject);
+    procedure AplicarConfiguracoesDesign;
 
     destructor Destroy;
   private
@@ -144,6 +146,29 @@ uses CampoVisual.Utils, CargoCteNovaFrota.View, Sistema.Utils,
   SistemaOperacional.Entidade, Transportadora.Entidade, Veiculo.Entidade,
   Endereco.Tipo.CEP,
   TransportadoraContato.Entidade;
+
+procedure TFrm_NovaTransportadora.AplicarConfiguracoesDesign;
+var
+ Usecase: TUsecaseConfig;
+ Dto    : TDTOConfig;
+ CorBase, CorBorda, CorFonte, CorFundo: TColor;
+begin
+  UseCase  := TConfigFactory.NovoUseCase;
+  try
+   Dto := UseCase.Inicializar; 
+   CorBase  := StringToColor(Dto.CordosBotoes);
+   CorFonte := StringToColor(Dto.CordaFonte);
+   CorBorda := TDesign.DarkenColor(CorBase, 30);
+   CorFundo := StringToColor(Dto.CordeFundo);
+
+
+   Pnl_Background.Color                 := CorBorda; 
+   Pnl_Background.Font.Color            := CorFonte; 
+   Img_NovaTransportadoraBanner.Visible := Dto.ExibirBanners; 
+  finally
+  UseCase.Free; 
+  end;
+end;
 
 procedure TFrm_NovaTransportadora.Btn_CancelarNovaTransportadoraClick(
   Sender: TObject);
@@ -194,6 +219,9 @@ begin
   MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
   //Cria um Stream para imagem
   FImage := TMemoryStream.Create;
+  
+  //Aplica o Design
+  AplicarConfiguracoesDesign;
 end;
 
 procedure TFrm_NovaTransportadora.Img_EnderecoLupaClick(Sender: TObject);
