@@ -5,11 +5,11 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
-  Config.UseCase, Config.DTO, Config.Factory, CargoCTe.View;
+  Config.UseCase, Config.DTO, Config.Factory, CargoCTe.View, Design.Utils;
 
 type
   TFrm_CargoCteConfig = class(TForm)
-    Pnl_ConfiguracoesBackground: TPanel;
+    Pnl_Background: TPanel;
     Pnl_ConfiguracoesBtns: TPanel;
     Pnl_BtnSalvarConfiguracoes: TPanel;
     Shp_BtnSalvarConfiguracoes: TShape;
@@ -25,7 +25,6 @@ type
     Chbx_ExibirLogoNotaCte: TCheckBox;
     Pnl_BtnsBancoDeDados: TPanel;
     Btn_ExcluirTransportadoras: TBitBtn;
-    Chbx_HabilitarBtnBancoDeDados: TCheckBox;
     Btn_ExcluirBancoDeDados: TBitBtn;
     GrBx_ConfiguracoesdeDesign: TGroupBox;
     Clbx_CorFundo: TColorBox;
@@ -35,8 +34,15 @@ type
     Btn_ConfiguracoesPadrao: TBitBtn;
     Lbl_ConfigCordaFonte: TLabel;
     Clbx_CordaFonte: TColorBox;
+    Lbl_ExibirHelpPanel: TLabel;
+    Lbl_ExibirBanners: TLabel;
+    Lbl_ExibirValorTotal: TLabel;
+    Chbx_HabilitarBtnBancoDeDados: TCheckBox;
+    Lbl_HabilitarBotoesBancodeDados: TLabel;
+    Lbl_ExibirLogonaNota: TLabel;
     procedure Btn_BtnCancelarConfiguracoesClick(Sender: TObject);
     procedure Btn_BtnSalvarrConfiguracoesClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,6 +50,7 @@ type
     var
     ADTO : TDTOConfig;
     procedure preencherDTO;
+    procedure AplicarConfiguracoesDesign;
   end;
 
 var
@@ -52,6 +59,37 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrm_CargoCteConfig.AplicarConfiguracoesDesign;
+var
+ Usecase: TUsecaseConfig;
+ Dto    : TDTOConfig;
+ CorBase, CorBorda, CorFonte, CorFundo: TColor;
+begin
+ UseCase  := TConfigFactory.NovoUseCase;
+  try
+   Dto := UseCase.Inicializar;
+   CorBase  := StringToColor(Dto.CordosBotoes);
+   CorFonte := StringToColor(Dto.CordaFonte);
+   CorBorda := TDesign.DarkenColor(CorBase, 30);
+   CorFundo := StringToColor(Dto.CordeFundo);
+   Pnl_Background.Color                 := CorBorda;
+   Pnl_Background.Font.Color            := CorFonte;
+
+   Chbx_ExibirHelpPanel.Checked               := Dto.ExibirHelPanel;
+   Chbx_ExibirBanners.Checked                 := Dto.ExibirBanners;
+   Chbx_ExibirValorTotalNotasEmitidas.Checked := Dto.ExibirValorTotal;
+   Chbx_ExibirLogoNotaCte.Checked             := Dto.ExibirLogo;
+   Chbx_HabilitarBtnBancoDeDados.Checked      := Dto.HabilitarBtnsBanco;
+   Pnl_BtnsBancoDeDados.Enabled               := Dto.HabilitarBtnsBanco;
+
+   Clbx_CorFundo.Selected     := StringToColor(Dto.CordeFundo);
+   Clbx_CordosBotoes.Selected := StringToColor(Dto.CordosBotoes);
+   Clbx_CordaFonte.Selected   := StringToColor(Dto.CordaFonte);
+  finally
+  UseCase.Free;
+  end;
+end;
 
 procedure TFrm_CargoCteConfig.Btn_BtnCancelarConfiguracoesClick(
   Sender: TObject);
@@ -73,6 +111,11 @@ begin
   end;
   Frm_CargoCteConfig.Close;
   Frm_CargoCTe.Close;
+end;
+
+procedure TFrm_CargoCteConfig.FormCreate(Sender: TObject);
+begin
+ AplicarConfiguracoesDesign;
 end;
 
 procedure TFrm_CargoCteConfig.preencherDTO;

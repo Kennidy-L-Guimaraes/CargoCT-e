@@ -13,8 +13,9 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poMainFormCenter
+  OnCreate = FormCreate
   TextHeight = 15
-  object Pnl_ConfiguracoesBackground: TPanel
+  object Pnl_Background: TPanel
     Left = 0
     Top = 0
     Width = 399
@@ -24,7 +25,6 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 346
     object Pnl_ConfiguracoesBtns: TPanel
       Left = 0
       Top = 423
@@ -36,8 +36,8 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Anchors = [akLeft, akTop, akRight]
       AutoSize = True
       BevelOuter = bvNone
+      ParentColor = True
       TabOrder = 0
-      ExplicitTop = 298
       object Pnl_BtnSalvarConfiguracoes: TPanel
         AlignWithMargins = True
         Left = 5
@@ -138,53 +138,90 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Width = 399
       Height = 129
       Caption = 'Configura'#231#245'es da Interace'
-      Color = clWhite
-      ParentBackground = False
-      ParentColor = False
       TabOrder = 1
+      object Lbl_ExibirHelpPanel: TLabel
+        Left = 39
+        Top = 26
+        Width = 104
+        Height = 15
+        Caption = 'Exibir o HelpPanel? '
+      end
+      object Lbl_ExibirBanners: TLabel
+        Left = 39
+        Top = 49
+        Width = 150
+        Height = 15
+        Caption = 'Exibir os Banners (Imagens)?'
+      end
+      object Lbl_ExibirValorTotal: TLabel
+        Left = 39
+        Top = 70
+        Width = 205
+        Height = 15
+        Caption = 'Exibir o valor total em Notas Emitidas? '
+      end
+      object Lbl_HabilitarBotoesBancodeDados: TLabel
+        Left = 39
+        Top = 93
+        Width = 309
+        Height = 15
+        Caption = 'Habilitar Bot'#245'es de Acesso ao Banco de Dados (Perigoso)? '
+      end
       object Chbx_ExibirHelpPanel: TCheckBox
         Left = 16
         Top = 24
-        Width = 129
+        Width = 17
         Height = 17
-        Caption = 'Exibir o HelpPanel? '
         Checked = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         State = cbChecked
         TabOrder = 0
       end
       object Chbx_ExibirBanners: TCheckBox
         Left = 16
         Top = 47
-        Width = 184
+        Width = 17
         Height = 17
-        Caption = 'Exibir os Banners (Imagens)?'
         Checked = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         State = cbChecked
         TabOrder = 1
       end
       object Chbx_ExibirValorTotalNotasEmitidas: TCheckBox
         Left = 16
         Top = 70
-        Width = 233
+        Width = 17
         Height = 17
-        Caption = 'Exibir o valor total em Notas Emitidas? '
         Checked = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         State = cbChecked
         TabOrder = 2
       end
       object Chbx_HabilitarBtnBancoDeDados: TCheckBox
         Left = 16
         Top = 93
-        Width = 329
+        Width = 17
         Height = 17
-        Caption = 'Habilitar Bot'#245'es de Acesso ao Banco de Dados (Perigoso)? '
-        Color = 8421631
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = 8421631
+        Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
-        ParentColor = False
         ParentFont = False
         TabOrder = 3
       end
@@ -195,17 +232,26 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Width = 399
       Height = 58
       Caption = 'Configura'#231#245'es da Nota CT-e'
-      Color = clWhite
-      ParentBackground = False
-      ParentColor = False
       TabOrder = 2
+      object Lbl_ExibirLogonaNota: TLabel
+        Left = 39
+        Top = 24
+        Width = 190
+        Height = 15
+        Caption = 'Exibir imagem (logo) na nota CT-e? '
+      end
       object Chbx_ExibirLogoNotaCte: TCheckBox
         Left = 16
         Top = 24
-        Width = 217
+        Width = 17
         Height = 17
-        Caption = 'Exibir imagem (logo) na nota CT-e? '
         Checked = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         State = cbChecked
         TabOrder = 0
       end
@@ -219,8 +265,9 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Margins.Bottom = 0
       Align = alBottom
       BevelOuter = bvLowered
+      Enabled = False
+      ParentColor = True
       TabOrder = 3
-      ExplicitTop = 221
       object Btn_ExcluirBancoDeDados: TBitBtn
         Left = 16
         Top = 10
@@ -228,7 +275,12 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Height = 25
         Caption = 'Excluir Banco de Dados'
         DragCursor = crHandPoint
-        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 0
       end
       object Btn_ExcluirTransportadoras: TBitBtn
@@ -238,7 +290,12 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Height = 25
         Caption = 'Excluir todas as transportadoras'
         DragCursor = crHandPoint
-        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 1
       end
       object Btn_ConfiguracoesPadrao: TBitBtn
@@ -248,7 +305,12 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Height = 25
         Caption = 'Configura'#231#245'es Padr'#227'o'
         DragCursor = crHandPoint
-        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 2
       end
     end
@@ -258,9 +320,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Width = 399
       Height = 114
       Caption = 'Configura'#231#245'es de Design'
-      Color = clWhite
       ParentBackground = False
-      ParentColor = False
       TabOrder = 4
       object Pnl_ConfigCordeFundo: TLabel
         AlignWithMargins = True
@@ -309,6 +369,12 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Margins.Right = 5
         Margins.Bottom = 5
         Selected = clCream
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 0
       end
       object Clbx_CordosBotoes: TColorBox
@@ -321,6 +387,12 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Margins.Top = 5
         Margins.Right = 5
         Margins.Bottom = 5
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 1
       end
       object Clbx_CordaFonte: TColorBox
@@ -333,6 +405,12 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Margins.Top = 5
         Margins.Right = 5
         Margins.Bottom = 5
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 2
       end
     end
