@@ -8568,11 +8568,12 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 1
-        object Img_NotasEmitidas: TImage
-          Left = 3
-          Top = 55
+        object Img_NotasEmitidasBanner: TImage
+          Left = 1
+          Top = 53
           Width = 706
           Height = 146
+          Align = alTop
           Picture.Data = {
             0A544A504547496D616765946A0100FFD8FFE10E954578696600004D4D002A00
             0000080007011200030000000100010000011A00050000000100000062011B00
@@ -11477,6 +11478,8 @@ object Frm_CargoCTe: TFrm_CargoCTe
             FF00CDFF004709FE2E12FC5C13F17FA380FC05FE2E07F0FF0027F83F17FA43FC
             97FFD9}
           Stretch = True
+          ExplicitLeft = 3
+          ExplicitTop = 55
         end
         object Pnl_NotasEmitidasTotal: TPanel
           Left = 1
@@ -11570,11 +11573,12 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 2
-        object Img_Transportadoras: TImage
+        object Img_TransportadorasBanner: TImage
           Left = 1
-          Top = 44
+          Top = 43
           Width = 707
           Height = 155
+          Align = alTop
           Picture.Data = {
             0A544A504547496D61676566D10100FFD8FFE10EC14578696600004D4D002A00
             0000080007011200030000000100010000011A00050000000100000062011B00
@@ -15301,6 +15305,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
             92A5BAF2C8484A53A252948FFDE459FF00E9EE43FF00DD9A0E32EFFF007823FF
             00B247FF003B74FF00ECC5AFFEF552FF00A57FFFD9}
           Stretch = True
+          ExplicitTop = 44
         end
         object Pnl_TransportadorasSearch: TPanel
           Left = 1
@@ -15393,11 +15398,12 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Color = clWhite
         ParentBackground = False
         TabOrder = 3
-        object Img_Motoristas: TImage
-          Left = 3
-          Top = 44
-          Width = 705
+        object Img_MotoristasBanner: TImage
+          Left = 1
+          Top = 43
+          Width = 757
           Height = 155
+          Align = alTop
           Picture.Data = {
             0A544A504547496D616765C2FC0100FFD8FFE110024578696600004D4D002A00
             0000080007011200030000000100010000011A00050000000100000062011B00
@@ -19471,6 +19477,9 @@ object Frm_CargoCTe: TFrm_CargoCTe
             191CED544E7050E928E19B54563A675000C251110110011FFD1EB17FFE96CFFF
             00CE62F853FF00C2B6FF0032DFE33FFFD9}
           Stretch = True
+          ExplicitLeft = 3
+          ExplicitTop = 44
+          ExplicitWidth = 705
         end
         object Pnl_MotoristasBusca: TPanel
           Left = 1

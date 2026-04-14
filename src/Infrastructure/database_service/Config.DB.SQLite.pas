@@ -92,6 +92,7 @@ begin
     'ValorTotal BOOLEAN, ' +
     'BotoesDeAcessoAoBD BOOLEAN, ' +
     'ExibirImagemNotaCte BOOLEAN, ' +
+    'ConfigPadrao BOOLEAN,' +
     'CordeFundo TEXT, ' +
     'CordosBotoes TEXT, ' +
     'CordaFonte TEXT' +
@@ -131,7 +132,7 @@ begin
     Q.Open;
 
     if Q.IsEmpty then
-      Exit(TConfig.Create(False, False, False, False, False, '', '', ''));
+      Exit(TConfig.Create(False, False, False, False, False, False, '', '', ''));
 
     Result := TConfig.Create(
       Q.FieldByName('HelPanel').AsBoolean,
@@ -139,6 +140,7 @@ begin
       Q.FieldByName('ValorTotal').AsBoolean,
       Q.FieldByName('BotoesDeAcessoAoBD').AsBoolean,
       Q.FieldByName('ExibirImagemNotaCte').AsBoolean,
+      Q.FieldByName('ConfigPadrao').AsBoolean,
       Q.FieldByName('CordeFundo').AsString,
       Q.FieldByName('CordosBotoes').AsString,
       Q.FieldByName('CordaFonte').AsString
@@ -161,6 +163,7 @@ begin
       'ValorTotal = :ValorTotal, ' +
       'BotoesDeAcessoAoBD = :BotoesDeAcessoAoBD, ' +
       'ExibirImagemNotaCte = :ExibirImagemNotaCte, ' +
+      'ConfigPadrao = :ConfigPadrao,' +
       'CordeFundo = :CordeFundo, ' +
       'CordosBotoes = :CordosBotoes, ' +
       'CordaFonte = :CordaFonte ' +
@@ -171,6 +174,7 @@ begin
     FQuery.ParamByName('ValorTotal').AsBoolean := Config.ExibirOValorTotal;
     FQuery.ParamByName('BotoesDeAcessoAoBD').AsBoolean := Config.HabilitarBotoesDB;
     FQuery.ParamByName('ExibirImagemNotaCte').AsBoolean := Config.ExibirLogoNotaCTe;
+    FQuery.ParamByName('ConfigPadrao').AsBoolean := Config.ConfigPadrao;
     FQuery.ParamByName('CordeFundo').AsString := Config.CorDeFundo;
     FQuery.ParamByName('CordosBotoes').AsString := Config.CorDosBotoes;
     FQuery.ParamByName('CordaFonte').AsString := Config.CorDaFonte;

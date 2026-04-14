@@ -1,10 +1,9 @@
 object Frm_CargoCteConfig: TFrm_CargoCteConfig
   Left = 0
   Top = 0
-  AutoSize = True
   BorderIcons = [biSystemMenu]
   Caption = 'Configura'#231#245'es'
-  ClientHeight = 471
+  ClientHeight = 504
   ClientWidth = 399
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,15 +18,16 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
     Left = 0
     Top = 0
     Width = 399
-    Height = 471
+    Height = 504
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 471
     object Pnl_ConfiguracoesBtns: TPanel
       Left = 0
-      Top = 423
+      Top = 456
       Width = 399
       Height = 48
       Margins.Top = 0
@@ -38,6 +38,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       BevelOuter = bvNone
       ParentColor = True
       TabOrder = 0
+      ExplicitTop = 423
       object Pnl_BtnSalvarConfiguracoes: TPanel
         AlignWithMargins = True
         Left = 5
@@ -258,7 +259,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
     end
     object Pnl_BtnsBancoDeDados: TPanel
       Left = 0
-      Top = 346
+      Top = 379
       Width = 399
       Height = 77
       Margins.Top = 0
@@ -268,24 +269,10 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Enabled = False
       ParentColor = True
       TabOrder = 3
-      object Btn_ExcluirBancoDeDados: TBitBtn
+      ExplicitTop = 346
+      object Btn_ExcluirTransportadoras: TBitBtn
         Left = 16
         Top = 10
-        Width = 139
-        Height = 25
-        Caption = 'Excluir Banco de Dados'
-        DragCursor = crHandPoint
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-      end
-      object Btn_ExcluirTransportadoras: TBitBtn
-        Left = 161
-        Top = 9
         Width = 192
         Height = 25
         Caption = 'Excluir todas as transportadoras'
@@ -296,7 +283,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 0
       end
       object Btn_ConfiguracoesPadrao: TBitBtn
         Left = 16
@@ -311,14 +298,14 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        TabOrder = 2
+        TabOrder = 1
       end
     end
     object GrBx_ConfiguracoesdeDesign: TGroupBox
       Left = 0
       Top = 215
       Width = 399
-      Height = 114
+      Height = 154
       Caption = 'Configura'#231#245'es de Design'
       ParentBackground = False
       TabOrder = 4
@@ -357,6 +344,13 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Margins.Right = 5
         Margins.Bottom = 5
         Caption = 'Cor da Fonte:'
+      end
+      object Lbl_ConfigPadrao: TLabel
+        Left = 39
+        Top = 122
+        Width = 237
+        Height = 15
+        Caption = 'Utilizar as configura'#231#245'es Padr'#227'o do Sistema? '
       end
       object Clbx_CorFundo: TColorBox
         AlignWithMargins = True
@@ -412,6 +406,21 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Font.Style = []
         ParentFont = False
         TabOrder = 2
+      end
+      object Chbx_ConfigPadrao: TCheckBox
+        Left = 16
+        Top = 121
+        Width = 17
+        Height = 17
+        Checked = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        State = cbChecked
+        TabOrder = 3
       end
     end
   end

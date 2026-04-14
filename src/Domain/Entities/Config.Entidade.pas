@@ -12,6 +12,7 @@ type
     FExibirOValorTotal : Boolean;
     FHabilitarBotoesDB : Boolean;
     FExibirLogoNotaCTe : Boolean;
+    FConfigPadrao      : Boolean;
     FCorDeFundo        : string;
     FCorDosBotoes      : string;
     FCorDaFonte        : string;
@@ -25,6 +26,7 @@ type
       AExibirOValorTotal: Boolean;
       AHabilitarBotoesDB: Boolean;
       AExibirLogoNotaCTe: Boolean;
+      AConfigPadrao     : Boolean;
       ACorDeFundo: string;
       ACorDosBotoes: string;
       ACorDaFonte: string
@@ -34,6 +36,7 @@ type
     property ExibirOValorTotal: Boolean read FExibirOValorTotal;
     property HabilitarBotoesDB: Boolean read FHabilitarBotoesDB;
     property ExibirLogoNotaCTe: Boolean read FExibirLogoNotaCTe;
+    property ConfigPadrao     : Boolean read FConfigPadrao;
     property CorDeFundo: string read FCorDeFundo;
     property CorDosBotoes: string read FCorDosBotoes;
     property CorDaFonte: string read FCorDaFonte;
@@ -51,6 +54,7 @@ constructor TConfig.Create(
   AExibirOValorTotal: Boolean;
   AHabilitarBotoesDB: Boolean;
   AExibirLogoNotaCTe: Boolean;
+  AConfigPadrao     : Boolean;
   ACorDeFundo: string;
   ACorDosBotoes: string;
   ACorDaFonte: string
@@ -65,6 +69,7 @@ begin
   FExibirOValorTotal := AExibirOValorTotal;
   FHabilitarBotoesDB := AHabilitarBotoesDB;
   FExibirLogoNotaCTe := AExibirLogoNotaCTe;
+  FConfigPadrao      := AConfigPadrao;
   FCorDeFundo        := ACorDeFundo;
   FCorDosBotoes      := ACorDosBotoes;
   FCorDaFonte        := ACorDaFonte;

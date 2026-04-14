@@ -87,12 +87,12 @@ type
     Lbl_TransportadorasTotal: TLabel;
     Lbl_TransportadorasTotalInativas: TLabel;
     Srbx_PesquisarTransportadora: TSearchBox;
-    Img_Transportadoras: TImage;
+    Img_TransportadorasBanner: TImage;
     Pnl_NotasEmitidasPesquisarNotas: TPanel;
     Srbx_PesquisarNotas: TSearchBox;
-    Img_NotasEmitidas: TImage;
+    Img_NotasEmitidasBanner: TImage;
     Pnl_Motoristas: TPanel;
-    Img_Motoristas: TImage;
+    Img_MotoristasBanner: TImage;
     Pnl_MotoristasBusca: TPanel;
     Lbl_MotoristasBuscaTotalMotoristas: TLabel;
     Lbl_MotoristasBuscaTotalInativos: TLabel;
@@ -345,6 +345,7 @@ type
     procedure AplicarConfiguracoesDesign; 
     procedure AplicarConfiguracoesSistema; 
     procedure AplicarConfiguracoesDB;
+    procedure InicializarConfiguracoes;
   end;
 
 var
@@ -507,9 +508,40 @@ begin
  end;
 end;
 
-procedure TFrm_CargoCTe.AplicarConfiguracoesSistema;
+procedure TFrm_CargoCTe.InicializarConfiguracoes;
+var
+ Usecase: TUsecaseConfig;
+ Dto    : TDTOConfig;
 begin
+  UseCase := TConfigFactory.NovoUseCase;
+  try
+  Dto := UseCase.Inicializar;
+  if Dto.ConfiguracoesPadrao = False then
+  begin
+    AplicarConfiguracoesDesign;
+    AplicarConfiguracoesSistema;
+    AplicarConfiguracoesDB;
+  end;
+  finally
+  UseCase.Free;
+  end;
+end;
 
+procedure TFrm_CargoCTe.AplicarConfiguracoesSistema;
+var
+ Usecase: TUsecaseConfig;
+ Dto    : TDTOConfig;
+begin
+   UseCase  := TConfigFactory.NovoUseCase;
+   try
+    Dto := UseCase.Inicializar;
+    Img_MotoristasBanner.Visible        := Dto.ExibirBanners;
+    Img_TransportadorasBanner.Visible   := Dto.ExibirBanners;
+    Img_NotasEmitidasBanner.Visible     := Dto.ExibirBanners;
+    Pnl_Ajuda.Visible                   := Dto.ExibirHelPanel;
+   finally
+    UseCase.Free;
+   end;
 end;
 
 procedure TFrm_CargoCTe.Btn_AdicionarVeiculoClick(Sender: TObject);
@@ -572,11 +604,7 @@ begin
   FMenuService.RegisterPanel(Pnl_NotasEmitidas);
   FMenuService.RegisterPanel(Pnl_Transportadoras);
   FMenuService.RegisterPanel(Pnl_Motoristas);
-
-//Inicializa as configurações do sistema (DESIGN)
-  AplicarConfiguracoesDesign;
-  AplicarConfiguracoesSistema;
-  AplicarConfiguracoesDB; 
+  InicializarConfiguracoes;
 end;
 
 procedure TFrm_CargoCTe.Srbx_PesquisarTransportadoraClick(Sender: TObject);

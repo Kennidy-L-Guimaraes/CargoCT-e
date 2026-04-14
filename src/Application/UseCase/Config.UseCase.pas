@@ -34,14 +34,15 @@ begin
   Dto    := Default(TDTOConfig);
   try
     Result := Default(TDTOConfig);
-    Result.ExibirHelPanel   := Config.ExibirHelpPanel;
-    Result.ExibirBanners    := Config.ExibirBanner;
-    Result.ExibirValorTotal := Config.ExibirOValorTotal;
-    Result.HabilitarBtnsBanco := Config.HabilitarBotoesDB;
-    Result.ExibirLogo       := Config.ExibirLogoNotaCTe;
-    Result.CordeFundo       := Config.CorDeFundo;
-    Result.CordosBotoes     := Config.CorDosBotoes;
-    Result.CordaFonte       := Config.CorDaFonte;
+    Result.ExibirHelPanel      := Config.ExibirHelpPanel;
+    Result.ExibirBanners       := Config.ExibirBanner;
+    Result.ExibirValorTotal    := Config.ExibirOValorTotal;
+    Result.HabilitarBtnsBanco  := Config.HabilitarBotoesDB;
+    Result.ExibirLogo          := Config.ExibirLogoNotaCTe;
+    Result.ConfiguracoesPadrao := Config.ConfigPadrao;
+    Result.CordeFundo          := Config.CorDeFundo;
+    Result.CordosBotoes        := Config.CorDosBotoes;
+    Result.CordaFonte          := Config.CorDaFonte;
   finally
     Config.Free;
   end;
@@ -57,6 +58,7 @@ begin
   Adto.ExibirValorTotal,
   Adto.HabilitarBtnsBanco,
   Adto.ExibirLogo,
+  Adto.ConfiguracoesPadrao,
   Adto.CordeFundo,
   Adto.CordosBotoes,
   Adto.CordaFonte);

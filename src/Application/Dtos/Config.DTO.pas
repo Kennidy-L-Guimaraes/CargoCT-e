@@ -18,7 +18,9 @@ interface
    CordaFonte   : string;
 
    //Configuração de Nota CT-e
-   ExibirLogo   : boolean;
+   ExibirLogo          : boolean;
+   //Configuração do Sistema
+   ConfiguracoesPadrao : boolean;
   End;
 
 implementation

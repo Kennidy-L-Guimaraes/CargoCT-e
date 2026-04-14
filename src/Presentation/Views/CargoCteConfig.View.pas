@@ -25,7 +25,6 @@ type
     Chbx_ExibirLogoNotaCte: TCheckBox;
     Pnl_BtnsBancoDeDados: TPanel;
     Btn_ExcluirTransportadoras: TBitBtn;
-    Btn_ExcluirBancoDeDados: TBitBtn;
     GrBx_ConfiguracoesdeDesign: TGroupBox;
     Clbx_CorFundo: TColorBox;
     Pnl_ConfigCordeFundo: TLabel;
@@ -40,6 +39,8 @@ type
     Chbx_HabilitarBtnBancoDeDados: TCheckBox;
     Lbl_HabilitarBotoesBancodeDados: TLabel;
     Lbl_ExibirLogonaNota: TLabel;
+    Lbl_ConfigPadrao: TLabel;
+    Chbx_ConfigPadrao: TCheckBox;
     procedure Btn_BtnCancelarConfiguracoesClick(Sender: TObject);
     procedure Btn_BtnSalvarrConfiguracoesClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -51,6 +52,8 @@ type
     ADTO : TDTOConfig;
     procedure preencherDTO;
     procedure AplicarConfiguracoesDesign;
+    procedure AplicarConfiguracoesSistema;
+    procedure InicializarConfiguracoes;
   end;
 
 var
@@ -76,13 +79,6 @@ begin
    Pnl_Background.Color                 := CorBorda;
    Pnl_Background.Font.Color            := CorFonte;
 
-   Chbx_ExibirHelpPanel.Checked               := Dto.ExibirHelPanel;
-   Chbx_ExibirBanners.Checked                 := Dto.ExibirBanners;
-   Chbx_ExibirValorTotalNotasEmitidas.Checked := Dto.ExibirValorTotal;
-   Chbx_ExibirLogoNotaCte.Checked             := Dto.ExibirLogo;
-   Chbx_HabilitarBtnBancoDeDados.Checked      := Dto.HabilitarBtnsBanco;
-   Pnl_BtnsBancoDeDados.Enabled               := Dto.HabilitarBtnsBanco;
-
    Clbx_CorFundo.Selected     := StringToColor(Dto.CordeFundo);
    Clbx_CordosBotoes.Selected := StringToColor(Dto.CordosBotoes);
    Clbx_CordaFonte.Selected   := StringToColor(Dto.CordaFonte);
@@ -91,6 +87,25 @@ begin
   end;
 end;
 
+procedure TFrm_CargoCteConfig.AplicarConfiguracoesSistema;
+var
+ Usecase: TUsecaseConfig;
+ Dto    : TDTOConfig;
+begin
+ UseCase  := TConfigFactory.NovoUseCase;
+  try
+   Dto := UseCase.Inicializar;
+   Chbx_ExibirHelpPanel.Checked               := Dto.ExibirHelPanel;
+   Chbx_ExibirBanners.Checked                 := Dto.ExibirBanners;
+   Chbx_ExibirValorTotalNotasEmitidas.Checked := Dto.ExibirValorTotal;
+   Chbx_ExibirLogoNotaCte.Checked             := Dto.ExibirLogo;
+   Chbx_HabilitarBtnBancoDeDados.Checked      := Dto.HabilitarBtnsBanco;
+   Chbx_ConfigPadrao.Checked                  := Dto.ConfiguracoesPadrao;
+   Pnl_BtnsBancoDeDados.Enabled               := Dto.HabilitarBtnsBanco;
+  finally
+  UseCase.Free;
+  end;
+end;
 procedure TFrm_CargoCteConfig.Btn_BtnCancelarConfiguracoesClick(
   Sender: TObject);
 begin
@@ -115,7 +130,25 @@ end;
 
 procedure TFrm_CargoCteConfig.FormCreate(Sender: TObject);
 begin
- AplicarConfiguracoesDesign;
+ InicializarConfiguracoes;
+end;
+
+procedure TFrm_CargoCteConfig.InicializarConfiguracoes;
+var
+ Usecase: TUsecaseConfig;
+ Dto    : TDTOConfig;
+begin
+  UseCase := TConfigFactory.NovoUseCase;
+  try
+  Dto := UseCase.Inicializar;
+  if Dto.ConfiguracoesPadrao = False then
+  begin
+    AplicarConfiguracoesDesign;
+    AplicarConfiguracoesSistema;
+  end;
+  finally
+  UseCase.Free;
+  end;
 end;
 
 procedure TFrm_CargoCteConfig.preencherDTO;
@@ -128,6 +161,7 @@ begin
   ADTO.CordeFundo         := ColorToString(Clbx_CorFundo.Selected);
   ADTO.CordosBotoes       := ColorToString(Clbx_CordosBotoes.Selected);
   ADTO.CordaFonte         := ColorToString(Clbx_CordaFonte.Selected);
+  ADTO.ConfiguracoesPadrao:= Chbx_ConfigPadrao.Checked;
 end;
 
 end.

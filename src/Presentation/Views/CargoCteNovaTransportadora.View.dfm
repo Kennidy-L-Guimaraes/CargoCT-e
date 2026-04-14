@@ -37,7 +37,6 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       Width = 624
       Height = 441
       VertScrollBar.Increment = 15
-      VertScrollBar.Position = 1159
       VertScrollBar.Range = 1600
       VertScrollBar.Tracking = True
       Align = alClient
@@ -50,7 +49,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       UseWheelForScrolling = True
       object Img_NovaTransportadoraBanner: TImage
         Left = 0
-        Top = -1159
+        Top = 0
         Width = 607
         Height = 161
         Align = alTop
@@ -4478,7 +4477,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_IdentificacaoFiscal: TGroupBox
         Left = 0
-        Top = -998
+        Top = 161
         Width = 607
         Height = 220
         Align = alTop
@@ -4877,7 +4876,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_EnderecoFiscal: TGroupBox
         Left = 0
-        Top = -778
+        Top = 381
         Width = 607
         Height = 359
         Align = alTop
@@ -5318,7 +5317,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Contato: TGroupBox
         Left = 0
-        Top = 103
+        Top = 1262
         Width = 607
         Height = 185
         Align = alTop
@@ -5457,7 +5456,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosOperacionais: TGroupBox
         Left = 0
-        Top = -209
+        Top = 950
         Width = 607
         Height = 131
         Align = alTop
@@ -5574,7 +5573,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_DadosFiscais: TGroupBox
         Left = 0
-        Top = -419
+        Top = 740
         Width = 607
         Height = 210
         Align = alTop
@@ -5786,7 +5785,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Grbx_Sistema: TGroupBox
         Left = 0
-        Top = -78
+        Top = 1081
         Width = 607
         Height = 181
         Align = alTop
@@ -5905,7 +5904,7 @@ object Frm_NovaTransportadora: TFrm_NovaTransportadora
       end
       object Pnl_NovaTransportadoraBtns: TPanel
         Left = 0
-        Top = 386
+        Top = 1545
         Width = 607
         Height = 55
         Align = alBottom

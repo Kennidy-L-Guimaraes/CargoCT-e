@@ -119,6 +119,7 @@ type
     procedure Btn_IdentificacaoLogoClick(Sender: TObject);
     procedure Img_EnderecoLupaClick(Sender: TObject);
     procedure AplicarConfiguracoesDesign;
+    procedure InicializarConfiguracoes;
 
     destructor Destroy;
   private
@@ -219,9 +220,7 @@ begin
   MsEdt_SistemaDataCadastro.Text := TSistemaUtils.DataAtual;
   //Cria um Stream para imagem
   FImage := TMemoryStream.Create;
-  
-  //Aplica o Design
-  AplicarConfiguracoesDesign;
+  InicializarConfiguracoes;
 end;
 
 procedure TFrm_NovaTransportadora.Img_EnderecoLupaClick(Sender: TObject);
@@ -241,6 +240,23 @@ begin
  finally
   UseCaseApi.Free;
  end;
+end;
+
+procedure TFrm_NovaTransportadora.InicializarConfiguracoes;
+var
+ Usecase: TUsecaseConfig;
+ Dto    : TDTOConfig;
+begin
+  UseCase := TConfigFactory.NovoUseCase;
+  try
+  Dto := UseCase.Inicializar;
+  if Dto.ConfiguracoesPadrao = False then
+  begin
+    AplicarConfiguracoesDesign;
+  end;
+  finally
+  UseCase.Free;
+  end;
 end;
 
 procedure TFrm_NovaTransportadora.PreencherDTO(var ADTO: TTransportadoraDTO);
