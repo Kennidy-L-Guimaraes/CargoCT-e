@@ -4223,6 +4223,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 0
+                  OnClick = Edt_IdentificacaoSerieClick
                 end
                 object Edt_IdentificacaoNumero: TEdit
                   AlignWithMargins = True
@@ -4243,6 +4244,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 2
+                  OnClick = Edt_IdentificacaoNumeroClick
                 end
                 object Edt_IdentificacaoFinalidade: TEdit
                   AlignWithMargins = True
@@ -4262,6 +4264,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 6
+                  OnClick = Edt_IdentificacaoFinalidadeClick
                 end
                 object Cmbx_IdentificacaoTipodeCTe: TComboBox
                   AlignWithMargins = True
@@ -4282,6 +4285,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 4
                   Text = 'Normal'
+                  OnClick = Cmbx_IdentificacaoTipodeCTeClick
                   Items.Strings = (
                     'Normal'
                     'Complementar'
@@ -4306,11 +4310,9 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 1
                   Text = 'Normal'
+                  OnClick = Cmbx_ModalClick
                   Items.Strings = (
-                    'Rodovi'#225'rio'
-                    'A'#233'reo'
-                    'Aquavi'#225'rio'
-                    'Ferrovi'#225'rio')
+                    'Rodovi'#225'rio')
                 end
                 object Cmbx_FormaDeEmissao: TComboBox
                   AlignWithMargins = True
@@ -4331,6 +4333,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 3
                   Text = 'Normal'
+                  OnClick = Cmbx_FormaDeEmissaoClick
                   Items.Strings = (
                     'Normal'
                     'Conting'#234'ncia')
@@ -4357,6 +4360,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Text = 
                     '1.100 - COMPRAS PARA INDUSTRIALIZA'#199#195'O, COMERCIALIZA'#199#195'O OU PRESTA' +
                     #199#195'O DE SERVI'#199'OS'
+                  OnClick = Cmbx_CFOPClick
                   Items.Strings = (
                     '1.000 - ENTRADAS OU AQUISI'#199#213'ES DE SERVI'#199'OS DO ESTADO'
                     
@@ -6028,6 +6032,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 7
                   Text = '00000-000'
+                  OnClick = MsEdt_IdentificacaoCEPClick
                 end
               end
             end

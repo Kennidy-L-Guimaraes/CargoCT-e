@@ -13,7 +13,7 @@ uses
   FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys,
   FireDAC.VCLUI.Wait, FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat,
   FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite, Config.UseCase, Config.Factory,
-  Config.DTO, Design.Utils;
+  Config.DTO, Design.Utils, HelpPanel.Helpers;
 
 type
   // PADRÃO DE NOMENCLATURA
@@ -332,6 +332,14 @@ type
     procedure Btn_NovaTransportadoraClick(Sender: TObject);
     procedure Btn_AdicionarVeiculoClick(Sender: TObject);
     procedure TimerDataEHoraTimer(Sender: TObject);
+    procedure Edt_IdentificacaoSerieClick(Sender: TObject);
+    procedure Edt_IdentificacaoNumeroClick(Sender: TObject);
+    procedure Cmbx_IdentificacaoTipodeCTeClick(Sender: TObject);
+    procedure Edt_IdentificacaoFinalidadeClick(Sender: TObject);
+    procedure Cmbx_ModalClick(Sender: TObject);
+    procedure Cmbx_FormaDeEmissaoClick(Sender: TObject);
+    procedure Cmbx_CFOPClick(Sender: TObject);
+    procedure MsEdt_IdentificacaoCEPClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationUtils;
@@ -527,6 +535,12 @@ begin
   end;
 end;
 
+procedure TFrm_CargoCTe.MsEdt_IdentificacaoCEPClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_CEP);
+end;
+
 procedure TFrm_CargoCTe.AplicarConfiguracoesSistema;
 var
  Usecase: TUsecaseConfig;
@@ -586,6 +600,30 @@ begin
 FMenuService.ActivePanel(Pnl_Transportadoras);
 end;
 
+procedure TFrm_CargoCTe.Cmbx_CFOPClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_CFOP);
+end;
+
+procedure TFrm_CargoCTe.Cmbx_FormaDeEmissaoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_FormaDeEmissao);
+end;
+
+procedure TFrm_CargoCTe.Cmbx_IdentificacaoTipodeCTeClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_TipoCte);
+end;
+
+procedure TFrm_CargoCTe.Cmbx_ModalClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_Modal);
+end;
+
 constructor TFrm_CargoCTe.Create(AOwner: TComponent);
 begin
   Inherited Create(AOwner);
@@ -596,6 +634,24 @@ destructor TFrm_CargoCTe.Destroy;
 begin
   FMenuService.Free;
   inherited;
+end;
+
+procedure TFrm_CargoCTe.Edt_IdentificacaoFinalidadeClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_Finalidade);
+end;
+
+procedure TFrm_CargoCTe.Edt_IdentificacaoNumeroClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_Numero);
+end;
+
+procedure TFrm_CargoCTe.Edt_IdentificacaoSerieClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_Serie);
 end;
 
 procedure TFrm_CargoCTe.FormCreate(Sender: TObject);

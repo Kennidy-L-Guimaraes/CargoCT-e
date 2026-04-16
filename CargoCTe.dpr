@@ -45,7 +45,8 @@ uses
   Config.Entidade in 'src\Domain\Entities\Config.Entidade.pas',
   Config.DB.SQLite in 'src\Infrastructure\database_service\Config.DB.SQLite.pas',
   Config.Factory in 'src\Application\Factories\Config.Factory.pas',
-  Design.Utils in 'src\Presentation\UI\Utils\Design.Utils.pas';
+  Design.Utils in 'src\Presentation\UI\Utils\Design.Utils.pas',
+  HelpPanel.Helpers in 'src\Application\Helpers\HelpPanel.Helpers.pas';
 
 {$R *.res}
 
