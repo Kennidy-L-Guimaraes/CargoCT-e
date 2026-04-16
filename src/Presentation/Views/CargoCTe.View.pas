@@ -539,6 +539,7 @@ begin
     Img_TransportadorasBanner.Visible   := Dto.ExibirBanners;
     Img_NotasEmitidasBanner.Visible     := Dto.ExibirBanners;
     Pnl_Ajuda.Visible                   := Dto.ExibirHelPanel;
+
    finally
     UseCase.Free;
    end;
