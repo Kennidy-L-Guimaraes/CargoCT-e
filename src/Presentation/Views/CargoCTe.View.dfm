@@ -23,6 +23,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
     Color = 16707307
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 647
     DesignSize = (
       891
       649)
@@ -36,6 +37,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 647
       object Pnl_Logo: TPanel
         Left = 1
         Top = 1
@@ -3365,6 +3367,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitTop = 596
         object Shp_BtnSair: TShape
           Left = 0
           Top = 0
@@ -3891,6 +3894,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 0
+                  OnClick = Edt_TomadorNomeClick
                 end
                 object Cmbx_TipoTomador: TComboBox
                   AlignWithMargins = True
@@ -3911,6 +3915,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 1
                   Text = 'Remetente'
+                  OnClick = Cmbx_TipoTomadorClick
                   Items.Strings = (
                     'Remetente'
                     'Destinat'#225'rio'
@@ -3937,6 +3942,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 2
                   Text = '00000-000'
+                  OnClick = MsEdt_TomadorCEPClick
                 end
                 object MsEdt_TomadorIE: TMaskEdit
                   AlignWithMargins = True
@@ -3957,6 +3963,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 3
                   Text = '000.000.000.000'
+                  OnClick = MsEdt_TomadorIEClick
                 end
                 object MsEdt_TomadorCpfCnpj: TMaskEdit
                   AlignWithMargins = True
@@ -3977,6 +3984,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 4
                   Text = '000.000.000.-00'
+                  OnClick = MsEdt_TomadorCpfCnpjClick
                 end
               end
               object Pnl_IdentificacaoCte: TPanel
@@ -19763,6 +19771,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
       Color = 11467263
       ParentBackground = False
       TabOrder = 3
+      ExplicitHeight = 110
       object Lbl_Ajuda: TLabel
         Left = 1
         Top = 1
@@ -19799,6 +19808,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
         ParentFont = False
         ScrollBars = ssVertical
         TabOrder = 0
+        ExplicitHeight = 87
       end
     end
   end

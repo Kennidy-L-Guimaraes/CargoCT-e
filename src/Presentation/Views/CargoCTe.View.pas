@@ -340,6 +340,11 @@ type
     procedure Cmbx_FormaDeEmissaoClick(Sender: TObject);
     procedure Cmbx_CFOPClick(Sender: TObject);
     procedure MsEdt_IdentificacaoCEPClick(Sender: TObject);
+    procedure Cmbx_TipoTomadorClick(Sender: TObject);
+    procedure Edt_TomadorNomeClick(Sender: TObject);
+    procedure MsEdt_TomadorCpfCnpjClick(Sender: TObject);
+    procedure MsEdt_TomadorCEPClick(Sender: TObject);
+    procedure MsEdt_TomadorIEClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationUtils;
@@ -541,6 +546,24 @@ begin
  Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_CEP);
 end;
 
+procedure TFrm_CargoCTe.MsEdt_TomadorCEPClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Tomador_CEP);
+end;
+
+procedure TFrm_CargoCTe.MsEdt_TomadorCpfCnpjClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Tomador_CPF);
+end;
+
+procedure TFrm_CargoCTe.MsEdt_TomadorIEClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Tomador_InscricaoEstadual);
+end;
+
 procedure TFrm_CargoCTe.AplicarConfiguracoesSistema;
 var
  Usecase: TUsecaseConfig;
@@ -624,6 +647,12 @@ begin
  Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_Modal);
 end;
 
+procedure TFrm_CargoCTe.Cmbx_TipoTomadorClick(Sender: TObject);
+begin
+  Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Tomador_Tipo);
+end;
+
 constructor TFrm_CargoCTe.Create(AOwner: TComponent);
 begin
   Inherited Create(AOwner);
@@ -652,6 +681,12 @@ procedure TFrm_CargoCTe.Edt_IdentificacaoSerieClick(Sender: TObject);
 begin
  Mem_Ajuda.Clear;
  Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_Serie);
+end;
+
+procedure TFrm_CargoCTe.Edt_TomadorNomeClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Tomador_Nome);
 end;
 
 procedure TFrm_CargoCTe.FormCreate(Sender: TObject);

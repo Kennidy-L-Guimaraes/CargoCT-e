@@ -61,6 +61,12 @@ interface
     class function IdentificacaoCTE_FormaDeEmissao : string;
     class function IdentificacaoCTE_CFOP           : string;
     class function IdentificacaoCTE_CEP            : string;
+
+    class function Tomador_Tipo                    : string;
+    class function Tomador_CPF                     : string;
+    class function Tomador_InscricaoEstadual       : string;
+    class function Tomador_Nome                    : string;
+    class function Tomador_CEP                     : string;
  end;
 
 
@@ -77,7 +83,7 @@ end;
 
 class function THelpPanel.IdentificacaoCTE_CFOP: string;
 begin
- Result := 'CÓDIGO FISCAL DE OPERAÇÕES E PRESTAÇÕES * Define a natureza fiscal da operação. Esse cara manda na tributação. '+
+ Result := 'CÓDIGO FISCAL DE OPERAÇÕES E PRESTAÇÕES * Define a natureza fiscal da operação. Ordem de tributação. '+
   'Exemplo: '+
   '5353 → prestação de serviço de transporte dentro do estado. '+
   '6353 → transporte interestadual. ';
@@ -138,6 +144,43 @@ begin
   'Complementar → ajuste de valor. '+
   'Anulação → cancela efeitos de outro CT-e. '+
   'Substituição → corrige um CT-e anterior. ';
+end;
+
+class function THelpPanel.Tomador_CEP: string;
+begin
+  Result := 'CEP * Localização do tomador, importante para validações fiscais e logísticas. '+
+   'Exemplo: '+
+   '01001-000 O Sistema usará uma API para completar as informações. Forneça Apenas o CEP. ';
+end;
+
+class function THelpPanel.Tomador_CPF: string;
+begin
+ Result := 'CPF * Identifica o tomador como pessoa física. '+
+  'Exemplo: '+
+  '123.456.789-00 Se for uma Empresa Alterar as Configurações. ';
+end;
+
+class function THelpPanel.Tomador_InscricaoEstadual: string;
+begin
+  Result := 'INSCRIÇÃO ESTADUAL * Registro do tomador na SEFAZ, quando ele é contribuinte de ICMS. '+
+  'Exemplo: '+
+  '254.789.456. ';
+end;
+
+class function THelpPanel.Tomador_Nome: string;
+begin
+  Result := 'NOME * Identificação formal do tomador. '+
+  'Exemplo: '+
+  'João da Silva ou Transportes XYZ Ltda. ';
+end;
+
+class function THelpPanel.Tomador_Tipo: string;
+begin
+  Result := 'TIPO DE TOMADOR * Define quem é o responsável pelo pagamento do frete. ' +
+   'Exemplo: '+
+   'Remetente → quem envia paga. '+
+   'Destinatário → quem recebe paga. '+
+   'Terceiro → alguém no meio assume. ';
 end;
 
 end.
