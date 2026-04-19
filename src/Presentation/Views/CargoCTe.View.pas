@@ -353,6 +353,9 @@ type
     procedure Edt_ParticipantesDestinatarioCpfCnpjClick(Sender: TObject);
     procedure MsEdt_ParticipantesDestinatarioCEPClick(Sender: TObject);
     procedure Edt_ParticipantesDestinatarioEmailClick(Sender: TObject);
+    procedure Edt_ParticipantesTransportadoraNomeRSClick(Sender: TObject);
+    procedure Edt_ParticipantesTransportadoraNFantasiaClick(Sender: TObject);
+    procedure Edt_ParticipantesTransportadoraCpfCnpjClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationUtils;
@@ -741,6 +744,27 @@ procedure TFrm_CargoCTe.Edt_ParticipantesRemetenteNomeRSClick(Sender: TObject);
 begin
  Mem_Ajuda.Clear;
  Mem_Ajuda.Lines.Add(THelpPanel.Remetente_NOMEouRS);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesTransportadoraCpfCnpjClick(
+  Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.TransportadoraEmitente_CPFouCNPJ);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesTransportadoraNFantasiaClick(
+  Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.TransportadoraEmitente_NomeFantasia);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesTransportadoraNomeRSClick(
+  Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.TransportadoraEmitente_NOMEouRS);
 end;
 
 procedure TFrm_CargoCTe.Edt_TomadorNomeClick(Sender: TObject);

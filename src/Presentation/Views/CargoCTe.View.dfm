@@ -6219,6 +6219,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 0
+                  OnClick = Edt_ParticipantesTransportadoraNomeRSClick
                 end
                 object Edt_ParticipantesTransportadoraCpfCnpj: TEdit
                   Left = 16
@@ -6238,6 +6239,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 1
+                  OnClick = Edt_ParticipantesTransportadoraCpfCnpjClick
                 end
                 object Edt_ParticipantesTransportadoraNFantasia: TEdit
                   Left = 184
@@ -6256,6 +6258,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 2
+                  OnClick = Edt_ParticipantesTransportadoraNFantasiaClick
                 end
                 object Edt_ParticipantesTransportadoraCEP: TEdit
                   Left = 147

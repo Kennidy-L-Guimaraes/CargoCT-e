@@ -81,6 +81,11 @@ interface
     class function Destinatario_CPFouCNPJ            : string;
     class function Destinatario_CEP                  : string;
     class function Destinatario_Email                : string;
+
+    //TRANSPORTADORA EMITENTE
+    class function TransportadoraEmitente_NOMEouRS     : string;
+    class function TransportadoraEmitente_CPFouCNPJ    : string;
+    class function TransportadoraEmitente_NomeFantasia : string;
  end;
 
 
@@ -252,6 +257,28 @@ begin
    'Remetente → quem envia paga. '+
    'Destinatário → quem recebe paga. '+
    'Terceiro → alguém no meio assume. ';
+end;
+
+class function THelpPanel.TransportadoraEmitente_CPFouCNPJ: string;
+begin
+  Result := 'CPF ou CNPJ * Identificação fiscal da transportadora. É o vínculo oficial com a SEFAZ e o que autentica a emissão. '+
+   'Exemplo: '+
+   'CNPJ: 12.345.678/0001-99 ';
+end;
+
+class function THelpPanel.TransportadoraEmitente_NomeFantasia: string;
+begin
+  Result := 'NOME FANTASIA * É o nome comercial, usado para identificação mais amigável. '+
+   'Exemplo: '+
+   'Rápido Sul Transportes. ';
+end;
+
+class function THelpPanel.TransportadoraEmitente_NOMEouRS: string;
+begin
+  Result := 'NOME OU RAZÃO SOCIAL * É o nome jurídico da empresa que está emitindo o CT-e. ' +
+   'É quem assume a responsabilidade legal pelo transporte. '+
+   'Exemplo: '+
+   'Transportadora Rápido Sul LTDA ';
 end;
 
 end.
