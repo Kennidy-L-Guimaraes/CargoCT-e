@@ -53,6 +53,7 @@ interface
  type
  THelpPanel = class
    public
+    //IDENTIFICAÇÃO CTE
     class function IdentificacaoCTE_Serie   : string;
     class function IdentificacaoCTE_Numero  : string;
     class function IdentificacaoCTE_TipoCte : string;
@@ -62,11 +63,24 @@ interface
     class function IdentificacaoCTE_CFOP           : string;
     class function IdentificacaoCTE_CEP            : string;
 
+    //TOMADOR CTE
     class function Tomador_Tipo                    : string;
     class function Tomador_CPF                     : string;
     class function Tomador_InscricaoEstadual       : string;
     class function Tomador_Nome                    : string;
     class function Tomador_CEP                     : string;
+
+    //REMETENTE CTE
+    class function Remetente_NOMEouRS             : string;
+    class function Remetente_CPFouCNPJ            : string;
+    class function Remetente_CEP                  : string;
+    class function Remetente_Email                : string;
+
+    //DESTINATARIO CTE
+    class function Destinatario_NOMEouRS             : string;
+    class function Destinatario_CPFouCNPJ            : string;
+    class function Destinatario_CEP                  : string;
+    class function Destinatario_Email                : string;
  end;
 
 
@@ -74,11 +88,39 @@ implementation
 
 { THelpPanel }
 
+class function THelpPanel.Destinatario_CEP: string;
+begin
+  Result := 'CEP * Local de entrega. Influencia diretamente logística e também validações fiscais.'+
+   'Exemplo: '+
+   '01001-000 O Sistema usará uma API para completar as informações. Forneça Apenas o CEP';
+end;
+
+class function THelpPanel.Destinatario_CPFouCNPJ: string;
+begin
+  Result := 'CPF OU CNPJ * Identificação fiscal do destinatário. Essencial para cruzamento de dados pela SEFAZ. '+
+   'Exemplo: '+
+   'CPF: 987.654.321-00 ou CNPJ: 98.765.432/0001-11. ';
+end;
+
+class function THelpPanel.Destinatario_Email: string;
+begin
+  Result := 'EMAIL * Recebimento do CT-e e comunicação da entrega. '+
+   'Exemplo: '+
+   'recebimento@empresa.com.br ';
+end;
+
+class function THelpPanel.Destinatario_NOMEouRS: string;
+begin
+  Result := 'NOME OU RAZÃO SOCIAL * Identifica quem vai receber a mercadoria. '+
+   'Exemplo: '+
+   'Mercado Central LTDA ou Maria Oliveira. ';
+end;
+
 class function THelpPanel.IdentificacaoCTE_CEP: string;
 begin
  Result := 'CEP * Indica a localização relacionada à operação (origem ou emissão). ' +
   'Exemplo: '+
-  '88000-000 → Florianópolis/SC. ';
+  '88000-000';
 end;
 
 class function THelpPanel.IdentificacaoCTE_CFOP: string;
@@ -144,6 +186,35 @@ begin
   'Complementar → ajuste de valor. '+
   'Anulação → cancela efeitos de outro CT-e. '+
   'Substituição → corrige um CT-e anterior. ';
+end;
+
+class function THelpPanel.Remetente_CEP: string;
+begin
+  Result := 'CEP * Define a localização do remetente. Isso impacta cálculo de rota, impostos e validações. '+
+   'Exemplo: '+
+   '88010-000. ';
+end;
+
+class function THelpPanel.Remetente_CPFouCNPJ: string;
+begin
+  Result := 'CPF OU CNPJ * É o identificador fiscal. Necessário para Emissão SEFAZ. '+
+   'Exemplo: '+
+   'CPF: 123.456.789-00. '+
+   'CNPJ: 12.345.678/0001-99. ';
+end;
+
+class function THelpPanel.Remetente_Email: string;
+begin
+  Result := 'EMAIL * Canal de comunicação para envio do CT-e (XML/DANFE) e notificações. '+
+   'Exemplo: '+
+   'financeiro@empresa.com.br ';
+end;
+
+class function THelpPanel.Remetente_NOMEouRS: string;
+begin
+  Result := 'NOME OU RAZÃO SOCIAL * Identifica oficialmente quem está enviando a mercadoria. É o nome jurídico ou o nome da pessoa. '+
+   'Exemplo: '+
+   'Comércio de Alimentos Silva LTDA ou João da Silva. ';
 end;
 
 class function THelpPanel.Tomador_CEP: string;

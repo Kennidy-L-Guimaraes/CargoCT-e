@@ -345,6 +345,14 @@ type
     procedure MsEdt_TomadorCpfCnpjClick(Sender: TObject);
     procedure MsEdt_TomadorCEPClick(Sender: TObject);
     procedure MsEdt_TomadorIEClick(Sender: TObject);
+    procedure Edt_ParticipantesRemetenteNomeRSClick(Sender: TObject);
+    procedure Edt_ParticipantesRemetenteCpfCnpjClick(Sender: TObject);
+    procedure MsEdt_ParticipantesRemetenteCEPClick(Sender: TObject);
+    procedure Edt_ParticipantesRemetenteEmailClick(Sender: TObject);
+    procedure Edt_ParticipantesDestinatarioNomeRSClick(Sender: TObject);
+    procedure Edt_ParticipantesDestinatarioCpfCnpjClick(Sender: TObject);
+    procedure MsEdt_ParticipantesDestinatarioCEPClick(Sender: TObject);
+    procedure Edt_ParticipantesDestinatarioEmailClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationUtils;
@@ -546,6 +554,19 @@ begin
  Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_CEP);
 end;
 
+procedure TFrm_CargoCTe.MsEdt_ParticipantesDestinatarioCEPClick(
+  Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Destinatario_CEP);
+end;
+
+procedure TFrm_CargoCTe.MsEdt_ParticipantesRemetenteCEPClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Remetente_CEP);
+end;
+
 procedure TFrm_CargoCTe.MsEdt_TomadorCEPClick(Sender: TObject);
 begin
  Mem_Ajuda.Clear;
@@ -681,6 +702,45 @@ procedure TFrm_CargoCTe.Edt_IdentificacaoSerieClick(Sender: TObject);
 begin
  Mem_Ajuda.Clear;
  Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_Serie);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesDestinatarioCpfCnpjClick(
+  Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Destinatario_CPFouCNPJ);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesDestinatarioEmailClick(
+  Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Destinatario_Email);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesDestinatarioNomeRSClick(
+  Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Destinatario_NOMEouRS);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesRemetenteCpfCnpjClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Remetente_CPFouCNPJ);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesRemetenteEmailClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Remetente_Email);
+end;
+
+procedure TFrm_CargoCTe.Edt_ParticipantesRemetenteNomeRSClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Remetente_NOMEouRS);
 end;
 
 procedure TFrm_CargoCTe.Edt_TomadorNomeClick(Sender: TObject);

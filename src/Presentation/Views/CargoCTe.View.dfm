@@ -3701,7 +3701,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Margins.Top = 0
           Margins.Right = 0
           Margins.Bottom = 0
-          ActivePage = Tbsh_IdentificacaoETomador
+          ActivePage = Tbsh_Participantes
           Align = alClient
           TabOrder = 0
           object Tbsh_IdentificacaoETomador: TTabSheet
@@ -6411,6 +6411,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 0
+                  OnClick = Edt_ParticipantesRemetenteNomeRSClick
                 end
                 object Edt_ParticipantesRemetenteCpfCnpj: TEdit
                   AlignWithMargins = True
@@ -6431,6 +6432,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 1
+                  OnClick = Edt_ParticipantesRemetenteCpfCnpjClick
                 end
                 object Edt_ParticipantesRemetenteEmail: TEdit
                   AlignWithMargins = True
@@ -6450,6 +6452,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 2
+                  OnClick = Edt_ParticipantesRemetenteEmailClick
                 end
                 object MsEdt_ParticipantesRemetenteCEP: TMaskEdit
                   AlignWithMargins = True
@@ -6470,6 +6473,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 3
                   Text = '00000-000'
+                  OnClick = MsEdt_ParticipantesRemetenteCEPClick
                 end
               end
               object Pnl_ParticipantesDestinatario: TPanel
@@ -6605,6 +6609,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 0
+                  OnClick = Edt_ParticipantesDestinatarioNomeRSClick
                 end
                 object Edt_ParticipantesDestinatarioCpfCnpj: TEdit
                   AlignWithMargins = True
@@ -6625,6 +6630,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 1
+                  OnClick = Edt_ParticipantesDestinatarioCpfCnpjClick
                 end
                 object Edt_ParticipantesDestinatarioEmail: TEdit
                   AlignWithMargins = True
@@ -6644,6 +6650,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 2
+                  OnClick = Edt_ParticipantesDestinatarioEmailClick
                 end
                 object MsEdt_ParticipantesDestinatarioCEP: TMaskEdit
                   AlignWithMargins = True
@@ -6664,6 +6671,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 3
                   Text = '00000-000'
+                  OnClick = MsEdt_ParticipantesDestinatarioCEPClick
                 end
               end
             end
