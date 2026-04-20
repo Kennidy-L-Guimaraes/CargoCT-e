@@ -360,6 +360,13 @@ type
     procedure Cmbx_TransporteOrigemTServicoClick(Sender: TObject);
     procedure MsEdt_TransporteDestinoCEPClick(Sender: TObject);
     procedure Cmbx_TransporteDestinoTServicoClick(Sender: TObject);
+    procedure Edt_TransporteCargaProdutoClick(Sender: TObject);
+    procedure Edt_TransporteCargaCubagemClick(Sender: TObject);
+    procedure Edt_TransporteCargaQuantidadeClick(Sender: TObject);
+    procedure Edt_TransporteCargaPesoBrutoClick(Sender: TObject);
+    procedure Edt_TransporteCargaValorCargaClick(Sender: TObject);
+    procedure Edt_TransporteCargaPesoCubadoClick(Sender: TObject);
+    procedure Edt_TransporteCargaValorSeguroClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationUtils;
@@ -799,6 +806,48 @@ procedure TFrm_CargoCTe.Edt_TomadorNomeClick(Sender: TObject);
 begin
  Mem_Ajuda.Clear;
  Mem_Ajuda.Lines.Add(THelpPanel.Tomador_Nome);
+end;
+
+procedure TFrm_CargoCTe.Edt_TransporteCargaCubagemClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.DadosDaCarga_Cubagem);
+end;
+
+procedure TFrm_CargoCTe.Edt_TransporteCargaPesoBrutoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.DadosDaCarga_PesoBruto);
+end;
+
+procedure TFrm_CargoCTe.Edt_TransporteCargaPesoCubadoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.DadosDaCarga_PesoCubado);
+end;
+
+procedure TFrm_CargoCTe.Edt_TransporteCargaProdutoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.DadosDaCarga_Produto);
+end;
+
+procedure TFrm_CargoCTe.Edt_TransporteCargaQuantidadeClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.DadosDaCarga_Quantidade);
+end;
+
+procedure TFrm_CargoCTe.Edt_TransporteCargaValorCargaClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.DadosDaCarga_ValorDaCarga);
+end;
+
+procedure TFrm_CargoCTe.Edt_TransporteCargaValorSeguroClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.DadosDaCarga_ValorDoSeguro);
 end;
 
 procedure TFrm_CargoCTe.FormCreate(Sender: TObject);

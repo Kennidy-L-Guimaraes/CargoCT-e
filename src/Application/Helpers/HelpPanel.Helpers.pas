@@ -92,12 +92,70 @@ interface
     class function Origem_TipoDeServico : string;
     class function Destino_CEP          : string;
     class function Destino_TipoDeServico: string;
+
+    //DADOS DA CARGA
+    class function DadosDaCarga_Produto       : string;
+    class function DadosDaCarga_Cubagem       : string;
+    class function DadosDaCarga_Quantidade    : string;
+    class function DadosDaCarga_PesoBruto     : string;
+    class function DadosDaCarga_ValorDaCarga  : string;
+    class function DadosDaCarga_PesoCubado    : string;
+    class function DadosDaCarga_ValorDoSeguro : string;
  end;
 
 
 implementation
 
 { THelpPanel }
+
+class function THelpPanel.DadosDaCarga_Cubagem: string;
+begin
+  Result := 'CUBAGEM * Volume ocupado pela carga (m³). Usado para cálculo de frete, principalmente quando o volume pesa mais que o peso real. '+
+   'Exemplo: '+
+   '2,5 m3. ';
+end;
+
+class function THelpPanel.DadosDaCarga_PesoBruto: string;
+begin
+  Result := 'PESO BRUTO * Peso total da carga (com embalagem). Base para cálculo de frete e limites do veículo. '+
+   'Exemplo: '+
+   '520 kg. ';
+end;
+
+class function THelpPanel.DadosDaCarga_PesoCubado: string;
+begin
+  Result := 'PESO CUBADO * Peso “teórico” baseado no volume da carga. Transportadoras usam isso para evitar prejuízo com cargas leves e volumosas. '+
+   'Exemplo: '+
+   '100 kg. ';
+end;
+
+class function THelpPanel.DadosDaCarga_Produto: string;
+begin
+  Result := 'PRODUTO * Descrição da mercadoria transportada. '+
+   'Exemplo: '+
+   'Eletrodomésticos ou Peças automotivas. ';
+end;
+
+class function THelpPanel.DadosDaCarga_Quantidade: string;
+begin
+  Result := 'QUANTIDADE * Número de volumes/unidades transportadas. '+
+   'Exemplo: '+
+   '10';
+end;
+
+class function THelpPanel.DadosDaCarga_ValorDaCarga: string;
+begin
+  Result := 'VALOR DA CARGA * Valor financeiro da mercadoria. Importante para seguro, responsabilidade e fiscalização. '+
+   'Exemplo: '+
+   'R$ 15.000,00. ';
+end;
+
+class function THelpPanel.DadosDaCarga_ValorDoSeguro: string;
+begin
+  Result := 'VALOR DO SEGURO * Valor cobrado para cobrir riscos de perda, roubo ou dano da carga. '+
+   'Exemplo: '+
+   'R$ 200,00. ';
+end;
 
 class function THelpPanel.Destinatario_CEP: string;
 begin

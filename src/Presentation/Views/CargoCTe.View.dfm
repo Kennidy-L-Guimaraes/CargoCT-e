@@ -7202,6 +7202,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 0
+                  OnClick = Edt_TransporteCargaProdutoClick
                 end
                 object Edt_TransporteCargaPesoBruto: TEdit
                   AlignWithMargins = True
@@ -7221,6 +7222,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 1
+                  OnClick = Edt_TransporteCargaPesoBrutoClick
                 end
                 object Edt_TransporteCargaPesoCubado: TEdit
                   AlignWithMargins = True
@@ -7240,6 +7242,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 2
+                  OnClick = Edt_TransporteCargaPesoCubadoClick
                 end
                 object Edt_TransporteCargaCubagem: TEdit
                   AlignWithMargins = True
@@ -7258,6 +7261,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   ParentFont = False
                   TabOrder = 3
+                  OnClick = Edt_TransporteCargaCubagemClick
                 end
                 object Edt_TransporteCargaValorCarga: TEdit
                   AlignWithMargins = True
@@ -7277,6 +7281,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 4
+                  OnClick = Edt_TransporteCargaValorCargaClick
                 end
                 object Edt_TransporteCargaValorSeguro: TEdit
                   AlignWithMargins = True
@@ -7296,6 +7301,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 5
+                  OnClick = Edt_TransporteCargaValorSeguroClick
                 end
                 object Edt_TransporteCargaQuantidade: TEdit
                   AlignWithMargins = True
@@ -7315,6 +7321,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   NumbersOnly = True
                   ParentFont = False
                   TabOrder = 6
+                  OnClick = Edt_TransporteCargaQuantidadeClick
                 end
               end
             end
