@@ -356,6 +356,10 @@ type
     procedure Edt_ParticipantesTransportadoraNomeRSClick(Sender: TObject);
     procedure Edt_ParticipantesTransportadoraNFantasiaClick(Sender: TObject);
     procedure Edt_ParticipantesTransportadoraCpfCnpjClick(Sender: TObject);
+    procedure MsEdt_TransporteOrigemCEPClick(Sender: TObject);
+    procedure Cmbx_TransporteOrigemTServicoClick(Sender: TObject);
+    procedure MsEdt_TransporteDestinoCEPClick(Sender: TObject);
+    procedure Cmbx_TransporteDestinoTServicoClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationUtils;
@@ -588,6 +592,18 @@ begin
  Mem_Ajuda.Lines.Add(THelpPanel.Tomador_InscricaoEstadual);
 end;
 
+procedure TFrm_CargoCTe.MsEdt_TransporteDestinoCEPClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Destino_CEP);
+end;
+
+procedure TFrm_CargoCTe.MsEdt_TransporteOrigemCEPClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Origem_CEP);
+end;
+
 procedure TFrm_CargoCTe.AplicarConfiguracoesSistema;
 var
  Usecase: TUsecaseConfig;
@@ -675,6 +691,18 @@ procedure TFrm_CargoCTe.Cmbx_TipoTomadorClick(Sender: TObject);
 begin
   Mem_Ajuda.Clear;
  Mem_Ajuda.Lines.Add(THelpPanel.Tomador_Tipo);
+end;
+
+procedure TFrm_CargoCTe.Cmbx_TransporteDestinoTServicoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Destino_TipoDeServico);
+end;
+
+procedure TFrm_CargoCTe.Cmbx_TransporteOrigemTServicoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Origem_TipoDeServico);
 end;
 
 constructor TFrm_CargoCTe.Create(AOwner: TComponent);

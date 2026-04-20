@@ -3701,7 +3701,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Margins.Top = 0
           Margins.Right = 0
           Margins.Bottom = 0
-          ActivePage = Tbsh_Participantes
+          ActivePage = Tbsh_TransporteECarga
           Align = alClient
           TabOrder = 0
           object Tbsh_IdentificacaoETomador: TTabSheet
@@ -6796,10 +6796,11 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 1
                   Text = 'Normal'
+                  OnClick = Cmbx_TransporteOrigemTServicoClick
                   Items.Strings = (
                     'Normal'
-                    'Redespacho'
-                    'Subcontrata'#231#227'o')
+                    'Expresso'
+                    'Lota'#231#227'o')
                 end
                 object MsEdt_TransporteOrigemCEP: TMaskEdit
                   AlignWithMargins = True
@@ -6819,6 +6820,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 0
                   Text = '00000-000'
+                  OnClick = MsEdt_TransporteOrigemCEPClick
                 end
               end
               object Pnl_TransporteDestino: TPanel
@@ -6900,10 +6902,11 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 1
                   Text = 'Normal'
+                  OnClick = Cmbx_TransporteDestinoTServicoClick
                   Items.Strings = (
                     'Normal'
-                    'Redespacho'
-                    'Subcontrata'#231#227'o')
+                    'Expresso'
+                    'Porta a porta')
                 end
                 object MsEdt_TransporteDestinoCEP: TMaskEdit
                   AlignWithMargins = True
@@ -6923,6 +6926,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 0
                   Text = '00000-000'
+                  OnClick = MsEdt_TransporteDestinoCEPClick
                 end
               end
               object Pnl_TransporteCarga: TPanel

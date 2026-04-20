@@ -86,6 +86,12 @@ interface
     class function TransportadoraEmitente_NOMEouRS     : string;
     class function TransportadoraEmitente_CPFouCNPJ    : string;
     class function TransportadoraEmitente_NomeFantasia : string;
+
+    //TRANSPORTADORA E ENTREGA
+    class function Origem_CEP           : string;
+    class function Origem_TipoDeServico : string;
+    class function Destino_CEP          : string;
+    class function Destino_TipoDeServico: string;
  end;
 
 
@@ -119,6 +125,22 @@ begin
   Result := 'NOME OU RAZÃO SOCIAL * Identifica quem vai receber a mercadoria. '+
    'Exemplo: '+
    'Mercado Central LTDA ou Maria Oliveira. ';
+end;
+
+class function THelpPanel.Destino_CEP: string;
+begin
+ Result := 'CEP * Define onde a carga será entregue. Impacta diretamente frete, prazo e validações fiscais. '+
+  'Exemplo: '+
+  '01001-000. ';
+end;
+
+class function THelpPanel.Destino_TipoDeServico: string;
+begin
+  Result := 'TIPO DE SERVIÇO * Define como será a entrega no destino. '+
+   'Exemplo: '+
+   'Normal → entrega padrão. '+
+   'Expresso → entrega urgente. '+
+   'Porta a porta → coleta e entrega direta. ';
 end;
 
 class function THelpPanel.IdentificacaoCTE_CEP: string;
@@ -191,6 +213,22 @@ begin
   'Complementar → ajuste de valor. '+
   'Anulação → cancela efeitos de outro CT-e. '+
   'Substituição → corrige um CT-e anterior. ';
+end;
+
+class function THelpPanel.Origem_CEP: string;
+begin
+  Result := 'CEP * Define o ponto de partida da carga. É base para cálculo de rota, prazo e até tributação. '+
+   'Exemplo: '+
+   '88010-000. ';
+end;
+
+class function THelpPanel.Origem_TipoDeServico: string;
+begin
+  Result := 'TIPO DE SERVIÇO * Indica a característica do transporte a partir da origem. '+
+   'Exemplo: '+
+   'Normal → coleta padrão. '+
+   'Expresso → prioridade alta. '+
+   'Lotação → carga exclusiva no veículo. ';
 end;
 
 class function THelpPanel.Remetente_CEP: string;
