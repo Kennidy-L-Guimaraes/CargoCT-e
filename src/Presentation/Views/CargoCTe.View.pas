@@ -367,6 +367,11 @@ type
     procedure Edt_TransporteCargaValorCargaClick(Sender: TObject);
     procedure Edt_TransporteCargaPesoCubadoClick(Sender: TObject);
     procedure Edt_TransporteCargaValorSeguroClick(Sender: TObject);
+    procedure MsEdt_DocumentosTaxasValorFreteClick(Sender: TObject);
+    procedure MsEdt_DocumentosTaxasDespachoClick(Sender: TObject);
+    procedure MsEdt_DocumentosTaxasPedagioClick(Sender: TObject);
+    procedure MsEdt_DocumentosTaxasSeguroClick(Sender: TObject);
+    procedure MsEdt_DocumentosTaxasOutrosClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationUtils;
@@ -560,6 +565,36 @@ begin
   finally
   UseCase.Free;
   end;
+end;
+
+procedure TFrm_CargoCTe.MsEdt_DocumentosTaxasDespachoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Taxas_ValorDespacho);
+end;
+
+procedure TFrm_CargoCTe.MsEdt_DocumentosTaxasOutrosClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Taxas_ValorOutros);
+end;
+
+procedure TFrm_CargoCTe.MsEdt_DocumentosTaxasPedagioClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Taxas_ValorPedagio);
+end;
+
+procedure TFrm_CargoCTe.MsEdt_DocumentosTaxasSeguroClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Taxas_ValorSeguro);
+end;
+
+procedure TFrm_CargoCTe.MsEdt_DocumentosTaxasValorFreteClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Taxas_ValorFrete);
 end;
 
 procedure TFrm_CargoCTe.MsEdt_IdentificacaoCEPClick(Sender: TObject);

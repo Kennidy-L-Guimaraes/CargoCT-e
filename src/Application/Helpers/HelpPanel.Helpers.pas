@@ -101,6 +101,13 @@ interface
     class function DadosDaCarga_ValorDaCarga  : string;
     class function DadosDaCarga_PesoCubado    : string;
     class function DadosDaCarga_ValorDoSeguro : string;
+
+    //DOCUMENTOS E TAXAS
+    class function Taxas_ValorFrete       : string;
+    class function Taxas_ValorDespacho    : string;
+    class function Taxas_ValorPedagio     : string;
+    class function Taxas_ValorSeguro      : string;
+    class function Taxas_ValorOutros      : string;
  end;
 
 
@@ -316,6 +323,39 @@ begin
   Result := 'NOME OU RAZÃO SOCIAL * Identifica oficialmente quem está enviando a mercadoria. É o nome jurídico ou o nome da pessoa. '+
    'Exemplo: '+
    'Comércio de Alimentos Silva LTDA ou João da Silva. ';
+end;
+
+class function THelpPanel.Taxas_ValorOutros: string;
+begin
+  Result := 'OUTROS * Agrupa custos adicionais que não entram nas categorias anteriores. ';
+end;
+
+class function THelpPanel.Taxas_ValorFrete: string;
+begin
+  Result := 'VALOR DO FRETE * É o valor principal cobrado pelo transporte da carga. Basicamente, o preço do serviço. '+
+   'Esemplo: '+
+   'R$ 1.200,00. ';
+end;
+
+class function THelpPanel.Taxas_ValorDespacho: string;
+begin
+  Result := 'DESPACHO * Taxa administrativa relacionada à emissão, processamento e organização do transporte. '+
+   'Exemplo: '+
+   'R$ 50,00. ';
+end;
+
+class function THelpPanel.Taxas_ValorPedagio: string;
+begin
+  Result := 'PEDAGIO * Custo dos pedágios no trajeto. Pode ser repassado ao cliente. '+
+   'Exemplo: '+
+   'R$ 120,00. ';
+end;
+
+class function THelpPanel.Taxas_ValorSeguro: string;
+begin
+  Result := 'SEGURO * Valor cobrado para cobrir riscos da carga durante o transporte. '+
+   'Exemplo: '+
+   'R$ 200,00 para uma carga de R$ 15.000,00. ';
 end;
 
 class function THelpPanel.Tomador_CEP: string;

@@ -3701,7 +3701,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Margins.Top = 0
           Margins.Right = 0
           Margins.Bottom = 0
-          ActivePage = Tbsh_TransporteECarga
+          ActivePage = Tbsh_DocumentosETaxas
           Align = alClient
           TabOrder = 0
           object Tbsh_IdentificacaoETomador: TTabSheet
@@ -7638,6 +7638,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 0
                   Text = '00'
+                  OnClick = MsEdt_DocumentosTaxasValorFreteClick
                 end
                 object MsEdt_DocumentosTaxasPedagio: TMaskEdit
                   AlignWithMargins = True
@@ -7658,6 +7659,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 1
                   Text = '00'
+                  OnClick = MsEdt_DocumentosTaxasPedagioClick
                 end
                 object MsEdt_DocumentosTaxasDespacho: TMaskEdit
                   AlignWithMargins = True
@@ -7678,6 +7680,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 2
                   Text = '00'
+                  OnClick = MsEdt_DocumentosTaxasDespachoClick
                 end
                 object MsEdt_DocumentosTaxasSeguro: TMaskEdit
                   AlignWithMargins = True
@@ -7698,6 +7701,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 3
                   Text = '00'
+                  OnClick = MsEdt_DocumentosTaxasSeguroClick
                 end
                 object MsEdt_DocumentosTaxasOutros: TMaskEdit
                   AlignWithMargins = True
@@ -7718,6 +7722,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 4
                   Text = '00'
+                  OnClick = MsEdt_DocumentosTaxasOutrosClick
                 end
               end
             end
