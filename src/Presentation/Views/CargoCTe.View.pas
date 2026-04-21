@@ -372,6 +372,13 @@ type
     procedure MsEdt_DocumentosTaxasPedagioClick(Sender: TObject);
     procedure MsEdt_DocumentosTaxasSeguroClick(Sender: TObject);
     procedure MsEdt_DocumentosTaxasOutrosClick(Sender: TObject);
+    procedure Edt_ImpostosImpostosCSTClick(Sender: TObject);
+    procedure Edt_ImpostosImpostosBaseCalculoClick(Sender: TObject);
+    procedure Edt_ImpostosImpostosAliquotaClick(Sender: TObject);
+    procedure Edt_ImpostosImpostosICMSClick(Sender: TObject);
+    procedure Edt_ImpostosImpostosREBaseClick(Sender: TObject);
+    procedure Edt_ImpostosImpostosICMSSTClick(Sender: TObject);
+    procedure Edt_ImpostosImpostosDesoneracaoClick(Sender: TObject);
   private
     { Private declarations }
     FMenuService: TMenuNavigationUtils;
@@ -775,6 +782,48 @@ procedure TFrm_CargoCTe.Edt_IdentificacaoSerieClick(Sender: TObject);
 begin
  Mem_Ajuda.Clear;
  Mem_Ajuda.Lines.Add(THelpPanel.IdentificacaoCTE_Serie);
+end;
+
+procedure TFrm_CargoCTe.Edt_ImpostosImpostosAliquotaClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Impostos_Aliquota);
+end;
+
+procedure TFrm_CargoCTe.Edt_ImpostosImpostosBaseCalculoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Impostos_BaseCalculo);
+end;
+
+procedure TFrm_CargoCTe.Edt_ImpostosImpostosCSTClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Impostos_CST);
+end;
+
+procedure TFrm_CargoCTe.Edt_ImpostosImpostosDesoneracaoClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Impostos_Desoneracao);
+end;
+
+procedure TFrm_CargoCTe.Edt_ImpostosImpostosICMSClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Impostos_Icms);
+end;
+
+procedure TFrm_CargoCTe.Edt_ImpostosImpostosICMSSTClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Impostos_Icmsst);
+end;
+
+procedure TFrm_CargoCTe.Edt_ImpostosImpostosREBaseClick(Sender: TObject);
+begin
+ Mem_Ajuda.Clear;
+ Mem_Ajuda.Lines.Add(THelpPanel.Impostos_ReBase);
 end;
 
 procedure TFrm_CargoCTe.Edt_ParticipantesDestinatarioCpfCnpjClick(

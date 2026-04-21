@@ -108,6 +108,15 @@ interface
     class function Taxas_ValorPedagio     : string;
     class function Taxas_ValorSeguro      : string;
     class function Taxas_ValorOutros      : string;
+
+   //IMPOSTOS
+   class function Impostos_CST          : string;
+   class function Impostos_BaseCalculo  : string;
+   class function Impostos_Aliquota     : string;
+   class function Impostos_ICMS         : string;
+   class function Impostos_ReBase       : string;
+   class function Impostos_ICMSst       : string;
+   class function Impostos_Desoneracao  : string;
  end;
 
 
@@ -278,6 +287,61 @@ begin
   'Complementar → ajuste de valor. '+
   'Anulação → cancela efeitos de outro CT-e. '+
   'Substituição → corrige um CT-e anterior. ';
+end;
+
+class function THelpPanel.Impostos_Aliquota: string;
+begin
+  Result := 'ALIQUOTA * Percentual aplicado sobre a base de cálculo. '+
+   'Exemplo: '+
+   '12% (interestadual comum). '+
+   '18% (interna, dependendo do estado). ';
+end;
+
+class function THelpPanel.Impostos_BaseCalculo: string;
+begin
+  Result := 'BASE CALCULO * É o valor sobre o qual o ICMS será calculado. '+
+   'Exemplo: '+
+   'Frete: R$ 1.000. '+
+   'Base de cálculo: R$ 1.000. ';
+end;
+
+class function THelpPanel.Impostos_CST: string;
+begin
+  Result := 'CÓDIGO DE SITUAÇÃO TRIBUTÁRIA * Define como o ICMS será tratado naquela operação. É basicamente o “modo tributário”. '+
+   'Exemplo: '+
+   '00 → tributação normal. '+
+   '20 → com redução de base. '+
+   '40 → isento. '+
+   '60 → ICMS já cobrado anteriormente (substituição tributária). ';
+end;
+
+class function THelpPanel.Impostos_Desoneracao: string;
+begin
+  Result := 'DESONERAÇÃO * Indica isenção ou redução total/parcial do ICMS por incentivo fiscal. '+
+   'Exemplo: '+
+   'Transporte para zona incentivada ICMS = R$ 0';
+end;
+
+class function THelpPanel.Impostos_ICMS: string;
+begin
+  Result := 'ICMS * Valor do imposto calculado. '+
+   'Exemplo: '+
+   'Base: R$ 1.000 e Alíquota: 12%'+
+   'ICMS = 1000 × 0.12 "R$ 120". ';
+end;
+
+class function THelpPanel.Impostos_ICMSst: string;
+begin
+  Result := 'SUBSTITUIÇÃO TRIBUTÁRIA * Indica que o ICMS foi pago antecipadamente por outro contribuinte. ';
+end;
+
+class function THelpPanel.Impostos_ReBase: string;
+begin
+  Result := 'REDUÇÃO DA BASE * Permite reduzir o valor da base antes de aplicar a alíquota. '+
+   'Exemplo: '+
+   'Base original: R$ 1.000. '+
+   'Redução: 30% '+
+   'Nova base: R$ 700 ';
 end;
 
 class function THelpPanel.Origem_CEP: string;

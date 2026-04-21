@@ -3701,7 +3701,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
           Margins.Top = 0
           Margins.Right = 0
           Margins.Bottom = 0
-          ActivePage = Tbsh_DocumentosETaxas
+          ActivePage = Tbsh_ImpostosEModal
           Align = alClient
           TabOrder = 0
           object Tbsh_IdentificacaoETomador: TTabSheet
@@ -7967,6 +7967,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 0
                   Text = '00,00'
+                  OnClick = Edt_ImpostosImpostosBaseCalculoClick
                 end
                 object Edt_ImpostosImpostosCST: TEdit
                   AlignWithMargins = True
@@ -7989,6 +7990,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 1
                   Text = '00,00'
+                  OnClick = Edt_ImpostosImpostosCSTClick
                 end
                 object Edt_ImpostosImpostosAliquota: TEdit
                   AlignWithMargins = True
@@ -8011,6 +8013,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 2
                   Text = '00,00'
+                  OnClick = Edt_ImpostosImpostosAliquotaClick
                 end
                 object Edt_ImpostosImpostosICMS: TEdit
                   AlignWithMargins = True
@@ -8033,6 +8036,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 3
                   Text = '00,00'
+                  OnClick = Edt_ImpostosImpostosICMSClick
                 end
                 object Edt_ImpostosImpostosREBase: TEdit
                   AlignWithMargins = True
@@ -8055,6 +8059,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 4
                   Text = '00,00'
+                  OnClick = Edt_ImpostosImpostosREBaseClick
                 end
                 object Edt_ImpostosImpostosICMSST: TEdit
                   AlignWithMargins = True
@@ -8077,6 +8082,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 5
                   Text = '00,00'
+                  OnClick = Edt_ImpostosImpostosICMSSTClick
                 end
                 object Edt_ImpostosImpostosDesoneracao: TEdit
                   AlignWithMargins = True
@@ -8099,6 +8105,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   ParentFont = False
                   TabOrder = 6
                   Text = '00,00'
+                  OnClick = Edt_ImpostosImpostosDesoneracaoClick
                 end
               end
               object Pnl_ImpostosModal: TPanel
