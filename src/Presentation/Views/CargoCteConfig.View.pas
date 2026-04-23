@@ -53,6 +53,7 @@ type
     procedure preencherDTO;
     procedure AplicarConfiguracoesDesign;
     procedure AplicarConfiguracoesSistema;
+    procedure AplicarConfiguracoesDB;
     procedure InicializarConfiguracoes;
   end;
 
@@ -62,6 +63,19 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrm_CargoCteConfig.AplicarConfiguracoesDB;
+var
+ Dto    : TDTOConfig;
+ Usecase: TUsecaseConfig;
+begin
+  UseCase := TConfigFactory.NovoUseCase;
+ try
+  Pnl_BtnsBancoDeDados.Enabled := Dto.HabilitarBtnsBanco;
+ finally
+  Usecase.Free;
+ end;
+end;
 
 procedure TFrm_CargoCteConfig.AplicarConfiguracoesDesign;
 var
@@ -101,7 +115,6 @@ begin
    Chbx_ExibirLogoNotaCte.Checked             := Dto.ExibirLogo;
    Chbx_HabilitarBtnBancoDeDados.Checked      := Dto.HabilitarBtnsBanco;
    Chbx_ConfigPadrao.Checked                  := Dto.ConfiguracoesPadrao;
-   Pnl_BtnsBancoDeDados.Enabled               := Dto.HabilitarBtnsBanco;
   finally
   UseCase.Free;
   end;
@@ -145,6 +158,11 @@ begin
   begin
     AplicarConfiguracoesDesign;
     AplicarConfiguracoesSistema;
+    AplicarConfiguracoesDB;
+  end
+  else
+  begin
+   AplicarConfiguracoesDB;
   end;
   finally
   UseCase.Free;

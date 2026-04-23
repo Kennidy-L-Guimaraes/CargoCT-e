@@ -7957,7 +7957,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Margins.Right = 5
                   Margins.Bottom = 5
                   Color = 11467263
-                  Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = clWindowText
                   Font.Height = -13
@@ -7965,6 +7964,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   NumbersOnly = True
                   ParentFont = False
+                  ReadOnly = True
                   TabOrder = 0
                   Text = '00,00'
                   OnClick = Edt_ImpostosImpostosBaseCalculoClick
@@ -7980,7 +7980,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Margins.Right = 5
                   Margins.Bottom = 5
                   Color = 11467263
-                  Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = clWindowText
                   Font.Height = -13
@@ -7988,6 +7987,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   NumbersOnly = True
                   ParentFont = False
+                  ReadOnly = True
                   TabOrder = 1
                   Text = '00,00'
                   OnClick = Edt_ImpostosImpostosCSTClick
@@ -8003,7 +8003,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Margins.Right = 5
                   Margins.Bottom = 5
                   Color = 11467263
-                  Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = clWindowText
                   Font.Height = -13
@@ -8011,6 +8010,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   NumbersOnly = True
                   ParentFont = False
+                  ReadOnly = True
                   TabOrder = 2
                   Text = '00,00'
                   OnClick = Edt_ImpostosImpostosAliquotaClick
@@ -8026,7 +8026,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Margins.Right = 5
                   Margins.Bottom = 5
                   Color = 11467263
-                  Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = clWindowText
                   Font.Height = -13
@@ -8034,6 +8033,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   NumbersOnly = True
                   ParentFont = False
+                  ReadOnly = True
                   TabOrder = 3
                   Text = '00,00'
                   OnClick = Edt_ImpostosImpostosICMSClick
@@ -8049,7 +8049,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Margins.Right = 5
                   Margins.Bottom = 5
                   Color = 11467263
-                  Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = clWindowText
                   Font.Height = -13
@@ -8057,6 +8056,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   NumbersOnly = True
                   ParentFont = False
+                  ReadOnly = True
                   TabOrder = 4
                   Text = '00,00'
                   OnClick = Edt_ImpostosImpostosREBaseClick
@@ -8072,7 +8072,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Margins.Right = 5
                   Margins.Bottom = 5
                   Color = 11467263
-                  Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = clWindowText
                   Font.Height = -13
@@ -8080,6 +8079,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   NumbersOnly = True
                   ParentFont = False
+                  ReadOnly = True
                   TabOrder = 5
                   Text = '00,00'
                   OnClick = Edt_ImpostosImpostosICMSSTClick
@@ -8095,7 +8095,6 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Margins.Right = 5
                   Margins.Bottom = 5
                   Color = 11467263
-                  Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = clWindowText
                   Font.Height = -13
@@ -8103,6 +8102,7 @@ object Frm_CargoCTe: TFrm_CargoCTe
                   Font.Style = []
                   NumbersOnly = True
                   ParentFont = False
+                  ReadOnly = True
                   TabOrder = 6
                   Text = '00,00'
                   OnClick = Edt_ImpostosImpostosDesoneracaoClick

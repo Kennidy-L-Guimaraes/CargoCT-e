@@ -24,7 +24,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 471
+    ExplicitHeight = 502
     object Pnl_ConfiguracoesBtns: TPanel
       Left = 0
       Top = 456
@@ -38,7 +38,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       BevelOuter = bvNone
       ParentColor = True
       TabOrder = 0
-      ExplicitTop = 423
+      ExplicitTop = 454
       object Pnl_BtnSalvarConfiguracoes: TPanel
         AlignWithMargins = True
         Left = 5
@@ -269,12 +269,13 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
       Enabled = False
       ParentColor = True
       TabOrder = 3
-      ExplicitTop = 346
+      ExplicitTop = 377
       object Btn_ExcluirTransportadoras: TBitBtn
         Left = 16
         Top = 10
         Width = 192
         Height = 25
+        Cursor = crHandPoint
         Caption = 'Excluir todas as transportadoras'
         DragCursor = crHandPoint
         Font.Charset = DEFAULT_CHARSET
@@ -290,6 +291,7 @@ object Frm_CargoCteConfig: TFrm_CargoCteConfig
         Top = 41
         Width = 139
         Height = 25
+        Cursor = crHandPoint
         Caption = 'Configura'#231#245'es Padr'#227'o'
         DragCursor = crHandPoint
         Font.Charset = DEFAULT_CHARSET

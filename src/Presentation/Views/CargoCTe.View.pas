@@ -568,6 +568,10 @@ begin
     AplicarConfiguracoesDesign;
     AplicarConfiguracoesSistema;
     AplicarConfiguracoesDB;
+  end
+  else
+  begin
+   AplicarConfiguracoesDB;
   end;
   finally
   UseCase.Free;
